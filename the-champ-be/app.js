@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const index = require('./routes/index');
+const twitter = require('./routes/twitter');
 const users = require('./routes/users');
 
 const cors = require('cors');
@@ -14,8 +14,9 @@ const db = 'mongodb://localhost/thechamp';
 const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 mongoose.connect(db, {useMongoClient: true})
-.then(() => console.log('successfully connected to', db))
-.catch(err => console.log('connection failed', err));
+.then(() => {
+  console.log('successfully connected to', db)
+}).catch(err => console.log('connection failed', err));
 
 app.use(cors());
 
@@ -31,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/', twitter);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

@@ -6,7 +6,7 @@ const SignIn = () => {
       <h3>
         Sign In
       </h3>
-      <form action="http://localhost:3001/login" method="post" className="uk-form-horizontal uk-margin-large">
+      <form action="http://localhost:3001/users/login" method="post" className="uk-form-horizontal uk-margin-large">
         <div className="uk-margin">
           <label className="uk-form-label">User Name</label>
           <div className="uk-form-controls">
