@@ -43,18 +43,18 @@ class SignUp extends Component {
       <form onSubmit={this.handleSubmit} className="uk-form-horizontal uk-margin-large">
       <article className="input-container">
       <div className="social-media-input">
-        <label className="uk-form-label">You&#39;ll need a username.<sup>&#42;</sup></label>
+        <label className="uk-form-label">You&#39;ll need a password.<sup>&#42;</sup></label>
       </div>
-      <div className="sub-header"></div>
-        <div className="uk-margin">
-          <div className="uk-form-controls">
-            <input className="uk-input" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
-          </div>
-          <div className="input-line"></div>
-        </div>
+      <div className="sub-header_included">Make sure it&#39;s 6 characters or more</div>
+      <div className="uk-margin">
+      <div className="uk-form-controls">
+        <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password"/>
+      </div>
+      <div className="input-line"></div>
+      </div>
       </article>
-      <Link to="/password">
-        <input className="confirm-btn" onClick="" type="button" value="Confirm"/>
+      <Link to="/twitter">
+        <input className="confirm-btn" onClick="" type="submit" value="Confirm"/>
       </Link>
       </form>
       </section>
@@ -64,10 +64,7 @@ class SignUp extends Component {
 
 export default SignUp;
 
-// <label className="uk-form-label">Password</label>
-// <div className="uk-form-controls">
-//   <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="password"/>
-// </div>
+
 // <label className="uk-form-label">Twitter handle</label>
 // <div className="uk-form-controls">
 //   <input className="uk-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="@"/>

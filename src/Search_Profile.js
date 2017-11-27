@@ -46,42 +46,7 @@ class ChampDisplay extends Component {
         <div class="white-gradient"></div>
         <h3>Worms Champion</h3>
       </section>
-      <section className="activity-container">
-        <article class="champ-display">
-          <div class="game-img-display">
-            <img src="Worms_Circle_Background.png"/>
-            <div class="user-location">
-            <img src="Targeting_Icon.png"/>
-              <div class="location-separator"></div>
-              <article class="location-address">
-                <div class="location-zone">16 Tib Street</div>
-                <div class="location-city">Manchester</div>
-              </article>
-            </div>
-            <div class="champ-details">
-              <div class="champ-status">
-                <img src="Trophy_Icon_Golden_Yellow.png"/>
-                <h3>Champ Unknown</h3>
-              </div>
-              <div class="horizontal-decor-line"></div>
-              <img src="Champion_Name_Decoration.png"/>
-            </div>
-          </div>
-        </article>
-      {
-        this.state.user.map((user, index) => {
-          if (user.currentchamp === true) {
-            return (<div key={index}>
-              <p>{user.username}</p>
-            </div>)
-          } else {
-            return (<div key={index}>
-              <p>Champ Unknown</p>
-            </div>)
-          }
-        })
-      }
-      </section>
+      
       <section className="nav-bar">
         <div className="horizontal-line"></div>
         <article className="nav-btn-container">

@@ -1,0 +1,67 @@
+.nav-bar {
+  height: 65px;
+  display: flex;
+  justify-content: center; }
+  .nav-bar .logo-wrapper {
+    height: 10vh;
+    width: 33.3vw;
+    display: flex;
+    align-items: center; }
+    .nav-bar .logo-wrapper img {
+      height: 36px;
+      width: 30px; }
+    .nav-bar .logo-wrapper h3 {
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      color: #FFF;
+      margin: 2.5px 12.5px; }
+
+.platform-btn-container {
+  display: flex;
+  justify-content: center; }
+  .platform-btn-container .btn-wrapper {
+    margin: 60px 0 0 0;
+    width: 320px; }
+    .platform-btn-container .btn-wrapper h5 {
+      font-weight: 200;
+      letter-spacing: 0.5px;
+      color: white;
+      text-align: center; }
+    .platform-btn-container .btn-wrapper .champ-display-link button {
+      border: 1px solid white;
+      border-radius: 15px;
+      background: none;
+      height: 50px;
+      width: 320px;
+      margin: 30px 0px;
+      display: flex;
+      justify-content: space-between; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .worms-icon {
+        height: 30px;
+        width: 30px; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .league-legends-icon {
+        height: 28px;
+        width: 28px;
+        margin: 2.5px 0 0 0; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .starcraft-icon {
+        height: 34px;
+        width: 34px;
+        margin: 0 0 0 -2.5px; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .dota-icon {
+        height: 30px;
+        width: 30px;
+        margin: 2.5px 0 0 0; }
+      .platform-btn-container .btn-wrapper .champ-display-link button h5 {
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 0.7px; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .btn-title-margin {
+        margin: 2.5px 0 0 0; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .coming-soon {
+        color: white;
+        letter-spacing: 0.7px; }
+      .platform-btn-container .btn-wrapper .champ-display-link button .ghost-div {
+        height: 30px;
+        width: 30px; }
+    .platform-btn-container .btn-wrapper .champ-display-link .disabled-btn {
+      opacity: 0.6; }

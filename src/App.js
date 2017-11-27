@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
 import SignUp from './SignUp';
+import SignUp_Password from './SignUp_Password';
+import SignUp_Twitter from './SignUp_Twitter'
 import Platform from './Platform';
 import SignIn from './SignIn';
 import ChampDisplay from './ChampDisplay';
@@ -32,6 +34,8 @@ class App extends Component {
           <div>
             <Route exact={true} path="/" component={Home}/>
             <Route path="/signup" component={() => <SignUp currentUserLoggedIn={this.currentUserLoggedIn} />} />
+            <Route path="/password" component={SignUp_Password}/>
+            <Route path="/twitter" component ={SignUp_Twitter}/>
             <Route path="/signin" component={SignIn}/>
             <Route path="/platform" component={Platform}/>
             <Route path="/champdisplay" component={() => <ChampDisplay loggedInUser={this.state.userLoggedIn} />} />

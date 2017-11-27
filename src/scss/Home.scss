@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h5 {
+  font-weight: 600;
+}
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, hsl(45,61,32), hsl(4,61,51));
+}
+.main-container {
+  .logo-container {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 60px;
+        width: 50px;
+      }
+      h1 {
+        color: white;
+        margin: 0 0 5px 20px;
+        font-weight: 600;
+      }
+    }
+  }
+  .brand-description-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+    .brand-description {
+      margin: 30px 0 0 0;
+      p {
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.6px;
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        opacity: 0.7;
+      }
+      p:nth-child(1) {
+        text-align: center;
+        // margin: 10px 0 0 0;
+      }
+      p:nth-child(2) {
+        text-align: center;
+        margin: 5px 0;
+      }
+      p:nth-child(3) {
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+  .bottom-container {
+    display: flex;
+    justify-content: center;
+    .btn-wrapper {
+      height: 27vh;
+      width: 255px;
+      .sign-up-btn {
+        background: white;
+        border-radius: 15px;
+        width: 255px;
+        opacity: 0.75;
+          h5 {
+            margin: 14px 0;
+            color: hsl(4,61,51);
+          }
+      }
+      .sign-in-btn {
+        margin: 25px 0 0 0;
+        width: 255px;
+        h5 {
+          margin: 14px 0;
+          color: white;
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}

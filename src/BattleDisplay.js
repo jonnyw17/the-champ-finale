@@ -4,7 +4,7 @@ class BattleDisplay extends Component {
   render() {
     return (
         <Link to="/champdisplay">
-          <h1>Battle Display</h1>
+          <h1>Battle Disply</h1>
         </Link>
     );
   }
