@@ -15,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "scss":"node-sass -w ./src/scss -o ./src"
   },
-  "proxy": "http://localhost:3001"
+  "devDependencies": {
+    "i": "^0.3.6",
+    "node-sass": "^4.7.2"
+  }
 }

@@ -1,0 +1,72 @@
+.top-container {
+  display: flex;
+  justify-content: space-around; }
+  .top-container .back-btn-wrapper {
+    width: 33.3vw; }
+  .top-container .logo-wrapper {
+    height: 10vh;
+    width: 33.3vw;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0; }
+    .top-container .logo-wrapper img {
+      height: 36px;
+      width: 30px; }
+    .top-container .logo-wrapper h3 {
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: #b05b30;
+      margin: 2.5px 12.5px; }
+  .top-container .menu-wrapper {
+    width: 33.3vw; }
+
+.form-container {
+  display: flex;
+  height: 80vh; }
+  .form-container .input-container {
+    margin: 50px 0; }
+    .form-container .input-container .social-media-input {
+      display: flex; }
+      .form-container .input-container .social-media-input img {
+        margin: 0 -2.5vw 0 5vw;
+        height: 20px;
+        width: 20px; }
+      .form-container .input-container .social-media-input .uk-form-label {
+        font-size: 16px;
+        margin: 0 0 1vh 5vw; }
+    .form-container .input-container .sub-header {
+      font-size: 12px;
+      margin: 0 0 7.5vh 5vw; }
+    .form-container .input-container .sub-header_included {
+      font-size: 12px;
+      margin: 0 0 5vh 5vw; }
+    .form-container .input-container .uk-margin {
+      margin: 0 5vw; }
+      .form-container .input-container .uk-margin .uk-input {
+        border: none;
+        width: 340px; }
+      .form-container .input-container .uk-margin .input-line {
+        height: 1px;
+        width: 90vw;
+        background: #E2E2E2; }
+    .form-container .input-container .uk-form-controls {
+      display: flex; }
+      .form-container .input-container .uk-form-controls .at-html-entity {
+        height: 20px;
+        margin: 8px 0 0 0; }
+      .form-container .input-container .uk-form-controls .division-line {
+        margin: 10px 0 0 10px;
+        height: 21px;
+        width: 2px;
+        background: grey; }
+  .form-container .confirm-btn {
+    position: absolute;
+    bottom: 10px;
+    font-size: 21px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin: 0 2.5vw;
+    width: 95vw;
+    height: 45px;
+    color: white;
+    background: #007AFF; }
