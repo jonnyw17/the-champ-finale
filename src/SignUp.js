@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './SignUp.css'
 
 const SignUp = () => {
   return (<div>
@@ -30,11 +31,37 @@ const SignUp = () => {
             </div>
             <div className="input-line"></div>
           </div>
-          <input type="submit" value="Submit"/>
         </article>
-        <Link to="/password">
-          <input className="confirm-btn" type="button" value="Confirm"/>
-        </Link>
+        <article className="input-container">
+          <div className="social-media-input">
+            <label className="uk-form-label">You&#39;ll need a password.<sup>&#42;</sup>
+            </label>
+          </div>
+          <div className="sub-header_included">Make sure it&#39;s 6 characters or more</div>
+          <div className="uk-margin">
+            <div className="uk-form-controls">
+              <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password"/>
+            </div>
+            <div className="input-line"></div>
+          </div>
+
+          <article className="input-container">
+            <div className="social-media-input">
+              <img src="Twitter_Icon_Black.png" alt="twitter icon"/>
+              <label className="uk-form-label">Twitter details</label>
+            </div>
+            <div className="sub-header_included">Provoke your opponent on Twitter (optional)</div>
+            <div className="uk-margin">
+              <div className="uk-form-controls">
+                <div className="at-html-entity">&#64;</div>
+                <div className="division-line"></div>
+                <input className="uk-input" id="form-horizontal-text" type="text" name="twitter" placeholder="Twitter Handle"/>
+              </div>
+              <div className="input-line"></div>
+            </div>
+          </article>
+        </article>
+        <input className="confirm-btn" type="submit" value="Confirm"/>
       </form>
     </section>
   </div>)

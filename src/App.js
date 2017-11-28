@@ -5,8 +5,6 @@ import axios from 'axios'
 import './App.css';
 
 import SignUp from './SignUp';
-import SignUpPassword from './SignUpPassword';
-import SignUpTwitter from './SignUpTwitter'
 import Platform from './Platform';
 import SignIn from './SignIn';
 import ChampDisplay from './ChampDisplay';
@@ -50,8 +48,6 @@ class App extends Component {
         <Router>
           <div>
             <Route exact={true} path="/" component={Home}/>
-            <Route path="/password" component={SignUpPassword}/>
-            <Route path="/twitter" component={SignUpTwitter}/>
             <Route path="/signup" component={SignUp}/>
             <Route path="/signin" component={SignIn}/>
             <Route path="/platform" component={Platform}/>
