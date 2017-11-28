@@ -7,7 +7,7 @@ const SignUp = () => {
     <section className="top-container">
       <article className="back-btn-wrapper">
         <Link to="/">
-          <h5>Back Button</h5>
+          <h5>Back</h5>
         </Link>
       </article>
       <article className="logo-wrapper">
