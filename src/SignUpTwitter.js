@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SignUp.css';
-class SignUp extends Component {
+
+class SignUpTwitter extends Component {
   constructor(props){
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.replaceInputDisplay = this.replaceInputDisplay.bind(this);
     this.state = {
       user: {
 
@@ -15,14 +15,13 @@ class SignUp extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const userDetails = event.target[0].value;
+    // const userDetails = event.target[0].value;
     this.setState({
       name:event.target[0].value
     })
   }
 
   render() {
-    console.log(this.state.name)
     return (
       <div>
       <section className="top-container">
@@ -32,7 +31,7 @@ class SignUp extends Component {
           </Link>
         </article>
         <article className="logo-wrapper">
-          <img src="BetGame_Logo_Brown.png"/>
+          <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
           <h3>Champ</h3>
         </article>
         <article className="menu-wrapper">
@@ -41,9 +40,10 @@ class SignUp extends Component {
 
       <section className="form-container">
       <form onSubmit={this.handleSubmit} className="uk-form-horizontal uk-margin-large">
+
       <article className="input-container">
       <div className="social-media-input">
-        <img src="Twitter_Icon_Black.png"/>
+        <img src="Twitter_Icon_Black.png" alt="twitter icon"/>
         <label className="uk-form-label">Twitter details</label>
       </div>
       <div className="sub-header_included">Provoke your opponent on Twitter (optional)</div>
@@ -53,11 +53,12 @@ class SignUp extends Component {
       <div className="division-line"></div>
         <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Twitter Handle"/>
       </div>
+
       <div className="input-line"></div>
       </div>
       </article>
       <Link to="/platform">
-        <input className="confirm-btn" onClick="" type="submit" value="Confirm"/>
+        <input className="confirm-btn" type="submit" value="Confirm"/>
       </Link>
       </form>
       </section>
@@ -65,7 +66,7 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default SignUpTwitter;
 
 
 // <label className="uk-form-label">Twitter handle</label>

@@ -1,28 +1,18 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SignUp.css';
-class SignUp extends Component {
-  constructor(props){
-    super(props)
-    this.handleSubmit = this.handleSubmit.bind(this);
-    // this.replaceInputDisplay = this.replaceInputDisplay.bind(this);
-    this.state = {
-      user: {
 
-      }
-    }
-  }
+class SignUpPassword extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const userDetails = event.target[0].value;
+    // const userDetails = event.target[0].value;
     this.setState({
       name:event.target[0].value
     })
   }
 
   render() {
-    console.log(this.state.name)
     return (
       <div>
       <section className="top-container">
@@ -32,7 +22,7 @@ class SignUp extends Component {
           </Link>
         </article>
         <article className="logo-wrapper">
-          <img src="BetGame_Logo_Brown.png"/>
+          <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
           <h3>Champ</h3>
         </article>
         <article className="menu-wrapper">
@@ -54,7 +44,7 @@ class SignUp extends Component {
       </div>
       </article>
       <Link to="/twitter">
-        <input className="confirm-btn" onClick="" type="submit" value="Confirm"/>
+        <input className="confirm-btn" type="submit" value="Confirm"/>
       </Link>
       </form>
       </section>
@@ -62,7 +52,7 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default SignUpPassword;
 
 
 // <label className="uk-form-label">Twitter handle</label>
