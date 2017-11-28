@@ -4,7 +4,7 @@ import './Platform.css';
 
 const Platform = () => {
     return (<div className="main-container">
-      <section className="nav-bar">
+      <section className="nav-display">
       <article className="logo-wrapper">
         <img src="BetGame_Logo_White.png" alt="the champ logo"/>
         <h3>Champ</h3>
