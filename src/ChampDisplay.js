@@ -33,6 +33,7 @@ class ChampDisplay extends Component {
   render() {
     console.log(this.props)
     return (<div class="main-container">
+
       <section className="menu-drop-down">
       <div className="ghost-div"></div>
       <article className="logo-wrapper">
@@ -86,9 +87,11 @@ class ChampDisplay extends Component {
         <div className="horizontal-line"></div>
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
+          <Link to="/searchprofile">
           <button className="nav-btn">
             <img className="search-icon" src="Search_Fa_Icon.png"/>
           </button>
+          </Link>
           <div className="separator"></div>
           <button className="nav-btn">
             <img className="trophy-icon" src="Trophy_Icon_Grey.png"/>

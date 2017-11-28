@@ -4,7 +4,7 @@ import './Platform.css';
 class Platform extends Component {
   render() {
     return (<div className="main-container">
-      <section className="nav-bar">
+      <section className="nav-display">
       <article className="logo-wrapper">
         <img src="BetGame_Logo_White.png"/>
         <h3>Champ</h3>

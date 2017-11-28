@@ -11,6 +11,7 @@ import SignIn from './SignIn';
 import ChampDisplay from './ChampDisplay';
 import BattleDisplay from './BattleDisplay';
 import Home from './Home'
+import SearchProfile from './SearchProfile';
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class App extends Component {
             <Route path="/password" component={SignUp_Password}/>
             <Route path="/twitter" component ={SignUp_Twitter}/>
             <Route path="/signin" component={SignIn}/>
+            <Route path="/searchprofile" component={SearchProfile}/>
             <Route path="/platform" component={Platform}/>
             <Route path="/champdisplay" component={() => <ChampDisplay loggedInUser={this.state.userLoggedIn} />} />
             <Route path="/battledisplay" component={BattleDisplay}/>

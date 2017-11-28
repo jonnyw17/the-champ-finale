@@ -1,0 +1,13 @@
+.search-wrapper {
+  height: 80vh;
+  background: white;
+  display: flex;
+  justify-content: center; }
+
+.search-bar {
+  height: 45px;
+  width: 360px;
+  border: 3px solid #8D572F;
+  border-radius: 10px;
+  margin: 45px 0;
+  display: flex; }
