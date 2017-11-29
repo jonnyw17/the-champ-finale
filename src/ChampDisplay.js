@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
+
 import './ChampDisplay.css';
 
 class ChampDisplay extends Component {
@@ -8,16 +10,15 @@ class ChampDisplay extends Component {
     this.state = {
       usersTwitter: []
     }
-    // this.provokeChamp = this.provokeChamp.bind(this);
-    // this.TweetChamp = this.TweetChamp.bind(this)
+    this.TweetChamp = this.TweetChamp.bind(this)
   }
 
-  // TweetChamp(event) {
-  //
-  // }
+  TweetChamp(event) {
+    axios.get()
+  }
 
   render() {
-    return (<div class="main-container">
+    return (<div className="main-container">
 
       <section className="menu-drop-down">
       <div className="ghost-div"></div>
@@ -27,46 +28,34 @@ class ChampDisplay extends Component {
       </article>
       <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
       </section>
+
       <section className="activity-name-wrapper">
         <img src="Crowned_Champion_Golden.png" alt="the champ crown icon"/>
-        <div class="white-gradient"></div>
+        <div className="white-gradient"></div>
         <h3>Worms Champion</h3>
       </section>
       <section className="activity-container">
-        <article class="champ-display">
-          <div class="game-img-display">
+        <article className="champ-display">
+          <div className="game-img-display">
             <img src="Worms_Circle_Background.png" alt="worms"/>
-            <div class="user-location">
+            <div className="user-location">
             <img src="Targeting_Icon.png" alt="navigation icon"/>
-              <div class="location-separator"></div>
-              <article class="location-address">
-                <div class="location-zone">16 Tib Street</div>
-                <div class="location-city">Manchester</div>
+              <div className="location-separator"></div>
+              <article className="location-address">
+                <div className="location-zone">16 Tib Street</div>
+                <div className="location-city">Manchester</div>
               </article>
             </div>
-            <div class="champ-details">
-              <div class="champ-status">
+            <div className="champ-details">
+              <div className="champ-status">
                 <img src="Trophy_Icon_Golden_Yellow.png" alt="trophy icon"/>
                 <h3>Champ Unknown</h3>
               </div>
-              <div class="horizontal-decor-line"></div>
+              <div className="horizontal-decor-line"></div>
               <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
             </div>
           </div>
         </article>
-      {
-        this.state.user.map((user, index) => {
-          if (user.currentchamp === true) {
-            return (<div key={index}>
-              <p>{user.username}</p>
-            </div>)
-          } else {
-            return (<div key={index}>
-              <p>Champ Unknown</p>
-            </div>)
-          }
-        })
-      }
       </section>
       <section className="nav-bar">
         <div className="horizontal-line"></div>

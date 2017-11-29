@@ -10,23 +10,23 @@ class SearchProfile extends Component {
     }
   }
 
-  render() {
+ render() {
     return (
       <div className="main-container">
 
-        <section className="menu-drop-down">
+       <section className="menu-drop-down">
           <div className="ghost-div"></div>
           <article className="logo-wrapper">
-          <img src="BetGame_Logo_White.png"/>
+          <img src="BetGame_Logo_White.png" alt="logo icon"/>
           <h3>Champ</h3>
           </article>
-          <img src="Menu_Dropdown_Icon.png"/>
+          <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
         </section>
         <section className="search-wrapper">
         <article className="search-bar">
-        <img src="Search_Fa_Icon_Brown.png"/>
-        
-        <h4>Search Opponents</h4>
+        <img src="Search_Fa_Icon_Brown.png" alt="navigation icon"/>
+
+       <h4>Search Opponents</h4>
         </article>
         </section>
         <section className="nav-bar">
@@ -35,16 +35,16 @@ class SearchProfile extends Component {
             <div className="ghost-separator"></div>
             <Link to="/searchprofile">
             <button className="nav-btn">
-              <img className="search-icon" src="Search_Fa_Icon.png"/>
+              <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
             </button>
             </Link>
             <div className="separator"></div>
             <button className="nav-btn">
-              <img className="trophy-icon" src="Trophy_Icon_Grey.png"/>
+              <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
             </button>
             <div className="separator"></div>
             <button className="nav-btn">
-              <img className="provoke-icon" src="Provoke_Icon_Grey.png"/>
+              <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
             </button>
             <div className="ghost-separator"></div>
           </article>

@@ -23,7 +23,7 @@ const Platform = () => {
         </Link>
         <article className="champ-display-link">
           <button className="disabled-btn">
-          <img className="league-legends-icon" src="League_Legends_Icon.png" alt="league of legends logo"/>
+          <img className="disabled-btn league-legends-icon" src="League_Legends_Icon.png" alt="league of legends logo"/>
             <div>
               <h5 className="platform-name-top">League of Legends</h5>
               <span className="coming-soon">Coming Soon</span>
