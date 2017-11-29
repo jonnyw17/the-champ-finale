@@ -5,28 +5,29 @@ import axios from 'axios';
 import './ChampDisplay.css';
 
 class ChampDisplay extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-      usersTwitter: []
+      users: []
     }
-    this.TweetChamp = this.TweetChamp.bind(this)
   }
 
-  TweetChamp(event) {
-    axios.get()
+  componentDidMount() {
+    axios.get('http://localhost:3001/users/').then((res) => {
+      this.setState({users: res.data})
+      console.log(this.state.users)
+    })
   }
 
   render() {
     return (<div className="main-container">
-
       <section className="menu-drop-down">
-      <div className="ghost-div"></div>
-      <article className="logo-wrapper">
-        <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-        <h3>Champ</h3>
-      </article>
-      <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
+        <div className="ghost-div"></div>
+        <article className="logo-wrapper">
+          <img src="BetGame_Logo_White.png" alt="the champ icon"/>
+          <h3>Champ</h3>
+        </article>
+        <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
       </section>
 
       <section className="activity-name-wrapper">
@@ -39,7 +40,7 @@ class ChampDisplay extends Component {
           <div className="game-img-display">
             <img src="Worms_Circle_Background.png" alt="worms"/>
             <div className="user-location">
-            <img src="Targeting_Icon.png" alt="navigation icon"/>
+              <img src="Targeting_Icon.png" alt="navigation icon"/>
               <div className="location-separator"></div>
               <article className="location-address">
                 <div className="location-zone">16 Tib Street</div>
@@ -48,8 +49,14 @@ class ChampDisplay extends Component {
             </div>
             <div className="champ-details">
               <div className="champ-status">
-                <img src="Trophy_Icon_Golden_Yellow.png" alt="trophy icon"/>
-                <h3>Champ Unknown</h3>
+                <img src="Trophy_Icon_Golden_Yellow.png" alt="trophy icon"/> {
+                  this.state.users.map((users, index) => {
+                    if (users.currentchamp === true) {
+                      return (<h3 key={index}>{users.fullname}</h3>)
+                    }
+                    return (<h3 key={index}>Champion Unknown</h3>)
+                  })
+                }
               </div>
               <div className="horizontal-decor-line"></div>
               <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
@@ -62,9 +69,9 @@ class ChampDisplay extends Component {
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
-          <button className="nav-btn">
-            <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
-          </button>
+            <button className="nav-btn">
+              <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
+            </button>
           </Link>
           <div className="separator"></div>
           <button className="nav-btn">

@@ -10,6 +10,8 @@ class SignUp extends Component {
       count: 0,
       fullname: 'block',
       password: 'none',
+      address: 'none',
+      postcode: 'none',
       username: 'none',
       twitter: 'none',
       submitBtn: 'none',
@@ -20,16 +22,28 @@ class SignUp extends Component {
     this.displayInput = this.displayInput.bind(this);
     this.userInput = this.userInput.bind(this);
     this.userMessage = this.userMessage.bind(this);
+    this.showPostcodeInput = this.showPostcodeInput.bind(this);
   }
 
   //USERINPUT - caputure the details/length of the input fields with the view of removing the disabled attr from the input field when the user adds a string longer than the minimum length
   userInput(event) {
-    event.preventDefault();
     let btnState;
+    event.preventDefault();
     event.target.value.length > 3
       ? btnState = false
       : btnState = true;
     this.setState({disabledBtn: btnState})
+  }
+
+  // adds display to hidden input fields on address section, when event.target.value.length > 0 input field slides in
+  showPostcodeInput(event) {
+    let postcodeInput;
+    event.preventDefault();
+    event.target.value.length > 0
+      ? postcodeInput = 'block'
+      : postcodeInput = 'none';
+    console.log(postcodeInput)
+    this.setState({postcode: postcodeInput})
   }
 
   //USERMESSAGE - inform the user of the minimum length needed, once minimum length has been reached inform the user that hey can then move onto the next input field
@@ -47,6 +61,7 @@ class SignUp extends Component {
     let fullname = this.state.fullname;
     let username = this.state.username;
     let password = this.state.password;
+    let address = this.state.address;
     let twitter = this.state.twitter;
     let confirmBtn = this.state.confirmBtn;
     let submitBtn = this.state.submitBtn;
@@ -65,14 +80,18 @@ class SignUp extends Component {
       : password = 'none';
 
     count === 3
+      ? address = 'block'
+      : address = 'none';
+
+    count === 4
       ? twitter = 'block'
       : twitter = 'none';
 
-    count === 0 || 1 || 2
+    count === 0 || 1 || 2 || 3
       ? confirmBtn = 'block'
       : confirmBtn = 'none';
 
-    count === 3
+    count === 4
       ? submitBtn = 'block'
       : submitBtn = 'none';
 
@@ -80,6 +99,7 @@ class SignUp extends Component {
       fullname: fullname,
       username: username,
       password: password,
+      address: address,
       twitter: twitter,
       submitBtn: submitBtn,
       confirmBtn: confirmBtn,
@@ -107,15 +127,21 @@ class SignUp extends Component {
     let displayPassword = {
       display: this.state.password
     };
+    let displayAddress = {
+      display: this.state.address
+    };
+    let displayPostcode = {
+      display:this.state.postcode
+    };
     let displayTwitterHandle = {
       display: this.state.twitter
-    }
+    };
     let displaySubmit = {
       display: this.state.submitBtn
-    }
+    };
     let displayConfirm = {
       display: this.state.confirmBtn
-    }
+    };
 
     return (<div>
 
@@ -173,6 +199,24 @@ class SignUp extends Component {
             <div className="uk-margin">
               <div className="uk-form-controls">
                 <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password" required="required"/>
+              </div>
+              <div className="input-line"></div>
+            </div>
+          </article>
+
+          <article className='input-container uk-animation-slide-right' style={displayAddress}>
+            <div className="social-media-input">
+              <label className="uk-form-label">We&#39;ll need your full address.
+                <sup>&#42;</sup>
+              </label>
+            </div>
+            <div className="sub-header"></div>
+            <div className="uk-margin">
+              <div className="uk-form-controls">
+                <input onChange={this.showPostcodeInput} className="uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Name" required="required"/>
+              </div>
+              <div className="uk-form-controls">
+                <input onChange={this.userInput} className="uk-input uk-animation-slide-right" style={displayPostcode} id="form-horizontal-text" type="text" name="city" placeholder="City" required="required"/>
               </div>
               <div className="input-line"></div>
             </div>
