@@ -23,13 +23,22 @@ class SearchProfile extends Component {
           <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
         </section>
         <section className="search-wrapper">
-        <article className="search-bar">
+        <article className="search-container">
+        <article className="search-bar uk-animation-slide-right">
         <img src="Search_Fa_Icon_Brown.png" alt="navigation icon"/>
-
        <h4>Search Opponents</h4>
+       <div class="ghost-div-search"></div>
         </article>
-        </section>
-        <section className="nav-bar">
+        <Link to="">
+          <article className="user-searched-details uk-animation-slide-bottom">
+          <div className="online-circle"></div>
+          <h6>Shaun Gibson</h6>
+          <div className="ghost-circle"></div>
+          </article>
+        </Link>
+        </article>
+          </section>
+          <section className="nav-bar">
           <div className="horizontal-line"></div>
           <article className="nav-btn-container">
             <div className="ghost-separator"></div>
