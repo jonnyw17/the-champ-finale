@@ -140,7 +140,6 @@ class SignUp extends Component {
               <label className="uk-form-label">We&#39;ll need your full name.
                 <sup>&#42;</sup>
               </label>
-              <div>{this.userMessage}</div>
             </div>
             <div className="sub-header"></div>
             <div className="uk-margin">
