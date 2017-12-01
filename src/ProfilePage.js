@@ -21,12 +21,6 @@ class ProfilePage extends Component {
     return (<div className="main-container">
 
       <section className="menu-drop-down">
-        <div className="ghost-div"></div>
-        <article className="logo-wrapper">
-          <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-          <h3>Champ</h3>
-        </article>
-        <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
       </section>
 
       <section className="activity-name-wrapper">
@@ -58,10 +52,10 @@ class ProfilePage extends Component {
                   <div className="champ-rank">
                     <h6>SILVER</h6>
                   </div>
+                  <article className="champ-trophies"></article>
                   <div className="horizontal-decor-line"></div>
                   <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
                 </article>
-                <article className="champ-trophies"></article>
               </div>
               <div className="challenge-btn-container uk-animation-shake">
                 <Link to="./battledisplay">
@@ -77,12 +71,22 @@ class ProfilePage extends Component {
         <article className="social-media-btn-container">
           <div className="twitter-btn">
             <div className="blue-twitter-background"></div>
-            <img src="Twitter_Icon_White.png"/>
+            <div className="twitter-wrapper">
+              <img src="Twitter_Icon_White.png"/>
+            </div>
             <div className="add-btn-container uk-animation-scale">
               <img className="" src="Add_Glyph.png"/>
             </div>
           </div>
-          <article className="tweet-box"></article>
+          <article className="tweet-box">
+          <div className="tweet-ghost-div">_</div>
+            <div className="tweet-recepient">
+              <p>Send Tweet? To @ShaunDBS</p>
+            </div>
+            <div className="tweet-description">
+              <p>Fancy a Worms W.M.D. Deathmatch? #DougWardUK</p>
+            </div>
+          </article>
         </article>
       </section>
       <section className="nav-bar">
@@ -107,6 +111,12 @@ class ProfilePage extends Component {
             </button>
           </Link>
           <div className="ghost-separator"></div>
+        </article>
+      </section>
+      <section className="nav-display">
+        <article className="logo-wrapper">
+          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          <h3 className="white-logo-name">Champ</h3>
         </article>
       </section>
     </div>);

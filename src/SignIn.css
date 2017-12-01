@@ -26,7 +26,8 @@
     background: transparent;
     opacity: 1;
     border: none;
-    border-radius: 10px; }
+    border-radius: 10px;
+    padding: 0; }
   .form-container .horizontal-separator {
     margin: 2px 0 0 0;
     background: white;

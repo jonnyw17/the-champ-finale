@@ -52,8 +52,12 @@ class ChampDisplay extends Component {
               </div>
                 <article className="champ-info">
                   <div className="champ-name"><h4>Champ Unknown</h4></div>
-                  <div className="champ-rank"><h6></h6></div>
+                  <div className="champ-rank">
+                    <h6>NO RANK</h6>
+                  </div>
+                  <article className="champ-trophies"></article>
                   <div className="horizontal-decor-line"></div>
+                  <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
                 </article>
                 <article className="champ-trophies"></article>
               </div>
@@ -67,13 +71,16 @@ class ChampDisplay extends Component {
         </article>
         <article className="social-media-btn-container">
           <div className="twitter-btn">
-          <div className="blue-twitter-background">
+            <div className="blue-twitter-background"></div>
+            <div className="twitter-wrapper">
+              <img src="Twitter_Icon_White.png"/>
+            </div>
+            <div className="add-btn-container uk-animation-scale">
+              <img className="" src="Add_Glyph.png"/>
+            </div>
           </div>
-          <img src="Twitter_Icon_White.png"/>
-          <div className="add-btn-container">
-            <img className="" src="Add_Glyph.png"/>
-          </div>
-          </div>
+          <article className="tweet-box">
+          </article>
         </article>
       </section>
 
