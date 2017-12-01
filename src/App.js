@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-// import axios from 'axios'
 
 import './App.css';
 
@@ -50,6 +49,7 @@ class App extends Component {
             <Route exact={true} path="/" component={Home}/>
             <Route path="/signup" render={()=><SignUp getCurrentUser={this.getCurrentUser}/>}/>
             <Route path="/signin" component={SignIn}/>
+            <Route path="/searchprofile" component={SearchProfile}/>
             <Route path="/profilepage" component={ProfilePage}/>
             <Route path="/platform" component={Platform}/>
             <Route path="/champdisplay" render={()=><ChampDisplay activeUser={this.state.userLoggedIn}/>}/>

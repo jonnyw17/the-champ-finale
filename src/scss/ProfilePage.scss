@@ -38,9 +38,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   img {
     height: 80px;
   }
+=======
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
   .white-gradient {
     position: absolute;
     height: 20px;
@@ -132,15 +135,38 @@
           display: inline-flex;
           justify-content: flex-start;
           .img-container {
+<<<<<<< HEAD
             height: 90px;
             width: 70px;
+=======
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            border: 3px solid ;
+            background: white;
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
             margin: 10px 0 0 0;
             display: flex;
             justify-content: center;
             align-items: center;
+<<<<<<< HEAD
             img {
               height: 60px;
               width: 60px;
+=======
+            overflow: hidden;
+            img {
+              height: 100px;
+              width: 100px;
+              margin: 0;
+            }
+            .gamer-img {
+              height: 120px;
+              width: 120px;
+            }
+            .empty-profile-img {
+              margin: 25px 0 0 0;
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
             }
           }
           .champ-info {
@@ -149,7 +175,11 @@
             .champ-name {
               h4 {
                 margin: 0;
+<<<<<<< HEAD
                 font-weight: 300;
+=======
+                font-weight: 600;
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
                 letter-spacing: 1.5px;
                 text-align: center;
               }
@@ -173,8 +203,13 @@
         }
         .horizontal-decor-line {
           height: 3px;
+<<<<<<< HEAD
           width: 300px;
           margin: auto;
+=======
+          width: 130px;
+          margin: 45px auto 20px auto;
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
           background: grey;
         }
         img {
@@ -194,6 +229,10 @@
             border-radius: 10px;
             background: white;
             display: flex;
+<<<<<<< HEAD
+=======
+            margin: 30px 0 0 0;
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
             img {
               height: 29px;
               width: 30px;
@@ -230,6 +269,10 @@
       width: 55px;
       border-radius: 50%;
       background: #009EF6;
+<<<<<<< HEAD
+=======
+      border: 5px solid white;
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
     }
     .add-btn-container {
       position: absolute;
@@ -246,6 +289,19 @@
         width: 12px;
       }
     }
+<<<<<<< HEAD
+=======
+    }
+    .tweet-box {
+      margin: 10px 0 0 50px;
+      width: 270px;
+      height: 55px;
+      background: #009EF6;
+      border-radius: 20px;
+      .tweet-description {
+        color: white;
+      }
+>>>>>>> a5d68e84dbb74011e52e4d7d8199ca2723f9e035
   }
 }
 .nav-bar {
