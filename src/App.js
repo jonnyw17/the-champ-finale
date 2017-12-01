@@ -11,6 +11,7 @@ import ChampDisplay from './ChampDisplay';
 import BattleDisplay from './BattleDisplay';
 import Home from './Home'
 import SearchProfile from './SearchProfile';
+import ProfilePage from './ProfilePage';
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +53,7 @@ class App extends Component {
             <Route path="/signup" component={SignUp}/>
             <Route path="/signin" component={SignIn}/>
             <Route path="/searchprofile" component={SearchProfile}/>
+            <Route path="/profilepage" component={ProfilePage}/>
             <Route path="/platform" component={Platform}/>
             <Route path="/champdisplay" component={ChampDisplay}/>
             <Route path="/battledisplay" component={BattleDisplay}/>
