@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 .menu-drop-down {
   height: 10vh;
   display: flex;
@@ -52,8 +53,8 @@
   display: flex;
   justify-content: center; }
   .activity-container .champ-display {
-    width: 390px;
-    height: 390px;
+    width: 370px;
+    height: 370px;
     background: linear-gradient(to bottom right, #836a20, #ce4036);
     border-radius: 50%;
     display: flex;
@@ -146,16 +147,16 @@
               color: grey;
               text-align: center; }
           .activity-container .champ-display .game-img-display .champ-details .champ-status .champ-trophies {
-            height: 90px;
+            height: 50px;
             width: 70px;
-            margin: 10px 0 0 0;
+            margin: 0px 0 0 0;
             display: flex;
             justify-content: center;
             align-items: center; }
         .activity-container .champ-display .game-img-display .champ-details .horizontal-decor-line {
           height: 3px;
           width: 130px;
-          margin: 45px auto 20px auto;
+          margin: 0 auto 20px auto;
           background: grey; }
         .activity-container .champ-display .game-img-display .champ-details img {
           margin: -2.5vh 120px 0 120px;
@@ -190,11 +191,11 @@
   height: 70px; }
   .social-media-btn-container .twitter-btn {
     margin: -10px 0 0 25px; }
-    .social-media-btn-container .twitter-btn img {
+    .social-media-btn-container .twitter-btn .twitter-wrapper img {
       position: absolute;
       height: 70px;
       width: 70px;
-      margin: 0 0 10px 0; }
+      margin: 5px 0 10px 5px; }
     .social-media-btn-container .twitter-btn .blue-twitter-background {
       position: absolute;
       margin: 7.5px 0 0 7.5px;
@@ -218,12 +219,31 @@
         width: 12px; }
   .social-media-btn-container .tweet-box {
     margin: 10px 0 0 50px;
-    width: 270px;
+    width: 320px;
     height: 55px;
     background: #009EF6;
     border-radius: 20px; }
+    .social-media-btn-container .tweet-box .tweet-ghost-div {
+      font-size: 2px;
+      color: none; }
+    .social-media-btn-container .tweet-box .tweet-recepient {
+      margin: 0px 0 0 60px; }
+      .social-media-btn-container .tweet-box .tweet-recepient p {
+        font-family: 'Roboto', sans-serif;
+        margin: 0 0 0 0;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        color: white; }
     .social-media-btn-container .tweet-box .tweet-description {
-      color: white; }
+      margin: 0.5px 0 0px 60px; }
+      .social-media-btn-container .tweet-box .tweet-description p {
+        margin: 0px 0 0px 0;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 14px;
+        color: white; }
 
 .nav-bar {
   display: block;

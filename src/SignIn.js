@@ -15,12 +15,12 @@ const SignIn = () => {
       <form action="http://localhost:3001/users/login" method="post" className="uk-form-horizontal uk-margin-large">
           <label className="uk-form-label white-color">Username</label>
           <div className="uk-form-controls">
-            <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="username"/>
+            <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
             <div className="horizontal-separator"></div>
           </div>
           <label className="uk-form-label white-color form-margin-top">Password</label>
           <div className="uk-form-controls">
-            <input className="uk-input form-border-radius" id="form-horizontal-text" type="password" name="password" placeholder="password"/>
+            <input className="uk-input form-border-radius" id="form-horizontal-text" type="password" name="password" placeholder="Password"/>
             <div className="horizontal-separator"></div>
           </div>
         <input className="signin-btn" type="submit" value="SIGN IN"/>
