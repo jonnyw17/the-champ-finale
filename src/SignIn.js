@@ -1,24 +1,32 @@
 import React from 'react';
+import './SignIn.css';
 
 const SignIn = () => {
     return (
-    <div>
-      <h3>
-        Sign In
-      </h3>
+    <div class="main-container">
+    <section className="menu-drop-down">
+    <article className="logo-wrapper">
+      <img src="BetGame_Logo_White.png" alt="the champ icon"/>
+      <h3>Champ</h3>
+    </article>
+    </section>
+    <section className="activity-form-container">
+    <article className="form-container">
       <form action="http://localhost:3001/users/login" method="post" className="uk-form-horizontal uk-margin-large">
-        <div className="uk-margin">
-          <label className="uk-form-label">User Name</label>
+          <label className="uk-form-label white-color">Username</label>
           <div className="uk-form-controls">
-            <input className="uk-input" id="form-horizontal-text" type="text" name="username" placeholder="username"/>
+            <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="username"/>
+            <div className="horizontal-separator"></div>
           </div>
-          <label className="uk-form-label">Password</label>
+          <label className="uk-form-label white-color form-margin-top">Password</label>
           <div className="uk-form-controls">
-            <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="password"/>
+            <input className="uk-input form-border-radius" id="form-horizontal-text" type="password" name="password" placeholder="password"/>
+            <div className="horizontal-separator"></div>
           </div>
-        </div>
-        <input type="submit"/>
+        <input className="signin-btn" type="submit" value="SIGN IN"/>
       </form>
+      </article>
+    </section>
     </div>)
   }
 
