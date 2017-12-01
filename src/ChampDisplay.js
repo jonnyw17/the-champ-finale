@@ -8,14 +8,13 @@ class ChampDisplay extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      users: []
+      user: []
     }
   }
 
   componentDidMount() {
     axios.get('http://localhost:3001/users/').then((res) => {
-      this.setState({users: res.data})
-      console.log(this.state.users)
+      this.setState({user: res.data})
     })
   }
 
@@ -49,14 +48,7 @@ class ChampDisplay extends Component {
             </div>
             <div className="champ-details">
               <div className="champ-status">
-                <img src="Trophy_Icon_Golden_Yellow.png" alt="trophy icon"/> {
-                  this.state.users.map((users, index) => {
-                    if (users.currentchamp === true) {
-                      return (<h3 key={index}>{users.fullname}</h3>)
-                    }
-                    return (<h3 key={index}>Champion Unknown</h3>)
-                  })
-                }
+                <img src="Trophy_Icon_Golden_Yellow.png" alt="trophy icon"/>
               </div>
               <div className="horizontal-decor-line"></div>
               <img src="Champion_Name_Decoration.png" alt="champion decoration"/>

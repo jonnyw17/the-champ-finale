@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
+
 import './SignUp.css'
 
 class SignUp extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: [],
       count: 0,
       fullname: 'block',
       password: 'none',
@@ -16,13 +17,42 @@ class SignUp extends Component {
       twitter: 'none',
       submitBtn: 'none',
       confirmBtn: 'block',
+      nextBtn: 'none',
       disabledBtn: true,
       userMessage: ''
     }
+    this.userDetails = this.userDetails.bind(this);
     this.displayInput = this.displayInput.bind(this);
     this.userInput = this.userInput.bind(this);
     this.userMessage = this.userMessage.bind(this);
     this.showPostcodeInput = this.showPostcodeInput.bind(this);
+    this.postUserDetails = this.postUserDetails.bind(this);
+  }
+
+  postUserDetails(event) {
+    event.preventDefault();
+    axios.post("http://localhost:3001/users/register", {
+      fullname: event.target[0].value,
+      username: event.target[1].value,
+      password: event.target[2].value,
+      streetname:event.target[3].value,
+      city: event.target[4].value,
+      twitter: event.target[5].value
+    }).catch((err) =>  err)
+  }
+
+  //USERDETAILS - send user details to app via a call back function
+  userDetails(event) {
+    event.preventDefault();
+    let currentUser = {
+      fullname: event.target[0].value,
+      username: event.target[1].value,
+      streetname: event.target[3].value,
+      city: event.target[4].value,
+      twitter: event.target[5].value
+    }
+    console.log(currentUser)
+    this.props.getCurrentUser(currentUser);
   }
 
   //USERINPUT - caputure the details/length of the input fields with the view of removing the disabled attr from the input field when the user adds a string longer than the minimum length
@@ -35,14 +65,13 @@ class SignUp extends Component {
     this.setState({disabledBtn: btnState})
   }
 
-  // adds display to hidden input fields on address section, when event.target.value.length > 0 input field slides in
+  //SHOWPOSTCODEINPUT - adds display to hidden input fields on address section, when event.target.value.length > 0 input field slides in
   showPostcodeInput(event) {
     let postcodeInput;
     event.preventDefault();
     event.target.value.length > 0
       ? postcodeInput = 'block'
       : postcodeInput = 'none';
-    console.log(postcodeInput)
     this.setState({postcode: postcodeInput})
   }
 
@@ -65,6 +94,7 @@ class SignUp extends Component {
     let twitter = this.state.twitter;
     let confirmBtn = this.state.confirmBtn;
     let submitBtn = this.state.submitBtn;
+    let nextBtn = this.state.nextBtn;
     let count = this.state.count;
 
     count === 0
@@ -95,6 +125,10 @@ class SignUp extends Component {
       ? submitBtn = 'block'
       : submitBtn = 'none';
 
+    count === 5
+      ? nextBtn = 'block'
+      : nextBtn = 'none';
+
     this.setState({
       fullname: fullname,
       username: username,
@@ -102,9 +136,11 @@ class SignUp extends Component {
       address: address,
       twitter: twitter,
       submitBtn: submitBtn,
+      nextBtn: nextBtn,
       confirmBtn: confirmBtn,
       count: this.state.count + 1
     });
+    console.log(this.state.count)
   };
 
   //COMPOENENTDIDMOUNT - lifecylce function used to increase count after first render in preperation for users next input field (feel like the count has an issue need to read up more and find out if this is the right approach, count without this is always one behind, must be something to do with the way the component/render works but check!)
@@ -116,7 +152,6 @@ class SignUp extends Component {
   }
 
   render() {
-
     //CSS inline styles, used to set display to either none for any none relevant input fields, accessing state to determin which input field is to be put in the view state is changed via the displayInput function.
     let displayFullname = {
       display: this.state.fullname
@@ -131,7 +166,7 @@ class SignUp extends Component {
       display: this.state.address
     };
     let displayPostcode = {
-      display:this.state.postcode
+      display: this.state.postcode
     };
     let displayTwitterHandle = {
       display: this.state.twitter
@@ -142,6 +177,9 @@ class SignUp extends Component {
     let displayConfirm = {
       display: this.state.confirmBtn
     };
+    let displayNext = {
+      display: this.state.nextBtn
+    }
 
     return (<div>
 
@@ -159,7 +197,7 @@ class SignUp extends Component {
       </section>
 
       <section className="form-container">
-        <form action="http://localhost:3001/users/register" method="post" className="uk-form-horizontal uk-margin-large">
+        <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
 
           <article className='input-container uk-animation-slide-right' style={displayFullname}>
             <div className="social-media-input">
@@ -239,8 +277,10 @@ class SignUp extends Component {
           </article>
 
           <input className="confirm-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
-          <input className="confirm-btn" type="submit" value="Submit" style={displaySubmit}/>
-
+          <input className="confirm-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
+          <Link to='/platform'>
+            <input className="confirm-btn" type="button" value="Next" style={displayNext}/>
+          </Link>
         </form>
       </section>
     </div>)
