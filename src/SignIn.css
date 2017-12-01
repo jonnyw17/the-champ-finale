@@ -23,8 +23,8 @@
     opacity: 1;
     border-radius: 10px; }
   .form-container .uk-input {
-    background: white;
-    opacity: 0.3;
+    background: transparent;
+    opacity: 1;
     border: none;
     border-radius: 10px; }
   .form-container .horizontal-separator {
