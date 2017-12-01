@@ -5,7 +5,7 @@ import axios from 'axios';
 import './ProfilePage.css';
 
 class ProfilePage extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       usersTwitter: []
@@ -21,12 +21,12 @@ class ProfilePage extends Component {
     return (<div className="main-container">
 
       <section className="menu-drop-down">
-      <div className="ghost-div"></div>
-      <article className="logo-wrapper">
-        <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-        <h3>Champ</h3>
-      </article>
-      <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
+        <div className="ghost-div"></div>
+        <article className="logo-wrapper">
+          <img src="BetGame_Logo_White.png" alt="the champ icon"/>
+          <h3>Champ</h3>
+        </article>
+        <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
       </section>
 
       <section className="activity-name-wrapper">
@@ -39,7 +39,7 @@ class ProfilePage extends Component {
           <div className="game-img-display">
             <img src="Worms_Circle_Background.png" alt="worms"/>
             <div className="user-location">
-            <img src="Targeting_Icon.png" alt="navigation icon"/>
+              <img src="Targeting_Icon.png" alt="navigation icon"/>
               <div className="location-separator"></div>
               <article className="location-address">
                 <div className="location-zone">16 Tib Street</div>
@@ -48,39 +48,41 @@ class ProfilePage extends Component {
             </div>
             <div className="champ-details">
               <div className="champ-status">
-              <div className="img-container">
-                <img class="gamer-img" src="Shaun_Face_Circular.png"></img>
-              </div>
+                <div className="img-container">
+                  <img class="gamer-img" src="Shaun_Face_Circular.png"></img>
+                </div>
                 <article className="champ-info">
-                  <div className="champ-name"><h4>Shaun Gibson</h4></div>
-                  <div className="champ-rank"><h6>SILVER</h6></div>
+                  <div className="champ-name">
+                    <h4>Shaun Gibson</h4>
+                  </div>
+                  <div className="champ-rank">
+                    <h6>SILVER</h6>
+                  </div>
                   <div className="horizontal-decor-line"></div>
                   <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
                 </article>
                 <article className="champ-trophies"></article>
               </div>
               <div className="challenge-btn-container uk-animation-shake">
-              <Link to="./battledisplay">
-              <button>
-                <img src="Provoke_Icon_Brown.png"/>
-                <h4>Challenge</h4>
-              </button>
-              </Link>
+                <Link to="./battledisplay">
+                  <button>
+                    <img src="Provoke_Icon_Brown.png"/>
+                    <h4>Challenge</h4>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </article>
         <article className="social-media-btn-container">
           <div className="twitter-btn">
-          <div className="blue-twitter-background">
+            <div className="blue-twitter-background"></div>
+            <img src="Twitter_Icon_White.png"/>
+            <div className="add-btn-container uk-animation-scale">
+              <img className="" src="Add_Glyph.png"/>
+            </div>
           </div>
-          <img src="Twitter_Icon_White.png"/>
-          <div className="add-btn-container uk-animation-scale">
-            <img className="" src="Add_Glyph.png"/>
-          </div>
-          </div>
-          <article className="tweet-box">
-          </article>
+          <article className="tweet-box"></article>
         </article>
       </section>
       <section className="nav-bar">
@@ -88,21 +90,21 @@ class ProfilePage extends Component {
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
-          <button className="nav-btn">
-            <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
-          </button>
+            <button className="nav-btn">
+              <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
+            </button>
           </Link>
           <div className="separator"></div>
           <Link to="champdisplay">
-          <button className="nav-btn">
-            <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
-          </button>
+            <button className="nav-btn">
+              <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
+            </button>
           </Link>
           <div className="separator"></div>
           <Link to="/battledisplay">
-          <button className="nav-btn">
-            <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
-          </button>
+            <button className="nav-btn">
+              <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
+            </button>
           </Link>
           <div className="ghost-separator"></div>
         </article>
@@ -112,6 +114,3 @@ class ProfilePage extends Component {
 }
 
 export default ProfilePage;
-// <button onSubmit={this.provokeChamp} type="button">Provoke</button>
-
-// <p className="tweet-description">Send Tweet ? To &#64;ShaunDBS</p>

@@ -8,13 +8,14 @@ class ChampDisplay extends Component {
   constructor(props){
     super(props)
     this.state = {
-      usersTwitter: []
+      user: []
     }
-    this.TweetChamp = this.TweetChamp.bind(this)
   }
 
-  TweetChamp(event) {
-    axios.get()
+  componentDidMount() {
+    axios.get('http://localhost:3001/users/').then((res) => {
+      this.setState({user: res.data})
+    })
   }
 
   render() {
@@ -105,34 +106,3 @@ class ChampDisplay extends Component {
 }
 
 export default ChampDisplay;
-// <button onSubmit={this.provokeChamp} type="button">Provoke</button>
-
-// Includes Menu Drop Down
-
-// <section className="menu-drop-down">
-// <div className="ghost-div"></div>
-// <article className="logo-wrapper">
-//   <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-//   <h3>Champ</h3>
-// </article>
-// <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
-// </section>
-
-// Trophy Symbol
-//
-// <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
-
-
-// slide From the right initial Entrance
-//
-// <section className="activity-name-wrapper uk-animation-slide-right">
-
-
-// Challenge btn
-//
-// <Link to="./battledisplay">
-// <button>
-//   <img src="Provoke_Icon_Brown.png"/>
-//   <h4>Challenge</h4>
-// </button>
-// </Link>

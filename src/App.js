@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import axios from 'axios'
 
 import './App.css';
 
@@ -17,32 +16,30 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      users: []
+      userLoggedIn: []
     }
-    this.currentUserLoggedIn = this.currentUserLoggedIn.bind(this);
+    this.getCurrentUser = this.getCurrentUser.bind(this);
   }
 
   //------------------------------------------------------------------------
     //FETCH ALL USER DATA FROM MONGODB
-    fetchUserData() {
-      return axios.get(`http://localhost:3001/users`).then(result => {
-        this.setState({users: result.data})
-      }).catch(console.log)
-    }
-    //MOUNT ALL USER DATA FROM MONGODB BEFORE RENDER
-    componentDidMount() {
-      this.fetchUserData();
-    }
+    // fetchUserData() {
+    //   return axios.get(`http://localhost:3001/users`).then(result => {
+    //     this.setState({users: result.data})
+    //   }).catch(console.log)
+    // }
+    // //MOUNT ALL USER DATA FROM MONGODB BEFORE RENDER
+    // componentDidMount() {
+    //   this.fetchUserData();
+    // }
   //------------------------------------------------------------------------
 
-  currentUserLoggedIn(userDetails) {
+  getCurrentUser(currentUser) {
+    console.log(currentUser)
     this.setState({
-      userLoggedIn: userDetails
+      userLoggedIn: currentUser
     })
   }
-
-  // <Route path="/password" component={SignUpPassword}/>
-  // <Route path="/twitter" component ={SignUpTwitter}/>
 
   render() {
     return (
@@ -50,12 +47,13 @@ class App extends Component {
         <Router>
           <div>
             <Route exact={true} path="/" component={Home}/>
-            <Route path="/signup" component={SignUp}/>
+            <Route path="/signup" render={()=><SignUp getCurrentUser={this.getCurrentUser}/>}/>
             <Route path="/signin" component={SignIn}/>
             <Route path="/searchprofile" component={SearchProfile}/>
             <Route path="/profilepage" component={ProfilePage}/>
             <Route path="/platform" component={Platform}/>
-            <Route path="/champdisplay" component={ChampDisplay}/>
+            <Route path="/champdisplay" render={()=><ChampDisplay activeUser={this.state.userLoggedIn}/>}/>
+            <Route path="/searchprofile" render={()=><SearchProfile activeUser={this.state.userLoggedIn}/>}/>
             <Route path="/battledisplay" component={BattleDisplay}/>
           </div>
         </Router>
