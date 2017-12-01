@@ -1,28 +1,40 @@
 .nav-display {
+  position: fixed;
+  top: 0;
   height: 65px;
+  width: 100vw;
   display: flex;
   justify-content: center; }
   .nav-display .logo-wrapper {
+    position: fixed;
     height: 10vh;
     width: 33.3vw;
     display: flex;
     align-items: center; }
     .nav-display .logo-wrapper img {
+      position: fixed;
       height: 36px;
       width: 30px; }
     .nav-display .logo-wrapper h3 {
       font-weight: 700;
+      position: fixed;
       letter-spacing: 0.9px;
       color: white;
-      margin: 2.5px 12.5px; }
+      margin: 2.5px 42.5px; }
 
 .platform-btn-container {
   display: flex;
   justify-content: center; }
   .platform-btn-container .btn-wrapper {
-    margin: 60px 0 0 0;
+    margin: 105px 0 0 0;
     width: 320px; }
     .platform-btn-container .btn-wrapper h5 {
+      font-weight: 200;
+      letter-spacing: 0.5px;
+      color: white;
+      text-align: center; }
+    .platform-btn-container .btn-wrapper h6 {
+      font-size: 15px;
       font-weight: 200;
       letter-spacing: 0.5px;
       color: white;

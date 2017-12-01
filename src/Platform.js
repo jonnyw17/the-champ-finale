@@ -3,16 +3,11 @@ import {Link} from 'react-router-dom';
 import './Platform.css';
 
 const Platform = () => {
-    return (<div className="main-container">
-      <section className="nav-display">
-      <article className="logo-wrapper">
-        <img src="BetGame_Logo_White.png" alt="the champ logo"/>
-        <h3>Champ</h3>
-      </article>
-      </section>
+    return (<div>
+     <div className="main-container uk-animation-slide-right">
       <section className="platform-btn-container">
         <article className="btn-wrapper">
-        <h5>Pick gaming platform.</h5>
+        <h6>Choose a gaming platform. Discover the Champions in your city.</h6>
 
         <Link className="champ-display-link" to="/champdisplay">
           <button>
@@ -51,6 +46,15 @@ const Platform = () => {
             <div className="ghost-div"></div>
           </button>
         </article>
+        </article>
+        </section>
+        </div>
+        <section className="nav-display">
+        <article className="logo-wrapper">
+          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          <h3 className="white-logo-name">Champ</h3>
+          <img className="brown-log uk-animation-fade uk-animation-reverse" src="BetGame_Logo_Brown.png" alt="brown champ logo"/>
+          <h3 className="brown-logo-name uk-animation-fade uk-animation-reverse">Champ</h3>
         </article>
         </section>
     </div>)

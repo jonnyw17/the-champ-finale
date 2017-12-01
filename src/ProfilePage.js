@@ -49,21 +49,23 @@ class ProfilePage extends Component {
             <div className="champ-details">
               <div className="champ-status">
               <div className="img-container">
-                <img src="Shaun_Face_Circular.png"></img>
+                <img class="gamer-img" src="Shaun_Face_Circular.png"></img>
               </div>
                 <article className="champ-info">
                   <div className="champ-name"><h4>Shaun Gibson</h4></div>
                   <div className="champ-rank"><h6>SILVER</h6></div>
+                  <div className="horizontal-decor-line"></div>
+                  <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
                 </article>
                 <article className="champ-trophies"></article>
               </div>
-              <div className="horizontal-decor-line"></div>
-              <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
-              <div className="challenge-btn-container">
+              <div className="challenge-btn-container uk-animation-shake">
+              <Link to="./battledisplay">
               <button>
                 <img src="Provoke_Icon_Brown.png"/>
                 <h4>Challenge</h4>
               </button>
+              </Link>
               </div>
             </div>
           </div>
@@ -73,10 +75,12 @@ class ProfilePage extends Component {
           <div className="blue-twitter-background">
           </div>
           <img src="Twitter_Icon_White.png"/>
-          <div className="add-btn-container">
+          <div className="add-btn-container uk-animation-scale">
             <img className="" src="Add_Glyph.png"/>
           </div>
           </div>
+          <article className="tweet-box">
+          </article>
         </article>
       </section>
       <section className="nav-bar">
@@ -89,13 +93,17 @@ class ProfilePage extends Component {
           </button>
           </Link>
           <div className="separator"></div>
+          <Link to="champdisplay">
           <button className="nav-btn">
             <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
           </button>
+          </Link>
           <div className="separator"></div>
+          <Link to="/battledisplay">
           <button className="nav-btn">
             <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
           </button>
+          </Link>
           <div className="ghost-separator"></div>
         </article>
       </section>
@@ -105,3 +113,5 @@ class ProfilePage extends Component {
 
 export default ProfilePage;
 // <button onSubmit={this.provokeChamp} type="button">Provoke</button>
+
+// <p className="tweet-description">Send Tweet ? To &#64;ShaunDBS</p>

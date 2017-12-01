@@ -15,21 +15,19 @@ class SearchProfile extends Component {
       <div className="main-container">
 
        <section className="menu-drop-down">
-          <div className="ghost-div"></div>
           <article className="logo-wrapper">
           <img src="BetGame_Logo_White.png" alt="logo icon"/>
           <h3>Champ</h3>
           </article>
-          <img src="Menu_Dropdown_Icon.png" alt="navigation icon"/>
         </section>
-        <section className="search-wrapper">
-        <article className="search-container">
-        <article className="search-bar uk-animation-slide-right">
-        <img src="Search_Fa_Icon_Brown.png" alt="navigation icon"/>
-       <h4>Search Opponents</h4>
-       <div class="ghost-div-search"></div>
+        <section className="status-wrapper">
+        <article className="status-container">
+        <article className="status-bar">
+        <div className="online-tab"><h4>online</h4></div>
+        <div className="status-separator"></div>
+        <div className="offline-tab"><h4>offline</h4></div>
         </article>
-        <Link to="">
+        <Link to="/profilepage">
           <article className="user-searched-details uk-animation-slide-bottom">
           <div className="online-circle"></div>
           <h6>Shaun Gibson</h6>
@@ -43,18 +41,22 @@ class SearchProfile extends Component {
           <article className="nav-btn-container">
             <div className="ghost-separator"></div>
             <Link to="/searchprofile">
-            <button className="nav-btn">
-              <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
+            <button className="nav-btn silver-bg-colour">
+              <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
             </button>
             </Link>
             <div className="separator"></div>
+            <Link to="/champdisplay">
             <button className="nav-btn">
               <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
             </button>
+            </Link>
             <div className="separator"></div>
+            <Link to="/battledisplay">
             <button className="nav-btn">
               <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
             </button>
+            </Link>
             <div className="ghost-separator"></div>
           </article>
         </section>
@@ -64,3 +66,7 @@ class SearchProfile extends Component {
 }
 
 export default SearchProfile;
+
+// Grey Icon of the search button
+
+// <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
