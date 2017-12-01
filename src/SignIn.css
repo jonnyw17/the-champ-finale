@@ -1,45 +1,38 @@
 .white-color {
-  color: white;
-}
-.form-margin-top {
-  margin-top: 30px;
-}
+  color: white; }
 
+.form-margin-top {
+  margin-top: 30px; }
 
 .activity-form-container {
   height: 90vh;
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .form-container {
   width: 320px;
-  height: 320px;
-  .uk-form-label {
+  height: 320px; }
+  .form-container .uk-form-label {
     letter-spacing: 0.8px;
-    font-weight: 100;
-  }
-  .uk-form-controls {
+    font-weight: 100; }
+  .form-container .uk-form-controls {
     margin: 0;
     width: 320px;
     opacity: 1;
-    border-radius: 10px;
-  }
-  .uk-input {
+    border-radius: 10px; }
+  .form-container .uk-input {
     background: white;
     opacity: 0.3;
     border: none;
-    border-radius: 10px;
-  }
-  .horizontal-separator{
+    border-radius: 10px; }
+  .form-container .horizontal-separator {
     margin: 2px 0 0 0;
     background: white;
     height: 1px;
-    width: 320px;
-  }
-  .signin-btn {
+    width: 320px; }
+  .form-container .signin-btn {
     position: absolute;
     bottom: 0;
     left: 27.5px;
@@ -51,6 +44,4 @@
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    color: hsl(4,61,51);
-  }
-}
+    color: #ce4036; }
