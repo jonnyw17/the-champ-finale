@@ -7,7 +7,7 @@ const Platform = () => {
     <div className="main-container uk-animation-slide-right">
       <section className="platform-btn-container">
         <article className="btn-wrapper">
-          <h6>Choose a gaming platform. Discover the Champions in your city.</h6>
+          <h6>Choose a gaming platform. Discover the champions in your city.</h6>
 
           <Link className="champ-display-link" to="/champdisplay">
             <button>

@@ -186,7 +186,10 @@ class SignUp extends Component {
       <section className="top-container">
         <article className="back-btn-wrapper">
           <Link to="/">
+          <div className="back-btn">
+          <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
             <h5>Back</h5>
+          </div>
           </Link>
         </article>
         <article className="logo-wrapper">
@@ -270,7 +273,7 @@ class SignUp extends Component {
               <div className="uk-form-controls">
                 <div className="at-html-entity">&#64;</div>
                 <div className="division-line"></div>
-                <input className="uk-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
+                <input className="uk-input twitter-handle-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
               </div>
               <div className="input-line"></div>
             </div>
@@ -278,6 +281,12 @@ class SignUp extends Component {
 
           <input className="confirm-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
           <input className="confirm-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
+
+          <article className='input-container uk-animation-slide-right' style={displayNext}>
+            <div className="centered-description">
+              <label className="uk-form-label">Ready to be The Champ?!</label>
+            </div>
+          </article>
           <Link to='/platform'>
             <input className="confirm-btn" type="button" value="Next" style={displayNext}/>
           </Link>

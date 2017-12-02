@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Home.css';
-
+import './Normalise.css'
 const Home = () => {
   return (<div className="main-container">
     <section className="logo-container">

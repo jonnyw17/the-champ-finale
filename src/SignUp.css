@@ -1,14 +1,32 @@
+.justify-content-center {
+  justify-content: center; }
+
+.align-items-center {
+  align-items: center; }
+
 .top-container {
-  display: flex;
-  justify-content: space-around; }
+  display: flex; }
   .top-container .back-btn-wrapper {
-    width: 33.3vw; }
-  .top-container .logo-wrapper {
+    width: 30vw;
     height: 10vh;
-    width: 33.3vw;
+    margin: 1vh 0 0 2.5vw;
     display: flex;
-    align-items: center;
-    margin: 10px 0 0 0; }
+    align-items: center; }
+    .top-container .back-btn-wrapper .back-btn {
+      display: inline-flex;
+      justify-content: center; }
+      .top-container .back-btn-wrapper .back-btn img {
+        height: 15px;
+        margin: 5px 0 0 10px; }
+      .top-container .back-btn-wrapper .back-btn h5 {
+        margin: 2px 0 0 10px; }
+  .top-container .logo-wrapper {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .top-container .logo-wrapper img {
       height: 36px;
       width: 30px; }
@@ -16,7 +34,7 @@
       font-weight: 700;
       letter-spacing: 0.8px;
       color: #b05b30;
-      margin: 2.5px 12.5px; }
+      margin: 0 0 0 12.5px; }
   .top-container .menu-wrapper {
     width: 33.3vw; }
 
@@ -49,16 +67,28 @@
         height: 1px;
         width: 90vw;
         background: #E2E2E2; }
+      .form-container .input-container .uk-margin .twitter-handle-input {
+        width: 80vw;
+        margin: 0 0px 0 10px; }
     .form-container .input-container .uk-form-controls {
       display: flex; }
       .form-container .input-container .uk-form-controls .at-html-entity {
-        height: 20px;
-        margin: 8px 0 0 0; }
+        font-size: 25px;
+        margin: 5px 0 0 0; }
       .form-container .input-container .uk-form-controls .division-line {
         margin: 10px 0 0 10px;
         height: 21px;
         width: 2px;
         background: grey; }
+    .form-container .input-container .centered-description {
+      width: 100vw;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .form-container .input-container .centered-description label {
+        font-size: 20px;
+        font-weight: 800; }
   .form-container .confirm-btn {
     position: absolute;
     bottom: 10px;
