@@ -13,7 +13,7 @@ class ChampDisplay extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/users/').then((res) => {
+    axios.get('https://thechamp-be.herokuapp.com/users/').then((res) => {
       this.setState({user: res.data})
     })
   }
@@ -48,7 +48,7 @@ class ChampDisplay extends Component {
             <div className="champ-details">
               <div className="champ-status">
               <div className="img-container">
-              <img className="empty-profile-img" src="Shaun_Img_Sillouhette.png"/>
+              <img className="empty-profile-img" src="Shaun_Img_Sillouhette.png" alt="profile img"/>
               </div>
                 <article className="champ-info">
                   <div className="champ-name"><h4>Champ Unknown</h4></div>
@@ -62,9 +62,6 @@ class ChampDisplay extends Component {
                 <article className="champ-trophies"></article>
               </div>
               <div className="challenge-btn-container">
-
-
-
               </div>
             </div>
           </div>
@@ -73,10 +70,10 @@ class ChampDisplay extends Component {
           <div className="twitter-btn">
             <div className="blue-twitter-background"></div>
             <div className="twitter-wrapper">
-              <img src="Twitter_Icon_White.png"/>
+              <img src="Twitter_Icon_White.png" alt="twitter icon"/>
             </div>
             <div className="add-btn-container uk-animation-scale">
-              <img className="" src="Add_Glyph.png"/>
+              <img className="" src="Add_Glyph.png" alt="navigation icon"/>
             </div>
           </div>
           <article className="tweet-box">

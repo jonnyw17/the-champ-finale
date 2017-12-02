@@ -19,10 +19,7 @@ class ProfilePage extends Component {
 
   render() {
     return (<div className="main-container">
-
-      <section className="menu-drop-down">
-      </section>
-
+      <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
         <div className="white-gradient"></div>
         <h3>Profile</h3>
@@ -43,7 +40,7 @@ class ProfilePage extends Component {
             <div className="champ-details">
               <div className="champ-status">
                 <div className="img-container">
-                  <img class="gamer-img" src="Shaun_Face_Circular.png"></img>
+                  <img className="gamer-img" src="Shaun_Face_Circular.png" alt="profile person"/>
                 </div>
                 <article className="champ-info">
                   <div className="champ-name">
@@ -60,7 +57,7 @@ class ProfilePage extends Component {
               <div className="challenge-btn-container uk-animation-shake">
                 <Link to="./battledisplay">
                   <button>
-                    <img src="Provoke_Icon_Brown.png"/>
+                    <img src="Provoke_Icon_Brown.png" alt="provoke icon"/>
                     <h4>Challenge</h4>
                   </button>
                 </Link>
@@ -72,14 +69,14 @@ class ProfilePage extends Component {
           <div className="twitter-btn">
             <div className="blue-twitter-background"></div>
             <div className="twitter-wrapper">
-              <img src="Twitter_Icon_White.png"/>
+              <img src="Twitter_Icon_White.png" alt="twitter icon"/>
             </div>
             <div className="add-btn-container uk-animation-scale">
-              <img className="" src="Add_Glyph.png"/>
+              <img className="" src="Add_Glyph.png" alt="navigation icon"/>
             </div>
           </div>
           <article className="tweet-box">
-          <div className="tweet-ghost-div">_</div>
+            <div className="tweet-ghost-div">_</div>
             <div className="tweet-recepient">
               <p>Send Tweet? To @ShaunDBS</p>
             </div>
