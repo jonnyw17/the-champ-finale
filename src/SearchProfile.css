@@ -1,3 +1,14 @@
+@charset "UTF-8";
+.border-top-bottom-online {
+  border-top: 2px solid #8d572f;
+  border-bottom: 2px solid #8d572f; }
+
+.border-top-bottom-offline {
+  border-top: 2px solid rgba(141, 87, 47, 0.5);
+  border-bottom: 2px solid rgba(141, 87, 47, 0.5); }
+  .border-top-bottom-offline h6 {
+    opacity: 0.5; }
+
 .status-wrapper {
   height: 80vh;
   background: white;
@@ -7,31 +18,53 @@
 .status-container {
   width: 360px; }
 
-.status-bar {
+.status-bar-online {
   height: 45px;
   width: 360px;
   margin: 45px 0 30px 0;
   display: inline-flex;
   justify-content: center; }
-  .status-bar h4 {
+  .status-bar-online h4 {
     margin: 8px 15px;
     color: #8D572F;
     opacity: 0.8; }
-  .status-bar .status-separator {
+  .status-bar-online .status-separator {
+    position: absolute;
     height: 25px;
     width: 2px;
     background: #8D572F;
     margin: 10px 0; }
-  .status-bar .online-tab h4 {
+  .status-bar-online .online-tab h4 {
     font-weight: 700; }
-  .status-bar .offline-tab h4 {
+  .status-bar-online §
+.offline-tab h4 {
     font-weight: 200; }
+
+.status-bar-offline {
+  height: 45px;
+  width: 360px;
+  margin: 45px 0 30px 0;
+  display: inline-flex;
+  justify-content: center; }
+  .status-bar-offline h4 {
+    margin: 8px 15px;
+    color: #8D572F;
+    opacity: 0.8; }
+  .status-bar-offline .status-separator {
+    position: absolute;
+    height: 25px;
+    width: 2px;
+    background: #8D572F;
+    margin: 10px 0; }
+  .status-bar-offline .online-tab h4 {
+    font-weight: 200; }
+  .status-bar-offline .offline-tab h4 {
+    font-weight: 700; }
 
 .user-searched-details {
   height: 40px;
   width: 360px;
-  border-top: 2px solid #8D572F;
-  border-bottom: 2px solid #8D572F;
+  margin: 10px 0;
   display: inline-flex;
   justify-content: space-around; }
   .user-searched-details .online-circle {
@@ -40,6 +73,12 @@
     margin: 15px;
     border-radius: 50%;
     background: #4CD964; }
+  .user-searched-details .offline-circle {
+    height: 12.5px;
+    width: 12.5px;
+    margin: 15px;
+    border-radius: 50%;
+    background: red; }
   .user-searched-details h6 {
     margin: 10px;
     font-size: 16px;

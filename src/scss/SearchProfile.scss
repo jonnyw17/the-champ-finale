@@ -1,3 +1,15 @@
+.border-top-bottom-online {
+  border-top: 2px solid rgba(141, 87, 47, 1);
+  border-bottom: 2px solid rgba(141, 87, 47, 1);
+}
+
+.border-top-bottom-offline {
+  border-top: 2px solid rgba(141, 87, 47, 0.5);
+  border-bottom: 2px solid rgba(141, 87, 47, 0.5);
+  h6 {
+    opacity: 0.5;
+  }
+}
 .status-wrapper {
   height: 80vh;
   background: white;
@@ -7,7 +19,7 @@
 .status-container {
   width: 360px;
 }
-.status-bar {
+.status-bar-online {
   height: 45px;
   width: 360px;
   margin: 45px 0 30px 0;
@@ -19,6 +31,7 @@
     opacity: 0.8;
   }
   .status-separator {
+    position: absolute;
     height: 25px;
     width: 2px;
     background: #8D572F;
@@ -26,12 +39,42 @@
   }
   .online-tab {
     h4 {
-      font-weight: 700;
+        font-weight: 700;
+    }
+  }§
+  .offline-tab {
+    h4 {
+        font-weight: 200;
+    }
+  }
+}
+
+.status-bar-offline {
+  height: 45px;
+  width: 360px;
+  margin: 45px 0 30px 0;
+  display: inline-flex;
+  justify-content: center;
+  h4 {
+    margin: 8px 15px;
+    color: #8D572F;
+    opacity: 0.8;
+  }
+  .status-separator {
+    position: absolute;
+    height: 25px;
+    width: 2px;
+    background: #8D572F;
+    margin: 10px 0;
+  }
+  .online-tab {
+    h4 {
+        font-weight: 200;
     }
   }
   .offline-tab {
     h4 {
-      font-weight: 200;
+        font-weight: 700;
     }
   }
 }
@@ -39,8 +82,7 @@
 .user-searched-details {
   height: 40px;
   width: 360px;
-  border-top: 2px solid #8D572F;
-  border-bottom: 2px solid #8D572F;
+  margin: 10px 0;
   display: inline-flex;
   justify-content: space-around;
   .online-circle {
@@ -49,6 +91,13 @@
     margin: 15px;
     border-radius: 50%;
     background: #4CD964;
+  }
+  .offline-circle {
+    height: 12.5px;
+    width: 12.5px;
+    margin: 15px;
+    border-radius: 50%;
+    background: red;
   }
   h6 {
     margin: 10px;

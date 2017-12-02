@@ -26,7 +26,7 @@ class BattleDisplay extends Component {
 
               <button className="search-opponent">
               <div className="white-gradient"></div>
-               <img src="Search_Fa_Icon.png"/>
+               <img src="Search_Fa_Icon.png" alt="search icon"/>
                <h5>Search opponents in your area. Now</h5>
               </button>
 

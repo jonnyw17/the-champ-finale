@@ -48,7 +48,7 @@ class ChampDisplay extends Component {
             <div className="champ-details">
               <div className="champ-status">
               <div className="img-container">
-              <img className="empty-profile-img" src="Shaun_Img_Sillouhette.png"/>
+              <img className="empty-profile-img" src="Shaun_Img_Sillouhette.png" alt="gamer shaun"/>
               </div>
                 <article className="champ-info">
                   <div className="champ-name"><h4>Champ Unknown</h4></div>

@@ -43,7 +43,7 @@ class ProfilePage extends Component {
             <div className="champ-details">
               <div className="champ-status">
                 <div className="img-container">
-                  <img class="gamer-img" src="Shaun_Face_Circular.png"></img>
+                  <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
                 </div>
                 <article className="champ-info">
                   <div className="champ-name">
@@ -60,7 +60,7 @@ class ProfilePage extends Component {
               <div className="challenge-btn-container uk-animation-shake">
                 <Link to="./battledisplay">
                   <button>
-                    <img src="Provoke_Icon_Brown.png"/>
+                    <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
                     <h4>Challenge</h4>
                   </button>
                 </Link>
