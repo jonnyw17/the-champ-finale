@@ -1,341 +1,693 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-.menu-drop-down {
-  height: 10vh;
-  display: flex;
-  justify-content: space-around;
-  .ghost-div {
-    width: 7px;
-    height: 30px;
-    margin: 0 0 0 25px;
-  }
-  .logo-wrapper {
+.fixed {
+  position: fixed;
+}
+
+@media (min-width: 320px) {
+  .menu-drop-down {
     height: 10vh;
-    width: 33.3vw;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    .ghost-div {
+      width: 7px;
+      height: 30px;
+      margin: 0 0 0 25px;
+    }
+    .logo-wrapper {
+      height: 10vh;
+      width: 33.3vw;
+      display: flex;
+      align-items: center;
+      img {
+        height: 36px;
+        width: 30px;
+        margin: 0;
+      }
+      h3 {
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        color: #FFF;
+        margin: 2.5px 12.5px;
+      }
+    }
     img {
-      height: 36px;
-      width: 30px;
-      margin: 0;
-    }
-    h3 {
-      font-weight: 700;
-      letter-spacing: 0.9px;
-      color: #FFF;
-      margin: 2.5px 12.5px;
+      height: 30px;
+      width: 7px;
+      margin: 25px 0 0 25px;
     }
   }
-  img {
-    height: 30px;
-    width: 7px;
-    margin: 25px 0 0 25px;
-  }
-}
-.activity-name-wrapper {
-  position: relative;
-  height: 20vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .white-gradient {
-    position: absolute;
-    height: 20px;
-    width: 200px;
+  .activity-name-wrapper {
+    position: relative;
+    height: 20vh;
     background: white;
-    opacity: 0.65;
-  }
-  h3 {
-    position: absolute;
-    top: 15px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    color: rgb(141,86,46);
-  }
-}
-.activity-container {
-  position: relative;
-  height: 60vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-  .champ-display {
-    width: 370px;
-    height: 370px;
-    background: linear-gradient(to bottom right, hsl(45,61,32), hsl(4,61,51));
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .game-img-display {
-      position: relative;
-      width: 370px;
-      height: 370px;
-      border-radius: 50%;
+    .white-gradient {
+      position: absolute;
+      height: 20px;
+      width: 200px;
       background: white;
+      opacity: 0.65;
+    }
+    h3 {
+      position: absolute;
+      top: 15px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: rgb(141,86,46);
+    }
+  }
+  .activity-container {
+    position: relative;
+    height: 60vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    .champ-display {
+      width: 100vw;
+      height: 100vw;
+      background: linear-gradient(to bottom right, hsl(45,61,32), hsl(4,61,51));
+      border-radius: 50%;
       display: flex;
       justify-content: center;
-      img {
-        width: 370px;
-        height: 370px;
-        opacity: 0.3;
-      }
-      .user-location {
-        position: absolute;
-        top: 65px;
-        height: 65px;
-        width: 250px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-radius: 20px;
+      align-items: center;
+      .game-img-display {
+        position: relative;
+        width: 100vw;
+        height: 100vw;
+        border-radius: 50%;
         background: white;
+        display: flex;
+        justify-content: center;
         img {
-          top: 10px;
-          height: 45px;
-          width: 45px;
-          opacity: 1;
-          margin: 0 0 0 1vw;
+          width: 100vw;
+          height: 100vw;
+          opacity: 0.3;
         }
-        .location-separator {
-          height: 45px;
-          width: 3px;
-          margin: 0 -2vw 0 0;
-          background: rgb(141,86,46);
-        }
-        .location-address {
-          padding: 0 5vw 0 0;
-          .location-zone {
-            font-size: 24px;
-            margin: -5px 0;
-            font-weight: 400;
-            color: rgb(141,86,46);
+        .user-location {
+          position: absolute;
+          top: 65px;
+          height: 65px;
+          width: 250px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border-radius: 20px;
+          background: white;
+          img {
+            top: 10px;
+            height: 45px;
+            width: 45px;
+            opacity: 1;
+            margin: 0 0 0 1vw;
           }
-          .location-city {
-            font-size: 15px;
-            color: rgb(141,86,46);
-            opacity: 0.8;
+          .location-separator {
+            height: 45px;
+            width: 3px;
+            margin: 0 -2vw 0 0;
+            background: rgb(141,86,46);
+          }
+          .location-address {
+            padding: 0 5vw 0 0;
+            .location-zone {
+              font-size: 24px;
+              margin: -5px 0;
+              font-weight: 400;
+              color: rgb(141,86,46);
+            }
+            .location-city {
+              font-size: 15px;
+              color: rgb(141,86,46);
+              opacity: 0.8;
+            }
           }
         }
-      }
-      .champ-details {
-        position: absolute;
-        top: 130px;
-        height: 100px;
-        width: 330px;
-        display: block;
-        .champ-status {
-          height: 60px;
-          display: inline-flex;
-          justify-content: flex-start;
-          .img-container {
-            height: 120px;
-            width: 120px;
-            border-radius: 50%;
-            border: 3px solid ;
-            background: white;
-            margin: 10px 0 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            img {
+        .champ-details {
+          position: absolute;
+          top: 130px;
+          height: 100px;
+          width: 330px;
+          display: block;
+          .champ-status {
+            height: 60px;
+            display: inline-flex;
+            justify-content: flex-start;
+            .img-container {
               height: 100px;
               width: 100px;
-              margin: 0;
-            }
-            .gamer-img {
-              height: 120px;
-              width: 120px;
-            }
-            .empty-profile-img {
-              margin: 25px 0 0 0;
-            }
-          }
-          .champ-info {
-            width: 200px;
-            margin: 35px 0 0 0;
-            .champ-name {
-              h4 {
+              border-radius: 50%;
+              border: 3px solid ;
+              background: white;
+              margin: 25px 0 0 25px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              img {
+                height: 100px;
+                width: 100px;
                 margin: 0;
-                font-weight: 600;
-                letter-spacing: 1.5px;
-                text-align: center;
+              }
+              .gamer-img {
+                height: 100px;
+                width: 100px;
+              }
+              .empty-profile-img {
+                margin: 25px 0 0 0;
               }
             }
-            .champ-rank {
-              h6 {
-                margin: 0;
-                color: grey;
-                text-align: center;
+            .champ-info {
+              width: 150px;
+              margin: 35px 0 0 0;
+              .champ-name {
+                h4 {
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: 600;
+                  letter-spacing: 1.5px;
+                  text-align: center;
+                }
+              }
+              .champ-rank {
+                h6 {
+                  margin: 0;
+                  font-size: 13px;
+                  color: grey;
+                  text-align: center;
+                }
               }
             }
+            .champ-trophies {
+              height: 40px;
+              width: 70px;
+              margin: 0px 0 0 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
           }
-          .champ-trophies {
-            height: 50px;
-            width: 70px;
-            margin: 0px 0 0 0;
+          .horizontal-decor-line {
+            height: 3px;
+            width: 130px;
+            margin: 0 auto 20px auto;
+            background: grey;
+          }
+          img {
+            margin: -2.5vh 120px 0 120px;
+            height: 90px;
+            width: 90px;
+            opacity: 1;
+          }
+          .challenge-btn-container{
+            width: 330px;
             display: flex;
             justify-content: center;
-            align-items: center;
-          }
-        }
-        .horizontal-decor-line {
-          height: 3px;
-          width: 130px;
-          margin: 0 auto 20px auto;
-          background: grey;
-        }
-        img {
-          margin: -2.5vh 120px 0 120px;
-          height: 90px;
-          width: 90px;
-          opacity: 1;
-        }
-        .challenge-btn-container{
-          width: 330px;
-          display: flex;
-          justify-content: center;
-          button {
-            height: 45px;
-            width: 182px;
-            border: 3px solid #B15B30;
-            border-radius: 10px;
-            background: white;
-            display: flex;
-            margin: 30px 0 0 0;
-            img {
-              height: 29px;
-              width: 30px;
-              margin: 3px 10px;
-            }
-            h4 {
-              font-weight: 700;
-              color: #B15B30;
-              margin: 3px 0;
+            button {
+              height: 45px;
+              width: 182px;
+              border: 3px solid #B15B30;
+              border-radius: 10px;
+              background: white;
+              display: flex;
+              margin: 30px 0 0 0;
+              img {
+                height: 29px;
+                width: 30px;
+                margin: 3px 10px;
+              }
+              h4 {
+                font-weight: 700;
+                color: #B15B30;
+                margin: 3px 0;
+              }
             }
           }
         }
       }
     }
   }
-}
-.social-media-btn-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  .twitter-btn {
-    margin: -10px 0 0 25px;
-    .twitter-wrapper {
-      img {
+  .social-media-btn-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    .twitter-btn {
+      margin: -10px 0 0 25px;
+      .twitter-wrapper {
+        img {
+          position: absolute;
+          height: 70px;
+          width: 70px;
+          margin: 5px 0 10px 5px;
+        }
+      }
+      .blue-twitter-background {
         position: absolute;
-        height: 70px;
-        width: 70px;
-        margin: 5px 0 10px 5px;
+        margin: 7.5px 0 0 7.5px;
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        background: #009EF6;
+        border: 5px solid white;
+      }
+      .add-btn-container {
+        position: absolute;
+        border: 3px solid #009EF6;
+        border-radius: 50%;
+        height: 22px;
+        width: 22px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 12px;
+          width: 12px;
+        }
+      }
+      }
+      .tweet-box {
+        margin: 10px 0 0 50px;
+        width: 320px;
+        height: 55px;
+        background: #009EF6;
+        border-radius: 20px;
+        .tweet-ghost-div {
+          font-size: 2px;
+          color: none;
+        }
+        .tweet-recepient {
+          margin: 0px 0 0 60px;
+          p {
+            font-family: 'Roboto', sans-serif;
+            margin: 0 0 0 0;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            color: white;
+          }
+        }
+        .tweet-description {
+          margin: 0.5px 0 0px 60px;
+          p {
+            margin: 0px 0 0px 0;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            line-height: 14px;
+            color: white;
+          }
+        }
+
+    }
+  }
+  .nav-bar {
+    display: block;
+    height: 10vh;
+    background: white;
+    .horizontal-line {
+      height: 3px;
+      width: 90vw;
+      margin: 0 5vw;
+      background: silver;
+    }
+    .nav-btn-container {
+      display: flex;
+      justify-content: space-around;
+      height: 9vh;
+      .nav-btn {
+        // background: silver;
+        width: 30vw;
+        height: 60px;
+        margin: 5px 0 0 0;
+        .search-icon {
+          height: 25px;
+          width: 25px;
+        }
+        .trophy-icon {
+          height: 40px;
+          margin: -15px 0 0 0;
+        }
+        .provoke-icon {
+          height: 30px;
+        }
+      }
+      .separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
+        background: silver;
+      }
+      .ghost-separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
       }
     }
-    .blue-twitter-background {
-      position: absolute;
-      margin: 7.5px 0 0 7.5px;
-      height: 55px;
-      width: 55px;
-      border-radius: 50%;
-      background: #009EF6;
-      border: 5px solid white;
+  }
+
+}
+
+@media (min-width: 375px) {
+    .menu-drop-down {
+      height: 10vh;
+      display: flex;
+      justify-content: space-around;
+      .ghost-div {
+        width: 7px;
+        height: 30px;
+        margin: 0 0 0 25px;
+      }
+      .logo-wrapper {
+        height: 10vh;
+        width: 33.3vw;
+        display: flex;
+        align-items: center;
+        img {
+          height: 36px;
+          width: 30px;
+          margin: 0;
+        }
+        h3 {
+          font-weight: 700;
+          letter-spacing: 0.9px;
+          color: #FFF;
+          margin: 2.5px 12.5px;
+        }
+      }
+      img {
+        height: 30px;
+        width: 7px;
+        margin: 25px 0 0 25px;
+      }
     }
-    .add-btn-container {
-      position: absolute;
-      border: 3px solid #009EF6;
-      border-radius: 50%;
-      height: 22px;
-      width: 22px;
+    .activity-name-wrapper {
+      position: relative;
+      height: 20vh;
       background: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-        height: 12px;
-        width: 12px;
+      .white-gradient {
+        position: absolute;
+        height: 20px;
+        width: 200px;
+        background: white;
+        opacity: 0.65;
+      }
+      h3 {
+        position: absolute;
+        top: 15px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        color: rgb(141,86,46);
       }
     }
+    .activity-container {
+      position: relative;
+      height: 60vh;
+      background: white;
+      display: flex;
+      justify-content: center;
+      .champ-display {
+        width: 100vw;
+        height: 100vw;
+        background: linear-gradient(to bottom right, hsl(45,61,32), hsl(4,61,51));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .game-img-display {
+          position: relative;
+          width: 100vw;
+          height: 100vw;
+          border-radius: 50%;
+          background: white;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 100vw;
+            height: 100vw;
+            opacity: 0.3;
+          }
+          .user-location {
+            position: absolute;
+            top: 65px;
+            height: 65px;
+            width: 250px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 20px;
+            background: white;
+            img {
+              top: 10px;
+              height: 45px;
+              width: 45px;
+              opacity: 1;
+              margin: 0 0 0 1vw;
+            }
+            .location-separator {
+              height: 45px;
+              width: 3px;
+              margin: 0 -2vw 0 0;
+              background: rgb(141,86,46);
+            }
+            .location-address {
+              padding: 0 5vw 0 0;
+              .location-zone {
+                font-size: 24px;
+                margin: -5px 0;
+                font-weight: 400;
+                color: rgb(141,86,46);
+              }
+              .location-city {
+                font-size: 15px;
+                color: rgb(141,86,46);
+                opacity: 0.8;
+              }
+            }
+          }
+          .champ-details {
+            position: absolute;
+            top: 130px;
+            height: 100px;
+            width: 330px;
+            display: block;
+            .champ-status {
+              height: 60px;
+              display: inline-flex;
+              justify-content: flex-start;
+              .img-container {
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                border: 3px solid ;
+                background: white;
+                margin: 25px 0 0 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img {
+                  height: 100px;
+                  width: 100px;
+                  margin: 0;
+                }
+                .gamer-img {
+                  height: 120px;
+                  width: 120px;
+                }
+                .empty-profile-img {
+                  margin: 25px 0 0 0;
+                }
+              }
+              .champ-info {
+                width: 200px;
+                margin: 35px 0 0 0;
+                .champ-name {
+                  h4 {
+                    margin: 0;
+                    font-weight: 600;
+                    letter-spacing: 1.5px;
+                    text-align: center;
+                  }
+                }
+                .champ-rank {
+                  h6 {
+                    margin: 0;
+                    color: grey;
+                    text-align: center;
+                  }
+                }
+              }
+              .champ-trophies {
+                height: 50px;
+                width: 70px;
+                margin: 0px 0 0 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+            .horizontal-decor-line {
+              height: 3px;
+              width: 130px;
+              margin: 0 auto 20px auto;
+              background: grey;
+            }
+            img {
+              margin: -2.5vh 120px 0 120px;
+              height: 90px;
+              width: 90px;
+              opacity: 1;
+            }
+            .challenge-btn-container{
+              width: 330px;
+              display: flex;
+              justify-content: center;
+              button {
+                height: 45px;
+                width: 182px;
+                border: 3px solid #B15B30;
+                border-radius: 10px;
+                background: white;
+                display: flex;
+                margin: 30px 0 0 0;
+                img {
+                  height: 29px;
+                  width: 30px;
+                  margin: 3px 10px;
+                }
+                h4 {
+                  font-weight: 700;
+                  color: #B15B30;
+                  margin: 3px 0;
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    .tweet-box {
-      margin: 10px 0 0 50px;
-      width: 320px;
-      height: 55px;
-      background: #009EF6;
-      border-radius: 20px;
-      .tweet-ghost-div {
-        font-size: 2px;
-        color: none;
-      }
-      .tweet-recepient {
-        margin: 0px 0 0 60px;
-        p {
-          font-family: 'Roboto', sans-serif;
-          margin: 0 0 0 0;
-          font-size: 13px;
-          font-weight: 800;
-          letter-spacing: 0.7px;
-          color: white;
+    .social-media-btn-container {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      .twitter-btn {
+        margin: -10px 0 0 25px;
+        .twitter-wrapper {
+          img {
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            margin: 5px 0 10px 5px;
+          }
         }
-      }
-      .tweet-description {
-        margin: 0.5px 0 0px 60px;
-        p {
-          margin: 0px 0 0px 0;
-          font-size: 11px;
-          font-weight: 400;
-          letter-spacing: 0.5px;
-          line-height: 14px;
-          color: white;
+        .blue-twitter-background {
+          position: absolute;
+          margin: 7.5px 0 0 7.5px;
+          height: 55px;
+          width: 55px;
+          border-radius: 50%;
+          background: #009EF6;
+          border: 5px solid white;
         }
-      }
+        .add-btn-container {
+          position: absolute;
+          border: 3px solid #009EF6;
+          border-radius: 50%;
+          height: 22px;
+          width: 22px;
+          background: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 12px;
+            width: 12px;
+          }
+        }
+        }
+        .tweet-box {
+          margin: 10px 0 0 50px;
+          width: 320px;
+          height: 55px;
+          background: #009EF6;
+          border-radius: 20px;
+          .tweet-ghost-div {
+            font-size: 2px;
+            color: none;
+          }
+          .tweet-recepient {
+            margin: 0px 0 0 60px;
+            p {
+              font-family: 'Roboto', sans-serif;
+              margin: 0 0 0 0;
+              font-size: 13px;
+              font-weight: 800;
+              letter-spacing: 0.7px;
+              color: white;
+            }
+          }
+          .tweet-description {
+            margin: 0.5px 0 0px 60px;
+            p {
+              margin: 0px 0 0px 0;
+              font-size: 11px;
+              font-weight: 400;
+              letter-spacing: 0.5px;
+              line-height: 14px;
+              color: white;
+            }
+          }
 
-  }
-}
-.nav-bar {
-  display: block;
-  height: 10vh;
-  background: white;
-  .horizontal-line {
-    height: 3px;
-    width: 90vw;
-    margin: 0 5vw;
-    background: silver;
-  }
-  .nav-btn-container {
-    display: flex;
-    justify-content: space-around;
-    height: 9vh;
-    .nav-btn {
-      // background: silver;
-      width: 30vw;
-      height: 60px;
-      margin: 5px 0 0 0;
-      .search-icon {
-        height: 25px;
-        width: 25px;
-      }
-      .trophy-icon {
-        height: 40px;
-        margin: -15px 0 0 0;
-      }
-      .provoke-icon {
-        height: 30px;
       }
     }
-    .separator {
-      height: 7vh;
-      width: 3px;
-      margin: 1vw;
-      background: silver;
-    }
-    .ghost-separator {
-      height: 7vh;
-      width: 3px;
-      margin: 1vw;
+    .nav-bar {
+      display: block;
+      height: 10vh;
+      background: white;
+      .horizontal-line {
+        height: 3px;
+        width: 90vw;
+        margin: 0 5vw;
+        background: silver;
+      }
+      .nav-btn-container {
+        display: flex;
+        justify-content: space-around;
+        height: 9vh;
+        .nav-btn {
+          // background: silver;
+          width: 30vw;
+          height: 60px;
+          margin: 5px 0 0 0;
+          .search-icon {
+            height: 25px;
+            width: 25px;
+          }
+          .trophy-icon {
+            height: 40px;
+            margin: -15px 0 0 0;
+          }
+          .provoke-icon {
+            height: 30px;
+          }
+        }
+        .separator {
+          height: 7vh;
+          width: 3px;
+          margin: 1vw;
+          background: silver;
+        }
+        .ghost-separator {
+          height: 7vh;
+          width: 3px;
+          margin: 1vw;
+        }
+      }
     }
   }
-}

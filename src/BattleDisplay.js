@@ -15,7 +15,7 @@ class BattleDisplay extends Component {
 
         <section className="activity-name-wrapper">
           <img className="battle-cover-img" src="Battle_Symbol.png" alt="battling icon"/>
-          <div className="white-gradient"></div>
+
           <h3>Challenge Mode</h3>
         </section>
 
@@ -23,13 +23,13 @@ class BattleDisplay extends Component {
           <article className="battle-display">
             <div className="battle-img-display">
               <img src="Worms_Circle_Background.png" alt="worms"/>
-              <Link to="/searchprofile">
+
               <button className="search-opponent">
               <div className="white-gradient"></div>
                <img src="Search_Fa_Icon.png"/>
                <h5>Search opponents in your area. Now</h5>
               </button>
-              </Link>
+
             </div>
           </article>
         </section>

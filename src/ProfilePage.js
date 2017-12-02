@@ -68,26 +68,6 @@ class ProfilePage extends Component {
             </div>
           </div>
         </article>
-        <article className="social-media-btn-container">
-          <div className="twitter-btn">
-            <div className="blue-twitter-background"></div>
-            <div className="twitter-wrapper">
-              <img src="Twitter_Icon_White.png"/>
-            </div>
-            <div className="add-btn-container uk-animation-scale">
-              <img className="" src="Add_Glyph.png"/>
-            </div>
-          </div>
-          <article className="tweet-box">
-          <div className="tweet-ghost-div">_</div>
-            <div className="tweet-recepient">
-              <p>Send Tweet? To @ShaunDBS</p>
-            </div>
-            <div className="tweet-description">
-              <p>Fancy a Worms W.M.D. Deathmatch? #DougWardUK</p>
-            </div>
-          </article>
-        </article>
       </section>
       <section className="nav-bar">
         <div className="horizontal-line"></div>
@@ -124,3 +104,26 @@ class ProfilePage extends Component {
 }
 
 export default ProfilePage;
+
+
+// DO NOT DELETE THIS - REQUIRED FOR THE SOCIAL MEDIA COMPONENT
+// <article className="social-media-btn-container">
+//   <div className="twitter-btn">
+//     <div className="blue-twitter-background"></div>
+//     <div className="twitter-wrapper">
+//       <img src="Twitter_Icon_White.png"/>
+//     </div>
+//     <div className="add-btn-container uk-animation-scale">
+//       <img className="" src="Add_Glyph.png"/>
+//     </div>
+//   </div>
+//   <article className="tweet-box">
+//   <div className="tweet-ghost-div">_</div>
+//     <div className="tweet-recepient">
+//       <p>Send Tweet? To @ShaunDBS</p>
+//     </div>
+//     <div className="tweet-description">
+//       <p>Fancy a Worms W.M.D. Deathmatch? #DougWardUK</p>
+//     </div>
+//   </article>
+// </article>

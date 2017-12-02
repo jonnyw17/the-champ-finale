@@ -69,19 +69,6 @@ class ChampDisplay extends Component {
             </div>
           </div>
         </article>
-        <article className="social-media-btn-container">
-          <div className="twitter-btn">
-            <div className="blue-twitter-background"></div>
-            <div className="twitter-wrapper">
-              <img src="Twitter_Icon_White.png"/>
-            </div>
-            <div className="add-btn-container uk-animation-scale">
-              <img className="" src="Add_Glyph.png"/>
-            </div>
-          </div>
-          <article className="tweet-box">
-          </article>
-        </article>
       </section>
 
       <section className="nav-bar">

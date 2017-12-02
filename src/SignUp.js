@@ -6,7 +6,7 @@ import './SignUp.css'
 
 class SignUp extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       count: 0,
       fullname: 'block',
@@ -185,6 +185,15 @@ class SignUp extends Component {
 
       <section className="top-container">
         <article className="back-btn-wrapper">
+        </article>
+
+        <article className="logo-wrapper">
+          <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
+          <h3>Champ</h3>
+        </article>
+        <article className="menu-wrapper"></article>
+
+        <article className="back-btn-wrapper fixed">
           <Link to="/">
           <div className="back-btn">
           <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
@@ -192,11 +201,6 @@ class SignUp extends Component {
           </div>
           </Link>
         </article>
-        <article className="logo-wrapper">
-          <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
-          <h3>Champ</h3>
-        </article>
-        <article className="menu-wrapper"></article>
       </section>
 
       <section className="form-container">
