@@ -29,14 +29,14 @@ class BattleDisplayReady extends Component {
               <img src="Worms_Circle_Background.png" alt="worms"/>
               {/*Player-container*/}
               <div className="player-containers">
-                <div className="player-container reverse-bg-colour">
+                <div className="player-container reverse-bg-colour uk-animation-slide-left">
                 <div className="player-details">
                   <img src="Doug_Face_Circular.png" alt="Doug's profile"/>
                   <h5>Doug Ward</h5>
                   <h6 className="rank-margins bronze-colour">BRONZE</h6>
                 </div>
                 </div>
-                <div className="player-container original-bg-colour">
+                <div className="player-container original-bg-colour uk-animation-slide-right">
                 <div className="player-details">
                   <img src="Shaun_Face_Circular.png" alt="Shaun's profile"/>
                   <h5>Shaun Gibson</h5>

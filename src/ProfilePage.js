@@ -49,7 +49,7 @@ class ProfilePage extends Component {
     }
 
     // There must be someway to set Time on the Display variable
-    const display = this.state.requestSent? this.notificationDelay() : { display : 'none'}
+    const display = this.state.requestSent? this.notificationDelay : { display : 'none'}
 
     const notificationDelay = () => {
       setTimeout(function() {
