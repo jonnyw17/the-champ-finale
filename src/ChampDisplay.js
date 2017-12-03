@@ -2,15 +2,20 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import GuideStep1 from './GuideStep1.js';
+
 import './ChampDisplay.css';
+import './Guides.css'
 
 class ChampDisplay extends Component {
   constructor(props) {
     super(props)
     this.state = {
       user: [],
-      tweetBox: 'none'
+      tweetBox: 'none',
+      tutorialsDisplay: true
     }
+    this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
   }
 
   componentDidMount() {
@@ -18,7 +23,9 @@ class ChampDisplay extends Component {
       this.setState({user: res.data})
     })
   }
-
+  removeTutorialDisplay() {
+    this.setState({tutorialsDisplay:false});
+  }
   render() {
     return (<div className="main-container">
 
@@ -62,7 +69,6 @@ class ChampDisplay extends Component {
                   <div className="horizontal-decor-line"></div>
                   <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
                 </article>
-                <article className="champ-trophies"></article>
               </div>
               <div className="challenge-btn-container"></div>
             </div>
@@ -93,6 +99,8 @@ class ChampDisplay extends Component {
           <div className="ghost-separator"></div>
         </article>
       </section>
+      {/*Display Step 1 Tip*/}
+      {<GuideStep1/>}
     </div>);
   }
 }

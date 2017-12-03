@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 import ChallengeRequestSent from './ChallengeRequestSent';
+import GuideStep3 from './GuideStep3';
+import GuideStep4 from './GuideStep4';
 
 import './ProfilePage.css';
 
@@ -47,7 +49,6 @@ class ProfilePage extends Component {
     }
 
     // There must be someway to set Time on the Display variable
-    const display = this.state.requestSent? this.notificationDelay() : { display : 'none'}
 
     const notificationDelay = () => {
       setTimeout(function() {
@@ -55,6 +56,8 @@ class ProfilePage extends Component {
         return {display : 'block'};
       }.bind(this), 3000);
     }
+
+    const display = this.state.requestSent? this.notificationDelay : { display : 'none'}
 
     return (
       <div className="main-container">
@@ -147,6 +150,13 @@ class ProfilePage extends Component {
           <div className="ghost-separator"></div>
         </article>
       </section>
+      {/*Display Step 1 Tip*/}
+      {this.state.requestSent
+        ?
+        <GuideStep4/>
+        :
+        <GuideStep3/>
+      }
       {/*Notification Circle*/}
       <section className="challenge-notification uk-animation-scale-up" style={display}>
         <div className="notification-amount">

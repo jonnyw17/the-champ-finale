@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+
 import OnlineProfile from './OnlineProfile';
 import OfflineProfile from './OfflineProfile';
+import GuideStep2 from './GuideStep2';
+
 import './SearchProfile.css';
 
 class SearchProfile extends Component {
@@ -75,6 +78,8 @@ class SearchProfile extends Component {
           <div className="ghost-separator"></div>
         </article>
       </section>
+      {/*Display Step 1 Tip*/}
+      {<GuideStep2/>}
     </div>)
   }
 }
