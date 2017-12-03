@@ -10,293 +10,371 @@
 .bronze-colour {
   color: #CD7F32;
 }
-.menu-drop-down {
-  height: 10vh;
-  display: flex;
-  justify-content: space-around;
-  .ghost-div {
-    width: 7px;
-    height: 30px;
-    margin: 0 0 0 25px;
-  }
-  .logo-wrapper {
+@media (min-width:320px) {
+
+  .menu-drop-down {
     height: 10vh;
-    width: 33.3vw;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    .ghost-div {
+      width: 7px;
+      height: 30px;
+      margin: 0 0 0 25px;
+    }
+    .logo-wrapper {
+      height: 10vh;
+      width: 33.3vw;
+      display: flex;
+      align-items: center;
+      img {
+        height: 36px;
+        width: 30px;
+        margin: 0;
+      }
+      h3 {
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        color: #FFF;
+        margin: 2.5px 12.5px;
+      }
+    }
     img {
-      height: 36px;
-      width: 30px;
-      margin: 0;
+      height: 30px;
+      width: 7px;
+      margin: 25px 0 0 25px;
+    }
+  }
+  .activity-name-wrapper {
+    position: relative;
+    height: 20vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .battle-cover-img {
+      height: 80px;
+      width: 90px;
+      opacity: 0.3;
+    }
+    .white-gradient {
+      position: absolute;
+      height: 20px;
+      width: 200px;
+      background: white;
+      opacity: 0.65;
     }
     h3 {
+      position: absolute;
+      top: 15px;
       font-weight: 700;
-      letter-spacing: 0.9px;
-      color: #FFF;
-      margin: 2.5px 12.5px;
+      letter-spacing: 0.8px;
+      color: rgb(141,86,46);
     }
   }
-  img {
-    height: 30px;
-    width: 7px;
-    margin: 25px 0 0 25px;
-  }
-}
-.activity-name-wrapper {
-  position: relative;
-  height: 20vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .battle-cover-img {
-    height: 80px;
-    width: 90px;
-    opacity: 0.3;
-  }
-  .white-gradient {
-    position: absolute;
-    height: 20px;
-    width: 200px;
+  .activity-container {
+    height: 60vh;
     background: white;
-    opacity: 0.65;
-  }
-  h3 {
-    position: absolute;
-    top: 15px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    color: rgb(141,86,46);
-  }
-}
-.activity-container {
-  height: 60vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-    .battle-img-display {
-      position: relative;
-      margin: 0;
-      width: 100vw;
-      height: 100vw;
-      border-radius: 50%;
-      background: white;
-      img {
+    display: flex;
+    justify-content: center;
+      .battle-img-display {
+        position: relative;
+        margin: 0;
         width: 100vw;
         height: 100vw;
-        opacity: 0.3;
-      }
-      .search-opponent{
-        position: absolute;
-        top: 175px;
-        display: flex;
-        justify-content: center;
-        width: 90vw;
-        .white-gradient {
-          position: absolute;
-          width: 200px;
-          height: 20px;
-          background: white;
-          opacity: 0.2;
-        }
+        border-radius: 50%;
+        background: white;
         img {
-          position: relative;
-          height: 20px;
-          width: 20px;
-          margin: 5px 10px;
+          width: 100vw;
+          height: 100vw;
+          opacity: 0.3;
+        }
+        .search-opponent{
+          position: absolute;
+          top: 175px;
+          display: flex;
+          justify-content: center;
+          width: 90vw;
+          .white-gradient {
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            background: white;
+            opacity: 0.2;
+          }
+          img {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            margin: 5px 10px;
+            opacity: 1;
+          }
+          h5 {
+            position: relative;
+            color: #A9A9A9;
+            margin: 5px 5px 0 0;
+          }
+        }
+        .shadow-casted {
+          position: absolute;
+          top:0;
+          width: 370px;
+          height: 370px;
+          border-radius: 50%;
+          background: black;
+          opacity: 0.25;
+        }
+        .crowned_champion {
+          width: 320px;
+          height: 285px;
+          left: 27px;
+          top: 50px;
+          position: absolute;
           opacity: 1;
         }
-        h5 {
-          position: relative;
-          color: #A9A9A9;
-          margin: 5px 5px 0 0;
-        }
-      }
-      .shadow-casted {
-        position: absolute;
-        top:0;
-        width: 370px;
-        height: 370px;
-        border-radius: 50%;
-        background: black;
-        opacity: 0.25;
-      }
-      .crowned_champion {
-        width: 320px;
-        height: 285px;
-        left: 27px;
-        top: 50px;
-        position: absolute;
-        opacity: 1;
-      }
-      .activity-info-banner {
-        position: absolute;
-        top:0;
-        height: 200px;
-        width: 370px;
-        // background: grey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h3 {
-          font-size: 26px;
-          font-weight: 700;
-          letter-spacing: 1px;
-          color: white;
-        }
-      }
-      .player-containers {
-        position: absolute;
-        top: 100px;
-        height: 143px;
-        width: 370px;
-        display: flex;
-        justify-content: space-between;
-        .player-container {
-          height: 143px;
-          width: 143px;
-          border-radius: 50%;
+        .activity-info-banner {
+          position: absolute;
+          top:0;
+          height: 200px;
+          width: 370px;
+          // background: grey;
           display: flex;
           justify-content: center;
           align-items: center;
-          .player-details {
-            height: 135px;
-            width: 135px;
-            border-radius: 50%;
-            background: white;
-            img {
-              height: 60px;
-              width: 60px;
-              margin: 15px 0 10px 38px;
-              opacity: 1;
-            }
-            h5 {
-              font-weight: 400;
-              text-align: center;
-              margin: 0;
-            }
-            h6 {
-              font-size: 11px;
-              text-align: center;
-              margin: 2px 0;
-            }
-          }
-        }
-    }
-    .status-activity {
-      position: absolute;
-      top: 250px;
-      height: 150px;
-      width: 370px;
-      display: flex;
-      justify-content: center;
-      .status-area {
-        width: 200px;
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        .connecting-wheel {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          background: #9F9F9F;
-          color: white;
-          img {
-            position: absolute;
-            height: 150px;
-            width: 150px;
-            opacity: 1;
-          }
-          .loading-info {
-            padding: 50px 0 0 0;
-            h5 {
-              margin: 0px;
-              text-align: center;
-              color: white;
-            }
-          }
-        }
-        .battle-ready-btn {
-          margin: 10px 0 0 0;
-          width: 182px;
-          height: 45px;
-          background: white;
-          border: 3px solid #B15B30;
-          border-radius: 10px;
-          display: flex;
-          justify-content: center;
-          h5 {
-            margin: 0;
+          h3 {
+            font-size: 26px;
             font-weight: 700;
-            color: #B15B30;
-            letter-spacing: 0.3px;
-          }
-        }
-        .tracking-progress {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          background: white;
-          img {
-            position: absolute;
-            height: 143px;
-            width: 150px;
-            margin: 3px 0 0 0;
-            opacity: 1;
-          }
-          .tracking-info {
-            padding: 60px 0 0 0;
-            h5 {
-              margin: 0px;
-              text-align: center;
-              color: black;
-            }
+            letter-spacing: 1px;
+            color: white;
           }
         }
       }
-    }
   }
-}
-.nav-bar {
-  display: block;
-  height: 10vh;
-  background: white;
-  .horizontal-line {
-    height: 3px;
-    width: 90vw;
-    margin: 0 5vw;
-    background: silver;
-  }
-  .nav-btn-container {
-    display: flex;
-    justify-content: space-around;
-    height: 9vh;
-    .nav-btn {
-      // background: silver;
-      width: 30vw;
-    height: 15vw;
-      margin: 5px 0 0 0;
-      .person-icon {
-        height: 27.5px;
-      }
-      .trophy-icon {
-        height: 40px;
-        margin: -15px 0 0 0;
-      }
-      .provoke-icon {
-        height: 30px;
-      }
-    }
-    .separator {
-      height: 7vh;
-      width: 3px;
-      margin: 1vw;
+  .nav-bar {
+    display: block;
+    height: 10vh;
+    background: white;
+    .horizontal-line {
+      height: 3px;
+      width: 90vw;
+      margin: 0 5vw;
       background: silver;
     }
-    .ghost-separator {
-      height: 7vh;
-      width: 3px;
-      margin: 1vw;
+    .nav-btn-container {
+      display: flex;
+      justify-content: space-around;
+      height: 9vh;
+      .nav-btn {
+        // background: silver;
+        width: 30vw;
+      height: 15vw;
+        margin: 5px 0 0 0;
+        .person-icon {
+          height: 27.5px;
+        }
+        .trophy-icon {
+          height: 40px;
+          margin: -15px 0 0 0;
+        }
+        .provoke-icon {
+          height: 30px;
+        }
+      }
+      .separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
+        background: silver;
+      }
+      .ghost-separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
+      }
     }
   }
+
+}
+
+@media (min-width:412px) {
+  .menu-drop-down {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    .ghost-div {
+      width: 7px;
+      height: 30px;
+      margin: 0 0 0 25px;
+    }
+    .logo-wrapper {
+      height: 10vh;
+      width: 33.3vw;
+      display: flex;
+      align-items: center;
+      img {
+        height: 36px;
+        width: 30px;
+        margin: 0;
+      }
+      h3 {
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        color: #FFF;
+        margin: 2.5px 12.5px;
+      }
+    }
+    img {
+      height: 30px;
+      width: 7px;
+      margin: 25px 0 0 25px;
+    }
+  }
+  .activity-name-wrapper {
+    position: relative;
+    height: 20vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .battle-cover-img {
+      height: 80px;
+      width: 90px;
+      opacity: 0.3;
+    }
+    .white-gradient {
+      position: absolute;
+      height: 20px;
+      width: 200px;
+      background: white;
+      opacity: 0.65;
+    }
+    h3 {
+      position: absolute;
+      top: 15px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: rgb(141,86,46);
+    }
+  }
+  .activity-container {
+    height: 60vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+      .battle-img-display {
+        position: relative;
+        margin: 0;
+        width: 100vw;
+        height: 100vw;
+        border-radius: 50%;
+        background: white;
+        img {
+          width: 100vw;
+          height: 100vw;
+          opacity: 0.3;
+        }
+        .search-opponent{
+          position: absolute;
+          top: 175px;
+          display: flex;
+          justify-content: center;
+          width: 90vw;
+          .white-gradient {
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            background: white;
+            opacity: 0.2;
+          }
+          img {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            margin: 5px 10px;
+            opacity: 1;
+          }
+          h5 {
+            position: relative;
+            color: #A9A9A9;
+            margin: 5px 5px 0 0;
+          }
+        }
+        .shadow-casted {
+          position: absolute;
+          top:0;
+          width: 370px;
+          height: 370px;
+          border-radius: 50%;
+          background: black;
+          opacity: 0.25;
+        }
+        .crowned_champion {
+          width: 320px;
+          height: 285px;
+          left: 27px;
+          top: 50px;
+          position: absolute;
+          opacity: 1;
+        }
+        .activity-info-banner {
+          position: absolute;
+          top:0;
+          height: 200px;
+          width: 370px;
+          // background: grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h3 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: white;
+          }
+        }
+      }
+  }
+  .nav-bar {
+    display: block;
+    height: 10vh;
+    background: white;
+    .horizontal-line {
+      height: 3px;
+      width: 90vw;
+      margin: 0 5vw;
+      background: silver;
+    }
+    .nav-btn-container {
+      display: flex;
+      justify-content: space-around;
+      height: 9vh;
+      .nav-btn {
+        // background: silver;
+        width: 30vw;
+      height: 15vw;
+        margin: 5px 0 0 0;
+        .person-icon {
+          height: 27.5px;
+        }
+        .trophy-icon {
+          height: 40px;
+          margin: -15px 0 0 0;
+        }
+        .provoke-icon {
+          height: 30px;
+        }
+      }
+      .separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
+        background: silver;
+      }
+      .ghost-separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
+      }
+    }
+  }
+  
 }

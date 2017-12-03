@@ -1,3 +1,241 @@
-button {
+@keyframes rotating-wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
+}
 
+
+@media(min-width: 320px){
+  .player-containers {
+    position: absolute;
+    top: 100px;
+    height: 143px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    .player-container {
+      height: 143px;
+      width: 143px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .player-details {
+        height: 135px;
+        width: 135px;
+        border-radius: 50%;
+        background: white;
+        img {
+          height: 60px;
+          width: 60px;
+          margin: 15px 0 10px 38px;
+          opacity: 1;
+        }
+        h5 {
+          font-weight: 400;
+          text-align: center;
+          margin: 0;
+        }
+        h6 {
+          font-size: 11px;
+          text-align: center;
+          margin: 2px 0;
+        }
+      }
+    }
+  }
+  .status-activity {
+  position: absolute;
+  top: 220px;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  .status-area {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    .connecting-wheel {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #9F9F9F;
+      color: white;
+      img {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        opacity: 1;
+        animation: 10s rotating-wheel;
+      }
+      .loading-info {
+        padding: 35px 0 0 0;
+        h5 {
+          font-size: 12px;
+          margin: 0px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+    .battle-ready-btn {
+      margin: 10px 0 0 0;
+      width: 182px;
+      height: 45px;
+      background: white;
+      border: 3px solid #B15B30;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      h5 {
+        margin: 0;
+        font-weight: 700;
+        color: #B15B30;
+        letter-spacing: 0.3px;
+      }
+    }
+    .tracking-progress {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      img {
+        position: absolute;
+        height: 143px;
+        width: 150px;
+        margin: 3px 0 0 0;
+        opacity: 1;
+      }
+      .tracking-info {
+        padding: 60px 0 0 0;
+        h5 {
+          margin: 0px;
+          text-align: center;
+          color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width:375px){
+  .player-containers {
+    position: absolute;
+    top: 100px;
+    height: 143px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    .player-container {
+      height: 143px;
+      width: 143px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .player-details {
+        height: 135px;
+        width: 135px;
+        border-radius: 50%;
+        background: white;
+        img {
+          height: 60px;
+          width: 60px;
+          margin: 15px 0 10px 38px;
+          opacity: 1;
+        }
+        h5 {
+          font-weight: 400;
+          text-align: center;
+          margin: 0;
+        }
+        h6 {
+          font-size: 11px;
+          text-align: center;
+          margin: 2px 0;
+        }
+      }
+    }
+  }
+  .status-activity {
+  position: absolute;
+  top: 225px;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  .status-area {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    .connecting-wheel {
+      position: fixed;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #9F9F9F;
+      color: white;
+      img {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        opacity: 1;
+        animation: 10s rotating-wheel;
+      }
+      .loading-info {
+        padding: 50px 0 0 0;
+        h5 {
+          font-size: 16px;
+          margin: 0px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+    .battle-ready-btn {
+      margin: 10px 0 0 0;
+      width: 182px;
+      height: 45px;
+      background: white;
+      border: 3px solid #B15B30;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      h5 {
+        margin: 0;
+        font-weight: 700;
+        color: #B15B30;
+        letter-spacing: 0.3px;
+      }
+    }
+    .tracking-progress {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      img {
+        position: absolute;
+        height: 143px;
+        width: 150px;
+        margin: 3px 0 0 0;
+        opacity: 1;
+      }
+      .tracking-info {
+        padding: 60px 0 0 0;
+        h5 {
+          margin: 0px;
+          text-align: center;
+          color: black;
+          }
+        }
+      }
+    }
+  }
 }

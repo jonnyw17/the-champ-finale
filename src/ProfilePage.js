@@ -28,6 +28,7 @@ class ProfilePage extends Component {
       this.setState({requestIcon : 'block'});
     }, 3000);
   }
+
   render() {
 
     const toggleButton = () => {
@@ -46,7 +47,14 @@ class ProfilePage extends Component {
     }
 
     // There must be someway to set Time on the Display variable
-    const display = this.state.requestSent ? doShow : dontShow;
+    const display = this.state.requestSent? this.notificationDelay() : { display : 'none'}
+
+    const notificationDelay = () => {
+      setTimeout(function() {
+        console.log(this.state.requestSent);
+        return {display : 'block'};
+      }.bind(this), 3000);
+    }
 
     return (
       <div className="main-container">
