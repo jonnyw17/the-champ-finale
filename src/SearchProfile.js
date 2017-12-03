@@ -1,16 +1,35 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import OnlineProfile from './OnlineProfile';
+import OfflineProfile from './OfflineProfile';
 import './SearchProfile.css';
 
 class SearchProfile extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: []
+      user: [],
+      online: true,
     }
+    this.showOnline = this.showOnline.bind(this);
+    this.showOffline = this.showOffline.bind(this);
+    this.makeBolder = this.makeBolder.bind(this);
   }
-
+  showOnline = () => {
+    this.setState({ online: true })
+  }
+  showOffline = () => {
+    this.setState({ online: false })
+  }
+  makeBolder = () => {
+    return undefined;
+  }
   render() {
+    const status = this.state.online? <OnlineProfile/> : <OfflineProfile/>;
+    const bold = {fontWeight : 700};
+    const normal = {fontWeight : 400};
+    const onlineFontWeight = this.state.online? bold : normal;
+    const offlineFontWeight = this.state.online? normal : bold;
     return (<div className="main-container">
       <section className="menu-drop-down">
         <article className="logo-wrapper">
@@ -20,22 +39,19 @@ class SearchProfile extends Component {
       </section>
       <section className="status-wrapper">
         <article className="status-container">
-          <article className="status-bar">
-            <div className="online-tab">
-              <h4>online</h4>
-            </div>
-            <div className="status-separator"></div>
-            <div className="offline-tab">
-              <h4>offline</h4>
-            </div>
-          </article>
-          <Link to="/profilepage">
-            <article className="user-searched-details uk-animation-slide-bottom">
-              <div className="online-circle"></div>
-              <h6>Shaun Gibson</h6>
-              <div className="ghost-circle"></div>
-            </article>
-          </Link>
+
+        <article className="status-bar-offline">
+          <button className="online-tab" onClick={this.showOnline}>
+            <h4 style={onlineFontWeight}>online</h4>
+          </button>
+          <div className="status-separator"></div>
+          <button className="offline-tab" onClick={this.showOffline}>
+            <h4 style={offlineFontWeight}>offline</h4>
+          </button>
+        </article>
+
+        {status}
+
         </article>
       </section>
       <section className="nav-bar">

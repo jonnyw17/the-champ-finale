@@ -1,16 +1,38 @@
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
 
 .top-container {
   display: flex;
-  justify-content: space-around;
   .back-btn-wrapper {
-    width: 33.3vw;
-  }
-  .logo-wrapper {
+    width: 30vw;
     height: 10vh;
-    width: 33.3vw;
+    margin: 1vh 0 0 2.5vw;
     display: flex;
     align-items: center;
-    margin: 10px 0 0 0;
+    .back-btn {
+      display: inline-flex;
+      justify-content: center;
+      img {
+        height: 15px;
+        margin: 5px 0 0 10px;
+      }
+      h5 {
+        margin: 2px 0 0 10px;
+      }
+    }
+  }
+  .logo-wrapper {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 20px 0 0 0;
     img {
       height: 36px;
       width: 30px;
@@ -19,7 +41,7 @@
       font-weight: 700;
       letter-spacing: 0.8px;
       color: hsl(20, 57, 44);
-      margin: 2.5px 12.5px;
+      margin: 0 0 0 12.5px;
     }
   }
   .menu-wrapper {
@@ -65,12 +87,16 @@
         width: 90vw;
         background: #E2E2E2;
       }
+      .twitter-handle-input{
+        width: 80vw;
+        margin: 0 0px 0 10px;
+      }
     }
     .uk-form-controls {
       display: flex;
     .at-html-entity {
-      height: 20px;
-      margin: 8px 0 0 0;
+      font-size: 25px;
+      margin: 5px 0 0 0;
     }
     .division-line {
       margin: 10px 0 0 10px;
@@ -78,6 +104,17 @@
       width: 2px;
       background: grey;
     }
+    }
+    .centered-description {
+      width: 100vw;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      label {
+        font-size: 20px;
+        font-weight: 800;
+      }
     }
   }
   .confirm-btn {

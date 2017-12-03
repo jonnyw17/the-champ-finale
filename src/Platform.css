@@ -8,7 +8,7 @@
   .nav-display .logo-wrapper {
     position: fixed;
     height: 10vh;
-    width: 33.3vw;
+    width: 40vw;
     display: flex;
     align-items: center; }
     .nav-display .logo-wrapper img {
@@ -27,14 +27,14 @@
   justify-content: center; }
   .platform-btn-container .btn-wrapper {
     margin: 105px 0 0 0;
-    width: 320px; }
+    width: 85vw; }
     .platform-btn-container .btn-wrapper h5 {
       font-weight: 200;
       letter-spacing: 0.5px;
       color: white;
       text-align: center; }
     .platform-btn-container .btn-wrapper h6 {
-      font-size: 15px;
+      font-size: 0.9rem;
       font-weight: 200;
       letter-spacing: 0.5px;
       color: white;
@@ -44,7 +44,7 @@
       border-radius: 15px;
       background: none;
       height: 50px;
-      width: 320px;
+      width: 85vw;
       margin: 30px 0px;
       display: flex;
       justify-content: space-between; }

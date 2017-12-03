@@ -6,7 +6,7 @@ import './SignUp.css'
 
 class SignUp extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       count: 0,
       fullname: 'block',
@@ -185,15 +185,22 @@ class SignUp extends Component {
 
       <section className="top-container">
         <article className="back-btn-wrapper">
-          <Link to="/">
-            <h5>Back</h5>
-          </Link>
         </article>
+
         <article className="logo-wrapper">
           <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
           <h3>Champ</h3>
         </article>
         <article className="menu-wrapper"></article>
+
+        <article className="back-btn-wrapper fixed">
+          <Link to="/">
+          <div className="back-btn">
+          <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
+            <h5>Back</h5>
+          </div>
+          </Link>
+        </article>
       </section>
 
       <section className="form-container">
@@ -270,7 +277,7 @@ class SignUp extends Component {
               <div className="uk-form-controls">
                 <div className="at-html-entity">&#64;</div>
                 <div className="division-line"></div>
-                <input className="uk-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
+                <input className="uk-input twitter-handle-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
               </div>
               <div className="input-line"></div>
             </div>
@@ -278,6 +285,12 @@ class SignUp extends Component {
 
           <input className="confirm-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
           <input className="confirm-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
+
+          <article className='input-container uk-animation-slide-right' style={displayNext}>
+            <div className="centered-description">
+              <label className="uk-form-label">Ready to be The Champ?!</label>
+            </div>
+          </article>
           <Link to='/platform'>
             <input className="confirm-btn" type="button" value="Next" style={displayNext}/>
           </Link>

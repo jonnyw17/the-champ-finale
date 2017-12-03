@@ -12,7 +12,6 @@ class BattleDisplay extends Component {
           <h3>Champ</h3>
         </article>
       </section>
-
       <section className="activity-name-wrapper">
         <img className="battle-cover-img" src="Battle_Symbol.png" alt="battling icon"/>
         <div className="white-gradient"></div>
