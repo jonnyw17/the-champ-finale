@@ -31,7 +31,7 @@ class SignUp extends Component {
 
   postUserDetails(event) {
     event.preventDefault();
-    axios.post("http://localhost:3001/users/register", {
+    axios.post("https://thechamp-be.herokuapp.com/users/register", {
       fullname: event.target[0].value,
       username: event.target[1].value,
       password: event.target[2].value,
