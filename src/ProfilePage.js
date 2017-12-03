@@ -49,6 +49,7 @@ class ProfilePage extends Component {
     }
 
     // There must be someway to set Time on the Display variable
+    const display = this.state.requestSent? this.notificationDelay() : { display : 'none'}
 
     const notificationDelay = () => {
       setTimeout(function() {
@@ -56,8 +57,6 @@ class ProfilePage extends Component {
         return {display : 'block'};
       }.bind(this), 3000);
     }
-
-    const display = this.state.requestSent? this.notificationDelay : { display : 'none'}
 
     return (
       <div className="main-container">
