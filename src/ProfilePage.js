@@ -2,27 +2,61 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import ChallengeRequestSent from './ChallengeRequestSent';
+
 import './ProfilePage.css';
 
 class ProfilePage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      usersTwitter: []
+      usersTwitter: [],
+      requestSent: false,
     }
-    this.TweetChamp = this.TweetChamp.bind(this)
+    this.TweetChamp = this.TweetChamp.bind(this);
+    this.SendRequest = this.SendRequest.bind(this);
+    this.notificationDelay = this.notificationDelay.bind(this);
   }
 
   TweetChamp(event) {
     axios.get()
   }
 
+  SendRequest = () => {
+    this.setState({ requestSent : true });
+  }
+  notificationDelay = () => {
+    setTimeout(function() {
+      console.log(this.state.requestSent);
+      return {display : 'block'};
+    }.bind(this), 3000);
+  }
+
   render() {
-    return (<div className="main-container">
+
+    const toggleButton = () => {
+      if(this.state.requestSent){
+        return <ChallengeRequestSent />;
+      }
+    }
+    // 1) Triggers when to display the notification
+
+    // There must be someway to set Time on the Display variable
+    const display = this.state.requestSent? this.notificationDelay() : { display : 'none'};
+    return (
+      <div className="main-container">
+
+      {/*Challenge Accepted Banner*/}
+      {/*There still needs to be a timeout period for it appear and disappear*/}
+      <article className="challenge-accepted-banner uk-animation-slide-top" style={display}>
+        <div className="message-banner">
+            <img src="Trophy_Icon_White.png" alt="trophy icon"/>
+            <h5 className="challenge-msg">Challenge Accepted</h5> <h6 className="gamer-name">Shaun Gibson</h6>
+        </div>
+      </article>
 
       <section className="menu-drop-down">
       </section>
-
       <section className="activity-name-wrapper">
         <div className="white-gradient"></div>
         <h3>Profile</h3>
@@ -57,18 +91,25 @@ class ProfilePage extends Component {
                   <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
                 </article>
               </div>
+
               <div className="challenge-btn-container uk-animation-shake">
-                <Link to="./battledisplay">
-                  <button>
-                    <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
-                    <h4>Challenge</h4>
-                  </button>
-                </Link>
+
+              {/*1) Button Clicked*/}
+              <button className="challenge-btn" onClick={this.SendRequest} style={{display: this.state.requestSent? 'none' : 'flex'}}>
+                <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
+                <h4>Challenge</h4>
+              </button>
+
+              {/*2) Toggles to this button*/}
+              {toggleButton()}
+
               </div>
+
             </div>
           </div>
         </article>
       </section>
+      {/*Navigation Bar*/}
       <section className="nav-bar">
         <div className="horizontal-line"></div>
         <article className="nav-btn-container">
@@ -85,7 +126,7 @@ class ProfilePage extends Component {
             </button>
           </Link>
           <div className="separator"></div>
-          <Link to="/battledisplay">
+          <Link to="/battledisplayready">
             <button className="nav-btn">
               <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
             </button>
@@ -93,6 +134,13 @@ class ProfilePage extends Component {
           <div className="ghost-separator"></div>
         </article>
       </section>
+      {/*Notification Circle*/}
+      <section className="challenge-notification uk-animation-scale-up" style={display}>
+        <div className="notification-amount">
+          <h6>1</h6>
+        </div>
+      </section>
+      {/*Navigation*/}
       <section className="nav-display">
         <article className="logo-wrapper">
           <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>

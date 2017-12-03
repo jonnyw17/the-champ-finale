@@ -4,6 +4,53 @@
 }
 
 @media (min-width: 320px) {
+  .challenge-accepted-banner {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #AC6143;
+    .message-banner {
+      position: fixed;
+      display: inline-flex;
+      align-items: center;
+      img {
+        height: 40px;
+        margin: 0 1.5vw 5vw 3vw;
+      }
+      h5 {
+          color: white;
+          font-weight: 700;
+          margin: 0;
+      }
+      h6 {
+        margin:0 10px;
+        color: white;
+        font-weight: 400;
+      }
+    }
+  }
+  .challenge-notification {
+    position: fixed;
+    right: 6vw;
+    bottom: 6vh;
+    .notification-amount {
+      background: #AB6042;
+      height: 23px;
+      width: 23px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h6 {
+        color: white;
+        margin:0 0 0 -2px;
+      }
+    }
+  }
   .menu-drop-down {
     height: 10vh;
     display: flex;
@@ -210,6 +257,7 @@
               border-radius: 10px;
               background: white;
               display: flex;
+              justify-content: space-around;
               margin: 30px 0 0 0;
               img {
                 height: 29px;
@@ -219,6 +267,17 @@
               h4 {
                 font-weight: 700;
                 color: #B15B30;
+                margin: 3px 0;
+              }
+            }
+            .challenge-btn-sent{
+              color: white;
+              border: 3px solid white;
+              background: #B15B30;
+              h4 {
+                font-weight: 400;
+                letter-spacing: 0.6px;
+                color: white;
                 margin: 3px 0;
               }
             }
@@ -350,6 +409,37 @@
 }
 
 @media (min-width: 375px) {
+  .challenge-accepted-banner {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #AC6143;
+    .message-banner {
+      position: fixed;
+      display: inline-flex;
+      align-items: center;
+      img {
+        height: 50px;
+        margin: 0 2vw 6vw 3vw;
+      }
+      h5 {
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0;
+          color: white;
+      }
+      h6 {
+        font-size: 16px;
+        margin:0 20px;
+        font-weight: 400;
+        color: white;
+      }
+    }
+  }
     .menu-drop-down {
       height: 10vh;
       display: flex;

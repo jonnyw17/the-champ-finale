@@ -8,6 +8,7 @@ import Platform from './Platform';
 import SignIn from './SignIn';
 import ChampDisplay from './ChampDisplay';
 import BattleDisplay from './BattleDisplay';
+import BattleDisplayReady from './BattleDisplayReady'
 import Home from './Home'
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
@@ -55,6 +56,7 @@ class App extends Component {
             <Route path="/champdisplay" render={()=><ChampDisplay activeUser={this.state.userLoggedIn}/>}/>
             <Route path="/searchprofile" render={()=><SearchProfile activeUser={this.state.userLoggedIn}/>}/>
             <Route path="/battledisplay" component={BattleDisplay}/>
+            <Route path="/battledisplayready" component={BattleDisplayReady}/>
           </div>
         </Router>
       </div>
