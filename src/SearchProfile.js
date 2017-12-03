@@ -8,29 +8,26 @@ class SearchProfile extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: [],
       online: true,
     }
     this.showOnline = this.showOnline.bind(this);
     this.showOffline = this.showOffline.bind(this);
-    this.makeBolder = this.makeBolder.bind(this);
   }
-  showOnline = () => {
+  showOnline() {
     this.setState({ online: true })
   }
-  showOffline = () => {
+  showOffline() {
     this.setState({ online: false })
   }
-  makeBolder = () => {
-    return undefined;
-  }
+
   render() {
     const status = this.state.online? <OnlineProfile/> : <OfflineProfile/>;
     const bold = {fontWeight : 700};
     const normal = {fontWeight : 400};
     const onlineFontWeight = this.state.online? bold : normal;
     const offlineFontWeight = this.state.online? normal : bold;
-    return (<div className="main-container">
+    return (
+    <div className="main-container">
       <section className="menu-drop-down">
         <article className="logo-wrapper">
           <img src="BetGame_Logo_White.png" alt="logo icon"/>

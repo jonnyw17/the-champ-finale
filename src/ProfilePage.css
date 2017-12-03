@@ -3,6 +3,45 @@
   position: fixed; }
 
 @media (min-width: 320px) {
+  .challenge-accepted-banner {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #AC6143; }
+    .challenge-accepted-banner .message-banner {
+      position: fixed;
+      display: inline-flex;
+      align-items: center; }
+      .challenge-accepted-banner .message-banner img {
+        height: 40px;
+        margin: 0 1.5vw 5vw 3vw; }
+      .challenge-accepted-banner .message-banner h5 {
+        color: white;
+        font-weight: 700;
+        margin: 0; }
+      .challenge-accepted-banner .message-banner h6 {
+        margin: 0 10px;
+        color: white;
+        font-weight: 400; }
+  .challenge-notification {
+    position: fixed;
+    right: 6vw;
+    bottom: 6vh; }
+    .challenge-notification .notification-amount {
+      background: #AB6042;
+      height: 23px;
+      width: 23px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .challenge-notification .notification-amount h6 {
+        color: white;
+        margin: 0 0 0 -2px; }
   .menu-drop-down {
     height: 10vh;
     display: flex;
@@ -178,6 +217,7 @@
               border-radius: 10px;
               background: white;
               display: flex;
+              justify-content: space-around;
               margin: 30px 0 0 0; }
               .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container button img {
                 height: 29px;
@@ -186,6 +226,15 @@
               .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container button h4 {
                 font-weight: 700;
                 color: #B15B30;
+                margin: 3px 0; }
+            .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container .challenge-btn-sent {
+              color: white;
+              border: 3px solid white;
+              background: #B15B30; }
+              .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container .challenge-btn-sent h4 {
+                font-weight: 400;
+                letter-spacing: 0.6px;
+                color: white;
                 margin: 3px 0; }
   .social-media-btn-container {
     position: absolute;
@@ -283,6 +332,32 @@
         margin: 1vw; } }
 
 @media (min-width: 375px) {
+  .challenge-accepted-banner {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #AC6143; }
+    .challenge-accepted-banner .message-banner {
+      position: fixed;
+      display: inline-flex;
+      align-items: center; }
+      .challenge-accepted-banner .message-banner img {
+        height: 50px;
+        margin: 0 2vw 6vw 3vw; }
+      .challenge-accepted-banner .message-banner h5 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        color: white; }
+      .challenge-accepted-banner .message-banner h6 {
+        font-size: 16px;
+        margin: 0 20px;
+        font-weight: 400;
+        color: white; }
   .menu-drop-down {
     height: 10vh;
     display: flex;

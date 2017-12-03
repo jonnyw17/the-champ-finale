@@ -3,7 +3,7 @@ import './SignIn.css';
 
 const SignIn = () => {
     return (
-    <div class="main-container">
+    <div className="main-container">
     <section className="menu-drop-down">
     <article className="logo-wrapper">
       <img src="BetGame_Logo_White.png" alt="the champ icon"/>
