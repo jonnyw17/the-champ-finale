@@ -27,7 +27,7 @@ class ProfilePage extends Component {
     setTimeout(() => {
       this.setState({requestIcon : 'block'});
     }, 3000);
-
+  }
   render() {
 
     const toggleButton = () => {
@@ -36,7 +36,7 @@ class ProfilePage extends Component {
       }
     }
     // 1) Triggers when to display the notification
-<<<<<<< HEAD
+
     const dontShow = {
       display: this.state.requestIcon
     };
