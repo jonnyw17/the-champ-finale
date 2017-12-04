@@ -108,6 +108,7 @@ class ProfilePage extends Component {
                   <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
                   <h4>Challenge</h4>
                 </button>
+                    {toggleButton()}
               </div>
             </div>
           </div>
@@ -145,7 +146,7 @@ class ProfilePage extends Component {
           : <GuideStep3/>
       }
 
-      {toggleButton()}
+
       {/* Notification Circle */}
       <section className="challenge-notification uk-animation-scale-up" style={display}>
         <div className="notification-amount">
