@@ -13,7 +13,7 @@ const Home = () => {
     <section className="brand-description-container">
       <article className="brand-description">
         <p>Welcome to Champ</p>
-        <p>Location based scoreboard. Become the</p>
+        <p>A Location based scoreboard. Become the</p>
         <p>Gaming Champion of your house or area</p>
       </article>
     </section>
