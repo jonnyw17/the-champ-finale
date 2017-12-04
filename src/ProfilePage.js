@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-
 import ChallengeRequestSent from './ChallengeRequestSent';
 import GuideStep3 from './GuideStep3';
 import GuideStep4 from './GuideStep4';
@@ -109,12 +108,7 @@ class ProfilePage extends Component {
                   <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
                   <h4>Challenge</h4>
                 </button>
-
-                {/* 2) Toggles to this button */}
-                
-
               </div>
-
             </div>
           </div>
         </article>
@@ -150,6 +144,8 @@ class ProfilePage extends Component {
           ? <GuideStep4/>
           : <GuideStep3/>
       }
+
+      {toggleButton()}
       {/* Notification Circle */}
       <section className="challenge-notification uk-animation-scale-up" style={display}>
         <div className="notification-amount">
