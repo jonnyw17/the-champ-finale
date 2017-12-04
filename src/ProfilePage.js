@@ -42,7 +42,7 @@ class ProfilePage extends Component {
     };
 
     const doShow = {
-      display: 'this.state.requestIcon'
+      display: this.state.requestIcon
     }
 
     // There must be someway to set Time on the Display variable
@@ -111,7 +111,7 @@ class ProfilePage extends Component {
                 </button>
 
                 {/* 2) Toggles to this button */}
-                {toggleButton()}
+                
 
               </div>
 
