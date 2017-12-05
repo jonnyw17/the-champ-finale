@@ -12,7 +12,7 @@ class SignIn extends Component {
   postUserDetails(event) {
     event.preventDefault();
     let currentUser = {
-      username: event.target[1].value,
+      username: event.target[0].value,
     }
     this.props.getCurrentUserSignIn(currentUser);
 
