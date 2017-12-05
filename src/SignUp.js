@@ -21,7 +21,6 @@ class SignUp extends Component {
       disabledBtn: true,
       userMessage: ''
     }
-    this.userDetails = this.userDetails.bind(this);
     this.displayInput = this.displayInput.bind(this);
     this.userInput = this.userInput.bind(this);
     this.userMessage = this.userMessage.bind(this);
@@ -31,29 +30,26 @@ class SignUp extends Component {
 
   postUserDetails(event) {
     event.preventDefault();
+    let currentUser = {
+      fullname: event.target[0].value,
+      username: event.target[1].value,
+      password: event.target[2].value,
+      streetname: event.target[3].value,
+      city: event.target[4].value,
+      twitterHandle: event.target[5].value
+    }
+    this.props.getCurrentUserSignUp(currentUser);
+
     axios.post("https://thechamp-be.herokuapp.com/users/register", {
       fullname: event.target[0].value,
       username: event.target[1].value,
       password: event.target[2].value,
-      streetname:event.target[3].value,
-      city: event.target[4].value,
-      twitter: event.target[5].value
-    }).catch((err) =>  err)
-  }
-
-  //USERDETAILS - send user details to app via a call back function
-  userDetails(event) {
-    event.preventDefault();
-    let currentUser = {
-      fullname: event.target[0].value,
-      username: event.target[1].value,
       streetname: event.target[3].value,
       city: event.target[4].value,
-      twitter: event.target[5].value
-    }
-    console.log(currentUser)
-    this.props.getCurrentUser(currentUser);
+      twitterHandle: event.target[5].value
+    }).catch((err) => err)
   }
+
 
   //USERINPUT - caputure the details/length of the input fields with the view of removing the disabled attr from the input field when the user adds a string longer than the minimum length
   userInput(event) {
@@ -140,7 +136,6 @@ class SignUp extends Component {
       confirmBtn: confirmBtn,
       count: this.state.count + 1
     });
-    console.log(this.state.count)
   };
 
   //COMPOENENTDIDMOUNT - lifecylce function used to increase count after first render in preperation for users next input field (feel like the count has an issue need to read up more and find out if this is the right approach, count without this is always one behind, must be something to do with the way the component/render works but check!)
@@ -184,8 +179,7 @@ class SignUp extends Component {
     return (<div>
 
       <section className="top-container">
-        <article className="back-btn-wrapper">
-        </article>
+        <article className="back-btn-wrapper"></article>
 
         <article className="logo-wrapper">
           <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
@@ -195,10 +189,10 @@ class SignUp extends Component {
 
         <article className="back-btn-wrapper fixed">
           <Link to="/">
-          <div className="back-btn">
-          <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
-            <h5>Back</h5>
-          </div>
+            <div className="back-btn">
+              <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
+              <h5>Back</h5>
+            </div>
           </Link>
         </article>
       </section>

@@ -8,8 +8,8 @@ import Platform from './Platform';
 import SignIn from './SignIn';
 import ChampDisplay from './ChampDisplay';
 import BattleDisplay from './BattleDisplay';
-import BattleDisplayReady from './BattleDisplayReady'
-import Home from './Home'
+import BattleDisplayReady from './BattleDisplayReady';
+import Home from './Home';
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
 
@@ -17,39 +17,35 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      userLoggedIn: []
+      currentUserSignedUp: [],
+      currentUserSignedIn: []
     }
-    this.getCurrentUser = this.getCurrentUser.bind(this);
+    this.getCurrentUserSignUp = this.getCurrentUserSignUp.bind(this);
+    this.getCurrentUserSignIn = this.getCurrentUserSignIn.bind(this);
   }
 
-  //------------------------------------------------------------------------
-    //FETCH ALL USER DATA FROM MONGODB
-    // fetchUserData() {
-    //   return axios.get(`http://localhost:3001/users`).then(result => {
-    //     this.setState({users: result.data})
-    //   }).catch(console.log)
-    // }
-    // //MOUNT ALL USER DATA FROM MONGODB BEFORE RENDER
-    // componentDidMount() {
-    //   this.fetchUserData();
-    // }
-  //------------------------------------------------------------------------
-
-  getCurrentUser(currentUser) {
-    console.log(currentUser)
+  getCurrentUserSignUp(currentUser) {
     this.setState({
-      userLoggedIn: currentUser
+      currentUserSignedUp: currentUser
+    })
+  }
+
+  getCurrentUserSignIn(currentUser) {
+    this.setState({
+      currentUserSignedIn: currentUser
     })
   }
 
   render() {
+    console.log(this.state.currentUserSignedUp);
+    console.log(this.state.currentUserSignedIn);
     return (
       <div>
         <Router>
           <div>
             <Route exact={true} path="/" component={Home}/>
-            <Route path="/signup" render={()=><SignUp getCurrentUser={this.getCurrentUser}/>}/>
-            <Route path="/signin" component={SignIn}/>
+            <Route path="/signup" render={()=><SignUp getCurrentUserSignUp={this.getCurrentUserSignUp}/>}/>
+            <Route path="/signin" render={()=><SignIn getCurrentUserSignIn={this.getCurrentUserSignIn}/>}/>
             <Route path="/profilepage" component={ProfilePage}/>
             <Route path="/platform" component={Platform}/>
             <Route path="/champdisplay" render={()=><ChampDisplay activeUser={this.state.userLoggedIn}/>}/>
