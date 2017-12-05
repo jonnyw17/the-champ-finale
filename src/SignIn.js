@@ -16,7 +16,7 @@ class SignIn extends Component {
     }
     this.props.getCurrentUser(currentUser);
 
-    axios.post("https://thechamp-be.herokuapp.com/users/signin", {
+    axios.post("https://thechamp-be.herokuapp.com/users/login", {
       username: event.target[0].value,
       password: event.target[1].value,
     }).catch((err) => err)
