@@ -27,6 +27,7 @@ class ChampDisplay extends Component {
     this.setState({tutorialsDisplay:false});
   }
   render() {
+    console.log(this.state.user)
     return (<div className="main-container">
 
       <section className="menu-drop-down">

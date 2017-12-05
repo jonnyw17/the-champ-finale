@@ -239,3 +239,93 @@
     }
   }
 }
+
+.status-activity {
+  position: absolute;
+  top: 200px;
+  height: 150px;
+  width: 370px;
+  display: flex;
+  justify-content: center;
+  .status-area {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    .connecting-wheel {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #9F9F9F;
+      color: white;
+      img {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        opacity: 1;
+      }
+      .loading-info {
+        padding: 50px 0 0 0;
+        h5 {
+          margin: 0px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+    .battle-ready-btn {
+      margin: 10px 0 0 0;
+      width: 182px;
+      height: 45px;
+      background: white;
+      border: 3px solid #B15B30;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      h5 {
+        margin: 0;
+        font-weight: 700;
+        color: #B15B30;
+        letter-spacing: 0.3px;
+      }
+    }
+    .tracking-progress {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      img {
+        position: absolute;
+        height: 143px;
+        width: 150px;
+        margin: 3px 0 0 0;
+        opacity: 1;
+      }
+      .tracking-info {
+        padding: 60px 0 0 0;
+        h5 {
+          margin: 0px;
+          text-align: center;
+          color: black;
+        }
+      }
+    }
+  }
+  .battling-end-btn {
+    position: absolute;
+    margin: 80px 0 0 -20px;
+    width: 182px;
+    height: 45px;
+    background: white;
+    border: 3px solid #B15B30;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    h5 {
+      margin: 0;
+      font-weight: 700;
+      color: #B15B30;
+      letter-spacing: 0.3px;
+    }
+  }
+}

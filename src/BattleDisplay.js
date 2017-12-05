@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import './BattleDisplay.css'
+import './BattleDisplay.css';
 
 class BattleDisplay extends Component {
-  render() {
+  render( ) {
     return (<div className="main-container">
 
       <section className="menu-drop-down">
@@ -12,6 +12,7 @@ class BattleDisplay extends Component {
           <h3>Champ</h3>
         </article>
       </section>
+
       <section className="activity-name-wrapper">
         <img className="battle-cover-img" src="Battle_Symbol.png" alt="battling icon"/>
         <div className="white-gradient"></div>
