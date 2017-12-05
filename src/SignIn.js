@@ -12,7 +12,7 @@ const SignIn = () => {
     </section>
     <section className="activity-form-container">
     <article className="form-container">
-      <form action="/users/login" method="post" className="uk-form-horizontal uk-margin-large">
+      <form action="https://thechamp.herokuapp.com/users/login" method="post" className="uk-form-horizontal uk-margin-large">
           <label className="uk-form-label white-color">Username</label>
           <div className="uk-form-controls">
             <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
