@@ -18,11 +18,7 @@ class ChampDisplay extends Component {
     this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
   }
 
-  componentDidMount() {
-    axios.get('/users').then((res) => {
-      this.setState({user: res.data})
-    })
-  }
+
   removeTutorialDisplay() {
     this.setState({tutorialsDisplay:false});
   }
