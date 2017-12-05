@@ -15,7 +15,15 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "superagent": "^3.8.1",
-    "uikit": "^3.0.0-beta.35"
+    "uikit": "^3.0.0-beta.35",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.4",
+    "serve-favicon": "~2.4.5",
+    "twit": "^2.2.9"
   },
   "scripts": {
     "start": "react-scripts start",
