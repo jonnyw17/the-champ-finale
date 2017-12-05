@@ -11,7 +11,7 @@ class SignIn extends Component {
   componentDidMount(event) {
     event.preventDefault();
     axios.post("https://thechamp-be.herokuapp.com/users/login", {
-      console.log(true)
+    
       username: event.target[0].value,
       password: event.target[1].value
     }).catch((err) => err)
