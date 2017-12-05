@@ -18,7 +18,11 @@ class ChampDisplay extends Component {
     this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
   }
 
-
+  componentDidMount() {
+    axios.get('https://thechamp-be.herokuapp.com/users').then((res) => {
+      this.setState({user: res.data})
+    })
+  }
   removeTutorialDisplay() {
     this.setState({tutorialsDisplay:false});
   }
