@@ -22,6 +22,7 @@ class ChampDisplay extends Component {
     axios.get('https://thechamp-be.herokuapp.com/users').then((res) => {
       this.setState({user: res.data})
     })
+    console.log(this.state.user)
   }
   removeTutorialDisplay() {
     this.setState({tutorialsDisplay:false});
