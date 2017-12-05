@@ -19,12 +19,12 @@ getAllUsers = (req, res, next) => {
      }
 
      if(!user) {
-       res.redirect('https://thechamp.herokuapp.com/signin');
+       res.redirect('/signin');
        res.status(404).send();
      }
 
      if(user) {
-       res.redirect('https://thechamp.herokuapp.com/platform');
+       res.redirect('/platform');
        res.status(200).send();
      }
    })
@@ -49,12 +49,12 @@ postNewUser = (req, res) => {
   newUser.save((err, savedUser) => {
     if(err) {
       console.log(err.message);
-      res.redirect('https://thechamp.herokuapp.com/signup');
+      res.redirect('/signup');
     }
 
     if(savedUser) {
       //need to ask ali about how to send
-      res.redirect('https://thechamp.herokuapp.com/platform');
+      res.redirect('/platform');
     }
   }).catch((err) => next(err))
 }
