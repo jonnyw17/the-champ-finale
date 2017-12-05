@@ -19,7 +19,7 @@ class ChampDisplay extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://thechamp-be.herokuapp.com/users/').then((res) => {
+    axios.get('https://thechamp.herokuapp.com/users/').then((res) => {
       this.setState({user: res.data})
     })
   }

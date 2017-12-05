@@ -8,8 +8,8 @@ import Platform from './Platform';
 import SignIn from './SignIn';
 import ChampDisplay from './ChampDisplay';
 import BattleDisplay from './BattleDisplay';
-import BattleDisplayReady from './BattleDisplayReady'
-import Home from './Home'
+import BattleDisplayReady from './BattleDisplayReady';
+import Home from './Home';
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
 

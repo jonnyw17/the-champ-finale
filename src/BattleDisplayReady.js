@@ -48,13 +48,22 @@ class BattleDisplayReady extends Component {
                 <div className="status-area">
                 {/*Connecting Players Wheel*/}
 
-                <article className="connecting-wheel">
+                <article className="connecting-wheel" style={{display: "none"}}>
                   <img src="Provoke_Pending_White.png" alt="loading circle"/>
                     <div className="loading-info">
                       <h5>Connecting</h5>
                       <h5>players</h5>
                     </div>
                   </article>
+
+                {/*Tracking progress*/}
+                  <article className="tracking-progress">
+                    <img src="Provoke_Pending.png" alt="loading circle"/>
+                      <div className="tracking-info">
+                        <h5>Battling ...</h5>
+                      </div>
+                      <button className="battling-end-btn"><h5>Battle Ended? Click</h5></button>
+                    </article>
 
                 </div>
               </div>
