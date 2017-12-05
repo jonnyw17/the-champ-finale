@@ -27,6 +27,5 @@
   "devDependencies": {
     "i": "^0.3.6",
     "node-sass": "^4.7.2"
-  },
-  "proxy": "https://thechamp-be.herokuapp.com"
+  }
 }
