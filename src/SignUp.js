@@ -21,7 +21,6 @@ class SignUp extends Component {
       disabledBtn: true,
       userMessage: ''
     }
-    // this.userDetails = this.userDetails.bind(this);
     this.displayInput = this.displayInput.bind(this);
     this.userInput = this.userInput.bind(this);
     this.userMessage = this.userMessage.bind(this);
@@ -39,7 +38,7 @@ class SignUp extends Component {
       city: event.target[4].value,
       twitterHandle: event.target[5].value
     }
-    this.props.getCurrentUser(currentUser);
+    this.props.getCurrentUserSignUp(currentUser);
 
     axios.post("https://thechamp-be.herokuapp.com/users/register", {
       fullname: event.target[0].value,

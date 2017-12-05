@@ -17,27 +17,22 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      userLoggedIn: []
+      currentUserSignedUp: [],
+      currentUserSignedIn: []
     }
-    this.getCurrentUser = this.getCurrentUser.bind(this);
+    this.getCurrentUserSignUp = this.getCurrentUserSignUp.bind(this);
+    this.getCurrentUserSignIn = this.getCurrentUserSignIn.bind(this);
   }
 
-  //------------------------------------------------------------------------
-    //FETCH ALL USER DATA FROM MONGODB
-    // fetchUserData() {
-    //   return axios.get(`http://localhost:3001/users`).then(result => {
-    //     this.setState({users: result.data})
-    //   }).catch(console.log)
-    // }
-    // //MOUNT ALL USER DATA FROM MONGODB BEFORE RENDER
-    // componentDidMount() {
-    //   this.fetchUserData();
-    // }
-  //------------------------------------------------------------------------
-
-  getCurrentUser(currentUser) {
+  getCurrentUserSignUp(currentUser) {
     this.setState({
-      userLoggedIn: currentUser
+      currentUserSignedUp: currentUser
+    })
+  }
+
+  getCurrentUserSignIn(currentUser) {
+    this.setState({
+      currentUserSignedIn: currentUser
     })
   }
 
@@ -48,7 +43,7 @@ class App extends Component {
         <Router>
           <div>
             <Route exact={true} path="/" component={Home}/>
-            <Route path="/signup" render={()=><SignUp getCurrentUser={this.getCurrentUser}/>}/>
+            <Route path="/signup" render={()=><SignUp getCurrentUserSignUp={this.getCurrentUserSignUp}/>}/>
             <Route path="/signin" component={SignIn}/>
             <Route path="/profilepage" component={ProfilePage}/>
             <Route path="/platform" component={Platform}/>
