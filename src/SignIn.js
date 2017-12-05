@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
+
 import './SignIn.css';
 
-const SignIn = () => {
+class SignIn extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount(event) {
+    event.preventDefault();
+    axios.post("https://thechamp-be.herokuapp.com/users/login", {
+      console.log(true)
+      username: event.target[0].value,
+      password: event.target[1].value
+    }).catch((err) => err)
+    let currentUser = {
+      username: event.target[0].value,
+    }
+    this.props.getCurrentUserSignIn(currentUser);
+
+  }
+
+  render() {
     return (
     <div className="main-container">
     <section className="menu-drop-down">
@@ -12,7 +33,7 @@ const SignIn = () => {
     </section>
     <section className="activity-form-container">
     <article className="form-container">
-      <form action="https://thechamp-be.herokuapp.com/users/login" method="post" className="uk-form-horizontal uk-margin-large">
+      <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
           <label className="uk-form-label white-color">Username</label>
           <div className="uk-form-controls">
             <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
@@ -29,5 +50,6 @@ const SignIn = () => {
     </section>
     </div>)
   }
+}
 
 export default SignIn;
