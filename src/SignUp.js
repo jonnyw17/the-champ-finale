@@ -21,7 +21,7 @@ class SignUp extends Component {
       disabledBtn: true,
       userMessage: ''
     }
-    this.userDetails = this.userDetails.bind(this);
+    // this.userDetails = this.userDetails.bind(this);
     this.displayInput = this.displayInput.bind(this);
     this.userInput = this.userInput.bind(this);
     this.userMessage = this.userMessage.bind(this);
