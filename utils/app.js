@@ -10,7 +10,7 @@ const users = require('./routes/users');
 
 const cors = require('cors');
 const app = express();
-const db = 'mongodb://localhost:3000/thechampusers';
+const db = 'mongodb://localhost/thechamp';
 const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 mongoose.connect(db, {useMongoClient: true})
