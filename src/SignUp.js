@@ -46,7 +46,7 @@ class SignUp extends Component {
       password: event.target[2].value,
       streetname: event.target[3].value,
       city: event.target[4].value,
-      twitterHandle: event.target[5].value
+      twitterhandle: event.target[5].value
     }).catch((err) => err)
   }
 
