@@ -160,6 +160,7 @@ class SignUp extends Component {
   }
 
   render() {
+    console.log(this.props)
     //CSS inline styles, used to set display to either none for any none relevant input fields, accessing state to determin which input field is to be put in the view state is changed via the displayInput function.
     let displayFullname = {
       display: this.state.fullname
