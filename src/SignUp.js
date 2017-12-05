@@ -188,7 +188,7 @@ class SignUp extends Component {
         </article>
 
         <article className="logo-wrapper">
-          <img src="BetGame_Logo_Brown.png" alt="the champ logo"/>
+          <img src="BetGame_Logo.png" alt="the champ logo"/>
           <h3>Champ</h3>
         </article>
         <article className="menu-wrapper"></article>

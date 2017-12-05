@@ -31,7 +31,7 @@
   .activity-name-wrapper {
     position: relative;
     height: 20vh;
-    background: white;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -52,7 +52,7 @@
       color: #8d562e; }
   .activity-container {
     height: 60vh;
-    background: white;
+    background: none;
     display: flex;
     justify-content: center; }
     .activity-container .champ-display {
@@ -198,7 +198,7 @@
   .activity-name-wrapper {
     position: relative;
     height: 20vh;
-    background: white;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -219,7 +219,7 @@
       color: #8d562e; }
   .activity-container {
     height: 60vh;
-    background: white;
+    background: none;
     display: flex;
     justify-content: center; }
     .activity-container .champ-display {
