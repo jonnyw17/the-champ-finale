@@ -37,7 +37,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.currentUserSignedUp):
+    console.log(this.state.currentUserSignedUp);
     console.log(this.state.currentUserSignedIn);
     return (
       <div>
