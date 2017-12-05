@@ -18,7 +18,7 @@ class SignIn extends Component {
 
     axios.post("https://thechamp-be.herokuapp.com/users/login", {
       username: event.target[0].value,
-      password: event.target[1].value,
+      password: event.target[1].value
     }).catch((err) => err)
   }
 
