@@ -36,7 +36,6 @@ class App extends Component {
   //------------------------------------------------------------------------
 
   getCurrentUser(currentUser) {
-    console.log(currentUser)
     this.setState({
       userLoggedIn: currentUser
     })

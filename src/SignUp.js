@@ -30,15 +30,19 @@ class SignUp extends Component {
   }
 
   postUserDetails(event) {
-    event.preventDefault();
-    axios.post("https://thechamp-be.herokuapp.com/users/register", {
+    let currentUser = {
       fullname: event.target[0].value,
       username: event.target[1].value,
       password: event.target[2].value,
       streetname:event.target[3].value,
       city: event.target[4].value,
       twitterHandle: event.target[5].value
+    }
+    event.preventDefault();
+    axios.post("https://thechamp-be.herokuapp.com/users/register", currentUser {
     }).catch((err) =>  err)
+
+    this.props.getCurrentUser()
   }
 
   //USERDETAILS - send user details to app via a call back function
@@ -140,7 +144,6 @@ class SignUp extends Component {
       confirmBtn: confirmBtn,
       count: this.state.count + 1
     });
-    console.log(this.state.count)
   };
 
   //COMPOENENTDIDMOUNT - lifecylce function used to increase count after first render in preperation for users next input field (feel like the count has an issue need to read up more and find out if this is the right approach, count without this is always one behind, must be something to do with the way the component/render works but check!)
