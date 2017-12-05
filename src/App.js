@@ -44,7 +44,7 @@ class App extends Component {
           <div>
             <Route exact={true} path="/" component={Home}/>
             <Route path="/signup" render={()=><SignUp getCurrentUserSignUp={this.getCurrentUserSignUp}/>}/>
-            <Route path="/signin" render={()=><Signin getCurrentUserSignIn={this.getCurrentUserSignIn}/>}/>
+            <Route path="/signin" render={()=><SignIn getCurrentUserSignIn={this.getCurrentUserSignIn}/>}/>
             <Route path="/profilepage" component={ProfilePage}/>
             <Route path="/platform" component={Platform}/>
             <Route path="/champdisplay" render={()=><ChampDisplay activeUser={this.state.userLoggedIn}/>}/>
