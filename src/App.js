@@ -25,37 +25,61 @@ class App extends Component {
   }
 
   getCurrentUserSignUp(currentUser) {
-    this.setState({
-      currentUserSignedUp: currentUser
-    })
+    this.setState({currentUserSignedUp: currentUser})
   }
 
   getCurrentUserSignIn(currentUser) {
-    this.setState({
-      currentUserSignedIn: currentUser
-    })
+    this.setState({currentUserSignedIn: currentUser})
   }
 
   render() {
+
+    (function toggleFullScreen() {
+      var doc = window.document;
+      var docEl = doc.documentElement;
+
+      var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+      var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+      if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+        requestFullScreen.call(docEl);
+      }
+      else {
+        cancelFullScreen.call(doc);
+      }
+    })()
+
+
+
+    // (function() => {
+    //     document.body.requestFullscreen();
+    //   }, true);
+    // })()
     console.log(this.state.currentUserSignedUp);
     console.log(this.state.currentUserSignedIn);
-    return (
-      <div>
-        <Router>
-          <div>
-            <Route exact={true} path="/" component={Home}/>
-            <Route path="/signup" render={()=><SignUp getCurrentUserSignUp={this.getCurrentUserSignUp}/>}/>
-            <Route path="/signin" render={()=><SignIn getCurrentUserSignIn={this.getCurrentUserSignIn}/>}/>
-            <Route path="/profilepage" component={ProfilePage}/>
-            <Route path="/platform" component={Platform}/>
-            <Route path="/champdisplay" render={()=><ChampDisplay activeUser={this.state.userLoggedIn}/>}/>
-            <Route path="/searchprofile" render={()=><SearchProfile activeUser={this.state.userLoggedIn}/>}/>
-            <Route path="/battledisplay" component={BattleDisplay}/>
-            <Route path="/battledisplayready" component={BattleDisplayReady}/>
-          </div>
-        </Router>
-      </div>
-    );
+    return (<div>
+      <Router>
+        <div>
+          <Route exact={true} path="/" component={Home}/>
+          <Route path="/signup" render={() =>< SignUp getCurrentUserSignUp = {
+              this.getCurrentUserSignUp
+            } />}/>
+          <Route path="/signin" render={() =>< SignIn getCurrentUserSignIn = {
+              this.getCurrentUserSignIn
+            } />}/>
+          <Route path="/profilepage" component={ProfilePage}/>
+          <Route path="/platform" component={Platform}/>
+          <Route path="/champdisplay" render={() =>< ChampDisplay activeUser = {
+              this.state.userLoggedIn
+            } />}/>
+          <Route path="/searchprofile" render={() =>< SearchProfile activeUser = {
+              this.state.userLoggedIn
+            } />}/>
+          <Route path="/battledisplay" component={BattleDisplay}/>
+          <Route path="/battledisplayready" component={BattleDisplayReady}/>
+        </div>
+      </Router>
+    </div>);
   }
 }
 
