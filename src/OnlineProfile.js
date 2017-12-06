@@ -10,7 +10,7 @@ class OnlineProfile extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://thechamp-be.herokuapp.com/users/').then((res) => {
+    axios.get('https://thechamp-be.herokuapp.com/users/?online=true').then((res) => {
       this.setState({users: res.data})
     })
   }
@@ -19,6 +19,7 @@ class OnlineProfile extends Component {
     return (<div>
       {
         this.state.users.map((users, index) => {
+          console.log(index)
           if (users.online) {
             return (<div key={index}>
               <Link to="/profilepage">
