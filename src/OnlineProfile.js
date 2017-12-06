@@ -23,14 +23,14 @@ class OnlineProfile extends Component {
   render(){
     return (
       <div>
-      {this.state.users.map((users) => {
+      {this.state.users.map((users, index) => {
         if(users.online) {
           return (
-            <div>
+            <div key={index}>
               <Link to="/profilepage">
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
                   <div className="online-circle"></div>
-                  <h6>{user.fullname}</h6>
+                  <h6>{users.fullname}</h6>
                   <div className="ghost-circle"></div>
                 </article>
               </Link>
