@@ -6,11 +6,23 @@ class OnlineProfile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      users: [],
-      online: true
+      users: []
     }
   }
+
+  componentDidMount(){
+    axios.get('https://thechamp-be.herokuapp.com/users/')
+    .then((res) => {
+      this.setState({
+        users: res
+      }).catch(function (error) {
+        console.log(error);
+      });
+    })
+  }
+
   render(){
+    console.log(this.state.users)
     return (
       <div>
       <Link to="/profilepage">
