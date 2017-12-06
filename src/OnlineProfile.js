@@ -7,12 +7,14 @@ class OnlineProfile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      users: []
+
     }
   }
 
   componentDidMount(){
-    axios.get('https://thechamp-be.herokuapp.com/users/', {
+    axios.get('https://thechamp-be.herokuapp.com/users/')
+    .then((res) => {
+      console.log(res.data)
       this.setState({
         users: res.data
       })
