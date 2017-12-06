@@ -14,7 +14,6 @@ class OnlineProfile extends Component {
   componentDidMount(){
     axios.get('https://thechamp-be.herokuapp.com/users/')
     .then((res) => {
-      console.log(res.data)
       this.setState({
         users: res.data
       })
@@ -22,16 +21,23 @@ class OnlineProfile extends Component {
   }
 
   render(){
-    console.log(this.state.users)
     return (
       <div>
-      <Link to="/profilepage">
-        <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
-          <div className="online-circle"></div>
-          <h6>Shaun Gibson</h6>
-          <div className="ghost-circle"></div>
-        </article>
-      </Link>
+      {this.state.users.map((users) => {
+        if(users.online) {
+          return (
+            <div>
+              <Link to="/profilepage">
+                <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
+                  <div className="online-circle"></div>
+                  <h6>{user.fullname}</h6>
+                  <div className="ghost-circle"></div>
+                </article>
+              </Link>
+            </div>
+          )
+        }
+      })}
       </div>
     )
   }
