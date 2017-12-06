@@ -4,29 +4,23 @@ import './SearchProfile.css';
 import {Link} from 'react-router-dom';
 
 class OnlineProfile extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {
-
-    }
+    this.state = {users: []}
   }
 
-  componentDidMount(){
-    axios.get('https://thechamp-be.herokuapp.com/users/')
-    .then((res) => {
-      this.setState({
-        users: res.data
-      })
+  componentDidMount() {
+    axios.get('https://thechamp-be.herokuapp.com/users/').then((res) => {
+      this.setState({users: res.data})
     })
   }
 
-  render(){
-    return (
-      <div>
-      {this.state.users.map((users, index) => {
-        if(users.online) {
-          return (
-            <div key={index}>
+  render() {
+    return (<div>
+      {
+        this.state.users.map((users, index) => {
+          if (users.online) {
+            return (<div key={index}>
               <Link to="/profilepage">
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
                   <div className="online-circle"></div>
@@ -34,12 +28,11 @@ class OnlineProfile extends Component {
                   <div className="ghost-circle"></div>
                 </article>
               </Link>
-            </div>
-          )
-        }
-      })}
-      </div>
-    )
+            </div>)
+          }
+        })
+      }
+    </div>)
   }
 }
 
