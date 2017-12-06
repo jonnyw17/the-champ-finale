@@ -63,55 +63,41 @@ class ProfilePage extends Component {
 
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
-        <div className="white-gradient"></div>
         <h3>Profile</h3>
       </section>
 
       <section className="activity-container">
-        <article className="champ-display">
-          <div className="game-img-display">
-            <img src="Worms_Circle_Background.png" alt="worms"/>
-            <div className="user-location">
-              <img src="Targeting_Icon.png" alt="navigation icon"/>
-              <div className="location-separator"></div>
-              <article className="location-address">
-                <div className="location-zone">16 Tib Street</div>
-                <div className="location-city">Manchester</div>
-              </article>
-            </div>
-            <div className="champ-details">
-              <div className="champ-status">
-                <div className="img-container">
-                  <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
-                </div>
-                <article className="champ-info">
-                  <div className="champ-name">
-                    <h4>Shaun Gibson</h4>
-                  </div>
-                  <div className="champ-rank">
-                    <h6>SILVER</h6>
-                  </div>
-                  <article className="champ-trophies"></article>
-                  <div className="horizontal-decor-line"></div>
-                  <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
-                </article>
-              </div>
-
-              <div className="challenge-btn-container uk-animation-shake">
-
-                {/* 1) Button Clicked */}
-                <button className="challenge-btn" onClick={this.SendRequest} style={{
-                    display: this.state.requestSent
-                      ? 'none'
-                      : 'flex'
-                  }}>
-                  <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
-                  <h4>Challenge</h4>
-                </button>
-                    {toggleButton()}
-              </div>
+        <article className="champdisplay"></article>
+        <article className="white-ring-border"></article>
+        <article className="game-overlay-display"></article>
+        <article className="gamer-info-container">
+        <article className="upper-circle-container">
+          <div className="gamer-name">
+            <h3>Widow Maker</h3>
+            <h6>Shaun Gibson</h6>
+          </div>
+        </article>
+        <article className="middle-circle-container">
+          <div className="img-container">
+            <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
+          </div>
+          <div className="victory-recent-container">
+            <img src="Crowned_Champion.png" alt="crown champion symbol"/>
+            <div className="victory-recent-description">
+              <h6 className="victory-title">Recent</h6>
+              <h6 className="victory-title">Victory</h6>
+              <h6 className="victory-address">29 Tib Street</h6>
+              <h6>CHAMPION</h6>
+              <img className="recent-trophy-icon" src="Trophy_Icon_Golden_Yellow.png" alt="Golden Trophy Icon"/>
             </div>
           </div>
+        </article>
+        <article className="lower-circle-container">
+          <div>
+            <div className="gamer-level">Level {5}</div>
+            <div className="line-decor"></div>
+          </div>
+        </article>
         </article>
       </section>
       {/* Navigation Bar */}
@@ -142,8 +128,7 @@ class ProfilePage extends Component {
       {/* Display Step 1 Tip */}
       {
         this.state.requestSent
-          ? <GuideStep4/>
-          : <GuideStep3/>
+          /*? <GuideStep4/> : <GuideStep3/>*/
       }
 
 
@@ -165,3 +150,46 @@ class ProfilePage extends Component {
 }
 
 export default ProfilePage;
+
+// PLEASE DO NOT DELETE
+//
+// <article className="champ-display">
+//   <div className="game-img-display">
+//     <div className="champ-details">
+//       <div className="champ-status">
+//         <div className="img-container">
+//           <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
+//         </div>
+//         <article className="champ-info">
+//           <div className="champ-name">
+//             <h4>Shaun Gibson</h4>
+//           </div>
+//           <div className="champ-rank">
+//             <h6>SILVER</h6>
+//           </div>
+//           <article className="champ-trophies"></article>
+//           <div className="horizontal-decor-line"></div>
+//           <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
+//         </article>
+//       </div>
+//
+//       <div className="challenge-btn-container uk-animation-shake">
+//
+//         {/* 1) Button Clicked */}
+//         <button className="challenge-btn" onClick={this.SendRequest} style={{
+//             display: this.state.requestSent
+//               ? 'none'
+//               : 'flex'
+//           }}>
+//           <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
+//           <h4>Challenge</h4>
+//         </button>
+//
+//         {/* 2) Toggles to this button */}
+//
+//
+//       </div>
+//
+//     </div>
+//   </div>
+// </article>

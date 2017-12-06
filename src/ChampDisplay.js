@@ -38,8 +38,6 @@ class ChampDisplay extends Component {
       </section>
 
       <section className="activity-name-wrapper">
-        <img className="crown-champion-cover-img" src="Crowned_Champion_Golden.png" alt="the champ crown icon"/>
-        <div className="white-gradient"></div>
         <h3>Worms Champion</h3>
       </section>
       <section className="activity-container">

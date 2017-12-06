@@ -21,12 +21,12 @@ const Home = () => {
       <article className="btn-wrapper">
         <Link to="/signup">
           <button className="sign-up-btn">
-            <h5>SIGN UP</h5>
+            <h5>Sign up</h5>
           </button>
         </Link>
         <Link to="/signin">
           <button className="sign-in-btn">
-            <h5>SIGN IN</h5>
+            <h5>Log in</h5>
           </button>
         </Link>
       </article>

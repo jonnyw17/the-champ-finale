@@ -59,7 +59,7 @@ h5 {
     width: 255px; }
     .main-container .bottom-container .btn-wrapper .sign-up-btn {
       background: white;
-      border-radius: 15px;
+      border-radius: 7.5px;
       width: 255px;
       opacity: 0.75; }
       .main-container .bottom-container .btn-wrapper .sign-up-btn h5 {
@@ -69,6 +69,6 @@ h5 {
       margin: 25px 0 0 0;
       width: 255px; }
       .main-container .bottom-container .btn-wrapper .sign-in-btn h5 {
-        margin: 14px 0;
+        margin: 5px 0;
         color: white;
         opacity: 0.75; }
