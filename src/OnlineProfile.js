@@ -21,13 +21,14 @@ class OnlineProfile extends Component {
   }
 
   render() {
+    var counter = 0;
     return (<div>
       {
         this.state.users.map((users, index) => {
-          console.log(index)
           if (users.online) {
-            return (<div key={index}>
-              <Link onClick={this.userProfile(index)} to="/profilepage">
+            return (
+            <div key={index}>
+              <Link onClick={this.userProfile} to='profilepage'>
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
                   <div className="online-circle"></div>
                   <h6>{users.fullname}</h6>
