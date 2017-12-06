@@ -85,203 +85,150 @@
   }
   .activity-name-wrapper {
     position: relative;
-    height: 20vh;
-    background: white;
+    height: 10vh;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    .white-gradient {
-      position: absolute;
-      height: 20px;
-      width: 200px;
-      background: white;
-      opacity: 0.65;
-    }
     h3 {
-      position: absolute;
-      top: 15px;
-      font-weight: 700;
+      margin: 0;
+      font-weight: 300;
       letter-spacing: 0.8px;
-      color: rgb(141,86,46);
+      color: white;
     }
   }
   .activity-container {
     position: relative;
-    height: 60vh;
-    background: white;
+    height: 70vh;
+    background: none;
     display: flex;
     justify-content: center;
-    .champ-display {
-      width: 100vw;
-      height: 100vw;
-      background: linear-gradient(to bottom right, hsl(45,61,32), hsl(4,61,51));
+    align-items: center;
+    .champdisplay{
+      width: 90vw;
+      height: 90vw;
+      background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));
+      filter: blur(5px);
       border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .game-img-display {
-        position: relative;
-        width: 100vw;
-        height: 100vw;
-        border-radius: 50%;
-        background: white;
+    }
+    .white-ring-border {
+      position: absolute;
+      background: none;
+      width: 90vw;
+      height: 90vw;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+    .game-overlay-display {
+      // display: none;
+      position: absolute;
+      width: 90vw;
+      height: 90vw;
+      background: rgba(255,255,255,0.35);
+      border-radius: 50%;
+    }
+    .gamer-info-container {
+      position: absolute;
+      width: 90vw;
+      height: 90vw;
+      .upper-circle-container{
         display: flex;
         justify-content: center;
-        img {
-          width: 100vw;
-          height: 100vw;
-          opacity: 0.3;
+        align-items: center;
+        width: 90vw;
+        height: 15vw;
+        margin: 5vh 0 0 0;
+        .gamer-name {
+          h3 {
+            display: block;
+            font-size: 20px;
+            margin: 0;
+            letter-spacing: 1px;
+            text-align: center;
+            color: white;
+          }
+          h6 {
+            display: block;
+            margin: -5px 0;
+            font-weight: 300;
+            letter-spacing: 0.7px;
+            opacity: 0.5;
+            text-align: center;
+            color: white;
+          }
         }
-        .user-location {
-          position: absolute;
-          top: 65px;
-          height: 65px;
-          width: 250px;
+      }
+      .middle-circle-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 90vw;
+        height: 42.5vw;
+        .img-container {
+          width: 35vw;
+          border-radius: 50%;
+          border: 2px solid white;
+          margin: 10px 0 0 0;
+        }
+        .victory-recent-container {
+          position: relative;
+          width: 42.5vw;
+          height: 42.5vw;
           display: flex;
-          justify-content: space-around;
-          align-items: center;
-          border-radius: 20px;
-          background: white;
+          align-items: flex-end;
           img {
-            top: 10px;
-            height: 45px;
-            width: 45px;
-            opacity: 1;
-            margin: 0 0 0 1vw;
+            position: absolute;
+            width: 47.5vw;
+            height: 40vw;
+            opacity: 0.9;
           }
-          .location-separator {
-            height: 45px;
-            width: 3px;
-            margin: 0 -2vw 0 0;
-            background: rgb(141,86,46);
-          }
-          .location-address {
-            padding: 0 5vw 0 0;
-            .location-zone {
-              font-size: 24px;
-              margin: -5px 0;
-              font-weight: 400;
-              color: rgb(141,86,46);
+          .victory-recent-description {
+            position: absolute;
+            width: 42.5vw;
+            height: 40vw;
+            margin: 10px 0 0 0;
+            h6 {
+              position: relative;
+              margin: 0;
+              text-align: center;
+              color: white;
             }
-            .location-city {
-              font-size: 15px;
-              color: rgb(141,86,46);
-              opacity: 0.8;
+            .victory-title {
+              font-size: 13px;
+              font-weight: 100;
+              opacity: 0.6;
+              letter-spacing: 0.6px;
+              margin: -5px 0 0 0;
+            }
+            .victory-address {
+              margin: 2.5px 0 -2.5px 0;
+              letter-spacing: 0.5px;
+            }
+            .recent-trophy-icon {
+              height: 35px;
+              width: auto;
+              margin: -1vh 16.5vw;
             }
           }
         }
-        .champ-details {
-          position: absolute;
-          top: 130px;
-          height: 100px;
-          width: 330px;
-          display: block;
-          .champ-status {
-            height: 60px;
-            display: inline-flex;
-            justify-content: flex-start;
-            .img-container {
-              height: 100px;
-              width: 100px;
-              border-radius: 50%;
-              border: 3px solid ;
-              background: white;
-              margin: 25px 0 0 25px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              overflow: hidden;
-              img {
-                height: 100px;
-                width: 100px;
-                margin: 0;
-              }
-              .gamer-img {
-                height: 100px;
-                width: 100px;
-              }
-              .empty-profile-img {
-                margin: 25px 0 0 0;
-              }
-            }
-            .champ-info {
-              width: 150px;
-              margin: 35px 0 0 0;
-              .champ-name {
-                h4 {
-                  margin: 0;
-                  font-size: 16px;
-                  font-weight: 600;
-                  letter-spacing: 1.5px;
-                  text-align: center;
-                }
-              }
-              .champ-rank {
-                h6 {
-                  margin: 0;
-                  font-size: 13px;
-                  color: grey;
-                  text-align: center;
-                }
-              }
-            }
-            .champ-trophies {
-              height: 40px;
-              width: 70px;
-              margin: 0px 0 0 0;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          }
-          .horizontal-decor-line {
-            height: 3px;
-            width: 130px;
-            margin: 0 auto 20px auto;
-            background: grey;
-          }
-          img {
-            margin: -2.5vh 120px 0 120px;
-            height: 90px;
-            width: 90px;
-            opacity: 1;
-          }
-          .challenge-btn-container{
-            width: 330px;
-            display: flex;
-            justify-content: center;
-            button {
-              height: 45px;
-              width: 182px;
-              border: 3px solid #B15B30;
-              border-radius: 10px;
-              background: white;
-              display: flex;
-              justify-content: space-around;
-              margin: 30px 0 0 0;
-              img {
-                height: 29px;
-                width: 30px;
-                margin: 3px 10px;
-              }
-              h4 {
-                font-weight: 700;
-                color: #B15B30;
-                margin: 3px 0;
-              }
-            }
-            .challenge-btn-sent{
-              color: white;
-              border: 3px solid white;
-              background: #B15B30;
-              h4 {
-                font-weight: 400;
-                letter-spacing: 0.6px;
-                color: white;
-                margin: 3px 0;
-              }
-            }
-          }
+      }
+      .lower-circle-container {
+        width: 90vw;
+        height: 10vw;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .gamer-level {
+          color: white;
+          letter-spacing: 0.6px;
+          text-align: center;
+        }
+        .line-decor {
+          height: 1px;
+          width: 60px;
+          margin: 2.5px 0;
+          background: white;
         }
       }
     }
@@ -475,7 +422,7 @@
     .activity-name-wrapper {
       position: relative;
       height: 20vh;
-      background: white;
+      background: none;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -487,17 +434,16 @@
         opacity: 0.65;
       }
       h3 {
-        position: absolute;
-        top: 15px;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        color: rgb(141,86,46);
+        top: 0px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: white;
       }
     }
     .activity-container {
       position: relative;
       height: 60vh;
-      background: white;
+      background: none;
       display: flex;
       justify-content: center;
       .champ-display {

@@ -40,7 +40,7 @@
   .activity-name-wrapper {
     position: relative;
     height: 20vh;
-    background: white;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -190,7 +190,7 @@
   .activity-name-wrapper {
     position: relative;
     height: 20vh;
-    background: white;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -207,9 +207,9 @@
     .activity-name-wrapper h3 {
       position: absolute;
       top: 15px;
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: 0.8px;
-      color: #8d562e; }
+      color: white; }
   .activity-container {
     height: 60vh;
     background: white;
