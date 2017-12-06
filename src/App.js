@@ -49,8 +49,6 @@ class App extends Component {
       }
     })()
 
-
-
     // (function() => {
     //     document.body.requestFullscreen();
     //   }, true);
