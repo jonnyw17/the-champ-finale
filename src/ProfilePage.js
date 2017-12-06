@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import ProgressBar from 'react-progressbar.js';
 
 import ChallengeRequestSent from './ChallengeRequestSent';
 import GuideStep3 from './GuideStep3';
@@ -47,7 +48,7 @@ class ProfilePage extends Component {
     // There must be someway to set Time on the Display variable
     const display = this.state.requestSent
       ? doShow
-      : dontShow
+      : dontShow;
 
     return (<div className="main-container">
 
@@ -63,7 +64,7 @@ class ProfilePage extends Component {
 
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
-        <h3>Profile</h3>
+        <h3>Rival&#39;s Profile</h3>
       </section>
 
       <section className="activity-container">
@@ -72,6 +73,9 @@ class ProfilePage extends Component {
         <article className="game-overlay-display"></article>
         <article className="gamer-info-container">
         <article className="upper-circle-container">
+          <article className="progress-circle">
+            <img src="Progress_Circle.png" />
+          </article>
           <div className="gamer-name">
             <h3>Widow Maker</h3>
             <h6>Shaun Gibson</h6>
@@ -88,7 +92,9 @@ class ProfilePage extends Component {
               <h6 className="victory-title">Victory</h6>
               <h6 className="victory-address">29 Tib Street</h6>
               <h6>CHAMPION</h6>
-              <img className="recent-trophy-icon" src="Trophy_Icon_Golden_Yellow.png" alt="Golden Trophy Icon"/>
+              <div className="trophy-icon-container">
+                <img className="recent-trophy-icon" src="Trophy_Icon_Golden_Yellow.png" alt="Golden Trophy Icon"/>
+              </div>
             </div>
           </div>
         </article>

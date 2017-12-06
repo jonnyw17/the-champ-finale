@@ -1,18 +1,18 @@
 .border-top-bottom-online {
-  border-top: 2px solid rgba(141, 87, 47, 1);
-  border-bottom: 2px solid rgba(141, 87, 47, 1);
+  border-top: 0px solid rgba(255, 255, 255, 1);
+  border-bottom: 0px solid rgba(255, 255, 255, 1);
 }
 
 .border-top-bottom-offline {
-  border-top: 2px solid rgba(141, 87, 47, 0.5);
-  border-bottom: 2px solid rgba(141, 87, 47, 0.5);
+  border-top: 0px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 0px solid rgba(255, 255, 255, 0.5);
   h6 {
     opacity: 0.5;
   }
 }
 .status-wrapper {
   height: 80vh;
-  background: white;
+  background: none;
   display: flex;
   justify-content: center;
 }
@@ -27,14 +27,14 @@
   justify-content: center;
   h4 {
     margin: 8px 15px;
-    color: #8D572F;
+    color: white;
     opacity: 0.8;
   }
   .status-separator {
     position: absolute;
     height: 25px;
     width: 2px;
-    background: #8D572F;
+    background: white;
     margin: 10px 0;
   }
   .online-tab {
@@ -57,14 +57,14 @@
   justify-content: center;
   h4 {
     margin: 8px 15px;
-    color: #8D572F;
+    color: white;
     opacity: 0.8;
   }
   .status-separator {
     position: absolute;
     height: 25px;
     width: 2px;
-    background: #8D572F;
+    background: white;
     margin: 10px 0;
   }
   .online-tab {
@@ -85,6 +85,7 @@
   margin: 10px 0;
   display: inline-flex;
   justify-content: space-around;
+  background: rgba(255,255,255, 0.05);
   .online-circle {
     height: 12.5px;
     width: 12.5px;
@@ -102,12 +103,13 @@
   h6 {
     margin: 10px;
     font-size: 16px;
-    font-weight: 600;
-    color: #8D572F;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: white;
   }
   .ghost-circle {
-    height: 12.5px;
-    width: 12.5px;
-    margin: 15px;
+    height: 30px;
+    width: 30px;
+    margin: 5px 0 5px 10px;
   }
 }

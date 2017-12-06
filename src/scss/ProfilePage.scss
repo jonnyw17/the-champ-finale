@@ -138,6 +138,15 @@
         width: 90vw;
         height: 15vw;
         margin: 5vh 0 0 0;
+        .progress-circle {
+          position: absolute;
+          bottom: 0vh;
+          right: 0vw;
+          img {
+            width: 86vw;
+            height: 90vw;
+          }
+        }
         .gamer-name {
           h3 {
             display: block;
@@ -204,10 +213,16 @@
               margin: 2.5px 0 -2.5px 0;
               letter-spacing: 0.5px;
             }
-            .recent-trophy-icon {
-              height: 35px;
-              width: auto;
-              margin: -1vh 16.5vw;
+            .trophy-icon-container {
+              width: 42.5vw;
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              margin: -10px 0 0 0;
+              .recent-trophy-icon {
+                height: 35px;
+                width: auto;
+              }
             }
           }
         }
@@ -311,7 +326,7 @@
   .nav-bar {
     display: block;
     height: 10vh;
-    background: white;
+    background: none;
     .horizontal-line {
       height: 3px;
       width: 90vw;

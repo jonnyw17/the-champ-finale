@@ -117,6 +117,13 @@
         width: 90vw;
         height: 15vw;
         margin: 5vh 0 0 0; }
+        .activity-container .gamer-info-container .upper-circle-container .progress-circle {
+          position: absolute;
+          bottom: 0vh;
+          right: 0vw; }
+          .activity-container .gamer-info-container .upper-circle-container .progress-circle img {
+            width: 86vw;
+            height: 90vw; }
         .activity-container .gamer-info-container .upper-circle-container .gamer-name h3 {
           display: block;
           font-size: 20px;
@@ -173,10 +180,15 @@
             .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .victory-address {
               margin: 2.5px 0 -2.5px 0;
               letter-spacing: 0.5px; }
-            .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .recent-trophy-icon {
-              height: 35px;
-              width: auto;
-              margin: -1vh 16.5vw; }
+            .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .trophy-icon-container {
+              width: 42.5vw;
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              margin: -10px 0 0 0; }
+              .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .trophy-icon-container .recent-trophy-icon {
+                height: 35px;
+                width: auto; }
       .activity-container .gamer-info-container .lower-circle-container {
         width: 90vw;
         height: 10vw;
@@ -256,7 +268,7 @@
   .nav-bar {
     display: block;
     height: 10vh;
-    background: white; }
+    background: none; }
     .nav-bar .horizontal-line {
       height: 3px;
       width: 90vw;
