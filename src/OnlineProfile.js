@@ -7,12 +7,17 @@ class OnlineProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {users: []}
+    this.userProfile = this.userProfile.bind(this);
   }
 
   componentDidMount() {
     axios.get('https://thechamp-be.herokuapp.com/users/?online=true').then((res) => {
       this.setState({users: res.data})
     })
+  }
+
+  userProfile(index) {
+    console.log(index)
   }
 
   render() {
@@ -22,7 +27,7 @@ class OnlineProfile extends Component {
           console.log(index)
           if (users.online) {
             return (<div key={index}>
-              <Link to="/profilepage">
+              <Link onClick={this.userProfile(index)} to="/profilepage">
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
                   <div className="online-circle"></div>
                   <h6>{users.fullname}</h6>
