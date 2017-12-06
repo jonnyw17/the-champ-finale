@@ -14,9 +14,10 @@ class OnlineProfile extends Component {
   componentDidMount(){
     axios.get('https://thechamp-be.herokuapp.com/users/')
     .then((res) => {
+      console.log(res)
       this.setState({
         users: res
-      }).catch(function (error) {
+      }).catch((error) => {
         console.log(error);
       });
     })
