@@ -10,7 +10,7 @@ class SignIn extends Component {
   }
 
   postUserDetails(event) {
-    // event.preventDefault();
+    event.preventDefault();
     let currentUser = {
       username: event.target[0].value,
     }
@@ -33,7 +33,7 @@ class SignIn extends Component {
     </section>
     <section className="activity-form-container">
     <article className="form-container">
-      <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
+      <form onSubmit={this.postUserDetails} method="post" className="uk-form-horizontal uk-margin-large">
           <label className="uk-form-label white-color">Username</label>
           <div className="uk-form-controls">
             <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
