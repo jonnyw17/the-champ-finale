@@ -49,7 +49,6 @@ class ProfilePage extends Component {
     const display = this.state.requestSent
       ? doShow
       : dontShow;
-
     return (<div className="main-container">
 
       {/* Challenge Accepted Banner */}
@@ -64,10 +63,10 @@ class ProfilePage extends Component {
 
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
-        <h3>Rival&#39;s Profile</h3>
+        <h3 className="activity-name">Rival&#39;s Profile</h3>
       </section>
 
-      <section className="activity-container">
+      <section className="profile-info">
         <article className="champdisplay"></article>
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>
@@ -84,6 +83,7 @@ class ProfilePage extends Component {
         <article className="middle-circle-container">
           <div className="img-container">
             <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
+            <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
           </div>
           <div className="victory-recent-container">
             <img src="Crowned_Champion.png" alt="crown champion symbol"/>
@@ -91,7 +91,7 @@ class ProfilePage extends Component {
               <h6 className="victory-title">Recent</h6>
               <h6 className="victory-title">Victory</h6>
               <h6 className="victory-address">29 Tib Street</h6>
-              <h6>CHAMPION</h6>
+              <h6 className="champion-title">CHAMPION</h6>
               <div className="trophy-icon-container">
                 <img className="recent-trophy-icon" src="Trophy_Icon_Golden_Yellow.png" alt="Golden Trophy Icon"/>
               </div>
@@ -102,30 +102,48 @@ class ProfilePage extends Component {
           <div>
             <div className="gamer-level">Level {5}</div>
             <div className="line-decor"></div>
+            <div className="gamer-level"><span className="experience-title">EXP</span><span className="experience-value">{1050}<span className="experience-divider">/</span>{1500}</span></div>
           </div>
         </article>
         </article>
       </section>
+      <section className="actions-container">
+        <button className="challenge-btn" onClick={this.SendRequest} style={{
+                    display: this.state.requestSent
+                      ? 'none'
+                      : 'flex'
+                  }}>
+          <img src="Provoke_Icon_White.png"/>
+          <h6>CHALLENGE</h6>
+        </button>
+        <button className="challenge-sent pos-abs" style={{
+                    display: this.state.requestSent
+                      ? 'flex'
+                      : 'none'
+                  }}>
+          <h6>CHALLENGE SENT !</h6>
+        </button>
+      </section>
       {/* Navigation Bar */}
       <section className="nav-bar">
-        <div className="horizontal-line"></div>
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
             <button className="nav-btn">
-              <img className="search-icon" src="Search_Fa_Icon.png" alt="navigation icon"/>
+              <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
+              <img className="button-highlight" src="Button_Highlight.png"/>
             </button>
           </Link>
-          <div className="separator"></div>
+          <div className="ghost-separator"></div>
           <Link to="champdisplay">
             <button className="nav-btn">
-              <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
+              <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
             </button>
           </Link>
-          <div className="separator"></div>
+          <div className="ghost-separator"></div>
           <Link to="/battledisplayready">
             <button className="nav-btn">
-              <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
+              <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
@@ -136,8 +154,6 @@ class ProfilePage extends Component {
         this.state.requestSent
           /*? <GuideStep4/> : <GuideStep3/>*/
       }
-
-
       {/* Notification Circle */}
       <section className="challenge-notification uk-animation-scale-up" style={display}>
         <div className="notification-amount">

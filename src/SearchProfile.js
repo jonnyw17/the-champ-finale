@@ -55,24 +55,23 @@ class SearchProfile extends Component {
         </article>
       </section>
       <section className="nav-bar">
-        <div className="horizontal-line"></div>
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
-            <button className="nav-btn silver-bg-colour">
+            <button className="nav-btn">
               <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
             </button>
           </Link>
-          <div className="separator"></div>
+          <div className="ghost-separator"></div>
           <Link to="/champdisplay">
             <button className="nav-btn">
-              <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
+              <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
             </button>
           </Link>
-          <div className="separator"></div>
+          <div className="ghost-separator"></div>
           <Link to="/battledisplay">
             <button className="nav-btn">
-              <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
+              <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>

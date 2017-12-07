@@ -30,14 +30,16 @@ class OnlineProfile extends Component {
             <div key={index}>
               <Link onClick={this.userProfile} to='profilepage'>
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
-                <div className="ghost-circle">
-                {index === 0?
+                <div className="img-circle">
+                {
+                  index === 0?
                   <img src="Shaun_Face_Circular.png"/>
                   :
                   <img src="Doug_Face_Circular.png"/>
                 }
                 </div>
                   <h6>{users.fullname}</h6>
+                  <div className="ghost-name-div"></div>
                   <div className="online-circle"></div>
                 </article>
               </Link>
