@@ -1,6 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn");
 .fixed {
   position: fixed; }
+
+.pos-abs {
+  position: absolute; }
+
+.bg-white {
+  background: white; }
 
 @media (min-width: 320px) {
   .challenge-accepted-banner {
@@ -11,7 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #AC6143; }
+    background: #0c3d55; }
     .challenge-accepted-banner .message-banner {
       position: fixed;
       display: inline-flex;
@@ -30,9 +36,9 @@
   .challenge-notification {
     position: fixed;
     right: 6vw;
-    bottom: 6vh; }
+    bottom: 5.5vh; }
     .challenge-notification .notification-amount {
-      background: #AB6042;
+      background: #0c3d55;
       height: 23px;
       width: 23px;
       border-radius: 50%;
@@ -75,63 +81,65 @@
     display: flex;
     justify-content: center;
     align-items: center; }
-    .activity-name-wrapper h3 {
+    .activity-name-wrapper .activity-name {
       margin: 0;
+      font-size: 20px;
       font-weight: 300;
-      letter-spacing: 0.8px;
+      letter-spacing: 1.5px;
       color: white; }
-  .activity-container {
+  .profile-info {
     position: relative;
-    height: 70vh;
+    height: 57.5vh;
     background: none;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .activity-container .champdisplay {
+    .profile-info .champdisplay {
       width: 93vw;
       height: 93vw;
       background: linear-gradient(to bottom right, #14181f, #0c3d55);
       filter: blur(5px);
       border-radius: 50%; }
-    .activity-container .white-ring-border {
+    .profile-info .white-ring-border {
       position: absolute;
       background: none;
       width: 93vw;
       height: 93vw;
       border-radius: 50%;
       border: 1px solid white; }
-    .activity-container .game-overlay-display {
+    .profile-info .game-overlay-display {
       position: absolute;
       width: 93vw;
       height: 93vw;
       background: rgba(255, 255, 255, 0.35);
       border-radius: 50%; }
-    .activity-container .gamer-info-container {
+    .profile-info .gamer-info-container {
       position: absolute;
       width: 90vw;
       height: 90vw; }
-      .activity-container .gamer-info-container .upper-circle-container {
+      .profile-info .gamer-info-container .upper-circle-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 90vw;
         height: 15vw;
         margin: 5vh 0 0 0; }
-        .activity-container .gamer-info-container .upper-circle-container .progress-circle {
+        .profile-info .gamer-info-container .upper-circle-container .progress-circle {
           position: absolute;
           bottom: 0vh;
           right: 0vw; }
-          .activity-container .gamer-info-container .upper-circle-container .progress-circle img {
+          .profile-info .gamer-info-container .upper-circle-container .progress-circle img {
             width: 86vw;
             height: 90vw; }
-        .activity-container .gamer-info-container .upper-circle-container .gamer-name h3 {
+        .profile-info .gamer-info-container .upper-circle-container .gamer-name h3 {
           display: block;
+          font-family: 'Vollkorn', serif;
           font-size: 20px;
           margin: 0;
           letter-spacing: 1px;
           text-align: center;
           color: white; }
-        .activity-container .gamer-info-container .upper-circle-container .gamer-name h6 {
+        .profile-info .gamer-info-container .upper-circle-container .gamer-name h6 {
           display: block;
           margin: -5px 0;
           font-weight: 300;
@@ -139,375 +147,130 @@
           opacity: 0.5;
           text-align: center;
           color: white; }
-      .activity-container .gamer-info-container .middle-circle-container {
+      .profile-info .gamer-info-container .middle-circle-container {
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
         width: 90vw;
         height: 42.5vw; }
-        .activity-container .gamer-info-container .middle-circle-container .img-container {
+        .profile-info .gamer-info-container .middle-circle-container .img-container {
+          position: relative;
           width: 35vw;
           border-radius: 50%;
           border: 2px solid white;
           margin: 10px 0 0 0; }
-        .activity-container .gamer-info-container .middle-circle-container .victory-recent-container {
+          .profile-info .gamer-info-container .middle-circle-container .img-container .gamer-img {
+            position: absolute;
+            z-index: 1; }
+          .profile-info .gamer-info-container .middle-circle-container .img-container .highlight-img {
+            filter: blur(14px); }
+        .profile-info .gamer-info-container .middle-circle-container .victory-recent-container {
           position: relative;
           width: 42.5vw;
           height: 42.5vw;
           display: flex;
           align-items: flex-end; }
-          .activity-container .gamer-info-container .middle-circle-container .victory-recent-container img {
+          .profile-info .gamer-info-container .middle-circle-container .victory-recent-container img {
             position: absolute;
             width: 47.5vw;
             height: 40vw;
             opacity: 0.9; }
-          .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description {
+          .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description {
             position: absolute;
             width: 42.5vw;
             height: 40vw;
             margin: 10px 0 0 0; }
-            .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description h6 {
+            .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description h6 {
               position: relative;
               margin: 0;
               text-align: center;
               color: white; }
-            .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .victory-title {
-              font-size: 13px;
+            .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .victory-title {
+              font-family: 'Vollkorn', serif;
+              font-size: 14px;
               font-weight: 100;
               opacity: 0.6;
-              letter-spacing: 0.6px;
+              letter-spacing: 0.9px;
               margin: -5px 0 0 0; }
-            .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .victory-address {
-              margin: 2.5px 0 -2.5px 0;
-              letter-spacing: 0.5px; }
-            .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .trophy-icon-container {
+            .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .victory-address {
+              font-weight: 100;
+              margin: 3.5px 0 -2.5px 0;
+              letter-spacing: 1px; }
+            .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .champion-title {
+              margin: -4px 0 -2.5px 0;
+              letter-spacing: 0.7px; }
+            .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .trophy-icon-container {
               width: 42.5vw;
               height: 50px;
               display: flex;
               justify-content: center;
-              margin: -10px 0 0 0; }
-              .activity-container .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .trophy-icon-container .recent-trophy-icon {
+              margin: -8px 0 0 0; }
+              .profile-info .gamer-info-container .middle-circle-container .victory-recent-container .victory-recent-description .trophy-icon-container .recent-trophy-icon {
                 height: 35px;
                 width: auto; }
-      .activity-container .gamer-info-container .lower-circle-container {
+      .profile-info .gamer-info-container .lower-circle-container {
         width: 90vw;
-        height: 10vw;
+        height: 20vw;
         background: none;
         display: flex;
         justify-content: center;
-        align-items: flex-end; }
-        .activity-container .gamer-info-container .lower-circle-container .gamer-level {
+        align-items: center; }
+        .profile-info .gamer-info-container .lower-circle-container .gamer-level {
+          font-family: 'Vollkorn', serif;
           color: white;
+          font-size: 14.5px;
           letter-spacing: 0.6px;
           text-align: center; }
-        .activity-container .gamer-info-container .lower-circle-container .line-decor {
-          height: 1px;
-          width: 60px;
-          margin: 2.5px 0;
+          .profile-info .gamer-info-container .lower-circle-container .gamer-level .experience-title {
+            font-size: 11px;
+            letter-spacing: 1.5px; }
+          .profile-info .gamer-info-container .lower-circle-container .gamer-level .experience-value {
+            letter-spacing: 1px;
+            margin-left: 5px; }
+          .profile-info .gamer-info-container .lower-circle-container .gamer-level .experience-divider {
+            margin: 0 1px; }
+        .profile-info .gamer-info-container .lower-circle-container .line-decor {
+          height: 2px;
+          width: 150px;
+          margin: 3px 0;
           background: white; }
-  .social-media-btn-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70px; }
-    .social-media-btn-container .twitter-btn {
-      margin: -10px 0 0 25px; }
-      .social-media-btn-container .twitter-btn .twitter-wrapper img {
-        position: absolute;
-        height: 70px;
-        width: 70px;
-        margin: 5px 0 10px 5px; }
-      .social-media-btn-container .twitter-btn .blue-twitter-background {
-        position: absolute;
-        margin: 7.5px 0 0 7.5px;
-        height: 55px;
-        width: 55px;
-        border-radius: 50%;
-        background: #009EF6;
-        border: 5px solid white; }
-      .social-media-btn-container .twitter-btn .add-btn-container {
-        position: absolute;
-        border: 3px solid #009EF6;
-        border-radius: 50%;
-        height: 22px;
-        width: 22px;
-        background: white;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .social-media-btn-container .twitter-btn .add-btn-container img {
-          height: 12px;
-          width: 12px; }
-    .social-media-btn-container .tweet-box {
-      margin: 10px 0 0 50px;
-      width: 320px;
-      height: 55px;
-      background: #009EF6;
-      border-radius: 20px; }
-      .social-media-btn-container .tweet-box .tweet-ghost-div {
-        font-size: 2px;
-        color: none; }
-      .social-media-btn-container .tweet-box .tweet-recepient {
-        margin: 0px 0 0 60px; }
-        .social-media-btn-container .tweet-box .tweet-recepient p {
-          font-family: 'Roboto', sans-serif;
-          margin: 0 0 0 0;
-          font-size: 13px;
-          font-weight: 800;
-          letter-spacing: 0.7px;
-          color: white; }
-      .social-media-btn-container .tweet-box .tweet-description {
-        margin: 0.5px 0 0px 60px; }
-        .social-media-btn-container .tweet-box .tweet-description p {
-          margin: 0px 0 0px 0;
-          font-size: 11px;
-          font-weight: 400;
-          letter-spacing: 0.5px;
-          line-height: 14px;
-          color: white; }
-  .nav-bar {
-    display: block;
-    height: 10vh;
-    background: none; }
-    .nav-bar .horizontal-line {
-      height: 3px;
-      width: 90vw;
-      margin: 0 5vw;
-      background: silver; }
-    .nav-bar .nav-btn-container {
-      display: flex;
-      justify-content: space-around;
-      height: 9vh; }
-      .nav-bar .nav-btn-container .nav-btn {
-        width: 30vw;
-        height: 15vw;
-        margin: 5px 0 0 0; }
-        .nav-bar .nav-btn-container .nav-btn .search-icon {
-          height: 25px;
-          width: 25px; }
-        .nav-bar .nav-btn-container .nav-btn .trophy-icon {
-          height: 40px;
-          margin: -15px 0 0 0; }
-        .nav-bar .nav-btn-container .nav-btn .provoke-icon {
-          height: 30px; }
-      .nav-bar .nav-btn-container .separator {
-        height: 7vh;
-        width: 3px;
-        margin: 1vw;
-        background: silver; }
-      .nav-bar .nav-btn-container .ghost-separator {
-        height: 7vh;
-        width: 3px;
-        margin: 1vw; } }
-
-@media (min-width: 375px) {
-  .challenge-accepted-banner {
-    position: fixed;
+  .actions-container {
+    height: 12.5vh;
     width: 100vw;
-    height: 10vh;
-    z-index: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: #AC6143; }
-    .challenge-accepted-banner .message-banner {
-      position: fixed;
-      display: inline-flex;
-      align-items: center; }
-      .challenge-accepted-banner .message-banner img {
-        height: 50px;
-        margin: 0 2vw 6vw 3vw; }
-      .challenge-accepted-banner .message-banner h5 {
-        font-size: 18px;
-        font-weight: 700;
+    align-items: flex-start; }
+    .actions-container button {
+      height: 50px;
+      width: 200px; }
+    .actions-container .challenge-btn {
+      color: white;
+      background: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      margin: 0 0 0px 0;
+      display: flex;
+      justify-content: space-around; }
+      .actions-container .challenge-btn h6 {
         margin: 0;
-        color: white; }
-      .challenge-accepted-banner .message-banner h6 {
         font-size: 16px;
-        margin: 0 20px;
-        font-weight: 400;
+        letter-spacing: 1.5px;
         color: white; }
-  .menu-drop-down {
-    height: 10vh;
-    display: flex;
-    justify-content: space-around; }
-    .menu-drop-down .ghost-div {
-      width: 7px;
-      height: 30px;
-      margin: 0 0 0 25px; }
-    .menu-drop-down .logo-wrapper {
-      height: 10vh;
-      width: 33.3vw;
+      .actions-container .challenge-btn img {
+        height: 25px; }
+    .actions-container .challenge-sent {
+      color: white;
+      background: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      margin: 0 0 0 0;
       display: flex;
-      align-items: center; }
-      .menu-drop-down .logo-wrapper img {
-        height: 36px;
-        width: 30px;
-        margin: 0; }
-      .menu-drop-down .logo-wrapper h3 {
-        font-weight: 700;
-        letter-spacing: 0.9px;
-        color: #FFF;
-        margin: 2.5px 12.5px; }
-    .menu-drop-down img {
-      height: 30px;
-      width: 7px;
-      margin: 25px 0 0 25px; }
-  .activity-name-wrapper {
-    position: relative;
-    height: 20vh;
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .activity-name-wrapper .white-gradient {
-      position: absolute;
-      height: 20px;
-      width: 200px;
-      background: white;
-      opacity: 0.65; }
-    .activity-name-wrapper h3 {
-      top: 0px;
-      font-weight: 300;
-      letter-spacing: 2px;
-      color: white; }
-  .activity-container {
-    position: relative;
-    height: 60vh;
-    background: none;
-    display: flex;
-    justify-content: center; }
-    .activity-container .champ-display {
-      width: 100vw;
-      height: 100vw;
-      background: linear-gradient(to bottom right, #836a20, #ce4036);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .activity-container .champ-display .game-img-display {
-        position: relative;
-        width: 100vw;
-        height: 100vw;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        justify-content: center; }
-        .activity-container .champ-display .game-img-display img {
-          width: 100vw;
-          height: 100vw;
-          opacity: 0.3; }
-        .activity-container .champ-display .game-img-display .user-location {
-          position: absolute;
-          top: 65px;
-          height: 65px;
-          width: 250px;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          border-radius: 20px;
-          background: white; }
-          .activity-container .champ-display .game-img-display .user-location img {
-            top: 10px;
-            height: 45px;
-            width: 45px;
-            opacity: 1;
-            margin: 0 0 0 1vw; }
-          .activity-container .champ-display .game-img-display .user-location .location-separator {
-            height: 45px;
-            width: 3px;
-            margin: 0 -2vw 0 0;
-            background: #8d562e; }
-          .activity-container .champ-display .game-img-display .user-location .location-address {
-            padding: 0 5vw 0 0; }
-            .activity-container .champ-display .game-img-display .user-location .location-address .location-zone {
-              font-size: 24px;
-              margin: -5px 0;
-              font-weight: 400;
-              color: #8d562e; }
-            .activity-container .champ-display .game-img-display .user-location .location-address .location-city {
-              font-size: 15px;
-              color: #8d562e;
-              opacity: 0.8; }
-        .activity-container .champ-display .game-img-display .champ-details {
-          position: absolute;
-          top: 130px;
-          height: 100px;
-          width: 330px;
-          display: block; }
-          .activity-container .champ-display .game-img-display .champ-details .champ-status {
-            height: 60px;
-            display: inline-flex;
-            justify-content: flex-start; }
-            .activity-container .champ-display .game-img-display .champ-details .champ-status .img-container {
-              height: 120px;
-              width: 120px;
-              border-radius: 50%;
-              border: 3px solid;
-              background: white;
-              margin: 25px 0 0 0;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              overflow: hidden; }
-              .activity-container .champ-display .game-img-display .champ-details .champ-status .img-container img {
-                height: 100px;
-                width: 100px;
-                margin: 0; }
-              .activity-container .champ-display .game-img-display .champ-details .champ-status .img-container .gamer-img {
-                height: 120px;
-                width: 120px; }
-              .activity-container .champ-display .game-img-display .champ-details .champ-status .img-container .empty-profile-img {
-                margin: 25px 0 0 0; }
-            .activity-container .champ-display .game-img-display .champ-details .champ-status .champ-info {
-              width: 200px;
-              margin: 35px 0 0 0; }
-              .activity-container .champ-display .game-img-display .champ-details .champ-status .champ-info .champ-name h4 {
-                margin: 0;
-                font-weight: 600;
-                letter-spacing: 1.5px;
-                text-align: center; }
-              .activity-container .champ-display .game-img-display .champ-details .champ-status .champ-info .champ-rank h6 {
-                margin: 0;
-                color: grey;
-                text-align: center; }
-            .activity-container .champ-display .game-img-display .champ-details .champ-status .champ-trophies {
-              height: 50px;
-              width: 70px;
-              margin: 0px 0 0 0;
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-          .activity-container .champ-display .game-img-display .champ-details .horizontal-decor-line {
-            height: 3px;
-            width: 130px;
-            margin: 0 auto 20px auto;
-            background: grey; }
-          .activity-container .champ-display .game-img-display .champ-details img {
-            margin: -2.5vh 120px 0 120px;
-            height: 90px;
-            width: 90px;
-            opacity: 1; }
-          .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container {
-            width: 330px;
-            display: flex;
-            justify-content: center; }
-            .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container button {
-              height: 45px;
-              width: 182px;
-              border: 3px solid #B15B30;
-              border-radius: 10px;
-              background: white;
-              display: flex;
-              margin: 30px 0 0 0; }
-              .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container button img {
-                height: 29px;
-                width: 30px;
-                margin: 3px 10px; }
-              .activity-container .champ-display .game-img-display .champ-details .challenge-btn-container button h4 {
-                font-weight: 700;
-                color: #B15B30;
-                margin: 3px 0; }
+      justify-content: space-around; }
+      .actions-container .challenge-sent h6 {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        color: white; }
   .social-media-btn-container {
     position: absolute;
     bottom: 0;
@@ -571,7 +334,7 @@
   .nav-bar {
     display: block;
     height: 10vh;
-    background: white; }
+    background: rgba(255, 255, 255, 0.3); }
     .nav-bar .horizontal-line {
       height: 3px;
       width: 90vw;
@@ -581,23 +344,37 @@
       display: flex;
       justify-content: space-around;
       height: 9vh; }
+      .nav-bar .nav-btn-container button {
+        width: 50px;
+        height: 50px; }
       .nav-bar .nav-btn-container .nav-btn {
-        width: 30vw;
+        position: relative;
+        width: 25vw;
         height: 15vw;
         margin: 5px 0 0 0; }
         .nav-bar .nav-btn-container .nav-btn .search-icon {
-          height: 25px;
-          width: 25px; }
+          height: 20px;
+          width: 20px; }
         .nav-bar .nav-btn-container .nav-btn .trophy-icon {
-          height: 40px;
+          height: 35px;
           margin: -15px 0 0 0; }
         .nav-bar .nav-btn-container .nav-btn .provoke-icon {
-          height: 30px; }
+          height: 25px; }
+        .nav-bar .nav-btn-container .nav-btn .button-highlight {
+          position: absolute;
+          left: 0;
+          top: 2.5px;
+          height: 40px;
+          width: 200px; }
       .nav-bar .nav-btn-container .separator {
         height: 7vh;
         width: 3px;
-        margin: 1vw;
-        background: silver; }
+        margin: 2vw 1vw;
+        background: #0b364c;
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-right-radius: 1px; }
       .nav-bar .nav-btn-container .ghost-separator {
         height: 7vh;
         width: 3px;

@@ -101,13 +101,17 @@
     background: red;
   }
   h6 {
+    position: absolute;
     margin: 10px;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.8px;
     color: white;
   }
-  .ghost-circle {
+  .ghost-name-div {
+    width: 100px;
+  }
+  .img-circle {
     height: 30px;
     width: 30px;
     margin: 5px 0 5px 10px;

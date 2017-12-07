@@ -37,6 +37,7 @@ class OnlineProfile extends Component {
                 }
                 </div>
                   <h6>{users.fullname}</h6>
+                  <div className="ghost-name-div"></div>
                   <div className="online-circle"></div>
                 </article>
               </Link>

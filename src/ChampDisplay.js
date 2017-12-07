@@ -28,80 +28,113 @@ class ChampDisplay extends Component {
   }
   render() {
     console.log(this.state.user)
-    return (<div className="main-container">
+    return (
+      <div className="main-container">
 
-      <section className="menu-drop-down">
-        <article className="logo-wrapper">
-          <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-          <h3>Champ</h3>
-        </article>
-      </section>
+        <section className="menu-drop-down"></section>
+        <section className="activity-name-wrapper">
+          <h3 className="activity-name">Location Champion</h3>
+        </section>
 
-      <section className="activity-name-wrapper">
-        <h3>Worms Champion</h3>
-      </section>
-      <section className="activity-container">
-        <article className="champ-display">
-          <div className="game-img-display">
-            <img src="Worms_Circle_Background.png" alt="worms"/>
-            <div className="user-location">
-              <img src="Targeting_Icon.png" alt="navigation icon"/>
-              <div className="location-separator"></div>
-              <article className="location-address">
-                <div className="location-zone">16 Tib Street</div>
-                <div className="location-city">Manchester</div>
-              </article>
+        <section className="profile-info">
+          <article className="champdisplay"></article>
+          <article className="white-ring-border"></article>
+          <article className="game-overlay-display"></article>
+          <article className="gamer-info-container">
+          <article className="upper-circle-container">
+            <article className="progress-circle">
+              <img src="Progress_Circle.png" />
+            </article>
+            <div className="gamer-name">
+              <h3>No Current Champ</h3>
             </div>
-            <div className="champ-details">
-              <div className="champ-status">
-                <div className="img-container">
-                  <img className="empty-profile-img" src="Shaun_Img_Sillouhette.png" alt="gamer shaun"/>
+          </article>
+          <article className="middle-circle-container">
+            <div className="img-container">
+              <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
+            </div>
+            <div className="victory-recent-container">
+              <img src="Crowned_Champion.png" alt="crown champion symbol"/>
+              <div className="victory-recent-description">
+                <h6 className="victory-title">Recent</h6>
+                <h6 className="victory-title">Victory</h6>
+                <h6 className="victory-address">N/A</h6>
+                <h6 className="champion-title">CHAMPION</h6>
+                <div className="trophy-icon-container">
+                  <img className="recent-trophy-icon" src="Trophy_Icon_Golden_Yellow.png" alt="Golden Trophy Icon"/>
                 </div>
-                <article className="champ-info">
-                  <div className="champ-name">
-                    <h4>Champ Unknown</h4>
-                  </div>
-                  <div className="champ-rank">
-                    <h6>NO RANK</h6>
-                  </div>
-                  <article className="champ-trophies"></article>
-                  <div className="horizontal-decor-line"></div>
-                  <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
-                </article>
               </div>
-              <div className="challenge-btn-container"></div>
             </div>
-          </div>
-        </article>
-      </section>
-      <section className="nav-bar">
-        <div className="horizontal-line"></div>
-        <article className="nav-btn-container">
-          <div className="ghost-separator"></div>
-          <Link to="/searchprofile">
-            <button className="nav-btn">
-              <img className="person-icon" src="Person_Icon_Grey.png" alt="navigation icon"/>
-            </button>
-          </Link>
-          <div className="separator"></div>
-          <Link to="/champdisplay">
-            <button className="nav-btn silver-bg-colour">
-              <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
-            </button>
-          </Link>
-          <div className="separator"></div>
-          <Link to="/battledisplay">
-            <button className="nav-btn">
-              <img className="provoke-icon" src="Provoke_Icon_Grey.png" alt="provoke icon"/>
-            </button>
-          </Link>
-          <div className="ghost-separator"></div>
-        </article>
-      </section>
-      {/*Display Step 1 Tip*/}
-      {<GuideStep1/>}
-    </div>);
+          </article>
+          <article className="lower-circle-container">
+            <div>
+              <div className="gamer-level">Level {'???'}</div>
+              <div className="line-decor"></div>
+              <div className="gamer-level"><span className="experience-title">EXP</span><span className="experience-value">{1050}<span className="experience-divider">/</span>{1500}</span></div>
+            </div>
+          </article>
+          </article>
+        </section>
+        <section className="actions-container">
+          <button className="challenge-btn" onClick={this.SendRequest} style={{
+                      display: this.state.requestSent
+                        ? 'none'
+                        : 'flex'
+                    }}>
+            <img src="Provoke_Icon_White.png"/>
+            <h6>CHALLENGE</h6>
+          </button>
+          <button className="challenge-sent pos-abs" style={{
+                      display: this.state.requestSent
+                        ? 'flex'
+                        : 'none'
+                    }}>
+            <h6>CHALLENGE SENT !</h6>
+          </button>
+        </section>
+        {/* Navigation Bar */}
+        <section className="nav-bar">
+          <article className="nav-btn-container">
+            <div className="ghost-separator"></div>
+            <Link to="/searchprofile">
+              <button className="nav-btn">
+                <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
+                <img className="button-highlight" src="Button_Highlight.png"/>
+              </button>
+            </Link>
+            <div className="ghost-separator"></div>
+            <Link to="champdisplay">
+              <button className="nav-btn">
+                <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
+              </button>
+            </Link>
+            <div className="ghost-separator"></div>
+            <Link to="/battledisplayready">
+              <button className="nav-btn">
+                <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
+              </button>
+            </Link>
+            <div className="ghost-separator"></div>
+          </article>
+        </section>
+        {/* Display Step 1 Tip */}
+        {
+          this.state.requestSent
+            /*? <GuideStep4/> : <GuideStep3/>*/
+        }
+        {/* Navigation */}
+        <section className="nav-display">
+          <article className="logo-wrapper">
+            <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+            <h3 className="white-logo-name">Champ</h3>
+          </article>
+        </section>
+      </div>
+    );
   }
 }
 
 export default ChampDisplay;
+
+// {/*Display Step 1 Tip*/}
+// {<GuideStep1/>}
