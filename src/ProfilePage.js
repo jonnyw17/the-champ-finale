@@ -56,9 +56,13 @@ class ProfilePage extends Component {
       {/* There still needs to be a timeout period for it appear and disappear */}
       <article className="challenge-accepted-banner uk-animation-slide-top" style={display}>
         <div className="message-banner">
-          <img src="Trophy_Icon_White.png" alt="trophy icon"/>
-          <h5 className="challenge-msg">Challenge Accepted</h5>
-          <h6 className="gamer-name">Shaun Gibson</h6>
+          <div className="img-container">
+            <img src="Trophy_Icon_White.png" alt="trophy icon"/>
+          </div>
+          <div className="challenge-msg">
+            <h5>Challenge Accepted</h5>
+            <h6 className="gamer-name">by Shaun Gibson</h6>
+          </div>
         </div>
       </article>
 
@@ -66,10 +70,6 @@ class ProfilePage extends Component {
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Rival&#39;s Profile</h3>
       </section>
-
-      <TwitterBtn activeUser={this.state.userLoggedIn} />
-
-
       <section className="profile-info">
         <article className="champdisplay"></article>
         <article className="white-ring-border"></article>
@@ -125,7 +125,7 @@ class ProfilePage extends Component {
                       ? 'flex'
                       : 'none'
                   }}>
-          <h6>CHALLENGE SENT !</h6>
+          <h6 className="uk-animation-slide-top">CHALLENGE SENT !</h6>
         </button>
       </section>
       {/* Navigation Bar */}

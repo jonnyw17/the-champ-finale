@@ -31,12 +31,14 @@ class SearchProfile extends Component {
     const offlineFontWeight = this.state.online? normal : bold;
     return (
     <div className="main-container">
-      <section className="menu-drop-down">
-        <article className="logo-wrapper">
-          <img src="BetGame_Logo_White.png" alt="logo icon"/>
-          <h3>Champ</h3>
-        </article>
-      </section>
+    {/* Navigation */}
+    <section className="nav-display">
+      <article className="logo-wrapper">
+        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+        <h3 className="white-logo-name">Champ</h3>
+      </article>
+    </section>
+
       <section className="status-wrapper">
         <article className="status-container">
 

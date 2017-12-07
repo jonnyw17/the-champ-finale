@@ -22,15 +22,26 @@
       position: fixed;
       display: inline-flex;
       align-items: center; }
+      .challenge-accepted-banner .message-banner .img-container {
+        width: 20vw;
+        height: 10vh; }
       .challenge-accepted-banner .message-banner img {
         height: 40px;
         margin: 0 1.5vw 5vw 3vw; }
-      .challenge-accepted-banner .message-banner h5 {
-        color: white;
-        font-weight: 700;
-        margin: 0; }
+      .challenge-accepted-banner .message-banner .challenge-msg {
+        display: inline;
+        position: absolute;
+        width: 100vw; }
+        .challenge-accepted-banner .message-banner .challenge-msg h5 {
+          text-align: center;
+          color: white;
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0; }
       .challenge-accepted-banner .message-banner h6 {
+        text-align: center;
         margin: 0 10px;
+        font-size: 13px;
         color: white;
         font-weight: 400; }
   .challenge-notification {
@@ -156,6 +167,7 @@
         .profile-info .gamer-info-container .middle-circle-container .img-container {
           position: relative;
           width: 35vw;
+          height: 35vw;
           border-radius: 50%;
           border: 2px solid white;
           margin: 10px 0 0 0; }
@@ -164,6 +176,18 @@
             z-index: 1; }
           .profile-info .gamer-info-container .middle-circle-container .img-container .highlight-img {
             filter: blur(14px); }
+          .profile-info .gamer-info-container .middle-circle-container .img-container .empty-profile-pic {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .profile-info .gamer-info-container .middle-circle-container .img-container .empty-profile-pic .question-mark {
+              z-index: 1;
+              height: 80px;
+              position: absolute; }
         .profile-info .gamer-info-container .middle-circle-container .victory-recent-container {
           position: relative;
           width: 42.5vw;
@@ -220,7 +244,8 @@
           color: white;
           font-size: 14.5px;
           letter-spacing: 0.6px;
-          text-align: center; }
+          text-align: center;
+          margin: 5px 0; }
           .profile-info .gamer-info-container .lower-circle-container .gamer-level .experience-title {
             font-size: 11px;
             letter-spacing: 1.5px; }
