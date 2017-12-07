@@ -21,7 +21,6 @@ class OnlineProfile extends Component {
   }
 
   render() {
-    var counter = 0;
     return (<div>
       {
         this.state.users.map((users, index) => {
@@ -32,9 +31,9 @@ class OnlineProfile extends Component {
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
                 <div className="ghost-circle">
                 {index === 0?
-                  <img src="Shaun_Face_Circular.png"/>
+                  <img src="Shaun_Face_Circular.png" alt="person"/>
                   :
-                  <img src="Doug_Face_Circular.png"/>
+                  <img src="Doug_Face_Circular.png" alt="person"/>
                 }
                 </div>
                   <h6>{users.fullname}</h6>

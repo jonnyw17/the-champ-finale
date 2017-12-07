@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import ProgressBar from 'react-progressbar.js';
 
 import ChallengeRequestSent from './ChallengeRequestSent';
-import GuideStep3 from './GuideStep3';
-import GuideStep4 from './GuideStep4';
+// import GuideStep3 from './GuideStep3';
+// import GuideStep4 from './GuideStep4';
+import TwitterBtn from './TwitterBtn';
 
 import './ProfilePage.css';
 
@@ -14,7 +14,8 @@ class ProfilePage extends Component {
     this.state = {
       usersTwitter: [],
       requestSent: false,
-      requestIcon: 'none'
+      requestIcon: 'none',
+      userLoggedIn: this.props.activeUser
     }
     this.SendRequest = this.SendRequest.bind(this);
   }
@@ -29,7 +30,7 @@ class ProfilePage extends Component {
   }
 
   render() {
-
+    console.log(this.state.userLoggedIn)
     const toggleButton = () => {
       if (this.state.requestSent) {
         return <ChallengeRequestSent/>;
@@ -67,6 +68,8 @@ class ProfilePage extends Component {
         <h3>Rival&#39;s Profile</h3>
       </section>
 
+      <TwitterBtn activeUser={this.state.userLoggedIn} />
+
       <section className="activity-container">
         <article className="champdisplay"></article>
         <article className="white-ring-border"></article>
@@ -74,7 +77,7 @@ class ProfilePage extends Component {
         <article className="gamer-info-container">
         <article className="upper-circle-container">
           <article className="progress-circle">
-            <img src="Progress_Circle.png" />
+            <img src="Progress_Circle.png" alt="person"/>
           </article>
           <div className="gamer-name">
             <h3>Widow Maker</h3>

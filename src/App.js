@@ -34,27 +34,21 @@ class App extends Component {
 
   render() {
 
-    (function toggleFullScreen() {
-      var doc = window.document;
-      var docEl = doc.documentElement;
-
-      var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-      var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-      if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-        requestFullScreen.call(docEl);
-      }
-      else {
-        cancelFullScreen.call(doc);
-      }
-    })()
-
-    // (function() => {
-    //     document.body.requestFullscreen();
-    //   }, true);
+    // (function toggleFullScreen() {
+    //   var doc = window.document;
+    //   var docEl = doc.documentElement;
+    //
+    //   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+    //   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+    //
+    //   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    //     requestFullScreen.call(docEl);
+    //   }
+    //   else {
+    //     cancelFullScreen.call(doc);
+    //   }
     // })()
-    console.log(this.state.currentUserSignedUp);
-    console.log(this.state.currentUserSignedIn);
+
     return (<div>
       <Router>
         <div>
@@ -65,7 +59,9 @@ class App extends Component {
           <Route path="/signin" render={() =>< SignIn getCurrentUserSignIn = {
               this.getCurrentUserSignIn
             } />}/>
-          <Route path="/profilepage" component={ProfilePage}/>
+          <Route path="/profilepage" render={() =>< ProfilePage activeUser = {
+              this.state.userLoggedIn
+            } />}/>
           <Route path="/platform" component={Platform}/>
           <Route path="/champdisplay" render={() =>< ChampDisplay activeUser = {
               this.state.userLoggedIn
