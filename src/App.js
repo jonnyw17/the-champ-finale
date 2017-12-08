@@ -12,6 +12,7 @@ import BattleDisplayReady from './BattleDisplayReady';
 import Home from './Home';
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
+import TwitterBtn from './TwitterBtn';
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +53,7 @@ class App extends Component {
     return (<div>
       <Router>
         <div>
+          <Route path="/twitterbutton" component={TwitterBtn} />
           <Route exact={true} path="/" component={Home}/>
           <Route path="/signup" render={() =>< SignUp getCurrentUserSignUp = {
               this.getCurrentUserSignUp

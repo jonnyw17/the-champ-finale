@@ -19,7 +19,7 @@ class ProfilePage extends Component {
     }
     this.SendRequest = this.SendRequest.bind(this);
   }
-
+  // <TwitterBtn activeUser={this.state.userLoggedIn} />
   SendRequest() {
     console.log(true)
     this.setState({requestSent: true});
@@ -66,9 +66,6 @@ class ProfilePage extends Component {
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Rival&#39;s Profile</h3>
       </section>
-
-      <TwitterBtn activeUser={this.state.userLoggedIn} />
-
 
       <section className="profile-info">
         <article className="champdisplay"></article>
