@@ -43,7 +43,6 @@ class ChampDisplay extends Component {
           <article className="gamer-info-container">
           <article className="upper-circle-container">
             <article className="progress-circle">
-              <img src="Progress_Circle.png" />
             </article>
             <div className="gamer-name">
               <h3>No Current Champ</h3>
@@ -51,7 +50,10 @@ class ChampDisplay extends Component {
           </article>
           <article className="middle-circle-container">
             <div className="img-container">
-              <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
+              <div className="empty-profile-pic">
+                <img className="question-mark" src="Question_Mark.png" alt="unknown player"/>
+                <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
+              </div>
             </div>
             <div className="victory-recent-container">
               <img src="Crowned_Champion.png" alt="crown champion symbol"/>
@@ -68,20 +70,18 @@ class ChampDisplay extends Component {
           </article>
           <article className="lower-circle-container">
             <div>
-              <div className="gamer-level">Level {'???'}</div>
+              <div className="gamer-level">Location</div>
               <div className="line-decor"></div>
-              <div className="gamer-level"><span className="experience-title">EXP</span><span className="experience-value">{1050}<span className="experience-divider">/</span>{1500}</span></div>
+              <div className="gamer-level">29 Tib Street</div>
             </div>
           </article>
           </article>
         </section>
         <section className="actions-container">
           <button className="challenge-btn" onClick={this.SendRequest} style={{
-                      display: this.state.requestSent
-                        ? 'none'
-                        : 'flex'
+                      display: 'none'
                     }}>
-            <img src="Provoke_Icon_White.png"/>
+            <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
             <h6>CHALLENGE</h6>
           </button>
           <button className="challenge-sent pos-abs" style={{
@@ -99,7 +99,7 @@ class ChampDisplay extends Component {
             <Link to="/searchprofile">
               <button className="nav-btn">
                 <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-                <img className="button-highlight" src="Button_Highlight.png"/>
+                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
               </button>
             </Link>
             <div className="ghost-separator"></div>
@@ -109,7 +109,7 @@ class ChampDisplay extends Component {
               </button>
             </Link>
             <div className="ghost-separator"></div>
-            <Link to="/battledisplayready">
+            <Link to="/battledisplay">
               <button className="nav-btn">
                 <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
               </button>

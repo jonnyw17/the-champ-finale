@@ -11,7 +11,7 @@
   }
 }
 .status-wrapper {
-  height: 80vh;
+  height: 90vh;
   background: none;
   display: flex;
   justify-content: center;
@@ -20,9 +20,9 @@
   width: 360px;
 }
 .status-bar-online {
-  height: 45px;
+  height: 65px;
   width: 360px;
-  margin: 45px 0 30px 0;
+  margin: 70px 0 30px 0;
   display: inline-flex;
   justify-content: center;
   h4 {
@@ -52,7 +52,7 @@
 .status-bar-offline {
   height: 45px;
   width: 360px;
-  margin: 45px 0 30px 0;
+  margin: 120px 0 30px 0;
   display: inline-flex;
   justify-content: center;
   h4 {
@@ -113,6 +113,10 @@
   }
   .img-circle {
     height: 30px;
+    width: 30px;
+    margin: 5px 0 5px 10px;
+  }
+  img {
     width: 30px;
     margin: 5px 0 5px 10px;
   }

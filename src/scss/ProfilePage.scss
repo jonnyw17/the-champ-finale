@@ -24,17 +24,30 @@
       position: fixed;
       display: inline-flex;
       align-items: center;
+      .img-container {
+        width: 20vw;
+        height: 10vh;
+      }
       img {
         height: 40px;
         margin: 0 1.5vw 5vw 3vw;
       }
-      h5 {
-          color: white;
-          font-weight: 700;
-          margin: 0;
+      .challenge-msg {
+        display: inline;
+        position: absolute;
+        width: 100vw;
+        h5 {
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
       }
       h6 {
+        text-align: center;
         margin:0 10px;
+        font-size: 13px;
         color: white;
         font-weight: 400;
       }
@@ -185,6 +198,7 @@
         .img-container {
           position: relative;
           width: 35vw;
+          height: 35vw;
           border-radius: 50%;
           border: 2px solid white;
           margin: 10px 0 0 0;
@@ -194,6 +208,20 @@
           }
           .highlight-img {
             filter: blur(14px);
+          }
+          .empty-profile-pic {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .question-mark {
+              z-index: 1;
+              height: 80px;
+              position: absolute;
+            }
           }
         }
         .victory-recent-container {
@@ -263,6 +291,7 @@
           font-size: 14.5px;
           letter-spacing: 0.6px;
           text-align: center;
+          margin: 5px 0;
           .experience-title {
             font-size: 11px;
             letter-spacing: 1.5px;

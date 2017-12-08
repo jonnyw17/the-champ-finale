@@ -5,98 +5,149 @@ import {Link} from 'react-router-dom';
 import './BattleDisplay.css';
 import './BattleDisplayReady.css';
 
+import ConnectPendingDisplay from './ConnectPendingDisplay';
+import TrackingBattleDisplay from './TrackingBattleDisplay';
+
 class BattleDisplayReady extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      usersTwitter: [],
+      requestSent: false,
+      requestIcon: 'none',
+      userLoggedIn: this.props.activeUser
+    }
+    this.SendRequest = this.SendRequest.bind(this);
+  }
+
+  SendRequest() {
+    console.log(true)
+    this.setState({requestSent: true});
+    setTimeout(() => {
+      console.log(true)
+      this.setState({requestIcon: 'block'});
+    }, 3000);
+  }
+
   render() {
-    return (
-      <div className="main-container">
+    console.log(this.state.userLoggedIn)
 
-        <section className="menu-drop-down">
-        <article className="logo-wrapper">
-          <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-          <h3>Champ</h3>
-        </article>
-        </section>
+    // There must be someway to set Time on the Display variable
+    return (<div className="main-container">
 
-        <section className="activity-name-wrapper">
-          <img className="battle-cover-img" src="Battle_Symbol.png" alt="battling icon"/>
+      <section className="menu-drop-down"></section>
+      <section className="activity-name-wrapper">
+        <h3 className="activity-name">Battle Arena</h3>
+      </section>
 
-          <h3>Challenge Mode</h3>
-        </section>
+      <section className="battle-info">
+        <article className="white-ring-border"></article>
+        <article className="game-overlay-display"></article>
+        <img className="battle-arena-cover" src="Battle_Arena.png" alt="battle arena cover"/>
+        <article className="gamer-info-container">
+          <article className="upper-container">
 
-        <section className="activity-container">
-          <article className="battle-display">
-            <div className="battle-img-display">
-              <img src="Worms_Circle_Background.png" alt="worms"/>
-              {/*Player-container*/}
-              <div className="player-containers">
-                <div className="player-container reverse-bg-colour uk-animation-slide-left">
-                <div className="player-details">
-                  <img src="Doug_Face_Circular.png" alt="Doug's profile"/>
-                  <h5>Doug Ward</h5>
-                  <h6 className="rank-margins bronze-colour">BRONZE</h6>
-                </div>
-                </div>
-                <div className="player-container original-bg-colour uk-animation-slide-right">
-                <div className="player-details">
-                  <img src="Shaun_Face_Circular.png" alt="Shaun's profile"/>
-                  <h5>Shaun Gibson</h5>
-                  <h6 className="rank-margins silver-colour">SILVER</h6>
-                </div>
-                </div>
-              </div>
-              <div className="status-activity">
-                <div className="status-area">
-                {/*Connecting Players Wheel*/}
-
-                <article className="connecting-wheel" style={{display: "none"}}>
-                  <img src="Provoke_Pending_White.png" alt="loading circle"/>
-                    <div className="loading-info">
-                      <h5>Connecting</h5>
-                      <h5>players</h5>
-                    </div>
-                  </article>
-
-                {/*Tracking progress*/}
-                  <article className="tracking-progress">
-                    <img src="Provoke_Pending.png" alt="loading circle"/>
-                      <div className="tracking-info">
-                        <h5>Battling ...</h5>
-                      </div>
-                      <button className="battling-end-btn"><h5>Battle Ended? Click</h5></button>
-                    </article>
-
-                </div>
-              </div>
-
+          <div className="opponent-container uk-animation-slide-right">
+            <div className="opponent-img-container">
+              <img src="Doug_Face_Circular.png" alt="player profile"/>
             </div>
+            <article className="opponent-info-container">
+              <div className="opponent-info-wrapper">
+                <h6 className="opponent-username">Occam&#39;s Blade</h6>
+                <h6 className="opponent-name">Doug Ward</h6>
+                <h6 className="opponent-lvl">Level {5}</h6>
+              </div>
+            </article>
+          </div>
+
           </article>
-        </section>
-        <section className="nav-bar">
-        <div className="horizontal-line"></div>
+
+          <article className="middle-container">
+          { false ?
+            <ConnectPendingDisplay />
+            :
+            <TrackingBattleDisplay />
+          }
+
+          </article>
+          <article className="lower-container">
+
+          <div className="user-container uk-animation-slide-left">
+            <div className="user-img-container">
+              <img src="Shaun_Face_Circular.png" alt="opponents profile"/>
+            </div>
+            <article className="user-info-container">
+              <div className="user-info-wrapper">
+                <h6 className="username">Widow Maker</h6>
+                <h6 className="actual-name">Shaun Gibson</h6>
+                <h6 className="actual-lvl">Level {5}</h6>
+              </div>
+            </article>
+          </div>
+
+          </article>
+        </article>
+      </section>
+
+
+
+      <section className="battle-actions-container">
+        <button className="challenge-btn" onClick={this.SendRequest} style={{
+                    display: this.state.requestSent
+                      ? 'none'
+                      : 'flex'
+                  }}>
+          <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
+          <div>
+            <h6 className="btn-description">END BATTLE</h6>
+          </div>
+        </button>
+        <button className="challenge-sent pos-abs" style={{
+                    display: this.state.requestSent
+                      ? 'flex'
+                      : 'none'
+                  }}>
+          <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
+        </button>
+      </section>
+      {/* Navigation Bar */}
+      <section className="nav-bar">
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
-          <button className="nav-btn">
-            <img className="person-icon" src="Person_Icon_Grey.png" alt="navigation icon"/>
-          </button>
+            <button className="nav-btn">
+              <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button currently used"/>
+            </button>
           </Link>
-          <div className="separator"></div>
-          <Link to="/champdisplay">
-          <button className="nav-btn">
-            <img className="trophy-icon" src="Trophy_Icon_Grey.png" alt="trophy icon"/>
-          </button>
+          <div className="ghost-separator"></div>
+          <Link to="champdisplay">
+            <button className="nav-btn">
+              <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
+            </button>
           </Link>
-          <div className="separator"></div>
-          <Link to="/battledisplay">
-          <button className="nav-btn silver-bg-colour">
-            <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
-          </button>
+          <div className="ghost-separator"></div>
+          <Link to="/battledisplayready">
+            <button className="nav-btn">
+              <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
+            </button>
           </Link>
           <div className="ghost-separator"></div>
         </article>
       </section>
-      </div>
-          );
+      {/* Display Step 1 Tip */}
+      {
+        this.state.requestSent
+          /*? <GuideStep4/> : <GuideStep3/>*/
+      }
+      {/* Navigation */}
+      <section className="nav-display">
+        <article className="logo-wrapper">
+          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          <h3 className="white-logo-name">Champ</h3>
+        </article>
+      </section>
+    </div>);
   }
 }
 
@@ -163,27 +214,27 @@ export default BattleDisplayReady;
 //     height: 150px;
 //     display: flex;
 //     justify-content: center;
-//     .connecting-wheel {
-//       width: 150px;
-//       height: 150px;
-//       border-radius: 50%;
-//       background: #9F9F9F;
-//       color: white;
-//       img {
-//         position: absolute;
-//         height: 150px;
-//         width: 150px;
-//         opacity: 1;
-//       }
-//       .loading-info {
-//         padding: 50px 0 0 0;
-//         h5 {
-//           margin: 0px;
-//           text-align: center;
-//           color: white;
-//         }
-//       }
-//     }
+    // .connecting-wheel {
+    //   width: 150px;
+    //   height: 150px;
+    //   border-radius: 50%;
+    //   background: #9F9F9F;
+    //   color: white;
+    //   img {
+    //     position: absolute;
+    //     height: 150px;
+    //     width: 150px;
+    //     opacity: 1;
+    //   }
+    //   .loading-info {
+    //     padding: 50px 0 0 0;
+    //     h5 {
+    //       margin: 0px;
+    //       text-align: center;
+    //       color: white;
+    //     }
+    //   }
+    // }
 //     .battle-ready-btn {
 //       margin: 10px 0 0 0;
 //       width: 182px;
@@ -493,3 +544,54 @@ export default BattleDisplayReady;
 //     }
 //   }
 // }
+
+// {Last copied here}
+//
+// <section className="activity-container">
+//   <article className="battle-display">
+//     <div className="battle-img-display">
+//       <img src="Worms_Circle_Background.png" alt="worms"/>
+//       {/*Player-container*/}
+//       <div className="player-containers">
+//         <div className="player-container reverse-bg-colour uk-animation-slide-left">
+//         <div className="player-details">
+//           <img src="Doug_Face_Circular.png" alt="Doug's profile"/>
+//           <h5>Doug Ward</h5>
+//           <h6 className="rank-margins bronze-colour">BRONZE</h6>
+//         </div>
+//         </div>
+//         <div className="player-container original-bg-colour uk-animation-slide-right">
+//         <div className="player-details">
+//           <img src="Shaun_Face_Circular.png" alt="Shaun's profile"/>
+//           <h5>Shaun Gibson</h5>
+//           <h6 className="rank-margins silver-colour">SILVER</h6>
+//         </div>
+//         </div>
+//       </div>
+//       <div className="status-activity">
+//         <div className="status-area">
+//         {/*Connecting Players Wheel*/}
+//
+//         <article className="connecting-wheel" style={{display: "none"}}>
+//           <img src="Provoke_Pending_White.png" alt="loading circle"/>
+//             <div className="loading-info">
+//               <h5>Connecting</h5>
+//               <h5>players</h5>
+//             </div>
+//           </article>
+//
+//         {/*Tracking progress*/}
+//           <article className="tracking-progress">
+//             <img src="Provoke_Pending.png" alt="loading circle"/>
+//               <div className="tracking-info">
+//                 <h5>Battling ...</h5>
+//               </div>
+//               <button className="battling-end-btn"><h5>Battle Ended? Click</h5></button>
+//             </article>
+//
+//         </div>
+//       </div>
+//
+//     </div>
+//   </article>
+// </section>
