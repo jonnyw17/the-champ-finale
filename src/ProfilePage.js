@@ -117,7 +117,7 @@ class ProfilePage extends Component {
                       ? 'none'
                       : 'flex'
                   }}>
-          <img src="Provoke_Icon_White.png"/>
+          <img src="Provoke_Icon_White.png" alt="provoke icon"/>
           <h6>CHALLENGE</h6>
         </button>
         <button className="challenge-sent pos-abs" style={{
@@ -135,7 +135,7 @@ class ProfilePage extends Component {
           <Link to="/searchprofile">
             <button className="nav-btn">
               <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-              <img className="button-highlight" src="Button_Highlight.png"/>
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>

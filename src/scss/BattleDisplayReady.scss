@@ -1,9 +1,22 @@
+.text-white {
+  color: white;
+}
+
 @keyframes rotating-wheel {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(3600deg);
+  }
+}
+
+@keyframes rotating-wheel-infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(216000deg);
   }
 }
 
@@ -39,6 +52,11 @@
       background: rgba(255,255,255,0.35);
       border-radius: 50%;
     }
+    .battle-arena-cover {
+      position: absolute;
+      width: 82vw;
+      height: 82vw;
+    }
     .gamer-info-container {
       position: absolute;
       width: 90vw;
@@ -46,6 +64,59 @@
       .upper-container {
         width: 90vw;
         height: 27.5vw;
+        .opponent-container {
+          position: absolute;
+          width: 60vw;
+          height: 25vw;
+          background: hsla(200,75,19, 0.95);
+          border: 1px solid rgba(255,255,255,0.75);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          .opponent-img-container {
+            width: 25vw;
+            height: 20vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            img {
+              border-radius: 50%;
+              border: 1px solid rgba(255,255,255,0.75);
+              width: 20vw;
+              height: 20vw;
+            }
+          }
+          .opponent-info-container {
+            width: 35vw;
+            height: 25vw;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .opponent-info-wrapper{
+              height: 17.5vw;
+              .opponent-username {
+                font-family: 'Vollkorn', serif;
+                letter-spacing: 1px;
+                margin: 0;
+                text-align: center;
+                color: white;
+              }
+              .opponent-name {
+                font-size: 12px;
+                letter-spacing: 1px;
+                margin: 0;
+                text-align: center;
+                color: rgba(255,255,255,0.7);
+              }
+              .opponent-lvl {
+                font-family: 'Vollkorn', serif;
+                margin: 0;
+                text-align: center;
+                color: white;
+              }
+            }
+          }
+        }
       }
       .middle-container {
         position: relative;
@@ -58,28 +129,53 @@
           align-items: center;
           .wheel-overlay {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             background: rgba(255,255,255,0.35);
           }
           .connecting-wheel {
-            width: 150px;
-            height: 150px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));
             color: white;
             img {
               position: absolute;
-              height: 150px;
-              width: 150px;
+              width: 110px;
+              height: 110px;
               opacity: 1;
-              animation: 10s rotating-wheel;
+              animation: 10s linear rotating-wheel;
             }
             .loading-info {
-              padding: 50px 0 0 0;
+              padding: 40px 0 0 0;
               h5 {
-                font-size: 16px;
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                margin: 0px;
+                text-align: center;
+                color: white;
+              }
+            }
+          }
+          .battling-wheel {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));
+            color: white;
+            img {
+              position: absolute;
+              width: 110px;
+              height: 110px;
+              opacity: 1;
+              animation: 600s linear infinite rotating-wheel-infinite;
+            }
+            .loading-info {
+              padding: 45px 0 0 0;
+              h5 {
+                font-size: 12px;
+                letter-spacing: 0.5px;
                 margin: 0px;
                 text-align: center;
                 color: white;
@@ -91,6 +187,62 @@
       .lower-container {
         width: 90vw;
         height: 27.5vw;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .user-container {
+          position: absolute;
+          width: 60vw;
+          height: 25vw;
+          background: hsla(218,20,10, 0.95);
+          border: 1px solid rgba(255,255,255,0.75);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          .user-img-container {
+            width: 25vw;
+            height: 20vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            img {
+              border-radius: 50%;
+              border: 1px solid rgba(255,255,255,0.75);
+              width: 20vw;
+              height: 20vw;
+            }
+          }
+          .user-info-container {
+            width: 35vw;
+            height: 25vw;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .user-info-wrapper{
+              height: 17.5vw;
+              .username {
+                font-family: 'Vollkorn', serif;
+                letter-spacing: 1px;
+                margin: 0;
+                text-align: center;
+                color: white;
+              }
+              .actual-name {
+                font-size: 12px;
+                letter-spacing: 1px;
+                margin: 0;
+                text-align: center;
+                color: rgba(255,255,255,0.7);
+              }
+              .actual-lvl {
+                font-family: 'Vollkorn', serif;
+                margin: 0;
+                text-align: center;
+                color: white;
+              }
+            }
+          }
+        }
       }
     }
     img {
@@ -98,7 +250,7 @@
         height: 90vw;
     }
   }
-  .actions-container {
+  .battle-actions-container {
     height: 12.5vh;
     width: 100vw;
     display: flex;
@@ -116,9 +268,9 @@
       margin: 0 0 0px 0;
       display: flex;
       justify-content: space-around;
-      h6 {
+      align-items: center;
+      .btn-description {
         margin: 0;
-        font-size: 16px;
         letter-spacing: 1.5px;
         color: white;
       }
@@ -140,188 +292,6 @@
         letter-spacing: 1.5px;
         color: white;
       }
-    }
-  }
-}
-
-@media(min-width:375px){
-  .player-containers {
-    position: absolute;
-    top: 100px;
-    height: 143px;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    .player-container {
-      height: 143px;
-      width: 143px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .player-details {
-        height: 135px;
-        width: 135px;
-        border-radius: 50%;
-        background: white;
-        img {
-          height: 60px;
-          width: 60px;
-          margin: 15px 0 10px 38px;
-          opacity: 1;
-        }
-        h5 {
-          font-weight: 400;
-          text-align: center;
-          margin: 0;
-        }
-        h6 {
-          font-size: 11px;
-          text-align: center;
-          margin: 2px 0;
-        }
-      }
-    }
-  }
-  .status-activity {
-  position: absolute;
-  top: 225px;
-  height: 150px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  .status-area {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    .battle-ready-btn {
-      margin: 10px 0 0 0;
-      width: 182px;
-      height: 45px;
-      background: white;
-      border: 3px solid #B15B30;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      h5 {
-        margin: 0;
-        font-weight: 700;
-        color: #B15B30;
-        letter-spacing: 0.3px;
-      }
-    }
-    .tracking-progress {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: white;
-      img {
-        position: absolute;
-        height: 143px;
-        width: 150px;
-        margin: 3px 0 0 0;
-        opacity: 1;
-      }
-      .tracking-info {
-        padding: 60px 0 0 0;
-        h5 {
-          margin: 0px;
-          text-align: center;
-          color: black;
-          }
-        }
-      }
-    }
-  }
-}
-
-.status-activity {
-  position: absolute;
-  top: 200px;
-  height: 150px;
-  width: 370px;
-  display: flex;
-  justify-content: center;
-  .status-area {
-    width: 200px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    .connecting-wheel {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: #9F9F9F;
-      color: white;
-      img {
-        position: absolute;
-        height: 150px;
-        width: 150px;
-        opacity: 1;
-      }
-      .loading-info {
-        padding: 50px 0 0 0;
-        h5 {
-          margin: 0px;
-          text-align: center;
-          color: white;
-        }
-      }
-    }
-    .battle-ready-btn {
-      margin: 10px 0 0 0;
-      width: 182px;
-      height: 45px;
-      background: white;
-      border: 3px solid #B15B30;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      h5 {
-        margin: 0;
-        font-weight: 700;
-        color: #B15B30;
-        letter-spacing: 0.3px;
-      }
-    }
-    .tracking-progress {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: white;
-      img {
-        position: absolute;
-        height: 143px;
-        width: 150px;
-        margin: 3px 0 0 0;
-        opacity: 1;
-      }
-      .tracking-info {
-        padding: 60px 0 0 0;
-        h5 {
-          margin: 0px;
-          text-align: center;
-          color: black;
-        }
-      }
-    }
-  }
-  .battling-end-btn {
-    position: absolute;
-    margin: 80px 0 0 -20px;
-    width: 182px;
-    height: 45px;
-    background: white;
-    border: 3px solid #B15B30;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    h5 {
-      margin: 0;
-      font-weight: 700;
-      color: #B15B30;
-      letter-spacing: 0.3px;
     }
   }
 }

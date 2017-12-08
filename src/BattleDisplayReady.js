@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom';
 import './BattleDisplay.css';
 import './BattleDisplayReady.css';
 
+import ConnectPendingDisplay from './ConnectPendingDisplay';
+import TrackingBattleDisplay from './TrackingBattleDisplay';
+
 class BattleDisplayReady extends Component {
   constructor(props) {
     super(props)
@@ -28,37 +31,9 @@ class BattleDisplayReady extends Component {
 
   render() {
     console.log(this.state.userLoggedIn)
-    const toggleButton = () => {
-    }
-    // 1) Triggers when to display the notification
-
-    const dontShow = {
-      display: this.state.requestIcon
-    };
-
-    const doShow = {
-      display: this.state.requestIcon
-    }
 
     // There must be someway to set Time on the Display variable
-    const display = this.state.requestSent
-      ? doShow
-      : dontShow;
     return (<div className="main-container">
-
-      {/* Challenge Accepted Banner */}
-      {/* There still needs to be a timeout period for it appear and disappear */}
-      <article className="challenge-accepted-banner uk-animation-slide-top" style={display}>
-        <div className="message-banner">
-          <div className="img-container">
-            <img src="Trophy_Icon_White.png" alt="trophy icon"/>
-          </div>
-          <div className="challenge-msg">
-            <h5>Challenge Accepted</h5>
-            <h6 className="gamer-name">by Shaun Gibson</h6>
-          </div>
-        </div>
-      </article>
 
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
@@ -68,48 +43,71 @@ class BattleDisplayReady extends Component {
       <section className="battle-info">
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>
-        <img src="Battle_Arena.png"/>
+        <img className="battle-arena-cover" src="Battle_Arena.png" alt="battle arena cover"/>
         <article className="gamer-info-container">
           <article className="upper-container">
-            <div>
+
+          <div className="opponent-container uk-animation-slide-right">
+            <div className="opponent-img-container">
+              <img src="Doug_Face_Circular.png" alt="player profile"/>
             </div>
+            <article className="opponent-info-container">
+              <div className="opponent-info-wrapper">
+                <h6 className="opponent-username">Occam&#39;s Blade</h6>
+                <h6 className="opponent-name">Doug Ward</h6>
+                <h6 className="opponent-lvl">Level {5}</h6>
+              </div>
+            </article>
+          </div>
+
           </article>
+
           <article className="middle-container">
-            <div className="connect-glyph-container">
-              <div className="wheel-overlay"></div>
-              <article className="connecting-wheel">
-                <img src="Provoke_Pending_White.png" alt="loading circle"/>
-                  <div className="loading-info">
-                    <h5>Connecting</h5>
-                    <h5>players</h5>
-                  </div>
-              </article>
-            </div>
+          { false ?
+            <ConnectPendingDisplay />
+            :
+            <TrackingBattleDisplay />
+          }
+
           </article>
           <article className="lower-container">
-            <div>
+
+          <div className="user-container uk-animation-slide-left">
+            <div className="user-img-container">
+              <img src="Shaun_Face_Circular.png" alt="opponents profile"/>
             </div>
+            <article className="user-info-container">
+              <div className="user-info-wrapper">
+                <h6 className="username">Widow Maker</h6>
+                <h6 className="actual-name">Shaun Gibson</h6>
+                <h6 className="actual-lvl">Level {5}</h6>
+              </div>
+            </article>
+          </div>
+
           </article>
         </article>
       </section>
 
 
 
-      <section className="actions-container">
+      <section className="battle-actions-container">
         <button className="challenge-btn" onClick={this.SendRequest} style={{
                     display: this.state.requestSent
                       ? 'none'
                       : 'flex'
                   }}>
-          <img src="Provoke_Icon_White.png"/>
-          <h6>CHALLENGE</h6>
+          <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
+          <div>
+            <h6 className="btn-description">END BATTLE</h6>
+          </div>
         </button>
         <button className="challenge-sent pos-abs" style={{
                     display: this.state.requestSent
                       ? 'flex'
                       : 'none'
                   }}>
-          <h6 className="uk-animation-slide-top">CHALLENGE SENT !</h6>
+          <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
         </button>
       </section>
       {/* Navigation Bar */}
@@ -119,7 +117,7 @@ class BattleDisplayReady extends Component {
           <Link to="/searchprofile">
             <button className="nav-btn">
               <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-              <img className="button-highlight" src="Button_Highlight.png"/>
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button currently used"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
@@ -142,12 +140,6 @@ class BattleDisplayReady extends Component {
         this.state.requestSent
           /*? <GuideStep4/> : <GuideStep3/>*/
       }
-      {/* Notification Circle */}
-      <section className="challenge-notification uk-animation-scale-up" style={display}>
-        <div className="notification-amount">
-          <h6>1</h6>
-        </div>
-      </section>
       {/* Navigation */}
       <section className="nav-display">
         <article className="logo-wrapper">
