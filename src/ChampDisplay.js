@@ -39,7 +39,7 @@ class ChampDisplay extends Component {
           <h3 className="activity-name">Area Champion</h3>
         </section>
 
-        <ChampionShaun/>
+        <ChampionUnknown/>
 
         <section className="actions-container">
           <button className="challenge-btn" onClick={this.SendRequest} style={{
@@ -63,12 +63,12 @@ class ChampDisplay extends Component {
             <Link to="/searchprofile">
               <button className="nav-btn">
                 <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
               </button>
             </Link>
             <div className="ghost-separator"></div>
             <Link to="champdisplay">
               <button className="nav-btn">
+                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
                 <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
               </button>
             </Link>

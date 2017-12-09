@@ -134,8 +134,7 @@ class ProfilePage extends Component {
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
             <button className="nav-btn">
-              <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
+              <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
@@ -164,6 +163,8 @@ class ProfilePage extends Component {
           <h6>1</h6>
         </div>
       </section>
+      <TwitterBtn />
+      
       {/* Navigation */}
       <section className="nav-display">
         <article className="logo-wrapper">

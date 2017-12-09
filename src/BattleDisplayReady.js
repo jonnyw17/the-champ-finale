@@ -120,7 +120,6 @@ class BattleDisplayReady extends Component {
           <Link to="/searchprofile">
             <button className="nav-btn">
               <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button currently used"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
@@ -132,6 +131,7 @@ class BattleDisplayReady extends Component {
           <div className="ghost-separator"></div>
           <Link to="/battledisplayready">
             <button className="nav-btn">
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
               <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>
           </Link>

@@ -15,7 +15,7 @@
     height: 10vh;
     z-index: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background: #0c3d55; }
     .challenge-accepted-banner .message-banner {

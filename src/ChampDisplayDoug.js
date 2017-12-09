@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import Countdown from 'react-countdown-now';
 
 import GuideStep1 from './GuideStep1';
 import ChampionUnknown from './ChampionUnknown';
 import ChampionDoug from './ChampionDoug';
 import ChampionShaun from './ChampionShaun';
+import TwitterBtn from './TwitterBtn';
 
 import './ChampDisplay.css';
 import './Guides.css'
@@ -16,7 +18,9 @@ class ChampDisplay extends Component {
     this.state = {
       user: [],
       tweetBox: 'none',
-      tutorialsDisplay: true
+      requestSent: false,
+      tutorialsDisplay: true,
+      countdownOver: false,
     }
     this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
   }
@@ -29,8 +33,27 @@ class ChampDisplay extends Component {
   removeTutorialDisplay() {
     this.setState({tutorialsDisplay:false});
   }
+
   render() {
-    console.log(this.state.user)
+    console.log(this.state.userLoggedIn);
+    const Completionist = () => <span>You are good to go!</span>;
+
+    const renderer = ({ hours, minutes, seconds, completed }) => {
+      if (completed) {
+        // Render a completed state
+        return <Completionist />;
+      } else {
+        hours = `0` + hours;
+        minutes < 10
+          ? minutes = `0` + minutes
+          : minutes;
+        seconds < 10
+          ? seconds = `0` + seconds
+          : seconds;
+        return <span>{hours}:{minutes}:{seconds}</span>;
+      }
+    };
+
     return (
       <div className="main-container">
 
@@ -41,13 +64,29 @@ class ChampDisplay extends Component {
 
         <ChampionDoug/>
 
-        <section className="actions-container">
-          <button className="challenge-btn" onClick={this.SendRequest} style={{
-                      display: 'none'
+        <section className="champ-actions-container">
+        {
+          !this.state.countdown ?
+          <div className="countdown-container">
+            <img src="Hourglass_Icon.png"/>
+            <h6 className="cooldown-title">Challenge Cooldown</h6>
+            <div className="countdown-timer">
+            <Countdown
+              date={Date.now() + 3600000}
+              zeroPadLength={1}
+              renderer={renderer}
+            />
+            </div>
+          </div>
+          : <button className="challenge-btn" onClick={this.SendRequest} style={{
+                      display: this.state.requestSent
+                        ? 'none'
+                        : 'flex'
                     }}>
             <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
             <h6>CHALLENGE</h6>
           </button>
+        }
           <button className="challenge-sent pos-abs" style={{
                       display: this.state.requestSent
                         ? 'flex'
@@ -62,13 +101,13 @@ class ChampDisplay extends Component {
             <div className="ghost-separator"></div>
             <Link to="/searchprofile">
               <button className="nav-btn">
-                <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
+                <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
               </button>
             </Link>
             <div className="ghost-separator"></div>
             <Link to="champdisplay">
               <button className="nav-btn">
+                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
                 <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
               </button>
             </Link>

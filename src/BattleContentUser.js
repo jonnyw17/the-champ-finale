@@ -9,7 +9,7 @@ class BattleContentUser extends Component {
   }
   render(){
     return (
-      <div className="opponent-container uk-animation-slide-right">
+      <div className="opponent-container uk-animation-slide-left">
         <div className="opponent-img-container">
           <img src="Doug_Face_Circular.png" alt="player profile"/>
         </div>

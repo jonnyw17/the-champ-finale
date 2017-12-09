@@ -61,6 +61,7 @@ class SearchProfile extends Component {
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
             <button className="nav-btn">
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
               <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
             </button>
           </Link>
