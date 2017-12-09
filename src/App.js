@@ -12,6 +12,8 @@ import BattleDisplayReady from './BattleDisplayReady';
 import Home from './Home';
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
+import ChampDisplayDoug from './ChampDisplayDoug';
+import ChampDisplayShaun from './ChampDisplayShaun';
 
 class App extends Component {
   constructor(props) {
@@ -71,6 +73,8 @@ class App extends Component {
             } />}/>
           <Route path="/battledisplay" component={BattleDisplay}/>
           <Route path="/battledisplayready" component={BattleDisplayReady}/>
+          <Route path="/champdisplaydoug" component={ChampDisplayDoug}/>
+          <Route path="/champdisplayshaun" component={ChampDisplayShaun}/>
         </div>
       </Router>
     </div>);

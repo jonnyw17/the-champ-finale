@@ -39,7 +39,7 @@ class ChampDisplay extends Component {
           <h3 className="activity-name">Area Champion</h3>
         </section>
 
-        <ChampionShaun/>
+        <ChampionDoug/>
 
         <section className="actions-container">
           <button className="challenge-btn" onClick={this.SendRequest} style={{

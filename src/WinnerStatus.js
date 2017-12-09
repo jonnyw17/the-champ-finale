@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-
+import React, {Component} from 'react';
 
 import './BattleDisplayReady.css';
 
-class TrackingBattleDisplay extends Component {
+class WinnerStatus extends Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -12,10 +11,11 @@ class TrackingBattleDisplay extends Component {
     return (
       <div className="connect-glyph-container">
         <div className="wheel-overlay"></div>
-        <article className="battling-wheel">
-          <img src="Battling_Circle.png" alt="Battling circle"/>
+        <article className="winner-circle">
+          <img src="Winner_Circle.png" alt="Press on Winner circle"/>
             <div className="loading-info">
-              <h5>Battling...</h5>
+              <h5>Tap On</h5>
+              <h5>Winner</h5>
             </div>
         </article>
       </div>
@@ -23,4 +23,4 @@ class TrackingBattleDisplay extends Component {
   }
 }
 
-export default TrackingBattleDisplay;
+export default WinnerStatus;

@@ -7,6 +7,10 @@ import './BattleDisplayReady.css';
 
 import ConnectPendingDisplay from './ConnectPendingDisplay';
 import TrackingBattleDisplay from './TrackingBattleDisplay';
+import EndBattleButton from './EndBattleButton';
+import WinnerStatus from './WinnerStatus';
+import BattleContentUser from './BattleContentUser';
+import BattleContentOpponent from './BattleContentOpponent';
 
 class BattleDisplayReady extends Component {
   constructor(props) {
@@ -15,23 +19,30 @@ class BattleDisplayReady extends Component {
       usersTwitter: [],
       requestSent: false,
       requestIcon: 'none',
-      userLoggedIn: this.props.activeUser
+      userLoggedIn: this.props.activeUser,
+      connectionMade: false,
+      battleEnded: false
     }
     this.SendRequest = this.SendRequest.bind(this);
+    this.DeclareBattleEnded = this.DeclareBattleEnded.bind(this);
   }
 
   SendRequest() {
-    console.log(true)
     this.setState({requestSent: true});
     setTimeout(() => {
-      console.log(true)
       this.setState({requestIcon: 'block'});
     }, 3000);
   }
 
-  render() {
-    console.log(this.state.userLoggedIn)
+  DeclareBattleEnded() {
+    this.setState({battleEnded: true});
+  }
 
+  render() {
+    console.log(this.state.userLoggedIn);
+    setTimeout(()=>{
+      this.setState({connectionMade:true})
+    }, 5000)
     // There must be someway to set Time on the Display variable
     return (<div className="main-container">
 
@@ -46,44 +57,37 @@ class BattleDisplayReady extends Component {
         <img className="battle-arena-cover" src="Battle_Arena.png" alt="battle arena cover"/>
         <article className="gamer-info-container">
           <article className="upper-container">
-
-          <div className="opponent-container uk-animation-slide-right">
-            <div className="opponent-img-container">
-              <img src="Doug_Face_Circular.png" alt="player profile"/>
-            </div>
-            <article className="opponent-info-container">
-              <div className="opponent-info-wrapper">
-                <h6 className="opponent-username">Occam&#39;s Blade</h6>
-                <h6 className="opponent-name">Doug Ward</h6>
-                <h6 className="opponent-lvl">Level {5}</h6>
-              </div>
-            </article>
-          </div>
+          { this.state.battleEnded?
+            <Link to="/champdisplaydoug">
+              <BattleContentUser />
+            </Link>
+            :
+            <BattleContentUser />
+          }
 
           </article>
 
           <article className="middle-container">
-          { false ?
-            <ConnectPendingDisplay />
+          {this.state.battleEnded ?
+            <WinnerStatus />
             :
+            (this.state.connectionMade ?
             <TrackingBattleDisplay />
+            :
+            <ConnectPendingDisplay />
+            )
           }
 
           </article>
           <article className="lower-container">
 
-          <div className="user-container uk-animation-slide-left">
-            <div className="user-img-container">
-              <img src="Shaun_Face_Circular.png" alt="opponents profile"/>
-            </div>
-            <article className="user-info-container">
-              <div className="user-info-wrapper">
-                <h6 className="username">Widow Maker</h6>
-                <h6 className="actual-name">Shaun Gibson</h6>
-                <h6 className="actual-lvl">Level {5}</h6>
-              </div>
-            </article>
-          </div>
+          { this.state.battleEnded ?
+            <Link to="/champdisplayshaun">
+              <BattleContentOpponent />
+            </Link>
+            :
+            <BattleContentOpponent />
+          }
 
           </article>
         </article>
@@ -92,23 +96,22 @@ class BattleDisplayReady extends Component {
 
 
       <section className="battle-actions-container">
-        <button className="challenge-btn" onClick={this.SendRequest} style={{
-                    display: this.state.requestSent
-                      ? 'none'
-                      : 'flex'
-                  }}>
-          <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
-          <div>
-            <h6 className="btn-description">END BATTLE</h6>
-          </div>
-        </button>
-        <button className="challenge-sent pos-abs" style={{
-                    display: this.state.requestSent
-                      ? 'flex'
-                      : 'none'
-                  }}>
-          <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
-        </button>
+        {this.state.connectionMade ?
+          (this.state.battleEnded ?
+                <button className="challenge-sent pos-abs">
+                  <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
+                </button>
+              :
+              <button className="challenge-btn uk-animation-slide-bottom" onClick={this.DeclareBattleEnded}>
+                <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
+                <div>
+                  <h6 className="btn-description">END BATTLE</h6>
+                </div>
+              </button>
+            )
+          :
+          <div></div>
+        }
       </section>
       {/* Navigation Bar */}
       <section className="nav-bar">

@@ -106,22 +106,22 @@
     justify-content: center;
     align-items: center; }
     .profile-info .champdisplay {
-      width: 93vw;
-      height: 93vw;
+      width: 90vw;
+      height: 90vw;
       background: linear-gradient(to bottom right, #14181f, #0c3d55);
       filter: blur(5px);
       border-radius: 50%; }
     .profile-info .white-ring-border {
       position: absolute;
       background: none;
-      width: 93vw;
-      height: 93vw;
+      width: 90vw;
+      height: 90vw;
       border-radius: 50%;
       border: 1px solid white; }
     .profile-info .game-overlay-display {
       position: absolute;
-      width: 93vw;
-      height: 93vw;
+      width: 90vw;
+      height: 90vw;
       background: rgba(255, 255, 255, 0.35);
       border-radius: 50%; }
     .profile-info .gamer-info-container {
@@ -264,7 +264,7 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: flex-start; }
+    align-items: center; }
     .actions-container button {
       height: 50px;
       width: 200px; }
