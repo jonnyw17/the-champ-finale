@@ -4,8 +4,6 @@ import axios from 'axios';
 
 import GuideStep1 from './GuideStep1';
 import ChampionUnknown from './ChampionUnknown';
-import ChampionDoug from './ChampionDoug';
-import ChampionShaun from './ChampionShaun';
 
 import './ChampDisplay.css';
 import './Guides.css'

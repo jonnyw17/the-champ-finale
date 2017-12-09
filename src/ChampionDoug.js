@@ -36,7 +36,6 @@ class ChampionDoug extends Component {
               <h6 className="victory-title">Number</h6>
               <h6 className="victory-title">of Wins</h6>
               <h6 className="victory-address">{1}</h6>
-              <h6 className="champion-title"></h6>
               <div className="trophy-icon-container">
                 <img className="recent-trophy-icon" src="Trophy_Icon_Golden_Yellow.png" alt="Golden Trophy Icon"/>
               </div>

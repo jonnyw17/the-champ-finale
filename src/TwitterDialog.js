@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-class TwitterBtn extends Component {
+import './ProfilePage.css';
+
+class TwitterDialog extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -11,17 +13,13 @@ class TwitterBtn extends Component {
   }
 
   render() {
-    let style = {
-      backgroundColor:"red",
-      color:"#fff"
-    }
     console.log(this.state.userLoggedIn)
     return (
-      <div>
+      <div className="twitter-dialog-container uk-animation-slide-right">
         <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
-        <article className='input-container uk-animation-slide-right'>
+        <article className='input-container'>
           <div className="social-media-input">
-            <label style={style}>Send a tweet to user!</label>
+            <label>Send a tweet to user!</label>
           </div>
           <div className="sub-header"></div>
           <div className="uk-margin">
@@ -31,10 +29,12 @@ class TwitterBtn extends Component {
             <div className="input-line"></div>
           </div>
         </article>
-        <input type="submit" value="Send Tweet" style={style}/>
+        <div className="submit-tweet">
+          <input type="submit" value="Send Tweet"/>
+        </div>
         </form>
        </div>
     )
   }
 }
-export default TwitterBtn;
+export default TwitterDialog;

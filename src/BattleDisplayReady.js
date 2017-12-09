@@ -7,7 +7,6 @@ import './BattleDisplayReady.css';
 
 import ConnectPendingDisplay from './ConnectPendingDisplay';
 import TrackingBattleDisplay from './TrackingBattleDisplay';
-import EndBattleButton from './EndBattleButton';
 import WinnerStatus from './WinnerStatus';
 import BattleContentUser from './BattleContentUser';
 import BattleContentOpponent from './BattleContentOpponent';

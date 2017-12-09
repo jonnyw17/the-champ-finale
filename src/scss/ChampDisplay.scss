@@ -205,7 +205,7 @@
         }
       }
       .countdown-container {
-        width: 90vw;
+        width: 60vw;
         height: 50px;
         background: rgba(212,240,255, 0.5);
         display: flex;
@@ -218,12 +218,12 @@
           opacity: 0.7;
         }
         .countdown-timer {
-          font-size: 16px;
+          font-size: 14px;
           margin: 2px 5px 0 5px;
           color: white;
         }
         .cooldown-title {
-          font-size: 15px;
+          font-size: 13px;
           letter-spacing: 0.8px;
           margin: 0 5px;
           color: rgba(255, 255, 255, 0.8);
