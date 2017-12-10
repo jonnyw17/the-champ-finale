@@ -8,20 +8,21 @@ class TwitterBtn extends Component {
       tweet: [],
       userLoggedIn: this.props.activeUser
     }
-    // this.userTwitter = this.userTwitter.bind(this);
+    this.userTwitter = this.userTwitter.bind(this);
   }
 
-  // userTwitter(event) {
-  //   event.preventDefault();
-  //   axios.post("https://thechamp-be.herokuapp.com/twitter/tweetuser", {
-  //     message: event.target[0].value
-  //   }).catch((err) => err)
-  // }
+  userTwitter(event) {
+    event.preventDefault();
+    console.log(event.target[0].value)
+    axios.post("https://thechamp-be.herokuapp.com/twitter/tweetuser", {
+      message: event.target[0].value
+    }).catch((err) => err)
+  }
 
   render() {
     return (
       <div>
-        <form action="https://thechamp-be.herokuapp.com/twitter/tweetuser" method="post" className="uk-form-horizontal uk-margin-large">
+        <form onSubmit={this.userTwitter} method="post" className="uk-form-horizontal uk-margin-large">
           <article className='input-container uk-animation-slide-right'>
             <div className="social-media-input">
               <label>Send a tweet to user!</label>
