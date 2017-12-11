@@ -12,7 +12,9 @@ import BattleDisplayReady from './BattleDisplayReady';
 import Home from './Home';
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
-import TwitterBtn from './TwitterBtn';
+import TwitterDialog from './TwitterDialog';
+import ChampDisplayDoug from './ChampDisplayDoug';
+import ChampDisplayShaun from './ChampDisplayShaun';
 
 class App extends Component {
   constructor(props) {
@@ -35,44 +37,31 @@ class App extends Component {
 
   render() {
 
-    // (function toggleFullScreen() {
-    //   var doc = window.document;
-    //   var docEl = doc.documentElement;
-    //
-    //   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-    //   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-    //
-    //   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-    //     requestFullScreen.call(docEl);
-    //   }
-    //   else {
-    //     cancelFullScreen.call(doc);
-    //   }
-    // })()
-
     return (<div>
       <Router>
         <div>
-          <Route path="/twitterbutton" component={TwitterBtn} />
+          <Route path="/twitterbutton" component={TwitterDialog} />
           <Route exact={true} path="/" component={Home}/>
           <Route path="/signup" render={() =>< SignUp getCurrentUserSignUp = {
               this.getCurrentUserSignUp
             } />}/>
           <Route path="/signin" render={() =>< SignIn getCurrentUserSignIn = {
-              this.getCurrentUserSignIn
+              this.getCurrentUserSignUp
             } />}/>
           <Route path="/profilepage" render={() =>< ProfilePage activeUser = {
-              this.state.userLoggedIn
+              this.getCurrentUserSignUp
             } />}/>
           <Route path="/platform" component={Platform}/>
           <Route path="/champdisplay" render={() =>< ChampDisplay activeUser = {
-              this.state.userLoggedIn
+              this.getCurrentUserSignUp
             } />}/>
           <Route path="/searchprofile" render={() =>< SearchProfile activeUser = {
-              this.state.userLoggedIn
+              this.getCurrentUserSignUp
             } />}/>
           <Route path="/battledisplay" component={BattleDisplay}/>
           <Route path="/battledisplayready" component={BattleDisplayReady}/>
+          <Route path="/champdisplaydoug" component={ChampDisplayDoug}/>
+          <Route path="/champdisplayshaun" component={ChampDisplayShaun}/>
         </div>
       </Router>
     </div>);

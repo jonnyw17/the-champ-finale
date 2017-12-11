@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+import './TwitterDialog';
+
 import ChallengeRequestSent from './ChallengeRequestSent';
 // import GuideStep3 from './GuideStep3';
 // import GuideStep4 from './GuideStep4';
-import TwitterBtn from './TwitterBtn';
+import TwitterDialog from './TwitterDialog';
 
 import './ProfilePage.css';
+import './TwitterDialog.css';
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -15,12 +18,14 @@ class ProfilePage extends Component {
       usersTwitter: [],
       requestSent: false,
       requestIcon: 'none',
-      userLoggedIn: this.props.activeUser
+      userLoggedIn: this.props.activeUser,
+      tweetBtnClick: false
     }
-    this.SendRequest = this.SendRequest.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
+    this.twitterActivate = this.twitterActivate.bind(this);
   }
   // <TwitterBtn activeUser={this.state.userLoggedIn} />
-  SendRequest() {
+  sendRequest() {
     console.log(true)
     this.setState({requestSent: true});
     setTimeout(() => {
@@ -28,14 +33,12 @@ class ProfilePage extends Component {
       this.setState({requestIcon: 'block'});
     }, 3000);
   }
+  
+  twitterActivate() {
+    this.setState({tweetBtnClick: !this.state.tweetBtnClick});
+  }
 
   render() {
-    console.log(this.state.userLoggedIn)
-    const toggleButton = () => {
-      if (this.state.requestSent) {
-        return <ChallengeRequestSent/>;
-      }
-    }
     // 1) Triggers when to display the notification
 
     const dontShow = {
@@ -50,6 +53,12 @@ class ProfilePage extends Component {
     const display = this.state.requestSent
       ? doShow
       : dontShow;
+    const twitterNewPos = this.state.tweetBtnClick
+      ? 'twitter-new-position'
+      : 'twitter-btn-container';
+    const twitterAnimation = this.state.tweetBtnClick
+      ? 'twitter-move-animation'
+      : '';
     return (<div className="main-container">
 
       {/* Challenge Accepted Banner */}
@@ -112,6 +121,22 @@ class ProfilePage extends Component {
         </article>
       </section>
       <section className="actions-container">
+      {/*TwitterDialog*/}
+      {
+        this.state.tweetBtnClick
+          ? <TwitterDialog />
+          : ""
+      }
+      {/*Twitter Button*/}
+      <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
+                  display: this.state.requestSent
+                    ? 'none'
+                    : 'flex'
+                }}>
+        <div className="twitter-btn">
+          <img src="Twitter_Icon_White.png" alt="Twitter"/>
+        </div>
+      </button>
         <button className="challenge-btn" onClick={this.SendRequest} style={{
                     display: this.state.requestSent
                       ? 'none'
@@ -128,14 +153,15 @@ class ProfilePage extends Component {
           <h6 className="uk-animation-slide-top">CHALLENGE SENT !</h6>
         </button>
       </section>
+
+
       {/* Navigation Bar */}
       <section className="nav-bar">
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
             <button className="nav-btn">
-              <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
+              <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>

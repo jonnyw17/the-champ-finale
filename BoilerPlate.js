@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component}from 'react';
 
-import 'Stylesheets.css';
+import './.css';
 
-class ChampDisplay extends Component {
+class name extends Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -14,3 +14,5 @@ class ChampDisplay extends Component {
     )
   }
 }
+
+export default name;

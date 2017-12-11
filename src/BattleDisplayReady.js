@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // import './animation.css';
@@ -7,6 +7,9 @@ import './BattleDisplayReady.css';
 
 import ConnectPendingDisplay from './ConnectPendingDisplay';
 import TrackingBattleDisplay from './TrackingBattleDisplay';
+import WinnerStatus from './WinnerStatus';
+import BattleContentUser from './BattleContentUser';
+import BattleContentOpponent from './BattleContentOpponent';
 
 class BattleDisplayReady extends Component {
   constructor(props) {
@@ -15,22 +18,25 @@ class BattleDisplayReady extends Component {
       usersTwitter: [],
       requestSent: false,
       requestIcon: 'none',
-      userLoggedIn: this.props.activeUser
+      // userLoggedIn: this.props.activeUser,
+      connectionMade: false,
+      battleEnded: false
     }
-    this.SendRequest = this.SendRequest.bind(this);
+    this.declareBattleEnded = this.declareBattleEnded.bind(this);
   }
 
-  SendRequest() {
-    console.log(true)
-    this.setState({requestSent: true});
+  componentDidMount() {
     setTimeout(() => {
-      console.log(true)
-      this.setState({requestIcon: 'block'});
-    }, 3000);
+      this.setState({connectionMade: true})
+    }, 5000)
+  }
+
+  // upon battle ending, battling button disappears, this is done by setting the state 'setstate' false to true
+  declareBattleEnded() {
+    this.setState({battleEnded: true});
   }
 
   render() {
-    console.log(this.state.userLoggedIn)
 
     // There must be someway to set Time on the Display variable
     return (<div className="main-container">
@@ -46,69 +52,57 @@ class BattleDisplayReady extends Component {
         <img className="battle-arena-cover" src="Battle_Arena.png" alt="battle arena cover"/>
         <article className="gamer-info-container">
           <article className="upper-container">
-
-          <div className="opponent-container uk-animation-slide-right">
-            <div className="opponent-img-container">
-              <img src="Doug_Face_Circular.png" alt="player profile"/>
-            </div>
-            <article className="opponent-info-container">
-              <div className="opponent-info-wrapper">
-                <h6 className="opponent-username">Occam&#39;s Blade</h6>
-                <h6 className="opponent-name">Doug Ward</h6>
-                <h6 className="opponent-lvl">Level {5}</h6>
-              </div>
-            </article>
-          </div>
+            {
+              this.state.battleEnded
+                ? <Link to="/champdisplaydoug">
+                    <BattleContentUser/>
+                  </Link>
+                : <BattleContentUser/>
+            }
 
           </article>
 
           <article className="middle-container">
-          { false ?
-            <ConnectPendingDisplay />
-            :
-            <TrackingBattleDisplay />
-          }
+            {
+              this.state.battleEnded
+                ? <WinnerStatus/>
+                : (
+                  this.state.connectionMade
+                  ? <TrackingBattleDisplay/>
+                  : <ConnectPendingDisplay/>)
+            }
 
           </article>
           <article className="lower-container">
 
-          <div className="user-container uk-animation-slide-left">
-            <div className="user-img-container">
-              <img src="Shaun_Face_Circular.png" alt="opponents profile"/>
-            </div>
-            <article className="user-info-container">
-              <div className="user-info-wrapper">
-                <h6 className="username">Widow Maker</h6>
-                <h6 className="actual-name">Shaun Gibson</h6>
-                <h6 className="actual-lvl">Level {5}</h6>
-              </div>
-            </article>
-          </div>
+            {
+              this.state.battleEnded
+                ? <Link to="/champdisplayshaun">
+                    <BattleContentOpponent/>
+                  </Link>
+                : <BattleContentOpponent/>
+            }
 
           </article>
         </article>
       </section>
 
-
-
       <section className="battle-actions-container">
-        <button className="challenge-btn" onClick={this.SendRequest} style={{
-                    display: this.state.requestSent
-                      ? 'none'
-                      : 'flex'
-                  }}>
-          <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
-          <div>
-            <h6 className="btn-description">END BATTLE</h6>
-          </div>
-        </button>
-        <button className="challenge-sent pos-abs" style={{
-                    display: this.state.requestSent
-                      ? 'flex'
-                      : 'none'
-                  }}>
-          <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
-        </button>
+        {
+          this.state.connectionMade
+            ? (
+              this.state.battleEnded
+              ? <button className="challenge-sent pos-abs">
+                <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
+              </button>
+              : <button className="challenge-btn uk-animation-slide-bottom" onClick={this.declareBattleEnded}>
+                <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
+                <div>
+                  <h6 className="btn-description">END BATTLE</h6>
+                </div>
+              </button>)
+            : <div></div>
+        }
       </section>
       {/* Navigation Bar */}
       <section className="nav-bar">
@@ -117,7 +111,6 @@ class BattleDisplayReady extends Component {
           <Link to="/searchprofile">
             <button className="nav-btn">
               <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
-              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button currently used"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
@@ -129,6 +122,7 @@ class BattleDisplayReady extends Component {
           <div className="ghost-separator"></div>
           <Link to="/battledisplayready">
             <button className="nav-btn">
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
               <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>
           </Link>
@@ -138,7 +132,7 @@ class BattleDisplayReady extends Component {
       {/* Display Step 1 Tip */}
       {
         this.state.requestSent
-          /*? <GuideStep4/> : <GuideStep3/>*/
+        /* ? <GuideStep4/> : <GuideStep3/> */
       }
       {/* Navigation */}
       <section className="nav-display">
@@ -183,7 +177,6 @@ export default BattleDisplayReady;
 //   </div>
 // </div>
 
-
 // Connect to Game Button
 //
 // <article className="connecting-wheel">
@@ -214,27 +207,27 @@ export default BattleDisplayReady;
 //     height: 150px;
 //     display: flex;
 //     justify-content: center;
-    // .connecting-wheel {
-    //   width: 150px;
-    //   height: 150px;
-    //   border-radius: 50%;
-    //   background: #9F9F9F;
-    //   color: white;
-    //   img {
-    //     position: absolute;
-    //     height: 150px;
-    //     width: 150px;
-    //     opacity: 1;
-    //   }
-    //   .loading-info {
-    //     padding: 50px 0 0 0;
-    //     h5 {
-    //       margin: 0px;
-    //       text-align: center;
-    //       color: white;
-    //     }
-    //   }
-    // }
+// .connecting-wheel {
+//   width: 150px;
+//   height: 150px;
+//   border-radius: 50%;
+//   background: #9F9F9F;
+//   color: white;
+//   img {
+//     position: absolute;
+//     height: 150px;
+//     width: 150px;
+//     opacity: 1;
+//   }
+//   .loading-info {
+//     padding: 50px 0 0 0;
+//     h5 {
+//       margin: 0px;
+//       text-align: center;
+//       color: white;
+//     }
+//   }
+// }
 //     .battle-ready-btn {
 //       margin: 10px 0 0 0;
 //       width: 182px;
@@ -375,7 +368,6 @@ export default BattleDisplayReady;
 //   }
 // }
 
-
 // Winner Chosen - positioned above player container
 // <div className="shadow-casted"></div>
 // <img className="crowned_champion" src="Crowned_Champion_Golden.png"/>
@@ -421,7 +413,7 @@ export default BattleDisplayReady;
 //         top:0;
 //         height: 200px;
 //         width: 370px;
-//         // background: grey;
+//          background: grey;
 //         display: flex;
 //         justify-content: center;
 //         align-items: center;
