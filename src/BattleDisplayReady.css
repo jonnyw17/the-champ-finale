@@ -42,10 +42,9 @@
       border-radius: 50%; }
     .battle-info .battle-arena-cover {
       position: absolute;
-      width: 82vw;
-      height: 82vw; }
+      width: 90vw;
+      height: 90vw; }
     .battle-info .gamer-info-container {
-      position: absolute;
       width: 90vw;
       height: 90vw; }
       .battle-info .gamer-info-container .upper-container {
@@ -102,6 +101,8 @@
         height: 35vw;
         justify-content: center; }
         .battle-info .gamer-info-container .middle-container .connect-glyph-container {
+          width: inherit;
+          height: inherit;
           display: flex;
           justify-content: center;
           align-items: center; }
@@ -243,7 +244,7 @@
       justify-content: space-around;
       align-items: center; }
       .battle-actions-container .challenge-btn .btn-description {
-        margin: 0;
+        margin: 3px 15px;
         letter-spacing: 1.5px;
         color: white; }
       .battle-actions-container .challenge-btn img {
@@ -257,7 +258,7 @@
       display: flex;
       justify-content: space-around; }
       .battle-actions-container .challenge-sent h6 {
-        margin: 0;
+        margin: 0 17px;
         font-size: 16px;
         letter-spacing: 1.5px;
         color: white; } }

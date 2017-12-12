@@ -54,11 +54,10 @@
     }
     .battle-arena-cover {
       position: absolute;
-      width: 82vw;
-      height: 82vw;
+      width: 90vw;
+      height: 90vw;
     }
     .gamer-info-container {
-      position: absolute;
       width: 90vw;
       height: 90vw;
       .upper-container {
@@ -124,6 +123,8 @@
         height: 35vw;
         justify-content: center;
         .connect-glyph-container{
+          width: inherit;
+          height: inherit;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -293,7 +294,7 @@
       justify-content: space-around;
       align-items: center;
       .btn-description {
-        margin: 0;
+        margin: 3px 15px;
         letter-spacing: 1.5px;
         color: white;
       }
@@ -310,7 +311,7 @@
       display: flex;
       justify-content: space-around;
       h6 {
-        margin: 0;
+        margin: 0 17px;
         font-size: 16px;
         letter-spacing: 1.5px;
         color: white;

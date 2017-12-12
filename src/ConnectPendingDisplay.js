@@ -11,7 +11,6 @@ class CircularPendingDisplay extends Component {
   render(){
     return (
       <div className="connect-glyph-container">
-        <div className="wheel-overlay"></div>
         <article className="connecting-wheel">
           <img src="Provoke_Pending_White.png" alt="loading circle"/>
             <div className="loading-info">

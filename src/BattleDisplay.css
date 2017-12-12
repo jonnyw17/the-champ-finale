@@ -44,7 +44,7 @@
     background: none;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: flex-start; }
     .activity-name-wrapper .battle-cover-img {
       height: 80px;
       width: 90px;
@@ -56,7 +56,7 @@
       background: white;
       opacity: 0.65; }
     .activity-name-wrapper h3 {
-      position: absolute;
+      position: relative;
       top: 15px;
       font-weight: 700;
       letter-spacing: 0.8px;

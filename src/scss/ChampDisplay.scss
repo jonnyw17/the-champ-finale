@@ -42,7 +42,7 @@
     background: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     .crown-champion-cover-img {
       height: 80px;
     }
@@ -54,7 +54,7 @@
       opacity: 0.65;
     }
     h3 {
-      position: absolute;
+      position: relative;
       top: 15px;
       font-weight: 700;
       margin: 5vh 0 0 0;
@@ -165,7 +165,7 @@
       height: 12.5vh;
       width: 100vw;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       button {
         height: 50px;

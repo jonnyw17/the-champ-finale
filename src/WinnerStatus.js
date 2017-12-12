@@ -10,7 +10,6 @@ class WinnerStatus extends Component {
   render(){
     return (
       <div className="connect-glyph-container">
-        <div className="wheel-overlay"></div>
         <article className="winner-circle">
           <img src="Winner_Circle.png" alt="Press on Winner circle"/>
             <div className="loading-info">

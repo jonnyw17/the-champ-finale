@@ -11,13 +11,10 @@ class ChampionUnknown extends Component {
     return (
       <div>
       <section className="profile-info">
-        <article className="champdisplay"></article>
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>
         <article className="gamer-info-container">
         <article className="upper-circle-container">
-          <article className="progress-circle">
-          </article>
           <div className="gamer-name">
             <h3>No Current Champ</h3>
           </div>

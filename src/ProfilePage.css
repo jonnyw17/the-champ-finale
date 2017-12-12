@@ -14,9 +14,6 @@
 .fixed {
   position: fixed; }
 
-.pos-abs {
-  position: absolute; }
-
 .bg-white {
   background: white; }
 
@@ -41,9 +38,8 @@
         height: 40px;
         margin: 0 1.5vw 5vw 3vw; }
       .challenge-accepted-banner .message-banner .challenge-msg {
-        display: inline;
-        position: absolute;
-        width: 100vw; }
+        width: 60vw;
+        margin: 1vh 0 0 0; }
         .challenge-accepted-banner .message-banner .challenge-msg h5 {
           text-align: center;
           color: white;
@@ -59,7 +55,7 @@
   .challenge-notification {
     position: fixed;
     right: 6vw;
-    bottom: 5vh; }
+    bottom: 5.5vh; }
     .challenge-notification .notification-amount {
       background: #0c3d55;
       height: 23px;
@@ -103,7 +99,7 @@
     background: none;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: flex-start; }
     .activity-name-wrapper .activity-name {
       margin: 0;
       font-size: 20px;
@@ -137,7 +133,6 @@
       background: rgba(255, 255, 255, 0.35);
       border-radius: 50%; }
     .profile-info .gamer-info-container {
-      position: absolute;
       width: 90vw;
       height: 90vw; }
       .profile-info .gamer-info-container .upper-circle-container {
@@ -289,7 +284,7 @@
       display: flex;
       justify-content: space-around; }
       .actions-container .challenge-btn h6 {
-        margin: 0;
+        margin: 0 15px;
         font-size: 16px;
         letter-spacing: 1.5px;
         color: white; }

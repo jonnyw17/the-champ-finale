@@ -7,6 +7,7 @@ import './BattleDisplayReady.css';
 
 import ConnectPendingDisplay from './ConnectPendingDisplay';
 import TrackingBattleDisplay from './TrackingBattleDisplay';
+import EndBattleButton from './EndBattleButton';
 import WinnerStatus from './WinnerStatus';
 import BattleContentUser from './BattleContentUser';
 import BattleContentOpponent from './BattleContentOpponent';
@@ -97,7 +98,7 @@ class BattleDisplayReady extends Component {
       <section className="battle-actions-container">
         {this.state.connectionMade ?
           (this.state.battleEnded ?
-                <button className="challenge-sent pos-abs">
+                <button className="challenge-sent">
                   <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
                 </button>
               :

@@ -79,14 +79,10 @@ class ProfilePage extends Component {
         <h3 className="activity-name">Rival&#39;s Profile</h3>
       </section>
       <section className="profile-info">
-        <article className="champdisplay"></article>
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>
         <article className="gamer-info-container">
         <article className="upper-circle-container">
-          <article className="progress-circle">
-            <img src="Progress_Circle.png" alt="person"/>
-          </article>
           <div className="gamer-name">
             <h3>Widow Maker</h3>
             <h6>Shaun Gibson</h6>
@@ -144,7 +140,7 @@ class ProfilePage extends Component {
           <img src="Provoke_Icon_White.png" alt="provoke icon"/>
           <h6>CHALLENGE</h6>
         </button>
-        <button className="challenge-sent pos-abs" style={{
+        <button className="challenge-sent" style={{
                     display: this.state.requestSent
                       ? 'flex'
                       : 'none'

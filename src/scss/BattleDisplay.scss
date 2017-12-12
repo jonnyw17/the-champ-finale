@@ -51,7 +51,7 @@
     background: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     .battle-cover-img {
       height: 80px;
       width: 90px;
@@ -65,7 +65,7 @@
       opacity: 0.65;
     }
     h3 {
-      position: absolute;
+      position: relative;
       top: 15px;
       font-weight: 700;
       letter-spacing: 0.8px;

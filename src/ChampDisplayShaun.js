@@ -113,7 +113,7 @@ class ChampDisplay extends Component {
           <img src="Twitter_Icon_White.png" alt="White Twitter"/>
         </div>
       </button>
-          <button className="challenge-sent pos-abs" style={{
+          <button className="challenge-sent" style={{
                       display: this.state.requestSent
                         ? 'flex'
                         : 'none'

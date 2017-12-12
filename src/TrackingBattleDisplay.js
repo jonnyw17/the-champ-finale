@@ -11,7 +11,6 @@ class TrackingBattleDisplay extends Component {
   render(){
     return (
       <div className="connect-glyph-container">
-        <div className="wheel-overlay"></div>
         <article className="battling-wheel">
           <img src="Battling_Circle.png" alt="Battling circle"/>
             <div className="loading-info">

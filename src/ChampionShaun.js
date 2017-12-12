@@ -11,14 +11,10 @@ class ChampionShaun extends Component {
     return (
       <div>
       <section className="profile-info">
-      <article className="champdisplay"></article>
       <article className="white-ring-border"></article>
       <article className="game-overlay-display"></article>
       <article className="gamer-info-container">
         <article className="upper-circle-container">
-        <article className="progress-circle">
-          <img src="Progress_Circle.png" alt="person"/>
-        </article>
         <div className="gamer-name">
           <h3>Widow Maker</h3>
           <h6>Shaun Gibson</h6>
