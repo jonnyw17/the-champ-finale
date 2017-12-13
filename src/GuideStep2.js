@@ -21,7 +21,7 @@ class GuideStep2 extends Component {
             <img className="cancel-glyph" src="Cancel_Glyph.png" alt="cancel glyph" onClick={this.removeTutorialDisplay}/>
             <article className="guide-content-1">
               <h5>Step 2</h5>
-              <h6>Click on Shaun&#39;s Profile</h6>
+              <h6>Click on Doug&#39;s Profile</h6>
             </article>
             <article className="arrow-pointing"></article>
           </section>

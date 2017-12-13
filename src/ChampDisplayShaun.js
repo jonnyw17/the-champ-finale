@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 import ChampionShaun from './ChampionShaun';
+import ChampLogo from './ChampLogo';
 import Countdown from 'react-countdown-now';
 import GuideStep1 from './GuideStep1';
 import TwitterDialog from './TwitterDialog';
@@ -12,6 +13,23 @@ import './ChampDisplay.css';
 import './Guides.css'
 import './TwitterDialog.css';
 
+const Completionist = () => <span>You are good to go!</span>;
+
+const renderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a completed state
+    return <Completionist />;
+  } else {
+    hours = `0` + hours;
+    minutes = minutes < 10
+      ? `0` + minutes
+      : minutes;
+    seconds = seconds < 10
+      ? `0` + seconds
+      : seconds;
+    return <span>{hours}:{minutes}:{seconds}</span>;
+  }
+};
 
 class ChampDisplay extends Component {
   constructor(props) {
@@ -38,23 +56,6 @@ class ChampDisplay extends Component {
   }
   render() {
     console.log(this.state.user);
-    const Completionist = () => <span>You are good to go!</span>;
-
-    const renderer = ({ hours, minutes, seconds, completed }) => {
-      if (completed) {
-        // Render a completed state
-        return <Completionist />;
-      } else {
-        hours = `0` + hours;
-        minutes = minutes < 10
-          ? `0` + minutes
-          : minutes;
-        seconds = seconds < 10
-          ? `0` + seconds
-          : seconds;
-        return <span>{hours}:{minutes}:{seconds}</span>;
-      }
-    };
     const twitterNewPos = this.state.tweetBtnClick
       ? 'twitter-new-position'
       : 'twitter-btn-container';
@@ -64,7 +65,7 @@ class ChampDisplay extends Component {
 
     return (
       <div className="main-container">
-
+        <ChampLogo />
         <section className="menu-drop-down"></section>
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>
@@ -144,18 +145,6 @@ class ChampDisplay extends Component {
               </button>
             </Link>
             <div className="ghost-separator"></div>
-          </article>
-        </section>
-        {/* Display Step 1 Tip */}
-        {
-          this.state.requestSent
-            /*? <GuideStep4/> : <GuideStep3/>*/
-        }
-        {/* Navigation */}
-        <section className="nav-display">
-          <article className="logo-wrapper">
-            <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-            <h3 className="white-logo-name">Champ</h3>
           </article>
         </section>
       </div>

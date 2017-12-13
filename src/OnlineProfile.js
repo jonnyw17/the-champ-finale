@@ -21,31 +21,24 @@ class OnlineProfile extends Component {
   }
 
   render() {
-    return (<div>
-      {
-        this.state.users.map((users, index) => {
-          if (users.online) {
-            return (
-            <div key={index}>
+          return (
+            <div>
               <Link onClick={this.userProfile} to='profilepage'>
                 <article className="user-searched-details border-top-bottom-online uk-animation-slide-bottom">
                 <div className="ghost-circle">
-                {index === 0?
-                  <img src="Shaun_Face_Circular.png" alt="person"/>
-                  :
+                {true?
                   <img src="Doug_Face_Circular.png" alt="person"/>
+                  :
+                  <img src="Shaun_Face_Circular.png" alt="person"/>
                 }
                 </div>
-                  <h6>{users.fullname}</h6>
+                  <h6>Doug Ward</h6>
                   <div className="ghost-name-div"></div>
                   <div className="online-circle"></div>
                 </article>
               </Link>
-            </div>)
-          }
-        })
-      }
-    </div>)
+            </div>
+          )
   }
 }
 

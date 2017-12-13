@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+import ChampLogo from './ChampLogo';
+import GuideStep3 from './GuideStep3';
+import GuideStep4 from './GuideStep4';
+
 import './TwitterDialog';
 
 import ChallengeRequestSent from './ChallengeRequestSent';
@@ -59,7 +63,7 @@ class ProfilePage extends Component {
       ? 'twitter-move-animation'
       : '';
     return (<div className="main-container">
-
+      <ChampLogo />
       {/* Challenge Accepted Banner */}
       {/* There still needs to be a timeout period for it appear and disappear */}
       <article className="challenge-accepted-banner uk-animation-slide-top" style={display}>
@@ -84,13 +88,13 @@ class ProfilePage extends Component {
         <article className="gamer-info-container">
         <article className="upper-circle-container">
           <div className="gamer-name">
-            <h3>Widow Maker</h3>
-            <h6>Shaun Gibson</h6>
+            <h3>Occam&#39;s Razor</h3>
+            <h6>Doug Ward</h6>
           </div>
         </article>
         <article className="middle-circle-container">
           <div className="img-container">
-            <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
+            <img className="gamer-img" src="Doug_Face_Circular.png" alt="gamer"/>
             <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
           </div>
           <div className="victory-recent-container">
@@ -177,20 +181,13 @@ class ProfilePage extends Component {
       {/* Display Step 1 Tip */}
       {
         this.state.requestSent
-          /*? <GuideStep4/> : <GuideStep3/>*/
+          ? <GuideStep4/> : <GuideStep3/>
       }
       {/* Notification Circle */}
       <section className="challenge-notification uk-animation-scale-up" style={display}>
         <div className="notification-amount">
           <h6>1</h6>
         </div>
-      </section>
-      {/* Navigation */}
-      <section className="nav-display">
-        <article className="logo-wrapper">
-          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-          <h3 className="white-logo-name">Champ</h3>
-        </article>
       </section>
     </div>);
   }

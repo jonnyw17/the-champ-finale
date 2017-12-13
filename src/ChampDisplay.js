@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import GuideStep1 from './GuideStep1';
 import ChampionUnknown from './ChampionUnknown';
+import ChampLogo from  './ChampLogo';
 
 import './ChampDisplay.css';
 import './Guides.css'
@@ -31,7 +32,7 @@ class ChampDisplay extends Component {
     console.log(this.state.user)
     return (
       <div className="main-container">
-
+      <ChampLogo />
         <section className="menu-drop-down"></section>
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>
@@ -80,23 +81,10 @@ class ChampDisplay extends Component {
           </article>
         </section>
         {/* Display Step 1 Tip */}
-        {
-          this.state.requestSent
-            /*? <GuideStep4/> : <GuideStep3/>*/
-        }
-        {/* Navigation */}
-        <section className="nav-display">
-          <article className="logo-wrapper">
-            <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-            <h3 className="white-logo-name">Champ</h3>
-          </article>
-        </section>
+        {<GuideStep1/>}
       </div>
     );
   }
 }
 
 export default ChampDisplay;
-
-// {/*Display Step 1 Tip*/}
-// {<GuideStep1/>}

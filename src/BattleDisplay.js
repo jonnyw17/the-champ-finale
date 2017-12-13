@@ -1,18 +1,15 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+
+import ChampLogo from './ChampLogo';
+
 import './BattleDisplay.css';
+
 
 class BattleDisplay extends Component {
   render( ) {
     return (<div className="main-container">
-
-    {/* Navigation */}
-    <section className="nav-display">
-      <article className="logo-wrapper">
-        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-        <h3 className="white-logo-name">Champ</h3>
-      </article>
-    </section>
+    <ChampLogo />
     <section className="menu-drop-down"></section>
 
     <section className="activity-name-wrapper">

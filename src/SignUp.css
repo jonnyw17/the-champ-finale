@@ -5,8 +5,11 @@
   align-items: center; }
 
 .top-container {
-  display: flex; }
+  display: flex;
+  height: 10vh; }
   .top-container .back-btn-wrapper {
+    position: fixed;
+    left: 0px;
     width: 30vw;
     height: 10vh;
     margin: 1vh 0 0 2.5vw;
@@ -20,17 +23,17 @@
         margin: 5px 0 0 10px; }
       .top-container .back-btn-wrapper .back-btn h5 {
         margin: 2px 0 0 10px; }
-  .top-container .logo-wrapper {
+  .top-container .logo-wrapper-home {
     position: fixed;
     height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .top-container .logo-wrapper img {
+    .top-container .logo-wrapper-home img {
       height: 36px;
       width: 30px; }
-    .top-container .logo-wrapper h3 {
+    .top-container .logo-wrapper-home h3 {
       font-weight: 700;
       letter-spacing: 0.8px;
       color: #0c3d55;
