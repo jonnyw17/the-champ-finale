@@ -63,15 +63,16 @@
       .upper-container {
         width: 90vw;
         height: 27.5vw;
-        .user-container {
+        .opponent-container {
+          position: absolute;
           width: 60vw;
           height: 25vw;
-          background: hsla(218,20,10, 0.95);
+          background: hsla(200,75,19, 0.95);
           border: 1px solid rgba(255,255,255,0.75);
           border-radius: 10px;
           display: flex;
           align-items: center;
-          .user-img-container {
+          .opponent-img-container {
             width: 25vw;
             height: 20vw;
             display: flex;
@@ -84,29 +85,29 @@
               height: 20vw;
             }
           }
-          .user-info-container {
+          .opponent-info-container {
             width: 35vw;
             height: 25vw;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            .user-info-wrapper{
+            .opponent-info-wrapper{
               height: 17.5vw;
-              .username {
+              .opponent-username {
                 font-family: 'Vollkorn', serif;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: white;
               }
-              .actual-name {
+              .opponent-name {
                 font-size: 12px;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: rgba(255,255,255,0.7);
               }
-              .actual-lvl {
+              .opponent-lvl {
                 font-family: 'Vollkorn', serif;
                 margin: 0;
                 text-align: center;
@@ -214,15 +215,15 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        .opponent-container {
+        .user-container {
           width: 60vw;
           height: 25vw;
-          background: hsla(200,75,19, 0.95);
+          background: hsla(218,20,10, 0.95);
           border: 1px solid rgba(255,255,255,0.75);
           border-radius: 10px;
           display: flex;
           align-items: center;
-          .opponent-img-container {
+          .user-img-container {
             width: 25vw;
             height: 20vw;
             display: flex;
@@ -235,29 +236,29 @@
               height: 20vw;
             }
           }
-          .opponent-info-container {
+          .user-info-container {
             width: 35vw;
             height: 25vw;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            .opponent-info-wrapper{
+            .user-info-wrapper{
               height: 17.5vw;
-              .opponent-username {
+              .username {
                 font-family: 'Vollkorn', serif;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: white;
               }
-              .opponent-name {
+              .actual-name {
                 font-size: 12px;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: rgba(255,255,255,0.7);
               }
-              .opponent-lvl {
+              .actual-lvl {
                 font-family: 'Vollkorn', serif;
                 margin: 0;
                 text-align: center;

@@ -178,13 +178,15 @@ class SignUp extends Component {
     return (<div>
 
       <section className="top-container">
-        <article className="logo-wrapper-home">
+        <article className="back-btn-wrapper"></article>
+
+        <article className="logo-wrapper">
           <img src="BetGame_Logo.png" alt="the champ logo"/>
           <h3>Champ</h3>
         </article>
         <article className="menu-wrapper"></article>
 
-        <article className="back-btn-wrapper">
+        <article className="back-btn-wrapper fixed">
           <Link to="/">
             <div className="back-btn">
               <img src="Back_Button_Triangle_Icon.png" alt="back button"/>

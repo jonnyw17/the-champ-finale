@@ -9,53 +9,55 @@
     opacity: 0.5; }
 
 .status-wrapper {
-  height: 70vh;
+  height: 90vh;
   background: none;
   display: flex;
   justify-content: center; }
 
 .status-container {
   width: 360px; }
-  .status-container .status-bar-online {
-    height: 65px;
-    width: inherit;
-    margin: 40px 0;
-    display: inline-flex;
-    justify-content: center; }
-    .status-container .status-bar-online h4 {
-      margin: 8px 15px;
-      color: white;
-      opacity: 0.8; }
-    .status-container .status-bar-online .status-separator {
-      position: absolute;
-      height: 25px;
-      width: 2px;
-      background: white;
-      margin: 10px 0; }
-    .status-container .status-bar-online .online-tab h4 {
-      font-weight: 700; }
-    .status-container .status-bar-online .offline-tab h4 {
-      font-weight: 200; }
-  .status-container .status-bar-offline {
-    height: 45px;
-    width: 360px;
-    margin: 120px 0 30px 0;
-    display: inline-flex;
-    justify-content: center; }
-    .status-container .status-bar-offline h4 {
-      margin: 8px 15px;
-      color: white;
-      opacity: 0.8; }
-    .status-container .status-bar-offline .status-separator {
-      position: absolute;
-      height: 25px;
-      width: 2px;
-      background: white;
-      margin: 10px 0; }
-    .status-container .status-bar-offline .online-tab h4 {
-      font-weight: 200; }
-    .status-container .status-bar-offline .offline-tab h4 {
-      font-weight: 700; }
+
+.status-bar-online {
+  height: 65px;
+  width: 360px;
+  margin: 70px 0 30px 0;
+  display: inline-flex;
+  justify-content: center; }
+  .status-bar-online h4 {
+    margin: 8px 15px;
+    color: white;
+    opacity: 0.8; }
+  .status-bar-online .status-separator {
+    position: absolute;
+    height: 25px;
+    width: 2px;
+    background: white;
+    margin: 10px 0; }
+  .status-bar-online .online-tab h4 {
+    font-weight: 700; }
+  .status-bar-online .offline-tab h4 {
+    font-weight: 200; }
+
+.status-bar-offline {
+  height: 45px;
+  width: 360px;
+  margin: 120px 0 30px 0;
+  display: inline-flex;
+  justify-content: center; }
+  .status-bar-offline h4 {
+    margin: 8px 15px;
+    color: white;
+    opacity: 0.8; }
+  .status-bar-offline .status-separator {
+    position: absolute;
+    height: 25px;
+    width: 2px;
+    background: white;
+    margin: 10px 0; }
+  .status-bar-offline .online-tab h4 {
+    font-weight: 200; }
+  .status-bar-offline .offline-tab h4 {
+    font-weight: 700; }
 
 .user-searched-details {
   height: 40px;

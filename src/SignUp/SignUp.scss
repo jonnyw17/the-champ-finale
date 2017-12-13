@@ -7,10 +7,7 @@
 
 .top-container {
   display: flex;
-  height: 10vh;
   .back-btn-wrapper {
-    position: fixed;
-    left: 0px;
     width: 30vw;
     height: 10vh;
     margin: 1vh 0 0 2.5vw;
@@ -28,7 +25,7 @@
       }
     }
   }
-  .logo-wrapper-home {
+  .logo-wrapper {
     position: fixed;
     height: 10vh;
     width: 100vw;

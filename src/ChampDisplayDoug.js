@@ -5,7 +5,6 @@ import Countdown from 'react-countdown-now';
 
 import GuideStep1 from './GuideStep1';
 import ChampionDoug from './ChampionDoug';
-import ChampLogo from './ChampLogo';
 import TwitterDialog from './TwitterDialog';
 
 import './ChampDisplay.css';
@@ -66,7 +65,7 @@ class ChampDisplay extends Component {
       : '';
     return (
       <div className="main-container">
-        <ChampLogo />
+
         <section className="menu-drop-down"></section>
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>
@@ -146,6 +145,18 @@ class ChampDisplay extends Component {
               </button>
             </Link>
             <div className="ghost-separator"></div>
+          </article>
+        </section>
+        {/* Display Step 1 Tip */}
+        {
+          this.state.requestSent
+            /*? <GuideStep4/> : <GuideStep3/>*/
+        }
+        {/* Navigation */}
+        <section className="nav-display">
+          <article className="logo-wrapper">
+            <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+            <h3 className="white-logo-name">Champ</h3>
           </article>
         </section>
       </div>

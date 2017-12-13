@@ -5,36 +5,22 @@
   width: 100vw;
   display: flex;
   justify-content: center; }
-  .nav-display .logo-wrapper-home {
+  .nav-display .logo-wrapper {
     position: fixed;
-    left: 0px;
     height: 10vh;
-    width: 100vw;
+    width: 40vw;
     display: flex;
-    justify-content: center;
     align-items: center; }
-    .nav-display .logo-wrapper-home .logo-underlay {
-      position: relative;
-      display: flex; }
-      .nav-display .logo-wrapper-home .logo-underlay img {
-        height: 36px;
-        width: 30px; }
-      .nav-display .logo-wrapper-home .logo-underlay h3 {
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        color: white;
-        margin: 0 0 0 12.5px; }
-    .nav-display .logo-wrapper-home .logo-overlay {
-      position: absolute;
-      display: flex; }
-      .nav-display .logo-wrapper-home .logo-overlay img {
-        height: 36px;
-        width: 30px; }
-      .nav-display .logo-wrapper-home .logo-overlay h3 {
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        color: #0c3d55;
-        margin: 0 0 0 12.5px; }
+    .nav-display .logo-wrapper img {
+      position: fixed;
+      height: 36px;
+      width: 30px; }
+    .nav-display .logo-wrapper h3 {
+      font-weight: 700;
+      position: fixed;
+      letter-spacing: 0.9px;
+      color: white;
+      margin: 2.5px 42.5px; }
 
 .platform-btn-container {
   display: flex;
@@ -82,7 +68,7 @@
         font-weight: 700;
         letter-spacing: 0.7px; }
       .platform-btn-container .btn-wrapper .champ-display-link button .btn-title-margin {
-        margin: 2.5px 0 0 30px; }
+        margin: 2.5px 0 0 0; }
       .platform-btn-container .btn-wrapper .champ-display-link button .coming-soon {
         color: white;
         letter-spacing: 0.7px; }
@@ -91,28 +77,3 @@
         width: 30px; }
     .platform-btn-container .btn-wrapper .champ-display-link .disabled-btn {
       opacity: 0.6; }
-
-.top-container {
-  display: flex;
-  height: 10vh; }
-  .top-container .back-btn-wrapper {
-    position: fixed;
-    left: 0px;
-    width: 30vw;
-    height: 10vh;
-    margin: 1vh 0 0 2.5vw;
-    display: flex;
-    align-items: center; }
-    .top-container .back-btn-wrapper .back-btn {
-      display: inline-flex;
-      justify-content: center; }
-      .top-container .back-btn-wrapper .back-btn img {
-        height: 15px;
-        margin: 5px 0 0 10px; }
-      .top-container .back-btn-wrapper .back-btn h5 {
-        margin: 2px 0 0 10px; }
-  .top-container .menu-wrapper {
-    width: 33.3vw; }
-
-.ghost-section {
-  height: 10vh; }

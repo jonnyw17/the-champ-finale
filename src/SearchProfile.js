@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import OnlineProfile from './OnlineProfile';
 import OfflineProfile from './OfflineProfile';
 import GuideStep2 from './GuideStep2';
-import ChampLogo from './ChampLogo';
 
 import './SearchProfile.css';
 
@@ -32,22 +31,26 @@ class SearchProfile extends Component {
     const offlineFontWeight = this.state.online? normal : bold;
     return (
     <div className="main-container">
-      <ChampLogo />
-      <section className="menu-drop-down"></section>
-      <section className="activity-name-wrapper">
-        <h3 className="activity-name">Search Profile</h3>
-      </section>
+    {/* Navigation */}
+    <section className="nav-display">
+      <article className="logo-wrapper">
+        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+        <h3 className="white-logo-name">Champ</h3>
+      </article>
+    </section>
+
       <section className="status-wrapper">
         <article className="status-container">
-          <article className="status-bar-offline">
-            <button className="online-tab" onClick={this.showOnline}>
-              <h4 style={onlineFontWeight}>online</h4>
-            </button>
-            <div className="status-separator"></div>
-            <button className="offline-tab" onClick={this.showOffline}>
-              <h4 style={offlineFontWeight}>offline</h4>
-            </button>
-          </article>
+
+        <article className="status-bar-offline">
+          <button className="online-tab" onClick={this.showOnline}>
+            <h4 style={onlineFontWeight}>online</h4>
+          </button>
+          <div className="status-separator"></div>
+          <button className="offline-tab" onClick={this.showOffline}>
+            <h4 style={offlineFontWeight}>offline</h4>
+          </button>
+        </article>
 
         {status}
 
@@ -77,7 +80,7 @@ class SearchProfile extends Component {
           <div className="ghost-separator"></div>
         </article>
       </section>
-      {/*Display Step 2 Tip*/}
+      {/*Display Step 1 Tip*/}
       {<GuideStep2/>}
     </div>)
   }

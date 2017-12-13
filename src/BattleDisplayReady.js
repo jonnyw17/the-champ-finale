@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-import ChampLogo from './ChampLogo';
-
 // import './animation.css';
 import './BattleDisplay.css';
 import './BattleDisplayReady.css';
@@ -47,10 +45,10 @@ class BattleDisplayReady extends Component {
     }, 5000)
     // There must be someway to set Time on the Display variable
     return (<div className="main-container">
-      <ChampLogo />
+
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
-        <h3 className="activity-name">Battle Tracker</h3>
+        <h3 className="activity-name">Battle Arena</h3>
       </section>
 
       <section className="battle-info">
@@ -59,13 +57,12 @@ class BattleDisplayReady extends Component {
         <img className="battle-arena-cover" src="Battle_Arena.png" alt="battle arena cover"/>
         <article className="gamer-info-container">
           <article className="upper-container">
-
-          { this.state.battleEnded ?
-            <Link to="/champdisplayshaun">
-              <BattleContentOpponent />
+          { this.state.battleEnded?
+            <Link to="/champdisplaydoug">
+              <BattleContentUser />
             </Link>
             :
-            <BattleContentOpponent />
+            <BattleContentUser />
           }
 
           </article>
@@ -84,14 +81,13 @@ class BattleDisplayReady extends Component {
           </article>
           <article className="lower-container">
 
-          { this.state.battleEnded?
-            <Link to="/champdisplaydoug">
-              <BattleContentUser />
+          { this.state.battleEnded ?
+            <Link to="/champdisplayshaun">
+              <BattleContentOpponent />
             </Link>
             :
-            <BattleContentUser />
+            <BattleContentOpponent />
           }
-
 
           </article>
         </article>
@@ -147,6 +143,13 @@ class BattleDisplayReady extends Component {
         this.state.requestSent
           /*? <GuideStep4/> : <GuideStep3/>*/
       }
+      {/* Navigation */}
+      <section className="nav-display">
+        <article className="logo-wrapper">
+          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          <h3 className="white-logo-name">Champ</h3>
+        </article>
+      </section>
     </div>);
   }
 }

@@ -50,46 +50,47 @@
       .battle-info .gamer-info-container .upper-container {
         width: 90vw;
         height: 27.5vw; }
-        .battle-info .gamer-info-container .upper-container .user-container {
+        .battle-info .gamer-info-container .upper-container .opponent-container {
+          position: absolute;
           width: 60vw;
           height: 25vw;
-          background: rgba(20, 24, 31, 0.95);
+          background: rgba(12, 61, 85, 0.95);
           border: 1px solid rgba(255, 255, 255, 0.75);
           border-radius: 10px;
           display: flex;
           align-items: center; }
-          .battle-info .gamer-info-container .upper-container .user-container .user-img-container {
+          .battle-info .gamer-info-container .upper-container .opponent-container .opponent-img-container {
             width: 25vw;
             height: 20vw;
             display: flex;
             justify-content: space-around;
             align-items: center; }
-            .battle-info .gamer-info-container .upper-container .user-container .user-img-container img {
+            .battle-info .gamer-info-container .upper-container .opponent-container .opponent-img-container img {
               border-radius: 50%;
               border: 1px solid rgba(255, 255, 255, 0.75);
               width: 20vw;
               height: 20vw; }
-          .battle-info .gamer-info-container .upper-container .user-container .user-info-container {
+          .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container {
             width: 35vw;
             height: 25vw;
             display: flex;
             justify-content: flex-start;
             align-items: center; }
-            .battle-info .gamer-info-container .upper-container .user-container .user-info-container .user-info-wrapper {
+            .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper {
               height: 17.5vw; }
-              .battle-info .gamer-info-container .upper-container .user-container .user-info-container .user-info-wrapper .username {
+              .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-username {
                 font-family: 'Vollkorn', serif;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: white; }
-              .battle-info .gamer-info-container .upper-container .user-container .user-info-container .user-info-wrapper .actual-name {
+              .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-name {
                 font-size: 12px;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: rgba(255, 255, 255, 0.7); }
-              .battle-info .gamer-info-container .upper-container .user-container .user-info-container .user-info-wrapper .actual-lvl {
+              .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-lvl {
                 font-family: 'Vollkorn', serif;
                 margin: 0;
                 text-align: center;
@@ -177,46 +178,46 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end; }
-        .battle-info .gamer-info-container .lower-container .opponent-container {
+        .battle-info .gamer-info-container .lower-container .user-container {
           width: 60vw;
           height: 25vw;
-          background: rgba(12, 61, 85, 0.95);
+          background: rgba(20, 24, 31, 0.95);
           border: 1px solid rgba(255, 255, 255, 0.75);
           border-radius: 10px;
           display: flex;
           align-items: center; }
-          .battle-info .gamer-info-container .lower-container .opponent-container .opponent-img-container {
+          .battle-info .gamer-info-container .lower-container .user-container .user-img-container {
             width: 25vw;
             height: 20vw;
             display: flex;
             justify-content: space-around;
             align-items: center; }
-            .battle-info .gamer-info-container .lower-container .opponent-container .opponent-img-container img {
+            .battle-info .gamer-info-container .lower-container .user-container .user-img-container img {
               border-radius: 50%;
               border: 1px solid rgba(255, 255, 255, 0.75);
               width: 20vw;
               height: 20vw; }
-          .battle-info .gamer-info-container .lower-container .opponent-container .opponent-info-container {
+          .battle-info .gamer-info-container .lower-container .user-container .user-info-container {
             width: 35vw;
             height: 25vw;
             display: flex;
             justify-content: flex-start;
             align-items: center; }
-            .battle-info .gamer-info-container .lower-container .opponent-container .opponent-info-container .opponent-info-wrapper {
+            .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper {
               height: 17.5vw; }
-              .battle-info .gamer-info-container .lower-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-username {
+              .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .username {
                 font-family: 'Vollkorn', serif;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: white; }
-              .battle-info .gamer-info-container .lower-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-name {
+              .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .actual-name {
                 font-size: 12px;
                 letter-spacing: 1px;
                 margin: 0;
                 text-align: center;
                 color: rgba(255, 255, 255, 0.7); }
-              .battle-info .gamer-info-container .lower-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-lvl {
+              .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .actual-lvl {
                 font-family: 'Vollkorn', serif;
                 margin: 0;
                 text-align: center;
