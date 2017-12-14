@@ -1,0 +1,106 @@
+@keyframes twitter-btn-move {
+  from {
+    bottom: 12vh; }
+  to {
+    bottom: 70vh; } }
+
+.twitter-move-animation {
+  animation: 0.5s twitter-btn-move; }
+
+.twitter-undo-animation {
+  animation: 1s reverse twitter-btn-move; }
+
+.twitter-dialog-container {
+  position: fixed;
+  z-index: 1;
+  top: 20vh;
+  left: 10vw;
+  width: 80vw;
+  height: 200px;
+  margin: 0px 0;
+  background: white;
+  border-radius: 10px; }
+  .twitter-dialog-container .uk-margin-large {
+    margin-bottom: 10px; }
+  .twitter-dialog-container .social-media-input {
+    margin: 10px 0;
+    text-align: center;
+    background: none; }
+  .twitter-dialog-container .submit-tweet {
+    background: #26b2f8;
+    height: 50px;
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .twitter-dialog-container .submit-tweet input {
+      font-size: 16px;
+      color: white; }
+
+.champ-actions-container {
+  height: 12.5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .champ-actions-container button {
+    height: 50px;
+    width: 200px; }
+  .champ-actions-container .challenge-btn {
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 0 0px 0;
+    display: flex;
+    justify-content: space-around; }
+    .champ-actions-container .challenge-btn h6 {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      color: white; }
+    .champ-actions-container .challenge-btn img {
+      height: 25px; }
+  .champ-actions-container .challenge-sent {
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: space-around; }
+    .champ-actions-container .challenge-sent h6 {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      color: white; }
+  .champ-actions-container .twitter-btn-container {
+    position: fixed;
+    z-index: 1;
+    bottom: 12vh;
+    left: 1vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #26b2f8; }
+    .champ-actions-container .twitter-btn-container .twitter-btn img {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      margin: -10px 5px 0 5px; }
+  .champ-actions-container .twitter-new-position {
+    position: fixed;
+    z-index: 1;
+    bottom: 70vh;
+    left: 1vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #26b2f8; }
+    .champ-actions-container .twitter-new-position .twitter-btn img {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      margin: -10px 5px 0 5px; }
