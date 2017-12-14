@@ -19,7 +19,7 @@ class BattleDisplay extends Component {
       <h3 className="activity-name">Battle Tracker</h3>
     </section>
 
-      <section className="activity-container">
+      <section className="battle-activity-container">
         <article className="search-container">
           <Link to="/searchprofile">
             <div className="search-opponent">
