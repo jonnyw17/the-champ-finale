@@ -3,13 +3,13 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import './App.css';
 
-import SignUp from './SignUp';
-import Platform from './Platform';
+import SignUp from './SignUp/SignUpContainer';
+import Platform from './Platform/PlatformContainer';
 import SignIn from './SignIn';
-import ChampDisplay from './ChampDisplay';
+import ChampDisplay from './ChampDisplay/ChampDisplayContainer';
 import BattleDisplay from './BattleDisplay';
 import BattleDisplayReady from './BattleDisplayReady';
-import Home from './Home';
+import Home from './Home/HomeContainer';
 import SearchProfile from './SearchProfile';
 import ProfilePage from './ProfilePage';
 import ChampDisplayDoug from './ChampDisplayDoug';

@@ -1,0 +1,79 @@
+@media (min-width: 320px) {
+  .guide-step-1-position {
+    bottom: 12.5vh;
+    left: 5vw; }
+  .guide-step-2-position {
+    bottom: 54vh;
+    left: 35vw; }
+  .guide-step-3-position {
+    bottom: 25vh;
+    left: 35vw; }
+  .guide-step-4-position {
+    bottom: 15vh;
+    left: 60vw; } }
+
+@media (min-width: 400px) {
+  .guide-step-3-position {
+    bottom: 30vh;
+    left: 35vw; }
+  .guide-step-4-position {
+    bottom: 12.5vh;
+    left: 68vw; } }
+
+.arrow-pointing {
+  position: absolute;
+  top: 149px;
+  left: 45px;
+  border-top: 30px solid #3394FF;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid transparent; }
+
+.guide-step-1 {
+  position: fixed;
+  z-index: 1;
+  width: 120px;
+  height: 150px;
+  background: #3394FF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .guide-step-1 .cancel-glyph {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .guide-step-1 .guide-content-1 {
+    height: 100px;
+    width: 80px;
+    text-align: center; }
+    .guide-step-1 .guide-content-1 h5 {
+      color: white;
+      margin: 5px 0; }
+    .guide-step-1 .guide-content-1 h6 {
+      color: white;
+      margin: 0; }
+
+.guide-step-2 {
+  position: fixed;
+  width: 120px;
+  height: 150px;
+  background: #3394FF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .guide-step-2 .cancel-glyph {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .guide-step-2 .guide-content-1 {
+    height: 100px;
+    width: 80px;
+    text-align: center; }
+    .guide-step-2 .guide-content-1 h5 {
+      color: white;
+      margin: 5px 0; }
+    .guide-step-2 .guide-content-1 h6 {
+      color: white;
+      margin: 0; }

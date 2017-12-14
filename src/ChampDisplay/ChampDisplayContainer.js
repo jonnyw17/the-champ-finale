@@ -7,8 +7,9 @@ import ChampionUnknown from './ChampionUnknown';
 import ChampLogo from  './ChampLogo';
 
 import './ChampDisplay.css';
-import './Guides.css'
-
+import './Guides.css';
+import './Home.css';
+import './ChampLogo.css'
 class ChampDisplay extends Component {
   constructor(props) {
     super(props)
