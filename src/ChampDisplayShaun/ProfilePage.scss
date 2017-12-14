@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
+@keyframes twitter-btn-move {
+  from {
+    bottom: 12vh;
+  }
+  to {
+    bottom: 70vh;
+  }
+}
+.twitter-move-animation {
+  animation: 0.5s twitter-btn-move;
+}
+.twitter-undo-animation {
+  animation: 1s reverse twitter-btn-move;
+}
+
+.fixed {
+  position: fixed;
+}
+.bg-white{
+  background: white;
+}
+
+@media (min-width: 320px) {
+  .challenge-accepted-banner {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: hsl(200,75,19);
+    .message-banner {
+      position: fixed;
+      display: inline-flex;
+      align-items: center;
+      .img-container {
+        width: 20vw;
+        height: 10vh;
+      }
+      img {
+        height: 40px;
+        margin: 0 1.5vw 5vw 3vw;
+      }
+      .challenge-msg {
+        width: 60vw;
+        margin: 1vh 0 0 0;
+        h5 {
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
+      }
+      h6 {
+        text-align: center;
+        margin:0 10px;
+        font-size: 13px;
+        color: white;
+        font-weight: 400;
+      }
+    }
+  }
+  .challenge-notification {
+    position: fixed;
+    right: 6vw;
+    bottom: 5.5vh;
+    .notification-amount {
+      background: hsl(200,75,19);
+      height: 23px;
+      width: 23px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h6 {
+        color: white;
+        margin:0 0 0 -2px;
+      }
+    }
+  }
+  .menu-drop-down {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    .ghost-div {
+      width: 7px;
+      height: 30px;
+      margin: 0 0 0 25px;
+    }
+    .logo-wrapper {
+      height: 10vh;
+      width: 33.3vw;
+      display: flex;
+      align-items: center;
+      img {
+        height: 36px;
+        width: 30px;
+        margin: 0;
+      }
+      h3 {
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        color: #FFF;
+        margin: 2.5px 12.5px;
+      }
+    }
+    img {
+      height: 30px;
+      width: 7px;
+      margin: 25px 0 0 25px;
+    }
+  }
+  .activity-name-wrapper {
+    position: relative;
+    height: 10vh;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .activity-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      color: white;
+    }
+  }
+  .profile-info {
+    position: relative;
+    height: 57.5vh;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .champdisplay{
+      width: 90vw;
+      height: 90vw;
+      background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));
+      filter: blur(5px);
+      border-radius: 50%;
+    }
+    .white-ring-border {
+      position: absolute;
+      background: none;
+      width: 90vw;
+      height: 90vw;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+    .game-overlay-display {
+      // display: none;
+      position: absolute;
+      width: 90vw;
+      height: 90vw;
+      background: rgba(255,255,255,0.35);
+      border-radius: 50%;
+    }
+    .gamer-info-container {
+      width: 90vw;
+      height: 90vw;
+      .upper-circle-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        height: 15vw;
+        margin: 5vh 0 0 0;
+        .progress-circle {
+          position: absolute;
+          bottom: 0vh;
+          right: 0vw;
+          img {
+            width: 86vw;
+            height: 90vw;
+          }
+        }
+        .gamer-name {
+          h3 {
+            display: block;
+            font-family: 'Vollkorn', serif;
+            font-size: 20px;
+            margin: 0;
+            letter-spacing: 1px;
+            text-align: center;
+            color: white;
+          }
+          h6 {
+            display: block;
+            margin: -5px 0;
+            font-weight: 300;
+            letter-spacing: 0.7px;
+            opacity: 0.5;
+            text-align: center;
+            color: white;
+          }
+        }
+      }
+      .middle-circle-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 90vw;
+        height: 42.5vw;
+        .img-container {
+          position: relative;
+          width: 35vw;
+          height: 35vw;
+          border-radius: 50%;
+          border: 2px solid white;
+          margin: 10px 0 0 0;
+          .gamer-img {
+            position: absolute;
+            z-index: 1;
+          }
+          .highlight-img {
+            filter: blur(14px);
+          }
+          .empty-profile-pic {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .question-mark {
+              z-index: 1;
+              height: 80px;
+              position: absolute;
+            }
+          }
+        }
+        .victory-recent-container {
+          position: relative;
+          width: 42.5vw;
+          height: 42.5vw;
+          display: flex;
+          align-items: flex-end;
+          img {
+            position: absolute;
+            width: 47.5vw;
+            height: 40vw;
+            opacity: 0.9;
+          }
+          .victory-recent-description {
+            position: absolute;
+            width: 42.5vw;
+            height: 40vw;
+            margin: 10px 0 0 0;
+            h6 {
+              position: relative;
+              margin: 0;
+              text-align: center;
+              color: white;
+            }
+            .victory-title {
+              font-family: 'Vollkorn', serif;
+              font-size: 14px;
+              font-weight: 100;
+              opacity: 0.6;
+              letter-spacing: 0.9px;
+              margin: -5px 0 0 0;
+            }
+            .victory-address {
+              font-weight: 100;
+              margin: 3.5px 0 -2.5px 0;
+              letter-spacing: 1px;
+            }
+            .champion-title {
+              margin: -4px 0 -2.5px 0;
+              letter-spacing: 0.7px;
+            }
+            .trophy-icon-container {
+              width: 42.5vw;
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              margin: -8px 0 0 0;
+              .recent-trophy-icon {
+                height: 35px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+      .lower-circle-container {
+        width: 90vw;
+        height: 20vw;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .gamer-level {
+          font-family: 'Vollkorn', serif;
+          color: white;
+          font-size: 14.5px;
+          letter-spacing: 0.6px;
+          text-align: center;
+          margin: 5px 0;
+          .experience-title {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+          }
+          .experience-value {
+            letter-spacing: 1px;
+            margin-left: 5px;
+          }
+          .experience-divider {
+            margin: 0 1px;
+          }
+        }
+        .line-decor {
+          height: 2px;
+          width: 150px;
+          margin: 3px 0;
+          background: white;
+        }
+      }
+    }
+  }
+  .actions-container {
+    height: 12.5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      height: 50px;
+      width: 200px;
+    }
+    .challenge-btn {
+      color: white;
+      background: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      margin: 0 0 0px 0;
+      display: flex;
+      justify-content: space-around;
+      h6 {
+        margin: 0 15px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        color: white;
+      }
+      img {
+        height: 25px;
+      }
+    }
+    .challenge-sent {
+      color: white;
+      background: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      margin: 0 0 0 0;
+      display: flex;
+      justify-content: space-around;
+      h6 {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        color: white;
+      }
+    }
+    .twitter-btn-container {
+      position: fixed;
+      z-index: 1;
+      bottom: 12vh;
+      left: 1vh;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgb(38,178,248);
+      .twitter-btn {
+          img {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            margin: -10px 5px 0 5px;
+          }
+        }
+      }
+    .twitter-new-position {
+      position: fixed;
+      z-index: 1;
+      bottom: 70vh;
+      left: 1vh;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgb(38,178,248);
+      .twitter-btn {
+          img {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            margin: -10px 5px 0 5px;
+          }
+      }
+    }
+  }
+
+  .nav-bar {
+    display: block;
+    height: 10vh;
+    background: rgba(255,255,255, 0.3);
+    .horizontal-line {
+      height: 3px;
+      width: 90vw;
+      margin: 0 5vw;
+      background: silver;
+    }
+    .nav-btn-container {
+      display: flex;
+      justify-content: space-around;
+      height: 9vh;
+      button{
+        width: 50px;
+        height: 50px;
+      }
+      .nav-btn {
+        // background: silver;
+        position: relative;
+        width: 25vw;
+        height: 15vw;
+        margin: 5px 0 0 0;
+        .search-icon {
+          height: 20px;
+          width: 20px;
+        }
+        .trophy-icon {
+          height: 35px;
+          margin: -15px 0 0 0;
+        }
+        .provoke-icon {
+          height: 25px;
+        }
+        .button-highlight {
+          position: absolute;
+          left: 0;
+          top: 2.5px;
+          height: 40px;
+          width: 200px
+        }
+      }
+      .separator {
+        height: 7vh;
+        width: 3px;
+        margin: 2vw 1vw;
+        background: hsl(200,75,17);
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-right-radius: 1px;
+      }
+      .ghost-separator {
+        height: 7vh;
+        width: 3px;
+        margin: 1vw;
+      }
+    }
+  }
+
+}
