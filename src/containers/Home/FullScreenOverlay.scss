@@ -1,0 +1,41 @@
+.fullscreen-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  .cancel-btn {
+    position: fixed;
+    top: 2.5vh;
+    right: 2.5vh; }
+  .fullscreen-overlay-wrapper {
+    margin: 0 0 20vh 0;
+    .fullscreen-logo-wrapper {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      .fullscreen-logo {
+        width: 60px;
+        height: 60px;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    h5 {
+      letter-spacing: 1px;
+      margin: 25px 0;
+      color: white;
+      text-align: center;
+    }
+  }
+}

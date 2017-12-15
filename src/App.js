@@ -3,17 +3,17 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import './App.css';
 
-import SignUp from './SignUp/SignUpContainer';
-import Platform from './Platform/PlatformContainer';
-import SignIn from './SignIn/SignInContainer';
-import ChampDisplay from './ChampDisplay/ChampDisplayContainer';
-import BattleDisplay from './BattleDisplay/BattleDisplayContainer';
-import BattleDisplayReady from './BattleDisplayReady/BattleDisplayReadyContainer';
-import Home from './Home/HomeContainer';
-import SearchProfile from './SearchProfile/SearchProfileContainer';
-import ProfilePage from './ProfilePage/ProfilePageContainer';
-import ChampDisplayDoug from './ChampDisplayDoug/ChampDisplayDougContainer';
-import ChampDisplayShaun from './ChampDisplayShaun/ChampDisplayShaunContainer';
+import SignUp from './containers/SignUp/SignUpContainer';
+import Platform from './containers/Platform/PlatformContainer';
+import SignIn from './containers/SignIn/SignInContainer';
+import ChampDisplay from './containers/ChampDisplay/ChampDisplayContainer';
+import BattleDisplay from './containers/BattleDisplay/BattleDisplayContainer';
+import BattleDisplayReady from './containers/BattleDisplayReady/BattleDisplayReadyContainer';
+import Home from './containers/Home/HomeContainer';
+import SearchProfile from './containers/SearchProfile/SearchProfileContainer';
+import ProfilePage from './containers/ProfilePage/ProfilePageContainer';
+import ChampDisplayDoug from './containers/ChampDisplayDoug/ChampDisplayDougContainer';
+import ChampDisplayShaun from './containers/ChampDisplayShaun/ChampDisplayShaunContainer';
 
 class App extends Component {
   constructor(props) {

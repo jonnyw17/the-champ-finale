@@ -24,10 +24,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "scss": "node-sass -w ./src/scss -o ./src"
+    "scss": "node-sass ./src/containers/Home/ -o src/containers/Home/"
   },
   "devDependencies": {
     "i": "^0.3.6",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.12.7"
   }
 }

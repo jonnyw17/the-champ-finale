@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import './ProfilePage.css';
+import './TwitterDialog.css';
 
 class TwitterDialog extends Component {
   constructor(props){

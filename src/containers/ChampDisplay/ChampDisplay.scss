@@ -1,8 +1,18 @@
+.original-bg-colour {
+  background: linear-gradient(to bottom right, hsl(45,61,32), hsl(4,61,51));
+}
+.reverse-bg-colour {
+  background: linear-gradient(to top left, hsl(45,61,32), hsl(4,61,51));
+}
+.silver-colour {
+  color: silver;
+}
+.bronze-colour {
+  color: #CD7F32;
+}
 .silver-bg-colour {
   background: 	#A9A9A9;
 }
-
-
 @media (min-width: 320px){
   .menu-drop-down {
     height: 10vh;
@@ -230,4 +240,5 @@
         }
       }
   }
+
 }

@@ -1,23 +1,26 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import Countdown from 'react-countdown-now';
 
-import GuideStep1 from './GuideStep1';
-import ChampionUnknown from './ChampionUnknown';
+import ChampionDoug from './ChampionDoug';
+import TwitterDialog from './TwitterDialog';
 
 import './ChampDisplay.css';
-import './Guides.css';
-import './Home.css';
-import './ChampLogo.css'
+
 class ChampDisplay extends Component {
   constructor(props) {
     super(props)
     this.state = {
       user: [],
       tweetBox: 'none',
-      tutorialsDisplay: true
+      requestSent: false,
+      tutorialsDisplay: true,
+      countdownOver: false,
+      tweetBtnClick: false
     }
     this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
+    this.TwitterActivate = this.TwitterActivate.bind(this);
   }
 
   componentDidMount() {
@@ -28,8 +31,35 @@ class ChampDisplay extends Component {
   removeTutorialDisplay() {
     this.setState({tutorialsDisplay:false});
   }
+  TwitterActivate() {
+    this.setState({tweetBtnClick: !this.state.tweetBtnClick});
+  }
+
   render() {
-    console.log(this.state.user)
+    console.log(this.state.userLoggedIn);
+    const Completionist = () => <span>You are good to go!</span>;
+
+    const renderer = ({ hours, minutes, seconds, completed }) => {
+      if (completed) {
+        // Render a completed state
+        return <Completionist />;
+      } else {
+        hours = `0` + hours;
+        minutes = minutes < 10
+          ? `0` + minutes
+          : minutes;
+        seconds = seconds < 10
+          ? `0` + seconds
+          : seconds;
+        return <span>{hours}:{minutes}:{seconds}</span>;
+      }
+    };
+    const twitterNewPos = this.state.tweetBtnClick
+      ? 'twitter-new-position'
+      : 'twitter-btn-container';
+    const twitterAnimation = this.state.tweetBtnClick
+      ? 'twitter-move-animation'
+      : '';
     return (
       <div className="main-container">
 
@@ -38,15 +68,49 @@ class ChampDisplay extends Component {
           <h3 className="activity-name">Area Champion</h3>
         </section>
 
-        <ChampionUnknown/>
+        <ChampionDoug/>
 
-        <section className="actions-container">
-          <button className="challenge-btn" onClick={this.SendRequest} style={{
-                      display: 'none'
+        <section className="champ-actions-container">
+          {
+          !this.state.countdown ?
+          <div className="countdown-container">
+            <img src="Hourglass_Icon.png" alt="Hour Glass"/>
+            <div className="">
+              <h6 className="cooldown-title">Challenge Cooldown</h6>
+              <div className="countdown-timer">
+              <Countdown
+                date={Date.now() + 3600000}
+                zeroPadLength={1}
+                renderer={renderer}
+              />
+              </div>
+            </div>
+          </div>
+          : <button className="challenge-btn" onClick={this.SendRequest} style={{
+                      display: this.state.requestSent
+                        ? 'none'
+                        : 'flex'
                     }}>
             <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
             <h6>CHALLENGE</h6>
           </button>
+        }
+        {/*TwitterDialog*/}
+        {
+          this.state.tweetBtnClick
+            ? <TwitterDialog />
+            : ""
+        }
+        {/*Twitter Button*/}
+        <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
+                    display: this.state.requestSent
+                      ? 'none'
+                      : 'flex'
+                  }}>
+          <div className="twitter-btn">
+            <img src="Twitter_Icon_White.png" alt="White Twitter"/>
+          </div>
+        </button>
           <button className="challenge-sent pos-abs" style={{
                       display: this.state.requestSent
                         ? 'flex'
@@ -61,7 +125,7 @@ class ChampDisplay extends Component {
             <div className="ghost-separator"></div>
             <Link to="/searchprofile">
               <button className="nav-btn">
-                <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
+                <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
               </button>
             </Link>
             <div className="ghost-separator"></div>

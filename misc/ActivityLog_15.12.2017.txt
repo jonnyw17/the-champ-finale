@@ -1,0 +1,54 @@
+Completed File Restructuring
+
+Activity Log
+
+Decoupling Folders
+
+Bottom Up Approach
+
+Take 1
+
+Rule (+ includes the reasons for use) —>
+1. Avoid Refactoring any code that connects to the backend; live the backend code untouched - ()
+    1. Comments must have some form of explanation; requirement for being tidy
+    2. Components and list like structures, should be ordered - e.g. for App.js the components should be in placed in Alphabetical order
+2. Aim to destructure components into smaller pieces, and make the smallest ones only dependent on their own file
+
+A. Git Branch - Total Project Restructuring File Refactoring
+B. Start with Refactoring the Root File - App.js
+C. Use the Ordered list of components to Organise the components into 4 categories
+	1. Common Components
+	2. Demo Components
+	3. Main Components
+	4. App.js / App.scss / App.css - other essentials (especially ones amalgamate a large proportion of the files into one )
+D. [Cancelled Hit a brick wall] One of the component files could not be found, error code was insufficient to fixing the problem
+
+Take 2
+
+Rule (+ includes the reasons for use) —>
+1. Avoid Refactoring any code that connects to the backend; live the backend code untouched - ()
+    1. Comments must have some form of explanation; requirement for being tidy
+    2. Components and list like structures, should be ordered - e.g. for App.js the components should be in placed in Alphabetical order
+2. Aim to destructure components into smaller pieces, and make the smallest ones only dependent on their own file
+
+A. Start with Refactoring PARTS of the Root File - App.js
+B. Comment out parts of comp
+C. Use the Ordered list of components to Organise the components into 4 categories
+	1. Containers
+	2. Components
+	3. Stylesheets - contains directories css + css
+	4. Miscellaneous
+
+Top Down Approach
+
+Rules
+1. Keep all the files being developed rendered, so that if anything breaks, it can be visibly shown
+2. All containers must be keep in a separate folder, i.e. containers/[Name_Of_Container]
+
+
+Decoupling-css files
+
+Rules
+1. Every containers along with all of it’s components rely on a single css file
+    1. The css files can be originally scss files that can be transpiled to imported together into a single file that represents that folder. For instance, each individual file targets an individual components and their should one separate for that one container
+2. Separate class name for each component, components shouldn’t share class names - avoid conflict

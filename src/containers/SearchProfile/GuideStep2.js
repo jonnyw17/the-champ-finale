@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import './Guides.css';
+
 class GuideStep2 extends Component {
   constructor(props) {
     super(props);

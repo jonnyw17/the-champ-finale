@@ -1,0 +1,43 @@
+@media (min-width: 320px) {
+  .guide-step-1-position {
+    bottom: 12.5vh;
+    left: 5vw; }
+}
+.arrow-pointing {
+  position: absolute;
+  top: 149px;
+  left: 45px;
+  border-top: 30px solid #3394FF;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+.guide-step-1 {
+  position: fixed;
+  z-index: 1;
+  width: 120px;
+  height: 150px;
+  background: #3394FF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .cancel-glyph {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .guide-content-1 {
+    height: 100px;
+    width: 80px;
+    text-align: center;
+     h5 {
+      color: white;
+      margin: 5px 0;
+    }
+     h6 {
+      color: white;
+      margin: 0;
+    }
+  }
+}

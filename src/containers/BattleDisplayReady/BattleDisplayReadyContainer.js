@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
 // import './animation.css';
-import './BattleDisplay.css';
 import './BattleDisplayReady.css';
 
-import ConnectPendingDisplay from './ConnectPendingDisplay';
-import TrackingBattleDisplay from './TrackingBattleDisplay';
-import EndBattleButton from './EndBattleButton';
-import WinnerStatus from './WinnerStatus';
-import BattleContentUser from './BattleContentUser';
-import BattleContentOpponent from './BattleContentOpponent';
+import BattleContentOpponent from './BattleContentOpponent.js';
+import BattleContentUser from './BattleContentUser.js';
+import ConnectPendingDisplay from './ConnectPendingDisplay.js';
+import EndBattleButton from './EndBattleButton.js';
+import TrackingBattleDisplay from './TrackingBattleDisplay.js';
+import WinnerStatus from './WinnerStatus.js';
 
 class BattleDisplayReady extends Component {
   constructor(props) {

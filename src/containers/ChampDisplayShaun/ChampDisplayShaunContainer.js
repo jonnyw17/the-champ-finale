@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import axios from 'axios';
+import React, {Component} from 'react';
 import Countdown from 'react-countdown-now';
+import {Link} from 'react-router-dom';
 
-import GuideStep1 from './GuideStep1';
-import ChampionDoug from './ChampionDoug';
+
+import ChampionShaun from './ChampionShaun';
 import TwitterDialog from './TwitterDialog';
 
+
 import './ChampDisplay.css';
-import './Guides.css';
-import './TwitterDialog.css';
+
 
 class ChampDisplay extends Component {
   constructor(props) {
@@ -17,13 +17,10 @@ class ChampDisplay extends Component {
     this.state = {
       user: [],
       tweetBox: 'none',
-      requestSent: false,
-      tutorialsDisplay: true,
-      countdownOver: false,
-      tweetBtnClick: false
+      tutorialsDisplay: true
     }
-    this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
-    this.TwitterActivate = this.TwitterActivate.bind(this);
+     this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
+     this.TwitterActivate = this.TwitterActivate.bind(this);
   }
 
   componentDidMount() {
@@ -37,9 +34,8 @@ class ChampDisplay extends Component {
   TwitterActivate() {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
-
   render() {
-    console.log(this.state.userLoggedIn);
+    console.log(this.state.user);
     const Completionist = () => <span>You are good to go!</span>;
 
     const renderer = ({ hours, minutes, seconds, completed }) => {
@@ -63,6 +59,7 @@ class ChampDisplay extends Component {
     const twitterAnimation = this.state.tweetBtnClick
       ? 'twitter-move-animation'
       : '';
+
     return (
       <div className="main-container">
 
@@ -71,50 +68,50 @@ class ChampDisplay extends Component {
           <h3 className="activity-name">Area Champion</h3>
         </section>
 
-        <ChampionDoug/>
+        <ChampionShaun/>
 
         <section className="champ-actions-container">
-          {
-          !this.state.countdown ?
-          <div className="countdown-container">
-            <img src="Hourglass_Icon.png" alt="Hour Glass"/>
-            <div className="">
-              <h6 className="cooldown-title">Challenge Cooldown</h6>
-              <div className="countdown-timer">
-              <Countdown
-                date={Date.now() + 3600000}
-                zeroPadLength={1}
-                renderer={renderer}
-              />
-              </div>
+        {
+        !this.state.countdown ?
+        <div className="countdown-container">
+          <img src="Hourglass_Icon.png" alt="Hour Glass"/>
+          <div className="">
+            <h6 className="cooldown-title">Challenge Cooldown</h6>
+            <div className="countdown-timer">
+            <Countdown
+              date={Date.now() + 3600000}
+              zeroPadLength={1}
+              renderer={renderer}
+            />
             </div>
           </div>
-          : <button className="challenge-btn" onClick={this.SendRequest} style={{
-                      display: this.state.requestSent
-                        ? 'none'
-                        : 'flex'
-                    }}>
-            <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
-            <h6>CHALLENGE</h6>
-          </button>
-        }
-        {/*TwitterDialog*/}
-        {
-          this.state.tweetBtnClick
-            ? <TwitterDialog />
-            : ""
-        }
-        {/*Twitter Button*/}
-        <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
+        </div>
+        : <button className="challenge-btn" onClick={this.SendRequest} style={{
                     display: this.state.requestSent
                       ? 'none'
                       : 'flex'
                   }}>
-          <div className="twitter-btn">
-            <img src="Twitter_Icon_White.png" alt="White Twitter"/>
-          </div>
+          <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
+          <h6>CHALLENGE</h6>
         </button>
-          <button className="challenge-sent pos-abs" style={{
+      }
+      {/*TwitterDialog*/}
+      {
+        this.state.tweetBtnClick
+          ? <TwitterDialog />
+          : ""
+      }
+      {/*Twitter Button*/}
+      <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
+                  display: this.state.requestSent
+                    ? 'none'
+                    : 'flex'
+                }}>
+        <div className="twitter-btn">
+          <img src="Twitter_Icon_White.png" alt="White Twitter"/>
+        </div>
+      </button>
+          <button className="challenge-sent" style={{
                       display: this.state.requestSent
                         ? 'flex'
                         : 'none'
@@ -128,7 +125,7 @@ class ChampDisplay extends Component {
             <div className="ghost-separator"></div>
             <Link to="/searchprofile">
               <button className="nav-btn">
-                <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
+                <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
               </button>
             </Link>
             <div className="ghost-separator"></div>
