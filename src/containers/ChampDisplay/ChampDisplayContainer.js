@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-import GuideStep1 from './GuideStep1';
 import ChampionUnknown from './ChampionUnknown';
+import GuideStep1 from './GuideStep1';
 
 import './ChampDisplay.css';
 import './ChampLogo.css';
@@ -12,9 +12,9 @@ class ChampDisplay extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: [],
+      tutorialsDisplay: true,
       tweetBox: 'none',
-      tutorialsDisplay: true
+      user: []
     }
     this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
   }
@@ -30,17 +30,18 @@ class ChampDisplay extends Component {
   render() {
     console.log(this.state.user)
     return (
-      <div className="main-container">
+      <div className="champ-display-container">
 
         <section className="menu-drop-down"></section>
         <section className="activity-name-wrapper">
+
           <h3 className="activity-name">Area Champion</h3>
         </section>
 
         <ChampionUnknown/>
 
         <section className="actions-container">
-          <button className="challenge-btn" onClick={this.SendRequest} style={{
+          <button className="challenge-btn" style={{
                       display: 'none'
                     }}>
             <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
@@ -84,13 +85,6 @@ class ChampDisplay extends Component {
           this.state.requestSent
             /*? <GuideStep4/> : <GuideStep3/>*/
         }
-        {/* Navigation */}
-        <section className="nav-display">
-          <article className="logo-wrapper">
-            <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-            <h3 className="white-logo-name">Champ</h3>
-          </article>
-        </section>
       </div>
     );
   }

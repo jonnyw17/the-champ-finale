@@ -121,3 +121,60 @@
     margin: 5px 0 5px 10px;
   }
 }
+.nav-bar {
+  display: block;
+  height: 10vh;
+  background: rgba(255,255,255, 0.3);
+  .nav-btn-container {
+    display: flex;
+    justify-content: space-around;
+    height: 9vh;
+    button{
+      width: 50px;
+      height: 50px;
+    }
+    .nav-btn {
+      // background: silver;
+      position: relative;
+      width: 25vw;
+      height: 15vw;
+      margin: 5px 0 0 0;
+      .person-icon {
+        height: 25px;
+      }
+      .search-icon {
+        height: 20px;
+        width: 20px;
+      }
+      .trophy-icon {
+        height: 35px;
+        margin: -15px 0 0 0;
+      }
+      .provoke-icon {
+        height: 25px;
+      }
+      .button-highlight {
+        position: absolute;
+        left: 0;
+        top: 2.5px;
+        height: 40px;
+        width: 200px
+      }
+    }
+    .separator {
+      height: 7vh;
+      width: 3px;
+      margin: 2vw 1vw;
+      background: hsl(200,75,17);
+      border-top-left-radius: 1px;
+      border-top-right-radius: 1px;
+      border-bottom-left-radius: 1px;
+      border-bottom-right-radius: 1px;
+    }
+    .ghost-separator {
+      height: 7vh;
+      width: 3px;
+      margin: 1vw;
+    }
+  }
+}

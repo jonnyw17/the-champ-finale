@@ -5,8 +5,9 @@
 .border-top-bottom-offline {
   border-top: 0px solid rgba(255, 255, 255, 0.5);
   border-bottom: 0px solid rgba(255, 255, 255, 0.5); }
-  .border-top-bottom-offline h6 {
-    opacity: 0.5; }
+
+.border-top-bottom-offline h6 {
+  opacity: 0.5; }
 
 .status-wrapper {
   height: 90vh;
@@ -23,20 +24,24 @@
   margin: 70px 0 30px 0;
   display: inline-flex;
   justify-content: center; }
-  .status-bar-online h4 {
-    margin: 8px 15px;
-    color: white;
-    opacity: 0.8; }
-  .status-bar-online .status-separator {
-    position: absolute;
-    height: 25px;
-    width: 2px;
-    background: white;
-    margin: 10px 0; }
-  .status-bar-online .online-tab h4 {
-    font-weight: 700; }
-  .status-bar-online .offline-tab h4 {
-    font-weight: 200; }
+
+.status-bar-online h4 {
+  margin: 8px 15px;
+  color: white;
+  opacity: 0.8; }
+
+.status-bar-online .status-separator {
+  position: absolute;
+  height: 25px;
+  width: 2px;
+  background: white;
+  margin: 10px 0; }
+
+.status-bar-online .online-tab h4 {
+  font-weight: 700; }
+
+.status-bar-online .offline-tab h4 {
+  font-weight: 200; }
 
 .status-bar-offline {
   height: 45px;
@@ -44,20 +49,24 @@
   margin: 120px 0 30px 0;
   display: inline-flex;
   justify-content: center; }
-  .status-bar-offline h4 {
-    margin: 8px 15px;
-    color: white;
-    opacity: 0.8; }
-  .status-bar-offline .status-separator {
-    position: absolute;
-    height: 25px;
-    width: 2px;
-    background: white;
-    margin: 10px 0; }
-  .status-bar-offline .online-tab h4 {
-    font-weight: 200; }
-  .status-bar-offline .offline-tab h4 {
-    font-weight: 700; }
+
+.status-bar-offline h4 {
+  margin: 8px 15px;
+  color: white;
+  opacity: 0.8; }
+
+.status-bar-offline .status-separator {
+  position: absolute;
+  height: 25px;
+  width: 2px;
+  background: white;
+  margin: 10px 0; }
+
+.status-bar-offline .online-tab h4 {
+  font-weight: 200; }
+
+.status-bar-offline .offline-tab h4 {
+  font-weight: 700; }
 
 .user-searched-details {
   height: 40px;
@@ -66,31 +75,93 @@
   display: inline-flex;
   justify-content: space-around;
   background: rgba(255, 255, 255, 0.05); }
-  .user-searched-details .online-circle {
-    height: 12.5px;
-    width: 12.5px;
-    margin: 15px;
-    border-radius: 50%;
-    background: #4CD964; }
-  .user-searched-details .offline-circle {
-    height: 12.5px;
-    width: 12.5px;
-    margin: 15px;
-    border-radius: 50%;
-    background: red; }
-  .user-searched-details h6 {
-    position: absolute;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.8px;
-    color: white; }
-  .user-searched-details .ghost-name-div {
-    width: 100px; }
-  .user-searched-details .img-circle {
-    height: 30px;
-    width: 30px;
-    margin: 5px 0 5px 10px; }
-  .user-searched-details img {
-    width: 30px;
-    margin: 5px 0 5px 10px; }
+
+.user-searched-details .online-circle {
+  height: 12.5px;
+  width: 12.5px;
+  margin: 15px;
+  border-radius: 50%;
+  background: #4CD964; }
+
+.user-searched-details .offline-circle {
+  height: 12.5px;
+  width: 12.5px;
+  margin: 15px;
+  border-radius: 50%;
+  background: red; }
+
+.user-searched-details h6 {
+  position: absolute;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  color: white; }
+
+.user-searched-details .ghost-name-div {
+  width: 100px; }
+
+.user-searched-details .img-circle {
+  height: 30px;
+  width: 30px;
+  margin: 5px 0 5px 10px; }
+
+.user-searched-details img {
+  width: 30px;
+  margin: 5px 0 5px 10px; }
+
+.nav-bar {
+  display: block;
+  height: 10vh;
+  background: rgba(255, 255, 255, 0.3); }
+
+.nav-bar .nav-btn-container {
+  display: flex;
+  justify-content: space-around;
+  height: 9vh; }
+
+.nav-bar .nav-btn-container button {
+  width: 50px;
+  height: 50px; }
+
+.nav-bar .nav-btn-container .nav-btn {
+  position: relative;
+  width: 25vw;
+  height: 15vw;
+  margin: 5px 0 0 0; }
+
+.nav-bar .nav-btn-container .nav-btn .person-icon {
+  height: 25px; }
+
+.nav-bar .nav-btn-container .nav-btn .search-icon {
+  height: 20px;
+  width: 20px; }
+
+.nav-bar .nav-btn-container .nav-btn .trophy-icon {
+  height: 35px;
+  margin: -15px 0 0 0; }
+
+.nav-bar .nav-btn-container .nav-btn .provoke-icon {
+  height: 25px; }
+
+.nav-bar .nav-btn-container .nav-btn .button-highlight {
+  position: absolute;
+  left: 0;
+  top: 2.5px;
+  height: 40px;
+  width: 200px; }
+
+.nav-bar .nav-btn-container .separator {
+  height: 7vh;
+  width: 3px;
+  margin: 2vw 1vw;
+  background: #0b364c;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px; }
+
+.nav-bar .nav-btn-container .ghost-separator {
+  height: 7vh;
+  width: 3px;
+  margin: 1vw; }

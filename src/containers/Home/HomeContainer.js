@@ -1,9 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 import './Home.css';
 import './Normalise.css'
+
 const Home = () => {
-  return (<div className="main-container">
+  return (
+  <div className="main-container">
     <section className="logo-container">
       <article className="logo-wrapper">
         <img src="BetGame_Logo_White.png" alt="the champ logo"/>

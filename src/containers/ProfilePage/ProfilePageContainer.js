@@ -62,7 +62,7 @@ class ProfilePage extends Component {
 
       {/* Challenge Accepted Banner */}
       {/* There still needs to be a timeout period for it appear and disappear */}
-      <article className="challenge-accepted-banner uk-animation-slide-top" style={display}>
+      <section className="challenge-accepted-banner uk-animation-slide-top" style={display}>
         <div className="message-banner">
           <div className="img-container">
             <img src="Trophy_Icon_White.png" alt="trophy icon"/>
@@ -72,8 +72,7 @@ class ProfilePage extends Component {
             <h6 className="gamer-name">by Shaun Gibson</h6>
           </div>
         </div>
-      </article>
-
+      </section>
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Rival&#39;s Profile</h3>
@@ -116,40 +115,38 @@ class ProfilePage extends Component {
         </article>
       </section>
       <section className="actions-container">
-      {/*TwitterDialog*/}
-      {
-        this.state.tweetBtnClick
-          ? <TwitterDialog />
-          : ""
-      }
-      {/*Twitter Button*/}
-      <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
-                  display: this.state.requestSent
-                    ? 'none'
-                    : 'flex'
-                }}>
-        <div className="twitter-btn">
-          <img src="Twitter_Icon_White.png" alt="Twitter"/>
-        </div>
-      </button>
-        <button className="challenge-btn" onClick={this.SendRequest} style={{
+        {/*TwitterDialog*/}
+        {
+          this.state.tweetBtnClick
+            ? <TwitterDialog />
+            : ""
+        }
+        {/*Twitter Button*/}
+        <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
                     display: this.state.requestSent
                       ? 'none'
                       : 'flex'
                   }}>
-          <img src="Provoke_Icon_White.png" alt="provoke icon"/>
-          <h6>CHALLENGE</h6>
+          <div className="twitter-btn">
+            <img src="Twitter_Icon_White.png" alt="Twitter"/>
+          </div>
         </button>
-        <button className="challenge-sent" style={{
-                    display: this.state.requestSent
-                      ? 'flex'
-                      : 'none'
-                  }}>
-          <h6 className="uk-animation-slide-top">CHALLENGE SENT !</h6>
-        </button>
+          <button className="challenge-btn" onClick={this.SendRequest} style={{
+                      display: this.state.requestSent
+                        ? 'none'
+                        : 'flex'
+                    }}>
+            <img src="Provoke_Icon_White.png" alt="provoke icon"/>
+            <h6>CHALLENGE</h6>
+          </button>
+          <button className="challenge-sent" style={{
+                      display: this.state.requestSent
+                        ? 'flex'
+                        : 'none'
+                    }}>
+            <h6 className="uk-animation-slide-top">CHALLENGE SENT !</h6>
+          </button>
       </section>
-
-
       {/* Navigation Bar */}
       <section className="nav-bar">
         <article className="nav-btn-container">
@@ -181,9 +178,9 @@ class ProfilePage extends Component {
       }
       {/* Notification Circle */}
       <section className="challenge-notification uk-animation-scale-up" style={display}>
-        <div className="notification-amount">
-          <h6>1</h6>
-        </div>
+          <div className="notification-amount">
+            <h6>1</h6>
+          </div>
       </section>
       {/* Navigation */}
       <section className="nav-display">

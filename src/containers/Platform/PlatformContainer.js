@@ -4,11 +4,10 @@ import './Platform.css';
 
 const Platform = () => {
   return (<div>
-    <div className="main-container uk-animation-slide-right">
+    <section className="main-container uk-animation-slide-right">
       <section className="platform-btn-container">
         <article className="btn-wrapper">
           <h6>Choose a gaming platform. Discover the champions in your city.</h6>
-
           <Link className="champ-display-link" to="/champdisplay">
             <button>
               <img className="worms-icon" src="Worms_Icon.png" alt="worms logo"/>
@@ -48,16 +47,19 @@ const Platform = () => {
           </article>
         </article>
       </section>
-    </div>
-    <section className="nav-display">
-      <article className="logo-wrapper">
-        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-        <h3 className="white-logo-name">Champ</h3>
-        <img className="brown-log uk-animation-fade uk-animation-reverse" src="BetGame_Logo_Brown.png" alt="brown champ logo"/>
-        <h3 className="brown-logo-name uk-animation-fade uk-animation-reverse">Champ</h3>
-      </article>
     </section>
   </div>)
 }
 
 export default Platform;
+
+// Logo Change
+//
+// <section className="nav-display">
+//   <article className="logo-wrapper">
+//     <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+//     <h3 className="white-logo-name">Champ</h3>
+//     <img className="brown-log uk-animation-fade uk-animation-reverse" src="BetGame_Logo_Brown.png" alt="brown champ logo"/>
+//     <h3 className="brown-logo-name uk-animation-fade uk-animation-reverse">Champ</h3>
+//   </article>
+// </section>

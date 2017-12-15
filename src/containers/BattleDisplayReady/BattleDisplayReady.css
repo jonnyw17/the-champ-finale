@@ -1,18 +1,3 @@
-.original-bg-colour {
-  background: linear-gradient(to bottom right, #836a20, #ce4036); }
-
-.reverse-bg-colour {
-  background: linear-gradient(to top left, #836a20, #ce4036); }
-
-.silver-colour {
-  color: silver; }
-
-.bronze-colour {
-  color: #CD7F32; }
-
-.text-white {
-  color: white; }
-
 @keyframes rotating-wheel {
   from {
     transform: rotate(0deg); }
@@ -26,361 +11,324 @@
     transform: rotate(216000deg); } }
 
 @media (min-width: 320px) {
-  .menu-drop-down {
+  .battle-ready-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #14181f, #0c3d55); }
+  .battle-ready-container .menu-drop-down {
     height: 10vh;
     display: flex;
     justify-content: space-around; }
-    .menu-drop-down .ghost-div {
-      width: 7px;
-      height: 30px;
-      margin: 0 0 0 25px; }
-    .menu-drop-down .logo-wrapper {
-      height: 10vh;
-      width: 33.3vw;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .menu-drop-down .logo-wrapper img {
-        height: 36px;
-        width: 30px;
-        margin: 0; }
-      .menu-drop-down .logo-wrapper h3 {
-        font-weight: 700;
-        letter-spacing: 0.9px;
-        color: #FFF;
-        margin: 2.5px 12.5px; }
-    .menu-drop-down img {
-      height: 30px;
-      width: 7px;
-      margin: 25px 0 0 25px; }
-  .activity-name-wrapper {
-    position: relative;
+  .battle-ready-container .menu-drop-down .ghost-div {
+    width: 7px;
+    height: 30px;
+    margin: 0 0 0 25px; }
+  .battle-ready-container .menu-drop-down .logo-wrapper {
     height: 10vh;
-    background: none;
+    width: 33.3vw;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; }
-    .activity-name-wrapper .battle-cover-img {
-      height: 80px;
-      width: 90px;
-      opacity: 0.3; }
-    .activity-name-wrapper .white-gradient {
-      position: absolute;
-      height: 20px;
-      width: 200px;
-      background: white;
-      opacity: 0.65; }
-    .activity-name-wrapper h3 {
-      position: relative;
-      top: 15px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      color: #8d562e; }
-  .activity-container {
-    height: 70vh;
-    background: none;
-    display: flex;
-    justify-content: center;
     align-items: center; }
-    .activity-container .search-container .search-opponent {
-      display: flex;
-      justify-content: center;
-      width: inherit; }
-      .activity-container .search-container .search-opponent .search-icon-wrapper {
-        width: 50px;
-        height: 50px;
-        border: 2px solid white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .activity-container .search-container .search-opponent .search-icon-wrapper img {
-          position: relative;
-          height: 20px;
-          width: 20px;
-          opacity: 1; }
-    .activity-container .search-container h5 {
-      position: relative;
-      color: rgba(255, 255, 255, 0.7);
-      margin: 15px 0; }
-  .nav-bar {
-    display: block;
-    height: 10vh;
-    background: white; }
-    .nav-bar .horizontal-line {
-      height: 3px;
-      width: 90vw;
-      margin: 0 5vw;
-      background: silver; }
-    .nav-bar .nav-btn-container {
-      display: flex;
-      justify-content: space-around;
-      height: 9vh; }
-      .nav-bar .nav-btn-container .nav-btn {
-        width: 30vw;
-        height: 15vw;
-        margin: 5px 0 0 0; }
-        .nav-bar .nav-btn-container .nav-btn .person-icon {
-          height: 25px; }
-        .nav-bar .nav-btn-container .nav-btn .trophy-icon {
-          height: 40px;
-          margin: -15px 0 0 0; }
-        .nav-bar .nav-btn-container .nav-btn .provoke-icon {
-          height: 30px; }
-      .nav-bar .nav-btn-container .separator {
-        height: 7vh;
-        width: 3px;
-        margin: 1vw;
-        background: silver; }
-      .nav-bar .nav-btn-container .ghost-separator {
-        height: 7vh;
-        width: 3px;
-        margin: 1vw; }
-  .battle-info {
+  .battle-ready-container .menu-drop-down .logo-wrapper img {
+    height: 36px;
+    width: 30px;
+    margin: 0; }
+  .battle-ready-container .menu-drop-down .logo-wrapper h3 {
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    color: #FFF;
+    margin: 2.5px 12.5px; }
+  .battle-ready-container .menu-drop-down img {
+    height: 30px;
+    width: 7px;
+    margin: 25px 0 0 25px; }
+  .battle-ready-container .battle-info {
     position: relative;
     height: 57.5vh;
     background: none;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .battle-info .champdisplay {
-      width: 90vw;
-      height: 90vw;
-      background: linear-gradient(to bottom right, #14181f, #0c3d55);
-      filter: blur(5px);
-      border-radius: 50%; }
-    .battle-info .white-ring-border {
-      position: absolute;
-      background: none;
-      width: 90vw;
-      height: 90vw;
-      border-radius: 50%;
-      border: 1px solid white; }
-    .battle-info .game-overlay-display {
-      position: absolute;
-      width: 90vw;
-      height: 90vw;
-      background: rgba(255, 255, 255, 0.35);
-      border-radius: 50%; }
-    .battle-info .battle-arena-cover {
-      position: absolute;
-      width: 90vw;
-      height: 90vw; }
-    .battle-info .gamer-info-container {
-      width: 90vw;
-      height: 90vw; }
-      .battle-info .gamer-info-container .upper-container {
-        width: 90vw;
-        height: 27.5vw; }
-        .battle-info .gamer-info-container .upper-container .opponent-container {
-          position: absolute;
-          width: 60vw;
-          height: 25vw;
-          background: rgba(12, 61, 85, 0.95);
-          border: 1px solid rgba(255, 255, 255, 0.75);
-          border-radius: 10px;
-          display: flex;
-          align-items: center; }
-          .battle-info .gamer-info-container .upper-container .opponent-container .opponent-img-container {
-            width: 25vw;
-            height: 20vw;
-            display: flex;
-            justify-content: space-around;
-            align-items: center; }
-            .battle-info .gamer-info-container .upper-container .opponent-container .opponent-img-container img {
-              border-radius: 50%;
-              border: 1px solid rgba(255, 255, 255, 0.75);
-              width: 20vw;
-              height: 20vw; }
-          .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container {
-            width: 35vw;
-            height: 25vw;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center; }
-            .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper {
-              height: 17.5vw; }
-              .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-username {
-                font-family: 'Vollkorn', serif;
-                letter-spacing: 1px;
-                margin: 0;
-                text-align: center;
-                color: white; }
-              .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-name {
-                font-size: 12px;
-                letter-spacing: 1px;
-                margin: 0;
-                text-align: center;
-                color: rgba(255, 255, 255, 0.7); }
-              .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-lvl {
-                font-family: 'Vollkorn', serif;
-                margin: 0;
-                text-align: center;
-                color: white; }
-      .battle-info .gamer-info-container .middle-container {
-        position: relative;
-        width: 90vw;
-        height: 35vw;
-        justify-content: center; }
-        .battle-info .gamer-info-container .middle-container .connect-glyph-container {
-          width: inherit;
-          height: inherit;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-          .battle-info .gamer-info-container .middle-container .connect-glyph-container .wheel-overlay {
-            position: absolute;
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.35); }
-          .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: linear-gradient(to bottom right, #14181f, #0c3d55);
-            color: white; }
-            .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel img {
-              position: absolute;
-              width: 110px;
-              height: 110px;
-              opacity: 1;
-              animation: 5s linear rotating-wheel; }
-            .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel .loading-info {
-              padding: 40px 0 0 0; }
-              .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel .loading-info h5 {
-                font-size: 12px;
-                letter-spacing: 0.5px;
-                margin: 0px;
-                text-align: center;
-                color: white; }
-          .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: linear-gradient(to bottom right, #14181f, #0c3d55);
-            color: white; }
-            .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel img {
-              position: absolute;
-              width: 110px;
-              height: 110px;
-              opacity: 1;
-              animation: 600s linear infinite rotating-wheel-infinite; }
-            .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel .loading-info {
-              padding: 45px 0 0 0; }
-              .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel .loading-info h5 {
-                font-size: 13px;
-                letter-spacing: 1px;
-                margin: 0px;
-                text-align: center;
-                color: white; }
-          .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: linear-gradient(to bottom right, #14181f, #0c3d55);
-            color: white; }
-            .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle img {
-              position: absolute;
-              width: 110px;
-              height: 110px;
-              opacity: 1;
-              animation: 600s linear infinite rotating-wheel-infinite; }
-            .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle .loading-info {
-              padding: 40px 0 0 0; }
-              .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle .loading-info h5 {
-                font-size: 13px;
-                letter-spacing: 1px;
-                margin: 0px;
-                text-align: center;
-                color: white; }
-      .battle-info .gamer-info-container .lower-container {
-        width: 90vw;
-        height: 27.5vw;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end; }
-        .battle-info .gamer-info-container .lower-container .user-container {
-          width: 60vw;
-          height: 25vw;
-          background: rgba(20, 24, 31, 0.95);
-          border: 1px solid rgba(255, 255, 255, 0.75);
-          border-radius: 10px;
-          display: flex;
-          align-items: center; }
-          .battle-info .gamer-info-container .lower-container .user-container .user-img-container {
-            width: 25vw;
-            height: 20vw;
-            display: flex;
-            justify-content: space-around;
-            align-items: center; }
-            .battle-info .gamer-info-container .lower-container .user-container .user-img-container img {
-              border-radius: 50%;
-              border: 1px solid rgba(255, 255, 255, 0.75);
-              width: 20vw;
-              height: 20vw; }
-          .battle-info .gamer-info-container .lower-container .user-container .user-info-container {
-            width: 35vw;
-            height: 25vw;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center; }
-            .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper {
-              height: 17.5vw; }
-              .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .username {
-                font-family: 'Vollkorn', serif;
-                letter-spacing: 1px;
-                margin: 0;
-                text-align: center;
-                color: white; }
-              .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .actual-name {
-                font-size: 12px;
-                letter-spacing: 1px;
-                margin: 0;
-                text-align: center;
-                color: rgba(255, 255, 255, 0.7); }
-              .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .actual-lvl {
-                font-family: 'Vollkorn', serif;
-                margin: 0;
-                text-align: center;
-                color: white; }
-    .battle-info img {
-      width: 90vw;
-      height: 90vw; }
-  .battle-actions-container {
+  .battle-ready-container .battle-info .champdisplay {
+    width: 90vw;
+    height: 90vw;
+    background: linear-gradient(to bottom right, #14181f, #0c3d55);
+    filter: blur(5px);
+    border-radius: 50%; }
+  .battle-ready-container .battle-info .white-ring-border {
+    position: absolute;
+    background: none;
+    width: 90vw;
+    height: 90vw;
+    border-radius: 50%;
+    border: 1px solid white; }
+  .battle-ready-container .battle-info .game-overlay-display {
+    position: absolute;
+    width: 90vw;
+    height: 90vw;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%; }
+  .battle-ready-container .battle-info .battle-arena-cover {
+    position: absolute;
+    width: 90vw;
+    height: 90vw; }
+  .battle-ready-container .battle-info .gamer-info-container {
+    width: 90vw;
+    height: 90vw; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container {
+    width: 90vw;
+    height: 27.5vw; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container {
+    position: absolute;
+    width: 60vw;
+    height: 25vw;
+    background: rgba(12, 61, 85, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    display: flex;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-img-container {
+    width: 25vw;
+    height: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-img-container img {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    width: 20vw;
+    height: 20vw; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container {
+    width: 35vw;
+    height: 25vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper {
+    height: 17.5vw; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-username {
+    font-family: 'Vollkorn', serif;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-name {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7); }
+  .battle-ready-container .battle-info .gamer-info-container .upper-container .opponent-container .opponent-info-container .opponent-info-wrapper .opponent-lvl {
+    font-family: 'Vollkorn', serif;
+    margin: 0;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container {
+    position: relative;
+    width: 90vw;
+    height: 35vw;
+    justify-content: center; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .wheel-overlay {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35); }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #14181f, #0c3d55);
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel img {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    opacity: 1;
+    animation: 5s linear rotating-wheel; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel .loading-info {
+    padding: 40px 0 0 0; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .connecting-wheel .loading-info h5 {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin: 0px;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #14181f, #0c3d55);
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel img {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    opacity: 1;
+    animation: 600s linear infinite rotating-wheel-infinite; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel .loading-info {
+    padding: 45px 0 0 0; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .battling-wheel .loading-info h5 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0px;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #14181f, #0c3d55);
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle img {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    opacity: 1;
+    animation: 600s linear infinite rotating-wheel-infinite; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle .loading-info {
+    padding: 40px 0 0 0; }
+  .battle-ready-container .battle-info .gamer-info-container .middle-container .connect-glyph-container .winner-circle .loading-info h5 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0px;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container {
+    width: 90vw;
+    height: 27.5vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container {
+    width: 60vw;
+    height: 25vw;
+    background: rgba(20, 24, 31, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    display: flex;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-img-container {
+    width: 25vw;
+    height: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-img-container img {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    width: 20vw;
+    height: 20vw; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-info-container {
+    width: 35vw;
+    height: 25vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper {
+    height: 17.5vw; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .username {
+    font-family: 'Vollkorn', serif;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .actual-name {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7); }
+  .battle-ready-container .battle-info .gamer-info-container .lower-container .user-container .user-info-container .user-info-wrapper .actual-lvl {
+    font-family: 'Vollkorn', serif;
+    margin: 0;
+    text-align: center;
+    color: white; }
+  .battle-ready-container .battle-info img {
+    width: 90vw;
+    height: 90vw; }
+  .battle-ready-container .battle-actions-container {
     height: 12.5vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .battle-actions-container button {
-      height: 50px;
-      width: 200px; }
-    .battle-actions-container .challenge-btn {
-      color: white;
-      background: none;
-      border: 2px solid white;
-      border-radius: 10px;
-      margin: 0 0 0px 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-      .battle-actions-container .challenge-btn .btn-description {
-        margin: 3px 15px;
-        letter-spacing: 1.5px;
-        color: white; }
-      .battle-actions-container .challenge-btn img {
-        height: 25px; }
-    .battle-actions-container .challenge-sent {
-      color: white;
-      background: none;
-      border: 2px solid white;
-      border-radius: 10px;
-      margin: 0 0 0 0;
-      display: flex;
-      justify-content: space-around; }
-      .battle-actions-container .challenge-sent h6 {
-        margin: 0 17px;
-        font-size: 16px;
-        letter-spacing: 1.5px;
-        color: white; } }
+  .battle-ready-container .battle-actions-container button {
+    height: 50px;
+    width: 200px; }
+  .battle-ready-container .battle-actions-container .challenge-btn {
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 0 0px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .battle-ready-container .battle-actions-container .challenge-btn .btn-description {
+    margin: 3px 15px;
+    letter-spacing: 1.5px;
+    color: white; }
+  .battle-ready-container .battle-actions-container .challenge-btn img {
+    height: 25px; }
+  .battle-ready-container .battle-actions-container .challenge-sent {
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: space-around; }
+  .battle-ready-container .battle-actions-container .challenge-sent h6 {
+    margin: 0 17px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: white; }
+  .battle-ready-container .nav-bar {
+    display: block;
+    height: 10vh;
+    background: rgba(255, 255, 255, 0.3); }
+  .battle-ready-container .nav-bar .nav-btn-container {
+    display: flex;
+    justify-content: space-around;
+    height: 9vh; }
+  .battle-ready-container .nav-bar .nav-btn-container button {
+    width: 50px;
+    height: 50px; }
+  .battle-ready-container .nav-bar .nav-btn-container .nav-btn {
+    position: relative;
+    width: 25vw;
+    height: 15vw;
+    margin: 5px 0 0 0; }
+  .battle-ready-container .nav-bar .nav-btn-container .nav-btn .search-icon {
+    height: 20px;
+    width: 20px; }
+  .battle-ready-container .nav-bar .nav-btn-container .nav-btn .trophy-icon {
+    height: 35px;
+    margin: -15px 0 0 0; }
+  .battle-ready-container .nav-bar .nav-btn-container .nav-btn .provoke-icon {
+    height: 25px; }
+  .battle-ready-container .nav-bar .nav-btn-container .nav-btn .button-highlight {
+    position: absolute;
+    left: 0;
+    top: 2.5px;
+    height: 40px;
+    width: 200px; }
+  .battle-ready-container .nav-bar .nav-btn-container .separator {
+    height: 7vh;
+    width: 3px;
+    margin: 2vw 1vw;
+    background: #0b364c;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px; }
+  .battle-ready-container .nav-bar .nav-btn-container .ghost-separator {
+    height: 7vh;
+    width: 3px;
+    margin: 1vw; } }

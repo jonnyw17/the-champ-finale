@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import './ChampLogo.css'
 
 class ChampLogo extends Component {
@@ -8,7 +9,7 @@ class ChampLogo extends Component {
     <div className="logo-wrapper">
       <img className="logo-img" src="BetGame_Logo_White.png" alt="white champ logo"/>
     </div>
-    )
+  )
   }
 }
 

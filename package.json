@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "scss": "node-sass ./src/containers/Home/ -o src/containers/Home/"
+    "scss": "node-sass -w ./src/containers/SearchProfile/ -o src/containers/SearchProfile/"
   },
   "devDependencies": {
     "i": "^0.3.6",

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 import './BattleDisplayReady.css';
 
 class TrackingBattleDisplay extends Component {

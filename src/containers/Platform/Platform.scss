@@ -1,97 +1,99 @@
-.nav-display {
-  position: fixed;
-  top: 0;
-  height: 65px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  .logo-wrapper {
-    position: fixed;
-    height: 10vh;
-    width: 40vw;
+// .nav-display {
+//   position: fixed;
+//   top: 0;
+//   height: 65px;
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+//   .logo-wrapper {
+//     position: fixed;
+//     height: 10vh;
+//     width: 40vw;
+//     display: flex;
+//     align-items: center;
+//     img {
+//       position: fixed;
+//       height: 36px;
+//       width: 30px;
+//     }
+//     h3 {
+//       font-weight: 700;
+//       position: fixed;
+//       letter-spacing: 0.9px;
+//       color: white;
+//       margin: 2.5px 42.5px;
+//     }
+//   }
+// }
+@media (min-width: 320px){
+  .platform-btn-container {
     display: flex;
-    align-items: center;
-    img {
-      position: fixed;
-      height: 36px;
-      width: 30px;
-    }
-    h3 {
-      font-weight: 700;
-      position: fixed;
-      letter-spacing: 0.9px;
-      color: white;
-      margin: 2.5px 42.5px;
-    }
-  }
-}
-.platform-btn-container {
-  display: flex;
-  justify-content: center;
-  .btn-wrapper {
-    margin: 105px 0 0 0;
-    width: 85vw;
-    h5 {
-      font-weight: 200;
-      letter-spacing: 0.5px;
-      color: white;
-      text-align: center;
-    }
-    h6 {
-      font-size: 0.9rem;
-      font-weight: 200;
-      letter-spacing: 0.5px;
-      color: white;
-      text-align: center;
-    }
-    .champ-display-link{
-      button {
-        border: 1px solid white;
-        border-radius: 15px;
-        background: none;
-        height: 50px;
-        width: 85vw;
-        margin: 30px 0px;
-        display: flex;
-        justify-content: space-between;
-          .worms-icon {
-            height: 30px;
-            width: 30px;
-          }
-          .league-legends-icon {
-            height: 28px;
-            width: 28px;
-            margin: 2.5px 0 0 0;
-          }
-          .starcraft-icon{
-            height: 34px;
-            width: 34px;
-            margin: 0 0 0 -2.5px;
-          }
-          .dota-icon {
-            height: 30px;
-            width: 30px;
-            margin: 2.5px 0 0 0;
-          }
-        h5 {
-          margin: 0;
-          font-weight: 700;
-          letter-spacing: 0.7px;
-        }
-        .btn-title-margin {
-          margin: 2.5px 0 0 0;
-        }
-        .coming-soon {
-          color: white;
-          letter-spacing: 0.7px;
-        }
-        .ghost-div {
-          height: 30px;
-          width: 30px;
-        }
+    justify-content: center;
+    .btn-wrapper {
+      margin: 105px 0 0 0;
+      width: 85vw;
+      h5 {
+        font-weight: 200;
+        letter-spacing: 0.5px;
+        color: white;
+        text-align: center;
       }
-      .disabled-btn {
-        opacity: 0.6;
+      h6 {
+        font-size: 0.9rem;
+        font-weight: 200;
+        letter-spacing: 0.5px;
+        color: white;
+        text-align: center;
+      }
+      .champ-display-link{
+        button {
+          border: 1px solid white;
+          border-radius: 15px;
+          background: none;
+          height: 50px;
+          width: 85vw;
+          margin: 30px 0px;
+          display: flex;
+          justify-content: space-between;
+            .worms-icon {
+              height: 30px;
+              width: 30px;
+            }
+            .league-legends-icon {
+              height: 28px;
+              width: 28px;
+              margin: 2.5px 0 0 0;
+            }
+            .starcraft-icon{
+              height: 34px;
+              width: 34px;
+              margin: 0 0 0 -2.5px;
+            }
+            .dota-icon {
+              height: 30px;
+              width: 30px;
+              margin: 2.5px 0 0 0;
+            }
+          h5 {
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+          }
+          .btn-title-margin {
+            margin: 2.5px 0 0 0;
+          }
+          .coming-soon {
+            color: white;
+            letter-spacing: 0.7px;
+          }
+          .ghost-div {
+            height: 30px;
+            width: 30px;
+          }
+        }
+        .disabled-btn {
+          opacity: 0.6;
+        }
       }
     }
   }

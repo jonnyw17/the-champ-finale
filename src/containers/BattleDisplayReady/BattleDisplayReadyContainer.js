@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-// import './animation.css';
-import './BattleDisplayReady.css';
-
 import BattleContentOpponent from './BattleContentOpponent.js';
 import BattleContentUser from './BattleContentUser.js';
 import ConnectPendingDisplay from './ConnectPendingDisplay.js';
@@ -11,29 +8,31 @@ import EndBattleButton from './EndBattleButton.js';
 import TrackingBattleDisplay from './TrackingBattleDisplay.js';
 import WinnerStatus from './WinnerStatus.js';
 
+import './BattleDisplayReady.css';
+
 class BattleDisplayReady extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      usersTwitter: [],
-      requestSent: false,
-      requestIcon: 'none',
-      userLoggedIn: this.props.activeUser,
+      battleEnded: false,
       connectionMade: false,
-      battleEnded: false
+      requestIcon: 'none',
+      requestSent: false,
+      userLoggedIn: this.props.activeUser,
+      usersTwitter: []
     }
-    this.SendRequest = this.SendRequest.bind(this);
-    this.DeclareBattleEnded = this.DeclareBattleEnded.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
+    this.declareBattleEnded = this.declareBattleEnded.bind(this);
   }
 
-  SendRequest() {
+  sendRequest() {
     this.setState({requestSent: true});
     setTimeout(() => {
       this.setState({requestIcon: 'block'});
     }, 3000);
   }
 
-  DeclareBattleEnded() {
+  declareBattleEnded() {
     this.setState({battleEnded: true});
   }
 
@@ -43,7 +42,7 @@ class BattleDisplayReady extends Component {
       this.setState({connectionMade:true})
     }, 5000)
     // There must be someway to set Time on the Display variable
-    return (<div className="main-container">
+    return (<div className="battle-ready-container">
 
       <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
@@ -101,7 +100,7 @@ class BattleDisplayReady extends Component {
                   <h6 className="uk-animation-slide-top">BATTLE ENDED!</h6>
                 </button>
               :
-              <button className="challenge-btn uk-animation-slide-bottom" onClick={this.DeclareBattleEnded}>
+              <button className="challenge-btn uk-animation-slide-bottom" onClick={this.declareBattleEnded}>
                 <img src="Battle_End_Icon.png" alt="Provoke Symbol"/>
                 <div>
                   <h6 className="btn-description">END BATTLE</h6>
@@ -142,13 +141,6 @@ class BattleDisplayReady extends Component {
         this.state.requestSent
           /*? <GuideStep4/> : <GuideStep3/>*/
       }
-      {/* Navigation */}
-      <section className="nav-display">
-        <article className="logo-wrapper">
-          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-          <h3 className="white-logo-name">Champ</h3>
-        </article>
-      </section>
     </div>);
   }
 }

@@ -1,25 +1,20 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+
 import './BattleDisplay.css';
 
 class BattleDisplay extends Component {
   render( ) {
-    return (<div className="main-container">
+    return (<div className="battle-display-container">
 
     {/* Navigation */}
-    <section className="nav-display">
-      <article className="logo-wrapper">
-        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-        <h3 className="white-logo-name">Champ</h3>
-      </article>
-    </section>
     <section className="menu-drop-down"></section>
 
     <section className="activity-name-wrapper">
       <h3 className="activity-name">Battle Tracker</h3>
     </section>
 
-      <section className="activity-container">
+      <section className="battle-activity-container">
         <article className="search-container">
           <Link to="/searchprofile">
             <div className="search-opponent">
@@ -60,11 +55,3 @@ class BattleDisplay extends Component {
 }
 
 export default BattleDisplay;
-
-// <Link to="/searchprofile">
-//   <button className="search-opponent">
-//     <div className="white-gradient"></div>
-//     <img src="Search_Fa_Icon.png" alt="navigation icon"/>
-//     <h5>Search opponents in your area. Now</h5>
-//   </button>
-// </Link>
