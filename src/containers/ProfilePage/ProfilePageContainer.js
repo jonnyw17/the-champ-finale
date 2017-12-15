@@ -21,11 +21,11 @@ class ProfilePage extends Component {
       userLoggedIn: this.props.activeUser,
       tweetBtnClick: false
     }
-    this.SendRequest = this.SendRequest.bind(this);
-    this.TwitterActivate = this.TwitterActivate.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
+    this.twitterActivate = this.twitterActivate.bind(this);
   }
-
-  SendRequest() {
+  // <TwitterBtn activeUser={this.state.userLoggedIn} />
+  sendRequest() {
     console.log(true)
     this.setState({requestSent: true});
     setTimeout(() => {
@@ -33,7 +33,8 @@ class ProfilePage extends Component {
       this.setState({requestIcon: 'block'});
     }, 3000);
   }
-  TwitterActivate() {
+  
+  twitterActivate() {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
 
