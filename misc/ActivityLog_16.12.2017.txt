@@ -1,0 +1,12 @@
+20:47
+
+HomeContainer.js
+
+[Problem]
+If the Champ Logo is off kilter for some reason
+reseting margin: 0 solves this problem; don't want the problem is exist.
+
+[Solution]
+
+There was another logo-wrapper class associated with the class used on
+the home screen. So the class name was changed to 'logo-home-wrapper'.

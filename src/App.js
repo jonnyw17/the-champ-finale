@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import BattleDisplay from './containers/BattleDisplay/BattleDisplayContainer';
@@ -13,7 +14,7 @@ import SearchProfile from './containers/SearchProfile/SearchProfileContainer';
 import SignUp from './containers/SignUp/SignUpContainer';
 import SignIn from './containers/SignIn/SignInContainer';
 
-
+import './FullScreenOverlay.css'
 
 class App extends Component {
   constructor(props) {
@@ -27,17 +28,40 @@ class App extends Component {
   }
 
   getCurrentUserSignIn(currentUser) {
-    this.setState({currentUserSignedIn: currentUser})
+    this.setState({currentUserSignedIn: currentUser});
   }
 
   getCurrentUserSignUp(currentUser) {
-    this.setState({currentUserSignedUp: currentUser})
+    this.setState({currentUserSignedUp: currentUser});
   }
 
   render() {
-
+    // isFullscreen props from the module - react-fullscreenable
+    let fullScreenOption = this.props.isFullscreen
+      ? 'none'
+      : 'flex';
     return (
       <div>
+        <div className="fullscreen-overlay-container" style={{display : fullScreenOption}}>
+            <button className="cancel-btn" onClick={()=>{this.setState({fullscreenOptionHidden:true})}}>
+              <img src="Cancel_Glyph.png" alt="cancel glyph"/>
+            </button>
+            <section className="fullscreen-overlay-wrapper">
+              <article className="fullscreen-overlay">
+              <div>
+                <h5>Recommend Fullscreen Mode.</h5>
+              </div>
+                <button className="fullscreen-logo-wrapper" onClick={this.props.toggleFullscreen}>
+                  <div className="fullscreen-logo">
+                    <img src="Full_Screen_Symbol.png" alt="Fullscreen" />
+                    <div>
+                      <h6>Fullscreen Mode</h6>
+                    </div>
+                  </div>
+                </button>
+              </article>
+            </section>
+        </div>
         <Router>
           <div>
             {/*Route Starts Here*/}
@@ -71,4 +95,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const FullscreenableDemoComponent = Fullscreenable()(App);
+
+export default FullscreenableDemoComponent;

@@ -17,13 +17,14 @@ h5 {
     height: 45vh;
     display: flex;
     justify-content: center;
-    .logo-wrapper {
+    .logo-home-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0;
       img {
-        height: 53px;
-        width: 45px;
+        height: 40px;
+        width: auto;
       }
       h1 {
         color: white;

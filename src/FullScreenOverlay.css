@@ -1,0 +1,50 @@
+.fullscreen-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7); }
+
+.fullscreen-overlay-container .cancel-btn {
+  position: fixed;
+  top: 2.5vh;
+  right: 2.5vh; }
+
+.fullscreen-overlay-container .fullscreen-overlay-wrapper {
+  margin: 0 0 20vh 0; }
+
+.fullscreen-overlay-container .fullscreen-overlay-wrapper .fullscreen-logo-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center; }
+
+.fullscreen-overlay-container .fullscreen-overlay-wrapper .fullscreen-logo-wrapper .fullscreen-logo {
+  width: 250px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05); }
+
+.fullscreen-overlay-container .fullscreen-overlay-wrapper .fullscreen-logo-wrapper .fullscreen-logo img {
+  width: 20px;
+  height: 20px; }
+
+.fullscreen-overlay-container .fullscreen-overlay-wrapper .fullscreen-logo-wrapper .fullscreen-logo h6 {
+  margin: 0 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white; }
+
+.fullscreen-overlay-container .fullscreen-overlay-wrapper h5 {
+  letter-spacing: 1px;
+  margin: 25px 0;
+  color: white;
+  text-align: center; }

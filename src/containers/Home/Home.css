@@ -15,16 +15,17 @@ h5 {
   display: flex;
   justify-content: center; }
 
-.main-container .logo-container .logo-wrapper {
+.main-container .logo-container .logo-home-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: 0; }
 
-.main-container .logo-container .logo-wrapper img {
-  height: 53px;
-  width: 45px; }
+.main-container .logo-container .logo-home-wrapper img {
+  height: 40px;
+  width: auto; }
 
-.main-container .logo-container .logo-wrapper h1 {
+.main-container .logo-container .logo-home-wrapper h1 {
   color: white;
   margin: 0 0 5px 20px;
   font-weight: 600;
