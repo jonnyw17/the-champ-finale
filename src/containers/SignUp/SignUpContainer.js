@@ -178,14 +178,6 @@ class SignUp extends Component {
     return (
       <div>
         <section className="top-container">
-          <article className="back-btn-wrapper"></article>
-
-          <article className="logo-wrapper">
-            <img src="BetGame_Logo.png" alt="the champ logo"/>
-            <h3>Champ</h3>
-          </article>
-          <article className="menu-wrapper"></article>
-
           <article className="back-btn-wrapper fixed">
             <Link to="/">
               <div className="back-btn">
@@ -193,6 +185,10 @@ class SignUp extends Component {
                 <h5>Back</h5>
               </div>
             </Link>
+          </article>
+          <article className="logo-signup-wrapper">
+            <img src="BetGame_Logo.png" alt="the champ logo"/>
+            <h3>Champ</h3>
           </article>
         </section>
         <section className="form-container">
