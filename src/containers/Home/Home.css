@@ -14,61 +14,74 @@ h5 {
   height: 45vh;
   display: flex;
   justify-content: center; }
-  .main-container .logo-container .logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .main-container .logo-container .logo-wrapper img {
-      height: 53px;
-      width: 45px; }
-    .main-container .logo-container .logo-wrapper h1 {
-      color: white;
-      margin: 0 0 5px 20px;
-      font-weight: 600;
-      font-size: 28px;
-      letter-spacing: 1px; }
+
+.main-container .logo-container .logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.main-container .logo-container .logo-wrapper img {
+  height: 53px;
+  width: 45px; }
+
+.main-container .logo-container .logo-wrapper h1 {
+  color: white;
+  margin: 0 0 5px 20px;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 1px; }
 
 .main-container .brand-description-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 28vh; }
-  .main-container .brand-description-container .brand-description {
-    margin: 30px 0 0 0; }
-    .main-container .brand-description-container .brand-description p {
-      font-family: 'Open Sans', sans-serif;
-      letter-spacing: 0.6px;
-      font-size: 14px;
-      font-weight: 300;
-      color: white;
-      opacity: 0.7; }
-    .main-container .brand-description-container .brand-description p:nth-child(1) {
-      text-align: center; }
-    .main-container .brand-description-container .brand-description p:nth-child(2) {
-      text-align: center;
-      margin: 5px 0; }
-    .main-container .brand-description-container .brand-description p:nth-child(3) {
-      text-align: center;
-      margin: 0; }
+
+.main-container .brand-description-container .brand-description {
+  margin: 30px 0 0 0; }
+
+.main-container .brand-description-container .brand-description p {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.6px;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  opacity: 0.7; }
+
+.main-container .brand-description-container .brand-description p:nth-child(1) {
+  text-align: center; }
+
+.main-container .brand-description-container .brand-description p:nth-child(2) {
+  text-align: center;
+  margin: 5px 0; }
+
+.main-container .brand-description-container .brand-description p:nth-child(3) {
+  text-align: center;
+  margin: 0; }
 
 .main-container .bottom-container {
   display: flex;
   justify-content: center; }
-  .main-container .bottom-container .btn-wrapper {
-    height: 27vh;
-    width: 255px; }
-    .main-container .bottom-container .btn-wrapper .sign-up-btn {
-      background: white;
-      border-radius: 7.5px;
-      width: 255px;
-      opacity: 0.75; }
-      .main-container .bottom-container .btn-wrapper .sign-up-btn h5 {
-        margin: 14px 0;
-        color: #14181f; }
-    .main-container .bottom-container .btn-wrapper .sign-in-btn {
-      margin: 25px 0 0 0;
-      width: 255px; }
-      .main-container .bottom-container .btn-wrapper .sign-in-btn h5 {
-        margin: 5px 0;
-        color: white;
-        opacity: 0.75; }
+
+.main-container .bottom-container .btn-wrapper {
+  height: 27vh;
+  width: 255px; }
+
+.main-container .bottom-container .btn-wrapper .sign-up-btn {
+  background: white;
+  border-radius: 7.5px;
+  width: 255px;
+  opacity: 0.75; }
+
+.main-container .bottom-container .btn-wrapper .sign-up-btn h5 {
+  margin: 14px 0;
+  color: #14181f; }
+
+.main-container .bottom-container .btn-wrapper .sign-in-btn {
+  margin: 25px 0 0 0;
+  width: 255px; }
+
+.main-container .bottom-container .btn-wrapper .sign-in-btn h5 {
+  margin: 5px 0;
+  color: white;
+  opacity: 0.75; }
