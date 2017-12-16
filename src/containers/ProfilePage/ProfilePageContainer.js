@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import './TwitterDialog';
 
-import ChallengeRequestSent from './ChallengeRequestSent';
+// import ChallengeRequestSent from './ChallengeRequestSent';
 // import GuideStep3 from './GuideStep3';
 // import GuideStep4 from './GuideStep4';
 import TwitterDialog from './TwitterDialog';
@@ -33,7 +33,7 @@ class ProfilePage extends Component {
       this.setState({requestIcon: 'block'});
     }, 3000);
   }
-  
+
   twitterActivate() {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }

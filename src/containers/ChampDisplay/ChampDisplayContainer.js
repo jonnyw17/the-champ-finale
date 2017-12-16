@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 import ChampionUnknown from './ChampionUnknown';
-import GuideStep1 from './GuideStep1';
+// import GuideStep1 from './GuideStep1';
 
 import './ChampDisplay.css';
 import './ChampLogo.css';

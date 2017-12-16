@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import BattleContentOpponent from './BattleContentOpponent.js';
 import BattleContentUser from './BattleContentUser.js';
 import ConnectPendingDisplay from './ConnectPendingDisplay.js';
-import EndBattleButton from './EndBattleButton.js';
 import TrackingBattleDisplay from './TrackingBattleDisplay.js';
 import WinnerStatus from './WinnerStatus.js';
 
