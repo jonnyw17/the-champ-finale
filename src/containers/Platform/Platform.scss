@@ -1,31 +1,43 @@
-// .nav-display {
-//   position: fixed;
-//   top: 0;
-//   height: 65px;
-//   width: 100vw;
-//   display: flex;
-//   justify-content: center;
-//   .logo-wrapper {
-//     position: fixed;
-//     height: 10vh;
-//     width: 40vw;
-//     display: flex;
-//     align-items: center;
-//     img {
-//       position: fixed;
-//       height: 36px;
-//       width: 30px;
-//     }
-//     h3 {
-//       font-weight: 700;
-//       position: fixed;
-//       letter-spacing: 0.9px;
-//       color: white;
-//       margin: 2.5px 42.5px;
-//     }
-//   }
-// }
+.nav-platform-display {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  height: 65px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  .logo-platform-wrapper {
+    position: fixed;
+    height: 10vh;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    img {
+      position: fixed;
+      height: 36px;
+      width: 30px;
+    }
+    .white-logo-name {
+      font-weight: 700;
+      position: fixed;
+      letter-spacing: 0.9px;
+      color: white;
+      margin: 2.5px 42.5px;
+    }
+    .slategrey-logo-name {
+      font-weight: 700;
+      position: fixed;
+      letter-spacing: 0.9px;
+      color: hsl(200,75,19); // Dark Slate Grey
+      margin: 2.5px 42.5px;
+    }
+  }
+}
 @media (min-width: 320px){
+  .platform-container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));
   .platform-btn-container {
     display: flex;
     justify-content: center;
@@ -97,4 +109,5 @@
       }
     }
   }
+}
 }

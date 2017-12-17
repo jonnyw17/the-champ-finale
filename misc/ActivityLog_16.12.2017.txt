@@ -12,3 +12,10 @@ reseting margin: 0 solves this problem; don't want the problem is exist.
 
 There was another logo-wrapper class associated with the class used on
 the home screen. So the class name was changed to 'logo-home-wrapper'.
+
+23:51
+
+NB: It's usually best to test out the app or display on a native device,
+a) To see whether it works
+b) whether the aesthetics are correct - phones and tablets tend to have unusually
+variety pixel density and aspect ratio - e.g. iPhoneX

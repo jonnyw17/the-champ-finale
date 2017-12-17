@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "scss": "node-sass -w ./src/containers/SignUp/ -o src/containers/SignUp/"
+    "scss": "node-sass -w ./src/containers/ProfilePage/ -o src/containers/ProfilePage/"
   },
   "devDependencies": {
     "i": "^0.3.6",

@@ -32,13 +32,16 @@ class SearchProfile extends Component {
     return (
     <div className="main-container">
     {/* Navigation */}
-    <section className="nav-display">
-      <article className="logo-wrapper">
-        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-        <h3 className="white-logo-name">Champ</h3>
+    <section className="menu-drop-down">
+      <article className="menu-btn-container">
+        <article className="logo-btn-wrapper">
+          <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
+        </article>
+        <article className="drop-down-container">
+          <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
+        </article>
       </article>
     </section>
-
       <section className="status-wrapper">
         <article className="status-container">
 

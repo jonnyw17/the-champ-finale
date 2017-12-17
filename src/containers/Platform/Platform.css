@@ -1,79 +1,95 @@
-.nav-display {
+.nav-platform-display {
+  z-index: 1;
   position: fixed;
   top: 0;
   height: 65px;
   width: 100vw;
   display: flex;
   justify-content: center; }
-  .nav-display .logo-wrapper {
-    position: fixed;
-    height: 10vh;
-    width: 40vw;
-    display: flex;
-    align-items: center; }
-    .nav-display .logo-wrapper img {
-      position: fixed;
-      height: 36px;
-      width: 30px; }
-    .nav-display .logo-wrapper h3 {
-      font-weight: 700;
-      position: fixed;
-      letter-spacing: 0.9px;
-      color: white;
-      margin: 2.5px 42.5px; }
 
-.platform-btn-container {
+.nav-platform-display .logo-platform-wrapper {
+  position: fixed;
+  height: 10vh;
+  width: 125px;
   display: flex;
-  justify-content: center; }
-  .platform-btn-container .btn-wrapper {
+  align-items: center; }
+
+.nav-platform-display .logo-platform-wrapper img {
+  position: fixed;
+  height: 36px;
+  width: 30px; }
+
+.nav-platform-display .logo-platform-wrapper .white-logo-name {
+  font-weight: 700;
+  position: fixed;
+  letter-spacing: 0.9px;
+  color: white;
+  margin: 2.5px 42.5px; }
+
+.nav-platform-display .logo-platform-wrapper .slategrey-logo-name {
+  font-weight: 700;
+  position: fixed;
+  letter-spacing: 0.9px;
+  color: #0c3d55;
+  margin: 2.5px 42.5px; }
+
+@media (min-width: 320px) {
+  .platform-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #14181f, #0c3d55); }
+  .platform-container .platform-btn-container {
+    display: flex;
+    justify-content: center; }
+  .platform-container .platform-btn-container .btn-wrapper {
     margin: 105px 0 0 0;
     width: 85vw; }
-    .platform-btn-container .btn-wrapper h5 {
-      font-weight: 200;
-      letter-spacing: 0.5px;
-      color: white;
-      text-align: center; }
-    .platform-btn-container .btn-wrapper h6 {
-      font-size: 0.9rem;
-      font-weight: 200;
-      letter-spacing: 0.5px;
-      color: white;
-      text-align: center; }
-    .platform-btn-container .btn-wrapper .champ-display-link button {
-      border: 1px solid white;
-      border-radius: 15px;
-      background: none;
-      height: 50px;
-      width: 85vw;
-      margin: 30px 0px;
-      display: flex;
-      justify-content: space-between; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .worms-icon {
-        height: 30px;
-        width: 30px; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .league-legends-icon {
-        height: 28px;
-        width: 28px;
-        margin: 2.5px 0 0 0; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .starcraft-icon {
-        height: 34px;
-        width: 34px;
-        margin: 0 0 0 -2.5px; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .dota-icon {
-        height: 30px;
-        width: 30px;
-        margin: 2.5px 0 0 0; }
-      .platform-btn-container .btn-wrapper .champ-display-link button h5 {
-        margin: 0;
-        font-weight: 700;
-        letter-spacing: 0.7px; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .btn-title-margin {
-        margin: 2.5px 0 0 0; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .coming-soon {
-        color: white;
-        letter-spacing: 0.7px; }
-      .platform-btn-container .btn-wrapper .champ-display-link button .ghost-div {
-        height: 30px;
-        width: 30px; }
-    .platform-btn-container .btn-wrapper .champ-display-link .disabled-btn {
-      opacity: 0.6; }
+  .platform-container .platform-btn-container .btn-wrapper h5 {
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    color: white;
+    text-align: center; }
+  .platform-container .platform-btn-container .btn-wrapper h6 {
+    font-size: 0.9rem;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    color: white;
+    text-align: center; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button {
+    border: 1px solid white;
+    border-radius: 15px;
+    background: none;
+    height: 50px;
+    width: 85vw;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .worms-icon {
+    height: 30px;
+    width: 30px; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .league-legends-icon {
+    height: 28px;
+    width: 28px;
+    margin: 2.5px 0 0 0; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .starcraft-icon {
+    height: 34px;
+    width: 34px;
+    margin: 0 0 0 -2.5px; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .dota-icon {
+    height: 30px;
+    width: 30px;
+    margin: 2.5px 0 0 0; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button h5 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.7px; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .btn-title-margin {
+    margin: 2.5px 0 0 0; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .coming-soon {
+    color: white;
+    letter-spacing: 0.7px; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link button .ghost-div {
+    height: 30px;
+    width: 30px; }
+  .platform-container .platform-btn-container .btn-wrapper .champ-display-link .disabled-btn {
+    opacity: 0.6; } }

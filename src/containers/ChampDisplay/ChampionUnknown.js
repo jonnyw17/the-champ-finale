@@ -22,8 +22,8 @@ class ChampionUnknown extends Component {
           <article className="middle-circle-container">
             <div className="img-container">
               <div className="empty-profile-pic">
-                <img className="question-mark" src="Question_Mark.png" alt="unknown player"/>
                 <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
+                <img className="question-mark" src="Question_Mark.png" alt="unknown player"/>
               </div>
             </div>
             <div className="victory-recent-container">

@@ -15,14 +15,19 @@ class ProfilePage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      usersTwitter: [],
+      menuDisplayed: false,
       requestSent: false,
       requestIcon: 'none',
+      tweetBtnClick: false,
       userLoggedIn: this.props.activeUser,
-      tweetBtnClick: false
+      usersTwitter: []
     }
+    this.displayMenu = this.displayMenu.bind(this);
     this.sendRequest = this.sendRequest.bind(this);
     this.twitterActivate = this.twitterActivate.bind(this);
+  }
+  displayMenu() {
+    this.setState({ menuDisplayed: !this.state.menuDisplayed });
   }
   // <TwitterBtn activeUser={this.state.userLoggedIn} />
   sendRequest() {
@@ -48,11 +53,13 @@ class ProfilePage extends Component {
     const doShow = {
       display: this.state.requestIcon
     }
-
     // There must be someway to set Time on the Display variable
     const display = this.state.requestSent
       ? doShow
       : dontShow;
+    const menu = this.state.menuDisplayed
+      ? 'block'
+      : 'none'
     const twitterNewPos = this.state.tweetBtnClick
       ? 'twitter-new-position'
       : 'twitter-btn-container';
@@ -74,7 +81,39 @@ class ProfilePage extends Component {
           </div>
         </div>
       </section>
-      <section className="menu-drop-down"></section>
+      {/* Navigation */}
+      <section className="menu-drop-down">
+        <article className="menu-btn-container">
+          <article className="logo-btn-wrapper">
+            <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          </article>
+          <article className="drop-down-container">
+            <button onClick={this.displayMenu}>
+              <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
+            </button>
+          </article>
+          <article className="menu-container" style={{display: menu}}>
+            <div className="menu-container-glasseffect">
+              <div className="menu-option">
+                <div className="icon-box">
+                  <img className="screen-icon" src="Screen_Icon.png" alt="Normalscreen Icon"/>
+                </div>
+                <div className="description-icon">
+                  <h6>Normal Screen Mode</h6>
+                </div>
+              </div>
+              <div className="menu-option">
+                <div className="icon-box">
+                  <img className="logout-icon" src="Logout_Icon.png" alt="Log Out Icon"/>
+                </div>
+                <div className="description-icon">
+                  <h6>Log out</h6>
+                </div>
+              </div>
+            </div>
+          </article>
+        </article>
+      </section>
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Rival&#39;s Profile</h3>
       </section>
@@ -90,8 +129,8 @@ class ProfilePage extends Component {
         </article>
         <article className="middle-circle-container">
           <div className="img-container">
-            <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
             <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
+            <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
           </div>
           <div className="victory-recent-container">
             <img src="Crowned_Champion.png" alt="crown champion symbol"/>
@@ -182,13 +221,6 @@ class ProfilePage extends Component {
           <div className="notification-amount">
             <h6>1</h6>
           </div>
-      </section>
-      {/* Navigation */}
-      <section className="nav-display">
-        <article className="logo-wrapper">
-          <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-          <h3 className="white-logo-name">Champ</h3>
-        </article>
       </section>
     </div>);
   }

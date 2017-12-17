@@ -41,9 +41,19 @@ class BattleDisplayReady extends Component {
       this.setState({connectionMade:true})
     }, 5000)
     // There must be someway to set Time on the Display variable
-    return (<div className="battle-ready-container">
-
-      <section className="menu-drop-down"></section>
+    return (
+    <div className="battle-ready-container">
+      {/* Navigation */}
+      <section className="menu-drop-down">
+        <article className="menu-btn-container">
+          <article className="logo-btn-wrapper">
+            <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          </article>
+          <article className="drop-down-container">
+            <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
+          </article>
+        </article>
+      </section>
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Battle Arena</h3>
       </section>

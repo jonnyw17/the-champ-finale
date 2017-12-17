@@ -32,7 +32,17 @@ class ChampDisplay extends Component {
     return (
       <div className="champ-display-container">
 
-        <section className="menu-drop-down"></section>
+      {/* Navigation */}
+      <section className="menu-drop-down">
+        <article className="menu-btn-container">
+          <article className="logo-btn-wrapper">
+            <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
+          </article>
+          <article className="drop-down-container">
+            <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
+          </article>
+        </article>
+      </section>
         <section className="activity-name-wrapper">
 
           <h3 className="activity-name">Area Champion</h3>
@@ -61,13 +71,13 @@ class ChampDisplay extends Component {
             <div className="ghost-separator"></div>
             <Link to="/searchprofile">
               <button className="nav-btn">
-                <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
+                <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
               </button>
             </Link>
             <div className="ghost-separator"></div>
             <Link to="champdisplay">
               <button className="nav-btn">
-                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
+                <img className="button-highlight" src="Button_Highlight.png" alt="highlight button"/>
                 <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
               </button>
             </Link>

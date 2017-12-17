@@ -8,7 +8,16 @@ class BattleDisplay extends Component {
     return (<div className="battle-display-container">
 
     {/* Navigation */}
-    <section className="menu-drop-down"></section>
+    <section className="menu-drop-down">
+      <article className="menu-btn-container">
+        <article className="logo-btn-wrapper">
+          <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
+        </article>
+        <article className="drop-down-container">
+          <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
+        </article>
+      </article>
+    </section>
 
     <section className="activity-name-wrapper">
       <h3 className="activity-name">Battle Tracker</h3>
@@ -44,6 +53,7 @@ class BattleDisplay extends Component {
           <div className="ghost-separator"></div>
           <Link to="/battledisplay">
             <button className="nav-btn">
+              <img className="button-highlight" src="Button_Highlight.png" alt="highlight button"/>
               <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>
           </Link>
