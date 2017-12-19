@@ -1,0 +1,16 @@
+[15:18]
+
+GitKraken Logs
+
+11:27 - Additional Fullscreen + Logout integration - Was able
+to integrate the "Nav Bar" features with all containers
+
+13:47 - CSS Fixes for every container - After integrating all
+containers with Nav bar functionality - for specific containers the
+nav bar should be hidden from instance '~/'; i.e. Home.js
+
+14:32 - Component Decomposition + Fix Functionality - TwitterBtn +
+TwitterDialog component were decomposed; with a more boilerplate code
+than required, however development time is of the essence.
+
+15:06 - TwitterBtn Fully integrated into App

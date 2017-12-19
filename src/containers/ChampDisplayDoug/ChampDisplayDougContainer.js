@@ -32,7 +32,6 @@ class ChampDisplay extends Component {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
   render() {
-    console.log(this.state.userLoggedIn);
     const Completionist = () => <span>You are good to go!</span>;
 
     const renderer = ({ hours, minutes, seconds, completed }) => {

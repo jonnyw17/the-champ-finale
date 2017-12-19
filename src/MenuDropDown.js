@@ -18,7 +18,6 @@ class MenuDropDown extends Component {
     const menu = this.props.isFullscreen && this.state.menuDisplayed
       ? 'block'
       : 'none';
-      console.log('this.props.isFullscreen ' + this.props.isFullscreen);
     return (
       <div className="menu-drop-down">
         <article className="menu-btn-container">

@@ -24,7 +24,6 @@ class ChampionDoug extends Component {
         <article className="middle-circle-container">
           <div className="img-container">
             <img className="gamer-img" src="Doug_Face_Circular.png" alt="gamer"/>
-            <img className="highlight-img" src="Blue_Player_Highlight.png" alt="blue_highlight_ring"/>
           </div>
           <div className="victory-recent-container">
             <img src="Crowned_Champion.png" alt="crown champion symbol"/>

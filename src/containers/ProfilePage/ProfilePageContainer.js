@@ -7,7 +7,6 @@ import './TwitterDialog';
 // import ChallengeRequestSent from './ChallengeRequestSent';
 // import GuideStep3 from './GuideStep3';
 // import GuideStep4 from './GuideStep4';
-import MenuDropDown from './MenuDropDown';
 import TwitterDialog from './TwitterDialog';
 import TwitterBtn from './TwitterBtn';
 
@@ -44,7 +43,6 @@ class ProfilePage extends Component {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
   render() {
-    console.log("this.state.tweetBtnClick: " + this.state.tweetBtnClick);
     // 1) Triggers when to display the notification
     const dontShow = {
       display: this.state.requestIcon
@@ -62,6 +60,7 @@ class ProfilePage extends Component {
     const twitterAnimation = this.state.tweetBtnClick
       ? 'twitter-move-animation'
       : '';
+      console.log(this.state.requestSent);
     return (<div className="profile-container">
       {/* Challenge Accepted Banner */}
       {/* There still needs to be a timeout period for it appear and disappear */}
@@ -126,8 +125,8 @@ class ProfilePage extends Component {
         }
         {/*Twitter Button*/}
         <TwitterBtn twitterActivate={this.twitterActivate} tweetBtnClick={this.state.tweetBtnClick}/>
-        
-          <button className="challenge-btn" onClick={this.SendRequest} style={{
+
+          <button className="challenge-btn" onClick={this.sendRequest} style={{
                       display: this.state.requestSent
                         ? 'none'
                         : 'flex'
