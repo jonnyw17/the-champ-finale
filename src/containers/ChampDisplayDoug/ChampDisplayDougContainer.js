@@ -82,7 +82,7 @@ class ChampDisplay extends Component {
             <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
             <h6>CHALLENGE</h6>
           </button>
-        }
+          }
         {/*TwitterDialog*/}
         {
           this.state.tweetBtnClick

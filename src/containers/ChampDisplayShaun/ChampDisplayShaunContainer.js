@@ -6,6 +6,7 @@ import Countdown from 'react-countdown-now';
 
 import ChampionShaun from './ChampionShaun';
 import MenuDropDown from './MenuDropDown';
+import TwitterBtn from './TwitterBtn';
 import TwitterDialog from './TwitterDialog';
 
 import './ChampDisplay.css';
@@ -15,28 +16,21 @@ class ChampDisplay extends Component {
     super(props)
     this.state = {
       user: [],
-      tweetBox: 'none',
       requestSent: false,
       tutorialsDisplay: true,
       countdownOver: false,
       tweetBtnClick: false
     }
-    this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
-    this.TwitterActivate = this.TwitterActivate.bind(this);
+    this.twitterActivate = this.twitterActivate.bind(this);
   }
-
   componentDidMount() {
     axios.get('https://thechamp-be.herokuapp.com/users/').then((res) => {
       this.setState({user: res.data})
     })
   }
-  removeTutorialDisplay() {
-    this.setState({tutorialsDisplay:false});
-  }
-  TwitterActivate() {
+  twitterActivate() {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
-
   render() {
     console.log(this.state.userLoggedIn);
     const Completionist = () => <span>You are good to go!</span>;
@@ -56,20 +50,12 @@ class ChampDisplay extends Component {
         return <span>{hours}:{minutes}:{seconds}</span>;
       }
     };
-    const twitterNewPos = this.state.tweetBtnClick
-      ? 'twitter-new-position'
-      : 'twitter-btn-container';
-    const twitterAnimation = this.state.tweetBtnClick
-      ? 'twitter-move-animation'
-      : '';
     return (
       <div className="champ-display-container">
-        {/* Navigation Top*/}
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>
         </section>
         <section className="ghost-section"></section>
-
         <ChampionShaun/>
 
         <section className="champ-actions-container">
@@ -96,7 +82,7 @@ class ChampDisplay extends Component {
             <img src="Provoke_Icon_White.png" alt="Provoke Icon"/>
             <h6>CHALLENGE</h6>
           </button>
-        }
+          }
         {/*TwitterDialog*/}
         {
           this.state.tweetBtnClick
@@ -104,22 +90,7 @@ class ChampDisplay extends Component {
             : ""
         }
         {/*Twitter Button*/}
-        <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
-                    display: this.state.requestSent
-                      ? 'none'
-                      : 'flex'
-                  }}>
-          <div className="twitter-btn">
-            <img src="Twitter_Icon_White.png" alt="White Twitter"/>
-          </div>
-        </button>
-          <button className="challenge-sent pos-abs" style={{
-                      display: this.state.requestSent
-                        ? 'flex'
-                        : 'none'
-                    }}>
-            <h6>CHALLENGE SENT !</h6>
-          </button>
+        <TwitterBtn twitterActivate={this.twitterActivate} tweetBtnClick={this.state.tweetBtnClick}/>
         </section>
         {/* Navigation Bar */}
         <section className="nav-bar">

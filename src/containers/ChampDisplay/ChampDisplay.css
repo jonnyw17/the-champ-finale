@@ -116,7 +116,7 @@
     height: 12.5vh;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center; }
   .champ-display-container .champ-actions-container .challenge-btn {
     height: 50px;

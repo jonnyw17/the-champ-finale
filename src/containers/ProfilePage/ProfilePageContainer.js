@@ -9,6 +9,7 @@ import './TwitterDialog';
 // import GuideStep4 from './GuideStep4';
 import MenuDropDown from './MenuDropDown';
 import TwitterDialog from './TwitterDialog';
+import TwitterBtn from './TwitterBtn';
 
 import './ProfilePage.css';
 import './TwitterDialog.css';
@@ -124,15 +125,8 @@ class ProfilePage extends Component {
             : ""
         }
         {/*Twitter Button*/}
-        <button className={twitterNewPos + ' ' + twitterAnimation} onClick={this.TwitterActivate} style={{
-                    display: this.state.requestSent
-                      ? 'none'
-                      : 'flex'
-                  }}>
-          <div className="twitter-btn">
-            <img src="Twitter_Icon_White.png" alt="Twitter"/>
-          </div>
-        </button>
+        <TwitterBtn twitterActivate={this.twitterActivate} tweetBtnClick={this.state.tweetBtnClick}/>
+        
           <button className="challenge-btn" onClick={this.SendRequest} style={{
                       display: this.state.requestSent
                         ? 'none'
