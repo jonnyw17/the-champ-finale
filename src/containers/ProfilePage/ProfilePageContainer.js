@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import './TwitterDialog';
 
-// import ChallengeRequestSent from './ChallengeRequestSent';
+import ChallengeRequest from './ChallengeRequest';
 // import GuideStep3 from './GuideStep3';
 // import GuideStep4 from './GuideStep4';
 import TwitterDialog from './TwitterDialog';
@@ -24,14 +24,14 @@ class ProfilePage extends Component {
       usersTwitter: []
     }
     this.displayMenu = this.displayMenu.bind(this);
-    this.sendRequest = this.sendRequest.bind(this);
+    this.sendingRequest = this.sendingRequest.bind(this);
     this.twitterActivate = this.twitterActivate.bind(this);
   }
   displayMenu() {
     this.setState({ menuDisplayed: !this.state.menuDisplayed });
   }
   // <TwitterBtn activeUser={this.state.userLoggedIn} />
-  sendRequest() {
+  sendingRequest() {
     console.log(true)
     this.setState({requestSent: true});
     setTimeout(() => {
@@ -60,7 +60,6 @@ class ProfilePage extends Component {
     const twitterAnimation = this.state.tweetBtnClick
       ? 'twitter-move-animation'
       : '';
-      console.log(this.state.requestSent);
     return (<div className="profile-container">
       {/* Challenge Accepted Banner */}
       {/* There still needs to be a timeout period for it appear and disappear */}
@@ -124,23 +123,14 @@ class ProfilePage extends Component {
             : ""
         }
         {/*Twitter Button*/}
-        <TwitterBtn twitterActivate={this.twitterActivate} tweetBtnClick={this.state.tweetBtnClick}/>
-
-          <button className="challenge-btn" onClick={this.sendRequest} style={{
-                      display: this.state.requestSent
-                        ? 'none'
-                        : 'flex'
-                    }}>
-            <img src="Provoke_Icon_White.png" alt="provoke icon"/>
-            <h6>CHALLENGE</h6>
-          </button>
-          <button className="challenge-sent" style={{
-                      display: this.state.requestSent
-                        ? 'flex'
-                        : 'none'
-                    }}>
-            <h6 className="uk-animation-slide-top">CHALLENGE SENT !</h6>
-          </button>
+        <TwitterBtn
+          twitterActivate={this.twitterActivate}
+          tweetBtnClick={this.state.tweetBtnClick}
+        />
+        <ChallengeRequest
+          requestSent={this.state.requestSent}
+          sendingRequest={this.sendingRequest}
+        />
       </section>
       {/* Navigation Bar */}
       <section className="nav-bar">
