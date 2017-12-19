@@ -1,0 +1,114 @@
+.fullscreen {
+  height: 10%; }
+
+.menu-drop-down {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.2); }
+
+.menu-drop-down .menu-btn-container {
+  position: relative;
+  width: 100vw; }
+
+.menu-drop-down .menu-btn-container .logo-btn-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 10vh;
+  width: 25vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.menu-drop-down .menu-btn-container .logo-btn-wrapper .logo-btn {
+  height: 30px;
+  width: auto;
+  margin: 0 5vw; }
+
+.menu-drop-down .menu-btn-container .drop-down-container {
+  position: absolute;
+  right: 0px;
+  height: 10vh;
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.menu-drop-down .menu-btn-container .drop-down-container .drop-down-btn {
+  height: 25px;
+  width: auto;
+  margin: 0 5vw; }
+
+.menu-drop-down .menu-btn-container .menu-container {
+  z-index: 1;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  height: 110px;
+  width: 50vw;
+  background: linear-gradient(to bottom, #14181f, #0c3d55); }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect {
+  height: 110px;
+  width: 50vw;
+  background: rgba(255, 255, 255, 0.25); }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect .menu-option {
+  width: 50vw;
+  display: flex; }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect .menu-option .icon-box {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect .menu-option .icon-box .logout-icon {
+  height: 20px;
+  width: auto;
+  margin: 10px 15px; }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect .menu-option .icon-box .screen-icon {
+  height: 20px;
+  width: auto;
+  margin: 10px 15px; }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect .menu-option .description-icon {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.menu-drop-down .menu-btn-container .menu-container .menu-container-glasseffect .menu-option .description-icon h6 {
+  color: white;
+  letter-spacing: 1px;
+  margin: 10px 0; }
+
+.menu-drop-down .ghost-div {
+  width: 7px;
+  height: 30px;
+  margin: 0 0 0 25px; }
+
+.menu-drop-down .logo-wrapper {
+  height: 10vh;
+  width: 33.3vw;
+  display: flex;
+  align-items: center; }
+
+.menu-drop-down .logo-wrapper img {
+  height: 36px;
+  width: 30px;
+  margin: 0; }
+
+.menu-drop-down .logo-wrapper h3 {
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  color: #FFF;
+  margin: 2.5px 12.5px; }
+
+.menu-drop-down img {
+  height: 30px;
+  width: 7px;
+  margin: 25px 0 0 25px; }

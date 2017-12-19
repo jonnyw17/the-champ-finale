@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {Link} from 'react-router-dom';
 
 import BattleContentOpponent from './BattleContentOpponent.js';
 import BattleContentUser from './BattleContentUser.js';
 import ConnectPendingDisplay from './ConnectPendingDisplay.js';
+import MenuDropDown from './MenuDropDown.js';
 import TrackingBattleDisplay from './TrackingBattleDisplay.js';
 import WinnerStatus from './WinnerStatus.js';
 
@@ -43,21 +45,10 @@ class BattleDisplayReady extends Component {
     // There must be someway to set Time on the Display variable
     return (
     <div className="battle-ready-container">
-      {/* Navigation */}
-      <section className="menu-drop-down">
-        <article className="menu-btn-container">
-          <article className="logo-btn-wrapper">
-            <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
-          </article>
-          <article className="drop-down-container">
-            <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
-          </article>
-        </article>
-      </section>
       <section className="activity-name-wrapper">
-        <h3 className="activity-name">Battle Arena</h3>
+        <h3 className="activity-name">Battle Tracker</h3>
       </section>
-
+      <section className="ghost-section"></section>
       <section className="battle-info">
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>
@@ -154,7 +145,9 @@ class BattleDisplayReady extends Component {
   }
 }
 
-export default BattleDisplayReady;
+const FullscreenableDemoComponent = Fullscreenable()(BattleDisplayReady);
+
+export default FullscreenableDemoComponent;
 
 // DO NOT DELETE ANY OF THIS PLEASE - REQYURED
 // Battle Arena

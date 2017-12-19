@@ -1,7 +1,7 @@
 .nav-platform-display {
   z-index: 1;
   position: fixed;
-  top: 0;
+  top: 0px;
   height: 65px;
   width: 100vw;
   display: flex;
@@ -35,6 +35,8 @@
 
 @media (min-width: 320px) {
   .platform-container {
+    z-index: 1;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, #14181f, #0c3d55); }

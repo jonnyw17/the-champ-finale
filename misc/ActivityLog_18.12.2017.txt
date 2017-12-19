@@ -1,0 +1,30 @@
+[14:34 - 14:48]
+
+Finalised That
+Anthony -
+a) Finishes the front-end;
+  i) Add Fullscreen functionality to the Nav Bar
+
+  Need to fix:
+  ii) The Social Media Button
+  iii) Challenge Button
+  iv) Notifications
+
+b) Soon after help Jonny with the BE get that finished
+  i) Persistent Login Situation - after that's finished
+     move onto the ...
+  ii) Twitter API
+
+c) Connect the API, FE + BE - combined. Never structured
+an API call system for a react codebase. Assuming it's
+the same with Vanilla JavaScript from the code Jonny has shown
+me.
+
+Jonny's Role
+Is what Anthony is doing, but only for b) + c)
+
+[18:15 - 18:39]
+
+ADVICE
+Develop components separate
+this.props to see what props are being passed back and fourth

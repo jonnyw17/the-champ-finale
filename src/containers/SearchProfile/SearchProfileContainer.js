@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {Link} from 'react-router-dom';
 
+import MenuDropDown from './MenuDropDown';
 import OnlineProfile from './OnlineProfile';
 import OfflineProfile from './OfflineProfile';
-import GuideStep2 from './GuideStep2';
+// import GuideStep2 from './GuideStep2';
 
 import './SearchProfile.css';
 
@@ -31,17 +33,9 @@ class SearchProfile extends Component {
     const offlineFontWeight = this.state.online? normal : bold;
     return (
     <div className="main-container">
-    {/* Navigation */}
-    <section className="menu-drop-down">
-      <article className="menu-btn-container">
-        <article className="logo-btn-wrapper">
-          <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
-        </article>
-        <article className="drop-down-container">
-          <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
-        </article>
-      </article>
-    </section>
+      <section className="activity-name-wrapper">
+        <h3 className="activity-name">Search Profile</h3>
+      </section>
       <section className="status-wrapper">
         <article className="status-container">
 
@@ -59,6 +53,7 @@ class SearchProfile extends Component {
 
         </article>
       </section>
+      <section className="ghost-section"></section>
       <section className="nav-bar">
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
@@ -84,9 +79,11 @@ class SearchProfile extends Component {
         </article>
       </section>
       {/*Display Step 1 Tip*/}
-      {<GuideStep2/>}
+      {/*<GuideStep2/>*/}
     </div>)
   }
 }
 
-export default SearchProfile;
+const FullscreenableDemoComponent = Fullscreenable()(SearchProfile);
+
+export default FullscreenableDemoComponent;

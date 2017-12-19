@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {Link} from 'react-router-dom';
 
 import './TwitterDialog';
@@ -6,6 +7,7 @@ import './TwitterDialog';
 // import ChallengeRequestSent from './ChallengeRequestSent';
 // import GuideStep3 from './GuideStep3';
 // import GuideStep4 from './GuideStep4';
+import MenuDropDown from './MenuDropDown';
 import TwitterDialog from './TwitterDialog';
 
 import './ProfilePage.css';
@@ -15,7 +17,6 @@ class ProfilePage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      menuDisplayed: false,
       requestSent: false,
       requestIcon: 'none',
       tweetBtnClick: false,
@@ -38,18 +39,14 @@ class ProfilePage extends Component {
       this.setState({requestIcon: 'block'});
     }, 3000);
   }
-
   twitterActivate() {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
-
   render() {
     // 1) Triggers when to display the notification
-
     const dontShow = {
       display: this.state.requestIcon
     };
-
     const doShow = {
       display: this.state.requestIcon
     }
@@ -57,9 +54,6 @@ class ProfilePage extends Component {
     const display = this.state.requestSent
       ? doShow
       : dontShow;
-    const menu = this.state.menuDisplayed
-      ? 'block'
-      : 'none'
     const twitterNewPos = this.state.tweetBtnClick
       ? 'twitter-new-position'
       : 'twitter-btn-container';
@@ -67,7 +61,6 @@ class ProfilePage extends Component {
       ? 'twitter-move-animation'
       : '';
     return (<div className="main-container">
-
       {/* Challenge Accepted Banner */}
       {/* There still needs to be a timeout period for it appear and disappear */}
       <section className="challenge-accepted-banner uk-animation-slide-top" style={display}>
@@ -81,42 +74,10 @@ class ProfilePage extends Component {
           </div>
         </div>
       </section>
-      {/* Navigation */}
-      <section className="menu-drop-down">
-        <article className="menu-btn-container">
-          <article className="logo-btn-wrapper">
-            <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
-          </article>
-          <article className="drop-down-container">
-            <button onClick={this.displayMenu}>
-              <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
-            </button>
-          </article>
-          <article className="menu-container" style={{display: menu}}>
-            <div className="menu-container-glasseffect">
-              <div className="menu-option">
-                <div className="icon-box">
-                  <img className="screen-icon" src="Screen_Icon.png" alt="Normalscreen Icon"/>
-                </div>
-                <div className="description-icon">
-                  <h6>Normal Screen Mode</h6>
-                </div>
-              </div>
-              <div className="menu-option">
-                <div className="icon-box">
-                  <img className="logout-icon" src="Logout_Icon.png" alt="Log Out Icon"/>
-                </div>
-                <div className="description-icon">
-                  <h6>Log out</h6>
-                </div>
-              </div>
-            </div>
-          </article>
-        </article>
-      </section>
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Rival&#39;s Profile</h3>
       </section>
+      <section className="ghost-section"></section>
       <section className="profile-info">
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>
@@ -226,47 +187,6 @@ class ProfilePage extends Component {
   }
 }
 
-export default ProfilePage;
+const FullscreenableDemoComponent = Fullscreenable()(ProfilePage);
 
-// PLEASE DO NOT DELETE
-//
-// <article className="champ-display">
-//   <div className="game-img-display">
-//     <div className="champ-details">
-//       <div className="champ-status">
-//         <div className="img-container">
-//           <img className="gamer-img" src="Shaun_Face_Circular.png" alt="gamer"/>
-//         </div>
-//         <article className="champ-info">
-//           <div className="champ-name">
-//             <h4>Shaun Gibson</h4>
-//           </div>
-//           <div className="champ-rank">
-//             <h6>SILVER</h6>
-//           </div>
-//           <article className="champ-trophies"></article>
-//           <div className="horizontal-decor-line"></div>
-//           <img src="Champion_Name_Decoration.png" alt="champion decoration"/>
-//         </article>
-//       </div>
-//
-//       <div className="challenge-btn-container uk-animation-shake">
-//
-//         {/* 1) Button Clicked */}
-//         <button className="challenge-btn" onClick={this.SendRequest} style={{
-//             display: this.state.requestSent
-//               ? 'none'
-//               : 'flex'
-//           }}>
-//           <img src="Provoke_Icon_Brown.png" alt="challenge icon"/>
-//           <h4>Challenge</h4>
-//         </button>
-//
-//         {/* 2) Toggles to this button */}
-//
-//
-//       </div>
-//
-//     </div>
-//   </div>
-// </article>
+export default FullscreenableDemoComponent;

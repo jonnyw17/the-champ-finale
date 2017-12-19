@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Fullscreenable from 'react-fullscreenable';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Link, Switch, BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 import BattleDisplay from './containers/BattleDisplay/BattleDisplayContainer';
 import BattleDisplayReady from './containers/BattleDisplayReady/BattleDisplayReadyContainer';
@@ -8,13 +9,15 @@ import ChampDisplay from './containers/ChampDisplay/ChampDisplayContainer';
 import ChampDisplayDoug from './containers/ChampDisplayDoug/ChampDisplayDougContainer';
 import ChampDisplayShaun from './containers/ChampDisplayShaun/ChampDisplayShaunContainer';
 import Home from './containers/Home/HomeContainer';
+import MenuDropDown from './MenuDropDown';
 import Platform from './containers/Platform/PlatformContainer';
 import ProfilePage from './containers/ProfilePage/ProfilePageContainer';
 import SearchProfile from './containers/SearchProfile/SearchProfileContainer';
 import SignUp from './containers/SignUp/SignUpContainer';
 import SignIn from './containers/SignIn/SignInContainer';
 
-import './FullScreenOverlay.css'
+import './app.css';
+import './FullScreenOverlay.css';
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +46,7 @@ class App extends Component {
     return (
       <div>
         <div className="fullscreen-overlay-container" style={{display : fullScreenOption}}>
-            <button className="cancel-btn" onClick={()=>{this.setState({fullscreenOptionHidden:true})}}>
+            <button className="cancel-btn">
               <img src="Cancel_Glyph.png" alt="cancel glyph"/>
             </button>
             <section className="fullscreen-overlay-wrapper">
@@ -63,7 +66,8 @@ class App extends Component {
             </section>
         </div>
         <Router>
-          <div>
+        <div>
+          <Switch>
             {/*Route Starts Here*/}
             <Route exact={true} path="/" component={Home}/>
             {/*Secondary Routes*/}
@@ -88,6 +92,11 @@ class App extends Component {
             <Route path="/battledisplayready" component={BattleDisplayReady}/>
             <Route path="/champdisplaydoug" component={ChampDisplayDoug}/>
             <Route path="/champdisplayshaun" component={ChampDisplayShaun}/>
+            </Switch>
+            <MenuDropDown
+              isFullscreen={this.props.isFullscreen}
+              toggleFullscreen={this.props.toggleFullscreen}
+            />
           </div>
         </Router>
       </div>

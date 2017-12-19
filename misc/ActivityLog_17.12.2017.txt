@@ -1,0 +1,13 @@
+3:24
+
+[Problem]
+> 1) ChampDisplayDougContainer 2) ChampDisplayShaunContainer
+Needs a quick fix - image has the z-index removed, so just need
+to apply that work around.
+
+> ProfilePage
+The Twitter Icon + Challenge doesn't work - need to apply FE fixes
+
+> ProfilePage
+Menu's look can be given a quick improvement - looks a bit shoddy
+when viewed on the phone; may need to use top ghost div.

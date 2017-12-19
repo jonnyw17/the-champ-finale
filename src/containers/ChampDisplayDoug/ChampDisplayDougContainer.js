@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import Countdown from 'react-countdown-now';
 
 import ChampionDoug from './ChampionDoug';
+import MenuDropDown from './MenuDropDown';
 import TwitterDialog from './TwitterDialog';
 
 import './ChampDisplay.css';
@@ -62,12 +64,10 @@ class ChampDisplay extends Component {
       : '';
     return (
       <div className="main-container">
-
-        <section className="menu-drop-down"></section>
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>
         </section>
-
+        <section className="ghost-section"></section>
         <ChampionDoug/>
 
         <section className="champ-actions-container">
@@ -149,19 +149,10 @@ class ChampDisplay extends Component {
           this.state.requestSent
             /*? <GuideStep4/> : <GuideStep3/>*/
         }
-        {/* Navigation */}
-        <section className="nav-display">
-          <article className="logo-wrapper">
-            <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
-            <h3 className="white-logo-name">Champ</h3>
-          </article>
-        </section>
       </div>
     );
   }
 }
+const FullscreenableDemoComponent = Fullscreenable()(ChampDisplay);
 
-export default ChampDisplay;
-
-// {/*Display Step 1 Tip*/}
-// {<GuideStep1/>}
+export default FullscreenableDemoComponent;

@@ -44,12 +44,9 @@ class BattleDisplayReady extends Component {
     }, 5000)
     // There must be someway to set Time on the Display variable
     return (<div className="main-container">
-
-      <section className="menu-drop-down"></section>
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Battle Arena</h3>
       </section>
-
       <section className="battle-info">
         <article className="white-ring-border"></article>
         <article className="game-overlay-display"></article>

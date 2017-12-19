@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 import ChampionUnknown from './ChampionUnknown';
+// import MenuDropDown from './MenuDropDown';
 // import GuideStep1 from './GuideStep1';
 
 import './ChampDisplay.css';
@@ -31,24 +33,12 @@ class ChampDisplay extends Component {
     console.log(this.state.user)
     return (
       <div className="champ-display-container">
-
-      {/* Navigation */}
-      <section className="menu-drop-down">
-        <article className="menu-btn-container">
-          <article className="logo-btn-wrapper">
-            <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
-          </article>
-          <article className="drop-down-container">
-            <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
-          </article>
-        </article>
-      </section>
+        {/* Navigation Top*/}
         <section className="activity-name-wrapper">
-
           <h3 className="activity-name">Area Champion</h3>
         </section>
-
-        <ChampionUnknown/>
+        <section className="ghost-section"></section>
+        <ChampionUnknown />
 
         <section className="actions-container">
           <button className="challenge-btn" style={{
@@ -99,8 +89,6 @@ class ChampDisplay extends Component {
     );
   }
 }
+const FullscreenableDemoComponent = Fullscreenable()(ChampDisplay);
 
-export default ChampDisplay;
-
-// {/*Display Step 1 Tip*/}
-// {<GuideStep1/>}
+export default FullscreenableDemoComponent;

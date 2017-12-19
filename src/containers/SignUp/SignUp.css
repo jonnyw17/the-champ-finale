@@ -124,7 +124,7 @@
   font-weight: 800; }
 
 .form-container .confirm-btn {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   font-size: 21px;
   font-weight: 200;

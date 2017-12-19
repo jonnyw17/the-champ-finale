@@ -10,38 +10,41 @@
   display: flex;
   justify-content: center;
   align-items: center; }
-  .activity-form-container .form-container {
-    width: 320px;
-    height: 320px; }
-  .activity-form-container .form-container .uk-form-label {
-    letter-spacing: 0.8px;
-    font-weight: 100; }
-  .activity-form-container .form-container .uk-form-controls {
-    margin: 0;
-    width: 320px;
-    opacity: 1;
-    border-radius: 10px; }
-  .activity-form-container .form-container .uk-input {
-    background: transparent;
-    opacity: 1;
-    border: none;
-    border-radius: 10px;
-    padding: 0; }
-  .activity-form-container .form-container .horizontal-separator {
-    margin: 2px 0 0 0;
-    background: white;
-    height: 1px;
-    width: 320px; }
-  .activity-form-container .form-container .signin-btn {
-    position: absolute;
-    bottom: 0;
-    left: 27.5px;
-    background: white;
-    height: 50px;
-    width: 360px;
-    border-radius: 10px;
-    margin: 14px 0;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #ce4036; }
+
+.form-container {
+  width: 320px;
+  height: 320px; }
+
+.form-container .uk-form-label {
+  letter-spacing: 0.8px;
+  font-weight: 100; }
+
+.form-container .uk-form-controls {
+  margin: 0;
+  width: 320px;
+  opacity: 1;
+  border-radius: 10px; }
+
+.form-container .uk-input {
+  background: transparent;
+  opacity: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 0; }
+
+.form-container .horizontal-separator {
+  margin: 2px 0 0 0;
+  background: white;
+  height: 1px;
+  width: 320px; }
+
+.form-container .confirm-credentials {
+  position: fixed;
+  bottom: 10px;
+  font-size: 21px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  width: 320px;
+  height: 45px;
+  color: white;
+  background: #007AFF; }

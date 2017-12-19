@@ -8,6 +8,8 @@ h5 {
   font-weight: 600;
 }
 .main-container {
+  z-index: 1;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));

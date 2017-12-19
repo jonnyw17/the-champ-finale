@@ -1,28 +1,20 @@
 import React, {Component} from 'react';
+import Fullscreenable from 'react-fullscreenable';
 import {Link} from 'react-router-dom';
+
+import MenuDropDown from './MenuDropDown';
 
 import './BattleDisplay.css';
 
 class BattleDisplay extends Component {
   render( ) {
-    return (<div className="battle-display-container">
-
-    {/* Navigation */}
-    <section className="menu-drop-down">
-      <article className="menu-btn-container">
-        <article className="logo-btn-wrapper">
-          <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
-        </article>
-        <article className="drop-down-container">
-          <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
-        </article>
-      </article>
-    </section>
-
-    <section className="activity-name-wrapper">
-      <h3 className="activity-name">Battle Tracker</h3>
-    </section>
-
+    return (
+      <div className="battle-display-container">
+      {/* Navigation Top*/}
+      <section className="activity-name-wrapper">
+        <h3 className="activity-name">Battle Tracker</h3>
+      </section>
+      <section className="ghost-section"></section>
       <section className="battle-activity-container">
         <article className="search-container">
           <Link to="/searchprofile">
@@ -64,4 +56,6 @@ class BattleDisplay extends Component {
   }
 }
 
-export default BattleDisplay;
+const FullscreenableDemoComponent = Fullscreenable()(BattleDisplay);
+
+export default FullscreenableDemoComponent;

@@ -8,7 +8,6 @@ class SignIn extends Component {
     super(props);
     this.postUserDetails = this.postUserDetails.bind(this);
   }
-
   postUserDetails(event) {
     event.preventDefault();
     let currentUser = {
@@ -25,15 +24,15 @@ class SignIn extends Component {
   render() {
     return (
     <div className="main-container">
-      <section className="menu-drop-down">
-        <article className="logo-wrapper">
-          <img src="BetGame_Logo_White.png" alt="the champ icon"/>
-          <h3>Champ</h3>
-        </article>
-      </section>
+    <section className="nav-platform-display">
+      <article className="logo-platform-wrapper">
+        <img className="white-logo" src="BetGame_Logo_White.png" alt="white champ logo"/>
+        <h3 className="white-logo-name">Champ</h3>
+      </article>
+    </section>
       <section className="activity-form-container">
         <article className="form-container">
-          <form onSubmit={this.postUserDetails} method="post" className="uk-form-horizontal uk-margin-large">
+          <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
               <label className="uk-form-label white-color">Username</label>
               <div className="uk-form-controls">
                 <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
@@ -44,7 +43,7 @@ class SignIn extends Component {
                 <input className="uk-input form-border-radius" id="form-horizontal-text" type="password" name="password" placeholder="Password"/>
                 <div className="horizontal-separator"></div>
               </div>
-            <input className="signin-btn" type="submit" value="SIGN IN"/>
+            <input className="confirm-credentials" onClick={this.displayInput} type="submit" value="Submit" />
           </form>
         </article>
       </section>
