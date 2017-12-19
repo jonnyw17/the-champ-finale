@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "scss": "node-sass -w ./src/containers/Platform/ -o src/containers/Platform/"
+    "scss": "node-sass -w ./src/containers/ChampDisplay/ -o src/containers/ChampDisplay/"
   },
   "devDependencies": {
     "i": "^0.3.6",

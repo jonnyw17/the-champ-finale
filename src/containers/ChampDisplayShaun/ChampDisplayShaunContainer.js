@@ -63,7 +63,7 @@ class ChampDisplay extends Component {
       ? 'twitter-move-animation'
       : '';
     return (
-      <div className="main-container">
+      <div className="champ-display-container">
         {/* Navigation Top*/}
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>

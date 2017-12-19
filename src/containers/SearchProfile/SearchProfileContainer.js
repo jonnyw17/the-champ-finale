@@ -32,7 +32,7 @@ class SearchProfile extends Component {
     const onlineFontWeight = this.state.online? bold : normal;
     const offlineFontWeight = this.state.online? normal : bold;
     return (
-    <div className="main-container">
+    <div className="search-profile-container">
       <section className="activity-name-wrapper">
         <h3 className="activity-name">Search Profile</h3>
       </section>

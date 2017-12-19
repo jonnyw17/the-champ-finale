@@ -8,6 +8,11 @@
     bottom: 70vh;
   }
 }
+.profile-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, hsl(218,20,10), hsl(200,75,19));
+}
 .twitter-move-animation {
   animation: 0.5s twitter-btn-move;
 }

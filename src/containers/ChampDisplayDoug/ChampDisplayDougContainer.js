@@ -15,13 +15,11 @@ class ChampDisplay extends Component {
     super(props)
     this.state = {
       user: [],
-      tweetBox: 'none',
       requestSent: false,
       tutorialsDisplay: true,
       countdownOver: false,
       tweetBtnClick: false
     }
-    this.removeTutorialDisplay = this.removeTutorialDisplay.bind(this);
     this.TwitterActivate = this.TwitterActivate.bind(this);
   }
 
@@ -29,9 +27,6 @@ class ChampDisplay extends Component {
     axios.get('https://thechamp-be.herokuapp.com/users/').then((res) => {
       this.setState({user: res.data})
     })
-  }
-  removeTutorialDisplay() {
-    this.setState({tutorialsDisplay:false});
   }
   TwitterActivate() {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
@@ -63,7 +58,7 @@ class ChampDisplay extends Component {
       ? 'twitter-move-animation'
       : '';
     return (
-      <div className="main-container">
+      <div className="champ-display-container">
         <section className="activity-name-wrapper">
           <h3 className="activity-name">Area Champion</h3>
         </section>

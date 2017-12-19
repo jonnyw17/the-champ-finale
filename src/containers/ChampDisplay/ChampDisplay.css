@@ -118,10 +118,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center; }
-  .champ-display-container .champ-actions-container button {
-    height: 50px;
-    width: 200px; }
   .champ-display-container .champ-actions-container .challenge-btn {
+    height: 50px;
+    width: 200px;
     color: white;
     background: none;
     border: 2px solid white;

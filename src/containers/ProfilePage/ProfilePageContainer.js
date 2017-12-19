@@ -43,6 +43,7 @@ class ProfilePage extends Component {
     this.setState({tweetBtnClick: !this.state.tweetBtnClick});
   }
   render() {
+    console.log("this.state.tweetBtnClick: " + this.state.tweetBtnClick);
     // 1) Triggers when to display the notification
     const dontShow = {
       display: this.state.requestIcon
@@ -60,7 +61,7 @@ class ProfilePage extends Component {
     const twitterAnimation = this.state.tweetBtnClick
       ? 'twitter-move-animation'
       : '';
-    return (<div className="main-container">
+    return (<div className="profile-container">
       {/* Challenge Accepted Banner */}
       {/* There still needs to be a timeout period for it appear and disappear */}
       <section className="challenge-accepted-banner uk-animation-slide-top" style={display}>

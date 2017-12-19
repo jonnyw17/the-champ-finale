@@ -1,3 +1,8 @@
+.search-profile-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #14181f, #0c3d55); }
+
 .border-top-bottom-online {
   border-top: 0px solid white;
   border-bottom: 0px solid white; }

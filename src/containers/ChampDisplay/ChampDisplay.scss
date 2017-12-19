@@ -140,11 +140,9 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        button {
+        .challenge-btn {
           height: 50px;
           width: 200px;
-        }
-        .challenge-btn {
           color: white;
           background: none;
           border: 2px solid white;

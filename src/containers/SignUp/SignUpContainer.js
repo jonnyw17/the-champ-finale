@@ -245,6 +245,9 @@ class SignUp extends Component {
               </div>
               <div className="sub-header"></div>
               <div className="uk-margin">
+              <div className="uk-form-controls">
+                <input onChange={this.showPostcodeInput} className="uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Number" required="required"/>
+              </div>
                 <div className="uk-form-controls">
                   <input onChange={this.showPostcodeInput} className="uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Name" required="required"/>
                 </div>
