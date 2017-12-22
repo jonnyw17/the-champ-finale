@@ -28,6 +28,7 @@
     "scss": "node-sass -w ./src/containers/ChampDisplay/ -o src/containers/ChampDisplay/"
   },
   "devDependencies": {
+    "cypress": "^1.4.0",
     "i": "^0.3.6",
     "node-sass": "^4.7.2",
     "nodemon": "^1.12.7"

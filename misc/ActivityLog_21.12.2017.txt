@@ -1,0 +1,39 @@
+[18:57] [Re-edited: 19:27]
+
+After Spending the majority of the day, producing a organisational
+framework - studying ways to improve workflow, reduce clutter. Actually
+the entire last 2 days spent.
+
+1. Altering Environment - Physical Space around me
+2. Copying down things - notes that I written down and placing it on the
+cloud
+3. Setting up a programming organisational framework - such as workflows
+every down to
+  + How tabs are organised on browsers
+  + Mac Desktop Layout
+Using the "Where is" Test.
+
+Decide to that learning to use cypress.io - will save me a tonne of
+time in the future.
+
+
+[19:22]
+
+Kaizan Diversion - divert focus away from a current task, by fixing
+a current fault or improving something - small minor change to
+current process.
+
+Yes I experienced a `Kaizan Diversion`, for some time there. Tried
+to find hot keys for some application. Trying initially save a
+small pocket of time. This time saving compounds when a hotkey/shortcut is
+used multiple times, integrated with other hotkey/shortcuts.
+
+Remember to be in the right directory whenever whenever installing a package.
+Recommend you use _Yarn_ for large packages, such as `cypress` - it took
+4 - 6 mins Macbook Air 2014.
+
+
+[19:33]
+
+Need to remove git ignore to use node_modules in atom.
+(Solution) - just use another terminal

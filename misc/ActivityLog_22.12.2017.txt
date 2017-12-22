@@ -1,0 +1,38 @@
+[14:57]
+
+Cypress.io did work due to some malware problem
+
+[15:34]
+
+Looking into the problem sooner, due to a malware issue.
+The IP Address within the house has been blacklisted.
+So I'll need to these 2 steps; before using Cypress.
+
+Another thing, that I can deduce from this - 2 possible
+scenarios;
+
+  1) there was some form of malware that must have existed
+  on the SpaceportX network. Managed to latch onto my local
+  machine somehow.
+  We can double check this by going back to SpaceportX, using
+  any website that using CloudFlares
+
+  OR
+
+  2) The Malware must have entered the network, via some device
+  that is not my laptop.
+    - Could be my
+    - My Mobile
+    - Other people's devices in the house
+
+Solution
+
+> Check Malware Origin
+
+A) Check next time whether you can use Cypress.io, in SpaceportX.
+If it's possible, then the virus must have originated from the house
+
+1) Do a full sweep of everyone's devices - mainly laptops, as phones
+are better protected.
+
+2) Find a way to get the house's IP address from being blacklisted.
