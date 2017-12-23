@@ -203,7 +203,7 @@ class SignUp extends Component {
               <div className="sub-header"></div>
               <div className="uk-margin">
                 <div className="uk-form-controls">
-                  <input onChange={this.userInput} className="uk-input" id="form-horizontal-text" type="text" name="fullname" placeholder="Full name" required="required"/>
+                  <input onChange={this.userInput} className="fullname-input uk-input" id="form-horizontal-text" type="text" name="fullname" placeholder="Full name" required="required"/>
                 </div>
                 <div className="input-line"></div>
               </div>
@@ -217,7 +217,7 @@ class SignUp extends Component {
               <div className="sub-header"></div>
               <div className="uk-margin">
                 <div className="uk-form-controls">
-                  <input className="uk-input" id="form-horizontal-text" type="text" name="username" placeholder="Username" required="required"/>
+                  <input className="username-input uk-input" id="form-horizontal-text" type="text" name="username" placeholder="Username" required="required"/>
                 </div>
                 <div className="input-line"></div>
               </div>
@@ -231,7 +231,7 @@ class SignUp extends Component {
               <div className="sub-header_included">Make sure it&#39;s 6 characters or more</div>
               <div className="uk-margin">
                 <div className="uk-form-controls">
-                  <input className="uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password" required="required"/>
+                  <input className="password-input uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password" required="required"/>
                 </div>
                 <div className="input-line"></div>
               </div>
@@ -246,13 +246,13 @@ class SignUp extends Component {
               <div className="sub-header"></div>
               <div className="uk-margin">
               <div className="uk-form-controls">
-                <input onChange={this.showPostcodeInput} className="uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Number" required="required"/>
+                <input onChange={this.showPostcodeInput} className="address-input-1 uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Number" required="required"/>
               </div>
                 <div className="uk-form-controls">
-                  <input onChange={this.showPostcodeInput} className="uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Name" required="required"/>
+                  <input onChange={this.showPostcodeInput} className="address-input-2 uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Name" required="required"/>
                 </div>
                 <div className="uk-form-controls">
-                  <input onChange={this.userInput} className="uk-input uk-animation-slide-right" style={displayPostcode} id="form-horizontal-text" type="text" name="city" placeholder="City" required="required"/>
+                  <input onChange={this.userInput} className="address-input-3 uk-input uk-animation-slide-right" style={displayPostcode} id="form-horizontal-text" type="text" name="city" placeholder="City" required="required"/>
                 </div>
                 <div className="input-line"></div>
               </div>
@@ -268,21 +268,21 @@ class SignUp extends Component {
                 <div className="uk-form-controls">
                   <div className="at-html-entity">&#64;</div>
                   <div className="division-line"></div>
-                  <input className="uk-input twitter-handle-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
+                  <input className="twitter-handle-input uk-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
                 </div>
                 <div className="input-line"></div>
               </div>
             </article>
 
-            <input className="confirm-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
-            <input className="confirm-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
+            <input className="confirm-btn form-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
+            <input className="submit-btn form-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
             <article className='input-container uk-animation-slide-right' style={displayNext}>
               <div className="centered-description">
                 <label className="uk-form-label">Ready to be The Champ?!</label>
               </div>
             </article>
             <Link to='/platform'>
-              <input className="confirm-btn" type="button" value="Next" style={displayNext}/>
+              <input className="next-btn form-btn" type="button" value="Next" style={displayNext}/>
             </Link>
           </form>
         </section>

@@ -45,26 +45,7 @@ class App extends Component {
       : 'flex';
     return (
       <div>
-        <div className="fullscreen-overlay-container" style={{display : fullScreenOption}}>
-            <button className="cancel-btn">
-              <img src="Cancel_Glyph.png" alt="cancel glyph"/>
-            </button>
-            <section className="fullscreen-overlay-wrapper">
-              <article className="fullscreen-overlay">
-              <div>
-                <h5>Recommend Fullscreen Mode.</h5>
-              </div>
-                <button className="fullscreen-logo-wrapper" onClick={this.props.toggleFullscreen}>
-                  <div className="fullscreen-logo">
-                    <img src="Full_Screen_Symbol.png" alt="Fullscreen" />
-                    <div>
-                      <h6>Fullscreen Mode</h6>
-                    </div>
-                  </div>
-                </button>
-              </article>
-            </section>
-        </div>
+        
         <Router>
         <div>
           <Switch>
@@ -93,10 +74,12 @@ class App extends Component {
             <Route path="/champdisplaydoug" component={ChampDisplayDoug}/>
             <Route path="/champdisplayshaun" component={ChampDisplayShaun}/>
             </Switch>
-            <MenuDropDown
-              isFullscreen={this.props.isFullscreen}
-              toggleFullscreen={this.props.toggleFullscreen}
-            />
+            {/*
+              <MenuDropDown
+                isFullscreen={this.props.isFullscreen}
+                toggleFullscreen={this.props.toggleFullscreen}
+              />
+            */}
           </div>
         </Router>
       </div>

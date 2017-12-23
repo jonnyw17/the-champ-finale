@@ -1,9 +1,9 @@
 [14:57]
-
+(General)
 Cypress.io did work due to some malware problem
 
 [15:34]
-
+(General)
 Looking into the problem sooner, due to a malware issue.
 The IP Address within the house has been blacklisted.
 So I'll need to these 2 steps; before using Cypress.
@@ -36,3 +36,48 @@ If it's possible, then the virus must have originated from the house
 are better protected.
 
 2) Find a way to get the house's IP address from being blacklisted.
+
+
+[18:45]
+(General)
+Had the first of many Christmas dinners to come. So time was not placed
+into learning how to use Cypress.io .
+
+
+[19:11]
+(General)
+
+Note that Cypress is still a bit buggy - you may have to restart the
+code editor or the local machine, if it is enable to local test files
+
+(Comment: Cypress.io)
+Testing in general is very useful. However the current learning curve
+is pretty high. Cypress all-in-one package offers a GUI to see all
+this testing happen really time.
+The setup and execution costs are minimised, the GUI allow use to test
+not only on a webpage, but also on different sized devices - visually
+simulates user input.
+
+(N.B: Cypress.io)
+Cypress ESLint Plugin is available
+
+
+[19:49]
+(General)
+Can't seem to use fullscreen mode with Cypress - thus I may have to
+test this manually - (no automated tests sadly, for now).
+
+I'll have to manually disable before I can use Cypress.io
+
+[20:45]
+(General)
+Cypress are able to check whether an element is visible or not.
+I dunno if it can test for elements are tappable, or some element
+is covering it up with another element.
+
+[22:00]
+(General)
+Did some simple tests. When the number tests you write increases, you
+may wanna use test reporters. This allows to see the test coverage of
+cypress. Because Cypress is build on 'Mocha', you can use test reporters
+built for Mocha such as 'Junit', 'teamcity'
