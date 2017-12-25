@@ -1,0 +1,43 @@
+[12:43] [Extended - 16:41]
+(General)
+
+Currently spending more time studying Cypress.io, as learning BDD + TDD will save us
+a large amount time.
+
+  - Write Fewer Bugs
+  - Avoid Manual Testing (All those console.log())
+  - Get a Faster Feedback Loop
+  - Increased Confidence when Changing Code
+  - When a change is made, tests can ran. Just to make sure the software doesn't break
+    upon change & whenever the software is broken at that point, it is tested as soon
+    as possible.
+  - Reduce the tech debt that can be amounted over time
+  - Gain experience more quickly in fixing bugs in software, as software being built
+    is tracked - any bugs that show up, are squashed as soon as possible.
+
+
+
+[13:53]
+(General)
+
+Being Watching James Whittakers Video on Test Engineering. The thing that fascinated me
+the most is that he mentioned the use of a "Gamified Experience", to aid testers and
+developers, in mitigating the risks of software breaking.
+
+[16:41]
+(General)
+
+After doing more in depth studying of Testing methods,
+I've decided to;
+
+1. Implement testing within the application
+2. Plan a goal, from a high level overview -> Using ACC Analysis [Attribute, Component,
+Capability Analysis].
+  - Using the Coloured ranking system, rather than RMI - I don't know to calculate that
+3. Look into BDD in Cucumber.io
+
+Questions to look out for, how to prioritise tests over others?
+- Risk ?
+- Value ?
+
+How to perform a RMI calculation? Trade Secret?

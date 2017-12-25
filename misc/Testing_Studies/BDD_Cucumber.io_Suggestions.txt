@@ -1,0 +1,125 @@
+
+BDD - https://cucumber.io/school
+
+Explore -> Discovering -> Define -> Drive desired behaviour of a software system.
+With
+ - Conversations
+ - Concrete examples
+ - Automated tests
+
+We do this to example -> discover -> illustrate the groups shared understanding of
+the problem for our stakeholders.
+Then we refine those examples to automated tests, that describe the desired behaviour
+of our solution.
+
+Cucumber is tool that facilitates BDD
+
+Concrete Example - Details of what you were doing at the time, or did you just write
+down the name of feature -> getting to concrete example is hard.
+Try to name that concrete example, in meticulous detail.
+
+In video it consisted of 'Concrete Example' being a in-depth story, a concrete example
+with a lot of context.
+
+BDD prerequisite, needs to done just in time, at the last responsible moment, as we try
+to base everything on conversion, rather than to write everything around.
+If you have those conversions too far ahead of doing and work, you would have already
+forgotten part of the conversation.
+You need your work to broken down to user stories, ideally you would have already
+started to define acceptance criteria or business rules for those stories - they don't
+have to exhausted just yet, they can fleshed out during the BDD.
+
+In order to prepare this story for development, you will need a 3 amigo meeting - 3
+amigos meaning 3 people from each of them from a different discipline.
+
+Acceptance Criteria/Business Rule is defined
+Example needs to be given
+What's the outcome here, what are we suppose to test
+
+From the meeting you clarify what you know and what you need to find out. Looking for
+example, allows you guys to have a shared understanding - so that every team member
+can be on the same page. Once all 3 amigos are happy.
+
+Then you can start translating the story, into something cucumber can understand.
+Specifications are written in Gherkin (DSL).
+
+Feature
+Scenario
+Given
+When
+Then
+
+We can refine down an example into this form, to create an executable specification for
+our software. We'll learn to create our first cucumber scenario and execute it.
+
+There is a main directory for our main code and our test directory for our test code.
+Will test npm to run the feature file
+
+
+Example Mapping - https://cucumber.io/blog/2015/12/08/example-mapping-introduction
+
+Concrete examples are a tremendous way to help us explore the problem domain, and
+they make a great basis for our acceptance tests. But as we discuss these examples,
+there are other things coming out in the conversation that deserve to be captured
+too:
+
+Example Mapping uses a pack of 4-coloured index cards and some pens to capture
+these different types of information as the conversation unfolds. As we talk, we
+capture them on index cards, and arrange them in a map:
+
+
+How it works?
+
+ - We start by writing the story under discussion on a yellow card and placing it at
+the top of the table.
+
+ - Next we write each of the acceptance criteria, or rules that
+we already know, on a blue card and placing those across the table beneath the
+yellow story card.
+
+ - For each rule, we may need one or more examples to illustrate it. We write those on a
+green card and place them under the relevant rule.
+
+ - As we discuss these examples, we may uncover questions that nobody in the room can
+answer. We capture those on a red card and move on with the conversation.
+
+ - We keep going until the group is satisfied that the scope of the story is clear, or
+we run out of time. And that’s it. I told you it was simple!
+
+
+Instant feedback
+
+A table covered in red (question) cards tells us that we still have a lot to learn about
+this story.
+A table covered in blue (rule) cards tells us that this story is big and complicated.
+Perhaps we can slice it? Take another yellow (story) card and put the sliced story on
+the backlog.
+A rule with many examples might be over-complex. Are there multiple rules at play that
+need to be teased apart?
+
+
+Time-boxable
+
+A small group of amigos should be able to map out a well-understood, well-sized story
+in about 25 minutes.
+At Cucumber, we use a quick thumb-vote after 25 minutes to determine whether we think
+the story is ready to pull into development. Even if there are some questions remaining,
+you might think they’re minor enough that you can resolve them as you go. Let the group
+decide.
+With this level of scrutiny, example mapping acts like a filter, preventing big fat
+stories from getting into your sprint.
+
+
+Known unknowns
+
+Whenever a conversation like this is going round in circles, it’s because you don’t
+have enough information. Probably someone is missing from the conversation, or maybe
+you need to do some user research, or a spike. Kinda turning a Black Swan to Grey Swans.
+
+Who Should Come?
+
+The bare minimum is your three amigos: a developer, a tester and a product person.
+That’s just a minimum though. By all means invite your operations, user experience
+people or whoever else is relevant to the story being discussed. Anyone likely to help
+ you discover new questions, or to turn questions into decisions during the
+ conversation will be useful.

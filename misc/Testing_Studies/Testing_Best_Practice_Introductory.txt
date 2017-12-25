@@ -1,0 +1,229 @@
+Why should I learn to write software tests?
+
+Developer Testing - Why should developers write tests? [May 10 2015]
+
+Angular is written with testability in mind, but it still requires that
+you do the right thing. We tried to make the right things easy, but if
+you ignore these guidelines you may end up with an untestable application.
+
+Different Types of Tests
+The common types of tests that developers can write for applications are:
+
+Unit Tests
+Integration Tests
+Regression Tests
+System Tests
+
+1. Unit Tests
+Unit Testing is the execution of a section of code or small program which
+is tested in isolation from the more complete system. Tested in isolation
+means not calling the implementation of code not under test e.g. database,
+web service calls or other code dependencies. The concept of isolation is
+why mocking frameworks are commonly used for unit tests. These would be
+written by developers during the development of a feature.
+
+2. Integration Tests
+Integration Testing is the combined execution sections of code. In these
+types of tests you would hit the database, make web service calls or call
+other code dependencies. These would be written by developers. These would
+be written by developers during the development of a feature.
+
+3. Regression Tests
+Regression testing is the repetition of previously executed test cases for
+the purpose of finding defects in software that previously passed the same
+set of tests. Such tests would commonly be used before shipping code to a
+new environment or as part of a build process. It’s common to see tools
+such a selenium used to write these types of tests, where a web browser
+would be launched and user input automated. Human testers can also perform
+regression tests by using an application directly.
+
+4. System Tests
+System testing is the execution of the software in its final configuration,
+including integration with other software and systems. It tests for security,
+performance, resource loss, timing problems, and other issues that can’t be
+tested at lower levels of integration. As with regression testing, automated
+tools such as selenium can be used for this process as well as human testers.
+
+Different Approaches to Writing Developer Tests
+Developer tests are written whilst the developer is writing the actual
+functionality. This process is tightly integrated so that the developer can
+work in a flow of writing tests and the logic. There are two widely adopted
+approaches for writing developer tests:
+
+Test Driven Development (TDD)
+Behaviour Driven Development (BDD)
+
+These different approaches are often the main point of contention amongst
+developers when setting out a testing strategy. Note that developer tests
+do not consider Regression or System Tests. Developers can also write code
+to automate Regression and/or System Tests, but that would come at a later
+stage in the development cycle when the application is in a more complete state.
+Regression or System Tests are sometimes even written by a different developer
+who specialises in writing regression tests and views the system as a
+black-box i.e. is not aware of the internal workings.
+
+1. Test Driven Development - TDD
+Using TDD you write Unit Tests that are driven by the implementation detail
+of the code. With unit tests, we must test things in isolation. If following
+the style as intended, the developer must code in a “Red, Green, Refactor”
+style, where they first write a test, watch the test fail (since the logic
+is not yet implemented), then write enough code to make the test pass, before
+refactoring the code and ensuring that the test still passes. Once a developer
+has finished working through a feature they will be left with a suite of
+passing tests verifying the correctness of their implementation.
+
+2. Behaviour Driven Development - BDD
+Using BDD you write Integration Tests that are driven by application behaviour
+which is in contrast to TDD which concerns itself with the implementation detail.
+You are also not restricted to testing in isolation as with TDD. In fact,
+BDD has emerged from TDD which has been around for longer. As with TDD, you
+would write tests before implementing the logic and make each test pass when
+moving through the implementation. Once a feature is completed the developer
+is left with a suite of passing tests verifying the correctness of the behaviour
+of the code.
+
+
+
+How Tech Giants Test Software? [Aug 2017]-
+https://techbeacon.com/how-tech-giants-test-software-theres-no-one-way-qa
+
+It stands to reason that companies such as Google, Microsoft, and Amazon
+would not be as successful as they are without paying proper attention to
+the quality of the products they're releasing into the world.
+
+
+[GOOGLE]
+The team responsible for the Google search engine itself, for example,
+maintains a large and rigorous testing framework.
+
+To that end, Google employs a four-stage testing process for changes to
+the search engine, consisting of:
+
+Every piece of software starts off with an RMI of 1; meaning perfect risk -
+https://www.youtube.com/watch?v=UzGhW8Tbs0E
+
+RMI - De-risking index
+
+Testing Cascade - where each group down the cascade, are able to test for
+completely different scenarios that were never thought of before.
+
+Aim to reduce product and risk further - rule of is for the risk and rule
+of thumb is to decrease the risk to below 50%.
+
+However, that this implies that each layer of the cascade, is that people,
+throughout each layer of the cascade, can't be running the same set of rules
+
+1. Testing by dedicated, internal testers (Google employees) - 100% to 91%
+2. Further testing on a crowdtesting platform - 91% - 60%
+3. "Dogfooding," which involves having Google employees use the product in
+their daily work - 60% - 48%
+4. Beta testing, which involves releasing the product to a small group of
+Google product end users - 48% - 41%
+
+Do we want it to be a accumulative process? Where each group knew what
+the other group did;
+The idea is to connect each layer into a cascade - so each other process learns
+from the last process
+
+Aim to bulid up a "Risk Profile" - Why?
+
+Risk Profile
+
+Attributes of the System - ACC analysis [Attribute Component Capability]
+Capability that this software can actually do/perform it's a verb.
+
+You need to follow this grammatically through
+
+Adjectives + Adverbs - Attributes -> We are not gonna write a test plan, we are going through the
+adverbs and adjectives, that describe the software
+Nouns - Components -> of the software
+Verbs - Capabilities -> Everything the software can do; all these capabilities are gonna be exercised.
+
+That's the testing surface.
+
+This gets us the Sum total all the testing defined.
+This helps with tracking it
+
+This allows us to attach different test cases to a capability.
+If the code under the four test cases have change, I'll need to re-run all those 4 test cases.
+
+James states that as soon as you get that entire Test Surface defined - that is 100% risk.
+We haven't run a single test case to show, that risk has been mitigated.
+
+As you run the test cases, you start to understand which part of the test surface you run across,
+every single test case, the software is getting less and less risky to release..
+
+Capabilities, by Attribute and Component Matrix - [Previously Mentioned Video -> 6:56]
+Where each number represents the number of capabilities we need to test, there are 5 verbs, that describe
+how that piece of software is simple, elegant.
+
+Again you want to reduce every components' attributes, you don't want every component to be at it's
+maximum risk value.
+
+James Talking about gamifying the testing experience, using a kind of hexagon skills graph.
+
+??? - lists how many times the tests have passed for this Capability, how many times they have failed.
+
+Built a tools, called the tester heads-up display, I wanna see the data in my workspace. Like a game,
+where areas of the webpage is colour coded to show the amount of testing has been done.
+
+Red - is the report on a bug, that has not yet been tested.
+Orange - is when a bug has been diagnosed by a developer; where the bug has not being fixed
+Yellow - is where the bug has been found, reported and fixed - but no new test cases, has been run
+against it
+Blue - Is when there has been tests have been written for the component
+Green - when the bug has been fixed, tests have been written and check over -> finally it's all been validated,
+so the color Green disappears completely.
+
+Another thing, is that each layer reporting the same bug. Which it negates completely.
+
+You need other developers out there testing the software - providing a safety net.
+
+[FACEBOOK]
+
+Facebook now employs a wide range of testing tools. Wide range of tools such as PHPUnit for backend Testing,
+stands Jest (a JavaScript test tool developed internally at Facebook) to Watir for end-to-end testing efforts.
+
+Facebook recognises that there are significant flaws in its testing process, but rather than going to great
+lengths to improve, it simply accepts the flaws, since, as it says, "social media is nonessential." Also,
+focusing less on testing means that more resources are available to focus on other, more valuable things.
+
+Rather than testing its software through and through, Facebook tends to use "canary" releases and an
+incremental rollout strategy to test fixes, updates, and new features in production. For example, a new feature
+might first be made available only to a small percentage of the total number of users.
+
+By tracking the usage of the feature and the feedback received, the company decides either to increase the
+rollout or to disable the feature, either improving it or discarding it altogether.
+
+[AMAZON]
+
+Deployment comes first.
+
+Like Facebook, Amazon does not have a large QA infrastructure in place. It has even been suggested (at least
+in the past) that Amazon does not value the QA profession.
+
+The feeling at Amazon is that its development and deployment processes are so mature (the company famously
+deploys software every 11.6 seconds!) that there is no need for elaborate and extensive testing efforts.
+
+It is all about making software easy to deploy, and, equally if not more important, easy to roll back in case
+of a failure.
+
+
+If the culture, views, and processes around testing and QA can vary so greatly at five of the biggest tech
+companies, then it may be true that there is no one right way of organising testing efforts. All five have
+crafted their testing processes, choosing what fits best for them, and all five are highly successful. They
+must be doing something right, right?
+
+Still, there are a few takeaways that can be derived from the stories above to apply to your testing strategy:
+
+ - There's a "testing responsibility spectrum," ranging from "We have dedicated testers that are primarily
+responsible for executing tests" to "Everybody is responsible for performing testing activities." You
+should choose the one that best fits the skillset of your team.
+
+- There is also a "testing importance spectrum," ranging from "Nothing goes to production untested" to "We put
+everything in production, and then we test there, if at all." Where your product and organisation belong on
+this spectrum depends on the risks that will come with failure and how easy it is for you to roll back and
+fix problems when they emerge.
+
+- Test automation has a significant presence in all five companies. The extent to which it is implemented differs,
+but all five employ tools to optimise their testing efforts. You probably should too.

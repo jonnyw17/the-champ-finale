@@ -1,0 +1,104 @@
+[1:52]
+(General)
+
+Planning to use Gherkin + Cucumber for JavaScript BDD.
+Not really sure if you can integrate a
+
+Cypress.io - Unit, Integration + Regression Testing; end-to-end testing; TDD
+  Use
+  - Mocha - Test framework
+  - Chai - Assertion Library
+  - Sinon, - implement Spies, Stubs, Mocks ?? - Additional Libraries
+    [Need to test first]
+Cucumber, Gherkin - Criteria Acceptance Testing; BDD - there is
+  - Cucumber.js - https://www.npmjs.com/package/cucumber
+  - Gherkin.js - https://www.npmjs.com/package/gherkin
+
+https://app.pluralsight.com/library/courses/unit-testing-nodejs/table-of-contents
+
+ - Testing Business Logic
+ - Testing Errors
+ - Finding Edge Cases
+ - IO and Asynchronous Operations
+ - Testing with Mocks
+ - Testing Promises
+ - Test Coverage
+
+
+[2:11]
+(Planning)
+
+Mock API
+Learn how to create a simple Mock API, in JavaScript - how they integrate with Cypress.io
+
+See how
+-> Sinon - help, with Spies, Stubs, Mocks
+  maybe do later on[json-server] - full fake REST API https://www.npmjs.com/package/json-server]
+Integrate with Cypress.io.
+
+See how
+  Cypress.io - Unit, Integration + Regression Testing; end-to-end testing; TDD
+    Use
+    - Mocha - Test framework
+    - Chai - Assertion Library
+    - Sinon, - implement Spies, Stubs, Mocks ?? - Additional Libraries
+      [Need to test first]
+    - mongo-mock - This is an in-memory 'pretend' mongodb. https://www.npmjs.com/package/mongo-mock
+Integrates with
+  Cucumber + Gherkin
+
+However Cucumber + Gherkin are more used for Agile Software Development - not lean.
+
+Checklist
+
+Need to learn
+[] Cypress.io - list all the additional features in Cypress, that are required to be learnt
+  [] List of all the additional features
+
+[] Integrate mongo-mock - into application, and build a fake mongodb, to call data back and
+fourth from https://www.npmjs.com/package/mongo-mock
+[] Integrate Cucumber + Gherkin
+
+Wants to Learn
+[] Learn to use Mocha + Chai, in a way where you work more towards BDD
+[] Sinon.js - help, with Spies, Stubs, Mocks
+- https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/table-of-contents
+[] Learn how to write technical report
+- https://app.pluralsight.com/library/courses/writing-better-technical-reports/table-of-contents
+
+Again we are not asking for full integration; as we still are enable a BE integration of;
+
+- Session Management
+- Twitter API
+
+Please change the Checklist + use Example mapping, to make it clear and understandable to all
+major stakeholders,
+that everyone is on the same page. Cucumber school costs to complete $199.
+
+[13:13]
+(Planning)
+
+Time to refresh what I have learnt about Cypress.io; Kurzgesagt
+
+- Will be spending time completing tests for the Champ feature
+- Deconstruct the tests I won't dynamically generate the tests, as the code will not be that
+flexible - I won't be able to add custom tests on the side - if need be
+- Find the best way to organise the tests - I don't think I can do all the tests in order????
+Prefer each tests to be modular
+
+[13:27]
+(General)
+
+Decided to spend more time studying through Cypress.io docs - the decision was made when I
+came across user.json profile.json in the fixture directory. That's comes with Cypress.io by
+default. This essentially means I can utilise mocking capabilities whilst building the
+application, Cypress marketed the fact that it allow devs to mock user data.
+
+[19:27]
+(Planning)
+
+Read over all the notes again, and draw up a model of your understanding. These additional
+notes are written as if;
+
+  1. Selling the Cypress Product, to a potential
+  2. If you were trying to promote the product to a team mate - encourage them to utilize it
