@@ -1,0 +1,87 @@
+Interacting with Elements Improve this doc
+
+What You’ll Learn
+ - How Cypress calculates visibility
+ - How Cypress ensures elements are actionable
+ - How Cypress deals with animating elements
+ - How you can bypass these checks and force events
+
+Actionability
+
+Some commands in Cypress are for interacting with the DOM.
+These commands simulate a user interacting with your application.
+Under the hood Cypress fires the events a browser would fire thus
+causing your application’s event bindings to fire.
+
+Cypress will wait for the element to pass all of these checks for the duration of the defaultCommandTimeout (described in depth in the Default Assertions core concept guide).
+
+Checks and Actions Performed
+
+ - Scroll the element into view.
+ - Ensure the element is not hidden.
+ - Ensure the element is not disabled.
+ - Ensure the element is not animating.
+ - Ensure the element is not covered.
+ - Scroll the page if still covered by an element with fixed position.
+
+Fire the event at the desired coordinates.
+
+Visibility
+  DOM element is invisible
+  - height + width is 0px
+  - visibility: hidden
+  - display: none
+  - any of its ancestor hides overflow
+
+Disability
+  - check whether the disabled property is true
+
+Animations
+  - To calculate whether an element is animating we take a sample
+   of the last positions it was at and calculate the element’s slope.
+  - If the element’s slope (the distance between its previous position
+  and its current position) exceeds the animationDistanceThreshold
+  then we consider the element to be animating.
+  - There is also a threshold for the speed of the animation, whether
+  it is too slow or fast
+  - waitForAnimations - can be toggled
+
+Covering
+  - We also ensure that the element we’re attempting to interact with
+  isn’t covered by a parent element.
+  For instance, an element could pass all of the previous checks, but
+  a giant dialog could be covering the entire screen making interacting with the element impossible for any real user.
+  When checking to see if the element is covered we always check its
+  center coordinates.
+  If a child of the element is covering it - that’s okay. In fact we’ll
+  automatically issue the events we fire to that child.
+
+
+Scrolling
+Before interacting with an element we will always scroll it into view
+(including any of its parent containers). Even if the element was
+visible without scrolling, we perform the scrolling algorithm in order
+to reproduce the same behavior every time the command is run.
+
+This scrolling logic only applies to commands that are actionable above.
+We do not scroll elements into view when using DOM commands such as
+cy.get() or .find().
+
+The scrolling algorithm works by scrolling the top, leftmost point of
+the element we issued the command on to the top, leftmost scrollable
+point of its scrollable container.
+
+After scrolling the element, if we determine that it is still being
+covered up, we will continue to scroll and “nudge” the page until it
+becomes visible. This most frequently happens when you have position:
+fixed or position: sticky navigation elements which are fixed to the
+top of the page.
+
+Our algorithm should always be able to scroll until the element is not
+covered.
+
+
+After determining that the element is actionable
+
+Force
+Kurgesagt, allows you bypass all actionable checks.

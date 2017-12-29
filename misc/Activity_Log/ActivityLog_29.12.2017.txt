@@ -1,0 +1,29 @@
+Additional Logs you should read
+
+Testing_Log_29.12.2017.txt
+Bug_Log_29.12.2017.txt
+Improvement_Log_29.12.2017.txt
+
+
+[11:02]
+(General)
+
+Completed the fullscreen component from yesterday. Time will spent today
+
+1) Writing out the testing spec for the current app
+  - it's a current snapshot, in this case of where the app is at
+2) Complete the improvement log
+3) Create a Bug log; complete bug log for today
+
+[16:11]
+(Planning)
+
+We will need to looking to testing scenarios with cucumber.io and gherkin.io
+afterwards. Learning about those 2 technologies before the project, would had
+been invaluable at the very start.
+
+  - made communication b/w the client, developer and tester (3 Amigos) easier
+  - would have kept us on track
+  - allow us to easily update stakeholders on the progress of the project
+  - if we have integrated CI + CD tools, producing the software would had
+    been much easier

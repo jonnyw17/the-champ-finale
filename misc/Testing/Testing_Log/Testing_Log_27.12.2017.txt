@@ -1,0 +1,12 @@
+[22:25] [Updated 23:13]
+(General)
+
+For Signup Tests
+
+There are other tests I would love to implement as well.
+
+1_home_spec.js
+
+2_signup_spec.js
+
+3_platform_spec.js

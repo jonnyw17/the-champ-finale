@@ -1,0 +1,43 @@
+[14:52]
+(Update)
+
+- Spent time studying
+  - Cypress.io: Core Concepts
+  - Cypress.io: Guides -> just started off looking into
+  the docs
+
+(General)
+Notes 1: Tech integrated into the time should,
+ - that saves time,
+ - helps avoid mistakes.
+ - enables better communication
+ - Future Support - LTS if possible
+
+Notes 2: Shortcut adoption
+
+When there is any improvement that can save time deterministically,
+with little to no trade-off, adopt it with little resistance or learn
+to form a habit with
+
+Avoiding pain
+
+The main reason why developers, usually are stuck on the problem is
+mainly due or these main reasons
+
+- Lack of Knowledge (every kind of Dec)
+- ‎Lack of experience in solving the problem
+- ‎Misunderstanding the problem domain
+- ‎Misunderstanding how to apply the solution to the problem
+
+Avoid a lot more pain
+
+Find a mentor - those experiences and pearls of wisdom.
+
+Also found out, that you can keep everything local, by install npx
+on to your local machine. As you can run any program
+
+Use of global modules, should be considered, but for me there should a
+way to run these modules locally - not globally.
+
+Plus Yarn can be used to install large modules such as Cypress.io
+faster

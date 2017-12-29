@@ -1,3 +1,12 @@
+//***********************************************
+// Please check Documentation in Activity,
+// whenever fullscreen mode needs to be applied
+// again
+// File Location: ./the-champ-finale/misc/Activity_Log/ActivityLog_15.12.2017.txt
+// File Name: ActivityLog_15.12.2017.txt
+// Timestamp: 23:56
+//***********************************************
+
 import React, {Component} from 'react';
 import Fullscreenable from 'react-fullscreenable';
 import {Link, Switch, BrowserRouter as Router, Route} from 'react-router-dom';
@@ -8,6 +17,7 @@ import BattleDisplayReady from './containers/BattleDisplayReady/BattleDisplayRea
 import ChampDisplay from './containers/ChampDisplay/ChampDisplayContainer';
 import ChampDisplayDoug from './containers/ChampDisplayDoug/ChampDisplayDougContainer';
 import ChampDisplayShaun from './containers/ChampDisplayShaun/ChampDisplayShaunContainer';
+// import FullScreenOverlay from './containers/Home/FullScreenOverlay';
 import Home from './containers/Home/HomeContainer';
 import MenuDropDown from './MenuDropDown';
 import Platform from './containers/Platform/PlatformContainer';
@@ -17,7 +27,7 @@ import SignUp from './containers/SignUp/SignUpContainer';
 import SignIn from './containers/SignIn/SignInContainer';
 
 import './app.css';
-import './FullScreenOverlay.css';
+// import './FullScreenOverlay.css';
 
 class App extends Component {
   constructor(props) {
@@ -39,13 +49,10 @@ class App extends Component {
   }
 
   render() {
-    // isFullscreen props from the module - react-fullscreenable
-    let fullScreenOption = this.props.isFullscreen
-      ? 'none'
-      : 'flex';
+    console.log(this.props);
     return (
       <div>
-        
+
         <Router>
         <div>
           <Switch>
@@ -74,12 +81,15 @@ class App extends Component {
             <Route path="/champdisplaydoug" component={ChampDisplayDoug}/>
             <Route path="/champdisplayshaun" component={ChampDisplayShaun}/>
             </Switch>
-            {/*
+              {/*<FullScreenOverlay
+                isFullscreen={this.props.isFullscreen}
+                onFullscreenChange={this.props.onFullscreenChange}
+                toggleFullscreen={this.props.toggleFullscreen}
+              />*/}
               <MenuDropDown
                 isFullscreen={this.props.isFullscreen}
                 toggleFullscreen={this.props.toggleFullscreen}
               />
-            */}
           </div>
         </Router>
       </div>

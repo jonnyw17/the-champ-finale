@@ -1,0 +1,65 @@
+[12:49]
+(General)
+
+Current way of organising tests, with each file being reusable.
+
+1) Individual Testing Files
+2) Collated Test Files
+3) Continuous Test Files
+
+
+1) Individual Testing Files
+  - only allows you play out individual tests
+  - all state independent
+
+2) Collated Testing Files
+  - allows you play out multiple tests
+  - all state independent
+
+3) Continuous Test files
+  - allows you play out multiple tests
+  - state independent
+
+
+Current
+
+Pros
+  - Tests can be specific and ran effortlessly
+  - ALL Files are reusable
+
+Cons
+  - whenever an update is made, it needs to made to the other 2 test files
+    -> need to find a way to make them as easy as plugin and play
+       mechanic, to decrease test development time
+
+
+[15:06]
+(Note)
+
+At this moment in time, we can rewrite the same code again and again,
+however I decided to trade-off the time execute the test, for
+
+
+[16:03]
+(General)
+
+Summary to current status
+
+Included a /utilities directory in cypress
+contains objects and functions containing
+cypress code.
+
+Completed tests for these integrations
+
+/home
+/signup
+/platform
+/champdisplay
+
+
+Currently at
+
+/searchprofile
+
+still needs testing of the
+online + offline buttons

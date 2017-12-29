@@ -1,0 +1,150 @@
+[00:11]
+(General)
+
+Using the plugin directory of cypress.io, in testing cases is it usually
+a requirement to change the environment variables based on the environment.
+
+When is that necessary?
+
+Preprocessors - not necessary now or for current project plus cypress.io
+has ES6 built in.
+
+Browsers - we may need to test it on safari and chrome - not mozilla.
+
+
+[00:33]
+(General)
+
+At the moment, really trying hard to create a utility function file,
+where the specs can pull out of
+
+Plus there was a recommendation to make JS crashes useful, with questions
+
+Which test should I run to cause this error?
+Which spec should I run to see this error?
+
+https://glebbahmutov.com/blog/cypress-tips-and-tricks/
+
+
+[00:42]
+(General)
+
+Managed to add utility functions files to integrations, see if I can
+separate that into a different directory.
+
+
+[10:50]
+(General)
+
+I feel, sometimes there is not a need for including additional
+utility functions. Unless I know they are repetitive.
+
+
+[10:56]
+(General)
+
+Test 3) /platform
+
+Description should be present.
+Being more Specific:
+"Choose a gaming platform. Discover the champions in your city."
+Tests all buttons are present.
+Tests all the button responses; all should be disabled.
+
+
+[11:12]
+(General)
+
+Anti-pattern for setting a tags { force:true}. I don't think so, as anchor
+tags will always be un-actionable.
+
+
+[11:21]
+(General)
+
+Okay, just to reaffirm again, they recommend you split up your tests into
+smaller pieces - placing all the tests in order, even into a monolithic
+block, is an anti-pattern.
+Those pieces for me being individual routes. Which I still feel is a valid
+reason, as I was previously unsure. So current pros and cons
+
+Pros
+
+  + Allows you test individual pieces of your app
+  + State dependent, stubs or fixtures can be used to introduce state to
+  the app - these features I still need to test
+  + If you want specific tests cases, just pull the code from the other files,
+  of which the components are labeled/numbered and create a new test file
+  - best practice
+
+Cons
+
+  + Testing for specific cases is slightly slower,
+    - Happy Path
+    - CRUD operations -> something to
+  [Current Solutions, is to order tests a certain way]
+
+I am currently focusing on the happy path, for all my files, they are ordered
+in terms of the happy path.
+
+
+[11:37]
+(Note)
+
+1. Sometimes if you cypress.io can't find a folder. Just restart the entire app
+again. Remember, the current version 1.4.0 is in beta.
+
+2. You are able to have test directories, just follow step 1.) if cypress is
+unable to find utility files.
+
+
+[17:27]
+(Notes)
+
+Another thing to mention, is that there should be currently two
+options while testing;
+
+  + Fast test - the fastest time for whether all the tests past
+    Default config
+  + User Speed Testing - emulate the speed at which a normal user
+    would interact with the app
+  + other speeds and configs may be required in the future,
+    depending whether you want to implement stubbing, use fixtures
+    etc.
+
+This includes allow appending of additional options in the future
+possible.
+
+
+[20:31]
+(Notes)
+
+As a rule of thumb anything you call from Cypress affects global
+state. Anything you call from cy affects local state.
+
+[21:24]
+(General)
+
+If Jonny or any other of the team members want to change the
+current configuration, as well as other environment variables.
+They can set the environment variables for their local machine,
+https://docs.cypress.io/guides/guides/environment-variables.html
+
+
+[23:56]
+(Documentation)
+
+Aim
+- Removal of Fullscreen feature, so that it can used again for
+production.
+- To allow the toggle of top nav bar controls; fullscreen mode
+  toggle off - i.e. in this case full removed - doesn't interfere
+  with current app/tests
+
+[app.js]
+line 20 -> commented out 'import FullScreenOverlay'
+line 30 -> commented out './FullScreenOverlay.css'
+line 84 - 88 -> commented out <FullScreenOverlay />
+
+[MenuDropDown.js]
+line 18 -> 'this.props.isFullscreen' removed

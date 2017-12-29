@@ -1,0 +1,33 @@
+What you'll Learn
+When conditional testing is a good choice for your tests
+
+>Problems: Conditional Testing - may even be considered an anti-pattern
+Without question, you want your tests to work 100% of the time, that
+would require a single source of immutable truth - this is what makes
+conditional testing difficult, thus all your tests must be deterministic.
+
+The problem with conditional testing is that it can only be used when
+the state has stabilized. In modern day applications, knowing when
+state is stable is oftentimes impossible - the DOM is unstable.
+
+To a human - if something changes 10ms or 100ms from now, we may not
+even notice this change and assume the state was always the same.
+
+To a robot - even 10ms represents billions+ of clock cycles. The
+timescale difference is incredible.
+
+A human also has intuition. If you click a button and see a loading
+spinner, you will assume the state is in flux and will automatically
+wait for it to finish.
+
+A robot has no intuition - it will do exactly as it is programmed
+to do.
+
+When you can perform conditional testing?
+If it's required
+The only way to do conditional testing on the DOM is if you are 100%
+sure that the state has “settled” and there is no possible way for
+it to change.
+
+That is it! In any other circumstance you will have flaky tests if
+you try to rely on the state of the DOM for conditional testing.

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // reminder to factorise if required
-// import FullScreenOverlay from './FullScreenOverlay';
+import FullScreenOverlay from './FullScreenOverlay';
 
 import './Home.css';
 import './Normalise.css'

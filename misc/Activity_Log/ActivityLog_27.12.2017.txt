@@ -1,0 +1,70 @@
+Additional Logs you should read
+
+Testing_Log_27.12.2017.txt
+
+[19:57]
+(Planning)
+
+Current decision now is collate all the learning material into a checklist style
+format, tick stuff off, while finishing all the tests.
+
+Basically have a standard that you want to adhere to, and work from their
+recommendation.
+
+[21:00]
+(General)
+
+Some of the notes have been collated, which will enable me to test for specific
+parts of the app.
+
+(Planning)
+Now gonna run my first record.
+
+1. Check cypress.json into source control. Why?
+
+{
+  "projectId": "t3sa2w"
+}
+Please note that this is changed automatically, when you decide to record your first run.
+2. Run this command now, or in CI. Need help?
+
+cypress run --record --key da7b136a-10f5-48b4-abf6-03a81c0d8598
+
+https://docs.cypress.io/guides/core-concepts/dashboard-service.html#Setup
+
+ Recorded runs will show up here and on your Cypress Dashboard Service.
+
+
+[21:37]
+(General)
+
+With all tests, I don't know whether have them dynamically generated is good
+things. It only saves time, so the circumstance in using generated tests, is when
+a lot of flexibility is not required.
+
+Reasons when to use Generated Tests
+
++ When they can explain an element is mainly repetitive in nature
++ An element that will NEVER change; or the changes that occur, happen across all
+  elements
+
+
+[22:22]
+(General)
+
+Written the tests for signup, these tests are just to get the ball
+rolling.
+
+I should have comments per test subject, so that I can add more tests to
+them if required.
+
+Decided to create a Testing Log, these will be separate from Reported
+directory, which automatically generates testing docs for you.
+
+
+[23:11]
+(General)
+
+Gonna Decide to set up each folder to represent each route, for
+modularity purposes.
+Then if we decide to

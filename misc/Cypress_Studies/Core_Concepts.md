@@ -112,9 +112,83 @@ All assertions, whether they’re the default ones or whether they’ve been add
 
 Timeouts are modifiable globally and per command; will affect all default assertions and any assertions chained after that command.
 
-Index
+
+##How do you organise your test and support files?
+
+If you’re starting your first project, we recommend you use the structure seeded and given to you when Cypress dependency is installed.
+
+##How do you group your tests?
+
+The support file is a great place to put reusable behavior such as Custom Commands or global overrides that you want applied and available to all of your spec files.
+
+From your support file you should also import or require other files to keep things organized.
+
+##How do you run all tests in order
+
+[Solutions]
+- Label the tests in order
+  - there should be a hacky work around for this..
+
+Why you shouldn't run your tests in order?
+
+No, you shouldn't need to run tests in any specific order. That is usually indicative of a testing anti pattern, whereby you are relying on state being built up between all the tests.
+
+Circumstances to run test in order
+
+1. Ordering tests could be convenient if you want to run the often failing tests first - saves time in the CI
+2. When running live tests we are dealing with real customer data that is somewhat dependent on state
+3. Sometimes in order for us to run our tests we need to hit real endpoints andß perform actual CRUD operations. If we cannot control what test packages are called in an order the tests will fail since clearing out and creating data in order is a big part of live testing.
+
+##How would you deal with Async commands?
+
+Remember Cypress uses an asynchronous API, so you would form a closure, using the .then().
+Plus Using .then() functions is an excellent opportunity to use `debugger`. This can help you understand the order in which commands are run. This also enables you to inspect the objects that Cypress yields you in each command.
+
+##What are Aliases? What makes them useful?
+
+Aliases are a powerful construct in Cypress that have many uses.
+
+Under the hood, aliasing basic objects and primitives utilizes `Mocha`'s shared context object. That is - aliases are available as this.\*.
+
+Usefulness of Aliases;
+  + Sharing Context - simplest way to use Aliases
+    + Mocha automatically shares contexts for us across all applicable hooks for each test. Additionally these aliases and properties are automatically cleaned up after each test.
+    + Using Fixtures - most common use case of Aliases
+      + Often times you may load in a fixture in a beforeEach hook but want to utilize the values in your tests.
+  + Aliasing DOM Elements
+    + After you alias DOM elements, you can then later access them for reuse
+    +  JS SPA's -> the DOM re-renders parts of the application constantly. If you alias DOM elements that have been removed from the DOM by the time you call cy.get() with the alias, Cypress automatically re-queries the DOM to find these elements again.
+
+  + Alias Routes;
+    + ensure your application makes the intended requests
+    + wait for your server to send the response
+    + access the actual XHR object for assertions
+
+It's recommended
+  + By using cy.get() we avoid the use of this.
+
+      But just keep in mind - there are use cases for both approaches because they have different ergonomics.
+
+      When using this.users we have access to it synchronously, whereas when using cy.get('\@users') it becomes an asynchronous command.
+
+      You can think of the cy.get('\@users') as doing the same thing as cy.wrap(this.users).
+  + To alias elements as soon as possible instead of further down a chain of commands
+
+
+##When and where to use conditional testing?
+
+Avoid at all costs, the main reason you wouldn't use conditional
+tests is that if the test are not deterministic - if the tests do not work 100% of the time. Then it defeats the purpose of using Cypress,
+where the main aim is make your tests flake free.
+
+###Chapters Skipped
+
+__1. Test Runner__ - https://docs.cypress.io/guides/core-concepts/test-runner.html#
+__2. Dashboard Service__ - https://docs.cypress.io/guides/core-concepts/dashboard-service.html
+
+
+#Index
 
 | Word        | Part of Speech           | Definition  |
 | ------------- |:-------------:| -----:|
-|Subject      | noun | In computing, subject-oriented programming is an object-oriented software paradigm in which the state (fields) and behavior (methods) of objects are not seen as intrinsic to the objects themselves, but are provided by various subjective perceptions (“subjects”) of the objects. https://www.techopedia.com/definition/22371/subject-oriented-programming |
 | Yield      | verb      | an action that occurs in a computer program during multithreading, of forcing a processor to relinquish control of the current running thread, and sending it to the end of the running queue, of the same scheduling priority. |

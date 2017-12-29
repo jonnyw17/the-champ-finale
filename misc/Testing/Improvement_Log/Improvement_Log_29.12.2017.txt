@@ -1,0 +1,48 @@
+Improvement Collation for 29.12.2017
+
+UX Design ideas
+
+---------------------------------------------------------------------
+/signup
+---------------------------------------------------------------------
+
+During User testing for the application, 1 user pointed out.
+
+1) Whether if accidentally hit the back button all his use details would
+be saved
+2) Whether the auto complete option was turned off - this is more a
+browser issue, however if this was an application, this affect would
+never occur
+
+In the improved testing, test out the 1).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[13:11]
+
+UX Design ideas
+
+---------------------------------------------------------------------
+/signup
+---------------------------------------------------------------------
+
+During User testing for the application, 1 user pointed out.
+
+1) Whether if accidentally hit the back button all his use details would
+be saved
+2) Whether the auto complete option was turned off - this is more a
+browser issue, however if this was an application, this affect would
+never occur
+
+In the improved testing, test out the 1).
+
+
+[14:45]
+(Notes)
+
+Spend a bit more time studying other application design, the twitter
+android is very simple, yet very effective.
+
+
+[14:57]
+(Notes)

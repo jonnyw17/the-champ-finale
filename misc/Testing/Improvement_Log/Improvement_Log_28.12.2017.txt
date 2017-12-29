@@ -1,0 +1,53 @@
+Improvement Collation for 28.12.2017
+
+UX Design ideas
+
+---------------------------------------------------------------------
+/home
+---------------------------------------------------------------------
+
+Reducing Steps from App load
+- Aim:
+  1) gain as much as experience of the app as they can
+  2) Implement Trial account process, before allowing to decide
+     he or she want to use to app.
+
+Give the
+ - Have a guest trial account initially
+ - Suggest to the user to either
+  Try the app the first OR Sign Up OR Sign In -> remember to break it
+  up into smaller simpler steps
+
+---------------------------------------------------------------------
+/signin
+---------------------------------------------------------------------
+
+Introduce a back button
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[23:35]
+
+UX Design ideas
+
+---------------------------------------------------------------------
+/home
+---------------------------------------------------------------------
+
+Reducing Steps from App load
+- Aim:
+  1) gain as much as experience of the app as they can
+  2) Implement Trial account process, before allowing to decide
+     he or she want to use to app.
+
+Give the
+ - Have a guest trial account initially
+ - Suggest to the user to either
+  Try the app the first OR Sign Up OR Sign In -> remember to break it
+  up into smaller simpler steps
+
+---------------------------------------------------------------------
+/signin
+---------------------------------------------------------------------
+
+Introduce a back button

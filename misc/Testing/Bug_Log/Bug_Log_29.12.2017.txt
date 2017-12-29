@@ -1,0 +1,16 @@
+---------------------------------------------------------
+Aesthetical Bug
+---------------------------------------------------------
+
+Bottom Nav Bar Component
+  - Highlight tool
+
+Challenge Notification Component
+  - Decoupling Challenge Component from profilepage
+  - Only allow the notification to appear for 3500ms
+
+Twitter Button + Dialog Component
+  - Fix Z-index issue (Manual Testing)
+
+Log Out Component
+  - Design a different button for Log out

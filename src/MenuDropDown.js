@@ -15,8 +15,8 @@ class MenuDropDown extends Component {
     this.setState({ menuDisplayed: !this.state.menuDisplayed });
   }
   render(){
-    const menu = this.props.isFullscreen && this.state.menuDisplayed
-      ? 'block'
+    const menu = this.state.menuDisplayed
+      ? 'flex'
       : 'none';
     return (
       <div className="menu-drop-down">
@@ -25,13 +25,13 @@ class MenuDropDown extends Component {
             <img className="logo-btn" src="BetGame_Logo_White.png" alt="white champ logo"/>
           </article>
           <article className="drop-down-container">
-            <button onClick={this.displayMenu}>
+            <button className="menu-drop-down-btn" onClick={this.displayMenu}>
               <img className="drop-down-btn" src="Menu_Dropdown_Icon.png" alt="Menu Dropdown"/>
             </button>
           </article>
           <article className="menu-container" style={{display: menu}}>
             <div className="menu-container-glasseffect">
-              <button className="menu-option" onClick={
+              <button className="full-screen-option-btn menu-option" onClick={
                 ()=>{
                   if(this.props.isFullscreen){
                     this.setState({menuDisplayed : false});
@@ -46,7 +46,7 @@ class MenuDropDown extends Component {
                 </div>
               </button>
               <Link to="/">
-                <div className="menu-option">
+                <div className="log-out-btn menu-option">
                   <div className="icon-box">
                     <img className="logout-icon" src="Logout_Icon.png" alt="Log Out Icon"/>
                   </div>

@@ -1,0 +1,120 @@
+Additional Logs you should read
+
+Testing_Log_28.12.2017.txt
+Improvement_Log_28.12.2017.txt
+
+[00:15]
+(General)
+
+When it comes to software developments, are there any current
+philosophies out there.
+
+
+[15:29]
+(Note)
+
+Happy path testing is mainly based on what the company
+believes to be one of the main activities the user would perform -
+on that specific task
+
+
+[15:46]
+(General)
+
+Needed label within Cypress integration directory (spec directory)
+which containers/components were temporary; originally they were
+there just for display purposes. End goal is integrate them as
+features within the application.
+
+
+[15:55]
+(General)
+
+I really want redesign the entire system again from scratch
+and I can; redesign the UI of the app; try out comprehensive +
+bottom-up approach with BDD, on the Business logic; shorten the
+user flow and invest time drastically improving the user experience;
+filter out features. We should have done everything with more
+planning.
+
+However all of that FE stuff is useless with out the ability to
+store data in the backend and connect them both with some API.
+
+  - Complete:
+    - Tests: Happy Path
+    - Tests: Expected Structure of entire app
+    - Tests: That will clarify whether you have fixed
+      bugs previously noted down
+    - Tests: bugs spotted; vice versa as well, spot bugs to write
+      tests on -> include the chicken & the egg; rather than either
+
+  - Invest all that time and effort onto the BE code
+    - Need to spec and plan out what to do First of all
+
+
+(Note)
+
+Had to realise this the hard way; even though a lot of people have
+mentioned it to me previously.
+Is that the high majority of the work you do as a software
+developer, that most of the work occurs in your head, not within
+the terminal or code editor. As it's your thinking that decides how
+and where to invest time, not your fingers.
+
+
+[17:19]
+(General)
+
+Complete the entire happy path.
+
+Just noticed that the menu functionality was not there, as I had
+removed it earlier on - not part of the 'happy path'
+
+Next stage:
+  - Tests: Expected Structure of entire app
+
+This is like taking an entire snapshot of the current state of
+the app; so that if any changes are made to the application, these
+tests can flag what's broken.
+In other cases if there are more than one happy path, it would be
+suggested that these have their own files, taking the individual specs
+and adding them to the file.
+
+
+[21:29]
+(General)
+
+Planning to place back in the nav-bar feature so that I can;
+1) Test the log out feature,
+2) Test whether the full-screen feature can work with the
+iPhone 6 + iPhone 7 restraints.
+
+Next -> Writing out the testing spec for the current app
+
+
+[22:29]
+(General)
+
+Managed to get Fullscreen up and working again, gonna try and test it.
+Time to get fullscreen tested.
+
+
+[22:32]
+(General)
+
+Fullscreen mode can only be tested manually, should comment on parts
+of the code to only have.
+Again fullscreen mode is only there to make the web app feel like
+a PWA.
+
+[23:08]
+(General)
+
+Should have learnt this definition first, before using cypress.io.
+
+End-to-end Testing: End-to-end testing is a methodology used to test
+whether the flow of an application is performing as designed from
+start to finish. The purpose of carrying out end-to-end tests is to
+identify system dependencies and to ensure that the right information
+is passed between various system components and systems.
+https://www.techopedia.com/definition/7035/end-to-end-test

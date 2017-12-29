@@ -35,12 +35,12 @@ class SignIn extends Component {
           <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
               <label className="uk-form-label white-color">Username</label>
               <div className="uk-form-controls">
-                <input className="uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
+                <input className="username-signin uk-input form-border-radius" id="form-horizontal-text" type="text" name="username" placeholder="Username"/>
                 <div className="horizontal-separator"></div>
               </div>
               <label className="uk-form-label white-color form-margin-top">Password</label>
               <div className="uk-form-controls">
-                <input className="uk-input form-border-radius" id="form-horizontal-text" type="password" name="password" placeholder="Password"/>
+                <input className="password-signin uk-input form-border-radius" id="form-horizontal-text" type="password" name="password" placeholder="Password"/>
                 <div className="horizontal-separator"></div>
               </div>
             <input className="confirm-credentials" onClick={this.displayInput} type="submit" value="Submit" />
@@ -49,7 +49,7 @@ class SignIn extends Component {
       </section>
     </div>
   );
-  }
+ }
 }
 
 export default SignIn;

@@ -149,7 +149,7 @@ class ProfilePage extends Component {
           </Link>
           <div className="ghost-separator"></div>
           <Link to="/battledisplayready">
-            <button className="nav-btn">
+            <button className="battle-display-ready-btn nav-btn">
               <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>
           </Link>

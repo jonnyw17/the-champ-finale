@@ -1,7 +1,7 @@
 {
-  "baseUrl":"http://localhost:3000",
+  "baseUrl": "http://localhost:3000",
   "defaultCommandTimeout": 3000,
-  "projectId": "jd90q7",
+  "projectId": "t3sa2w",
   "screenshotOnHeadlessFailure": false,
   "viewportWidth": 375,
   "viewportHeight": 667,

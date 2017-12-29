@@ -1,0 +1,11 @@
+Please go to this URL [Dec 2017] - https://docs.cypress.io/guides/core-concepts/dashboard-service.html
+
+All the content is mainly visual.
+
+Overview
+The Dashboard allows you to:
+ - See the number of failed, pending and passing tests.
+ - Get the entire stack trace of failed tests.
+ - View screenshots taken when tests fail or when using cy.screenshot().
+ - Watch a video of your entire test run or a video clip at the point of test failure.
+ - Manage who has access to your recorded test data.
