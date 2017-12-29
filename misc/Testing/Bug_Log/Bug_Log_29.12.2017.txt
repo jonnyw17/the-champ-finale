@@ -14,3 +14,16 @@ Twitter Button + Dialog Component
 
 Log Out Component
   - Design a different button for Log out
+
+---------------------------------------------------------
+Functional Bug
+---------------------------------------------------------
+
+Twitter Dialog component
+  - should not be able to send an empty tweet
+
+Challenge Button (???)
+  - unable to use the challenge button, whilst the twitter
+    dialog button is still present on the screen
+  - a final decision would need to be made on whether this
+    is a bug to the system or not

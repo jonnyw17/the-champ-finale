@@ -137,13 +137,13 @@ class ProfilePage extends Component {
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
-            <button className="nav-btn">
+            <button className="search-profile-btn nav-btn">
               <img className="person-icon" src="Person_Icon_White.png" alt="navigation icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
           <Link to="champdisplay">
-            <button className="nav-btn">
+            <button className="champ-display-btn nav-btn">
               <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
             </button>
           </Link>

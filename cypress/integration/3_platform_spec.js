@@ -1,4 +1,6 @@
-import {changeSubdomain} from './utilities.js';
+import {changeSubdomain} from '../utilities/traversal.js';
+
+const displayPeriod = 0;
 
 describe('Platform Selection', function() {
   context('Traversal', function(){
@@ -7,7 +9,7 @@ describe('Platform Selection', function() {
   context('Misc', function(){
     it('.click() - .champ-display-link', function(){
       cy.get("." + 'champ-display-link')
-        .wait(2000)
+        .wait(displayPeriod)
         .click({
           force:true,
           multiple: true

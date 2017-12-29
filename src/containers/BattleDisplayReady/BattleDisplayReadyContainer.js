@@ -116,19 +116,19 @@ class BattleDisplayReady extends Component {
         <article className="nav-btn-container">
           <div className="ghost-separator"></div>
           <Link to="/searchprofile">
-            <button className="nav-btn">
+            <button className="search-profile-btn nav-btn">
               <img className="search-icon" src="Search_Fa_Icon_White.png" alt="navigation icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
           <Link to="champdisplay">
-            <button className="nav-btn">
+            <button className="champ-display-btn nav-btn">
               <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
             </button>
           </Link>
           <div className="ghost-separator"></div>
           <Link to="/battledisplayready">
-            <button className="nav-btn">
+            <button className="battle-display-ready-btn nav-btn">
               <img className="button-highlight" src="Button_Highlight.png" alt="highlight button used"/>
               <img className="provoke-icon" src="Provoke_Icon_White.png" alt="provoke icon"/>
             </button>

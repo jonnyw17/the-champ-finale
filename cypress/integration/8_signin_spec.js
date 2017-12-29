@@ -1,4 +1,5 @@
-import {changeSubdomain} from './utilities.js';
+import {changeSubdomain} from '../utilities/traversal.js';
+
 describe('Sign In Test', function() {
   context('Traversal', function(){
     return changeSubdomain('signin');

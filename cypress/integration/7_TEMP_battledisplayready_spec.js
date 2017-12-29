@@ -1,9 +1,15 @@
-import {changeSubdomain} from './utilities.js';
+import {changeSubdomain} from '../utilities/traversal.js';
+import {navigationButton, socialMedia} from '../utilities/common-components.js';
+
+const delayPeriod = 0;
+const originalRoute = 'battledisplayready';
+
 Cypress.config({
   'defaultCommandTimeout': 7000,
   'pageLoadTimeout': 20000
 });
-describe('Platform Selection', function() {
+
+describe('Search Profile', function() {
   context('Cypress.config()', function () {
     it('Cypress.config() - get and set configuration options', function () {
       let myConfig = Cypress.config()
@@ -13,9 +19,16 @@ describe('Platform Selection', function() {
     })
   })
   context('Traversal', function(){
-    return changeSubdomain('battledisplayready');
+    return changeSubdomain(originalRoute);
   });
-  context('Actions', function(){
+  context('Actions - Settings Button', function(){
+    return navigationButton.settings(originalRoute, delayPeriod);
+  });
+  context('Actions - Bottom Navigation Buttons', function(){
+    return navigationButton.bottom(originalRoute, delayPeriod, true);
+  });
+  // End battle
+  context('Actions - challenge Rival', function(){
     it('.click() - .challenge-btn', function(){
       cy.get("." + 'challenge-btn')
         .first()
@@ -30,5 +43,6 @@ describe('Platform Selection', function() {
         .wait(3000)
         .click();
     });
+    return changeSubdomain(originalRoute);    
   });
 });

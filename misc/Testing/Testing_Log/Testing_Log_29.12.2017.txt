@@ -63,3 +63,59 @@ Currently at
 
 still needs testing of the
 online + offline buttons
+
+
+[18:51]
+(Note)
+
+Just came across not being able to use the challenge-btn after
+pressing the twitter-btn.
+So additional tests would include using the button/features in different
+combinations.
+
+
+[20:41]
+(General)
+
+If only they had a way to test individual
+  - units
+  - test units
+  - contexts
+  - description
+  - E2E
+
+  /signin - comments
+
+  // This needs to test fake signin credentials
+  //  1) Incorrect credentials
+  //  2) Correct credentials
+  // No need for conditional testing
+
+[21:38]
+(General)
+
+[app_spec.js]
+
+// ********************************************
+// This spec file, allows you pick and choose
+// which specific tests you would like to run.
+//
+// Default Option: run every integration test
+// each route.
+//
+// Other Option:
+// With Mocha you can;
+//
+//  1) Rule out a test by inserting an x in front
+// of 'describe()', 'context()' or it().
+//
+//  2) Running exclusive tests it only()
+//
+// When to update this spec?
+//
+//  1) when parts of the application have passed
+//     other tests
+//  2) add the passed tests to this spec
+//     - like a snapshot of the current test
+//     state
+// ********************************************

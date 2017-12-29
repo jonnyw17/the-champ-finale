@@ -1,24 +1,31 @@
 import {changeSubdomain} from '../utilities/traversal.js';
 import {navigationButton} from '../utilities/common-components.js';
 
-const globalSpeed = 2000;
+const delayPeriod = 0;
 const originalRoute = 'searchprofile';
 
 describe('Search Profile', function() {
-  xcontext('Traversal', function(){
-    return changeSubdomain('searchprofile');
+  context('Traversal', function(){
+    return changeSubdomain(originalRoute);
   });
-  xcontext('Actions - Testing Settings Button', function(){
-    return navigationButton.settings(originalRoute, globalSpeed);
+  context('Actions - Settings Button', function(){
+    return navigationButton.settings(originalRoute, delayPeriod);
   });
-  context('Actions - Testing Bottom Navigation Buttons', function(){
-    return navigationButton.bottom(originalRoute, globalSpeed);
+  context('Actions - Bottom Navigation Buttons', function(){
+    return navigationButton.bottom(originalRoute, delayPeriod);
   });
-  xcontext('Misc', function(){
-    it('.click() - .user-searched-details', function(){
-      cy.get("." + 'user-searched-details')
-        .first()
+  context('Actions - Toggling online and offline displays', function(){
+    it('.click() - .offline-tab', function(){
+      cy.get("." + 'offline-tab')
+        .wait(delayPeriod)
         .click();
+      cy.wait(delayPeriod)
+    });
+    it('.click() - .online-tab', function(){
+      cy.get("." + 'online-tab')
+        .wait(delayPeriod)
+        .click();
+      cy.wait(delayPeriod)
     });
   });
 });

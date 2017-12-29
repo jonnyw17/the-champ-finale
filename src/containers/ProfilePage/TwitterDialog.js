@@ -24,13 +24,13 @@ class TwitterDialog extends Component {
           <div className="sub-header"></div>
           <div className="uk-margin">
             <div className="uk-form-controls">
-              <input className="uk-input" id="form-horizontal-text" type="text" name="fullname" placeholder="Lets Battle!" />
+              <input className="tweet-box-input uk-input" id="form-horizontal-text" type="text" name="fullname" placeholder="Lets Battle!" />
             </div>
             <div className="input-line"></div>
           </div>
         </article>
         <div className="submit-tweet">
-          <input type="submit" value="Send Tweet"/>
+          <input className="send-tweet" type="submit" value="Send Tweet"/>
         </div>
         </form>
        </div>

@@ -1,29 +1,29 @@
 import {changeSubdomain} from './utilities.js';
+
+const displayPeriod = 1000;
+
 describe('Home Page Test', function() {
   context('Traversal', function(){
     it(`Visits /` , function() {
       cy.visit(``)
       cy.url()
         .should('include', ``)
-        .wait(1000)
+        .wait(displayPeriod)
     });
     it('Visits "/signup" ', function() {
       cy.get('.sign-up-btn')
         .click();
       cy.get('.back-btn')
-        .wait(1000)
+        .wait(displayPeriod)
         .click();
     });
     it('Visits "/signin" ', function() {
       cy.get('.sign-in-btn')
-        .wait(1000)
+        .wait(displayPeriod)
         .click();
         cy.get('.back-btn')
-          .wait(1000)
+          .wait(displayPeriod)
           .click();
     });
   });
 });
-// cy.get('.fullname-input')
-//   .type('Doug Ward', { delay: 30 })
-//   .should('have.value', 'Doug Ward');
