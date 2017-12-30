@@ -27,3 +27,21 @@ been invaluable at the very start.
   - allow us to easily update stakeholders on the progress of the project
   - if we have integrated CI + CD tools, producing the software would had
     been much easier
+
+
+[21:46]
+(Planning)
+
+Now after I have finished that current app tests, I can now focus on all the
+time and effort into fixing the bugs
+
+
+[22:04]
+(Planning)
+
+Simple - current plan for the next few days
+
+1) Just follow the Trello board.
+2) i) High-level overview aim -> Have states set up in App, where the information can update part of the
+   application, such as who won; and slowly and remove the throwaway code
+3) ii) Place some time out on who to fix the back end

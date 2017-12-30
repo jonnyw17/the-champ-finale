@@ -9,7 +9,7 @@ Cypress.config({
   'pageLoadTimeout': 20000
 });
 
-describe('Search Profile', function() {
+describe('Battle Display Ready [Container]', function() {
   context('Cypress.config()', function () {
     it('Cypress.config() - get and set configuration options', function () {
       let myConfig = Cypress.config()
@@ -43,6 +43,6 @@ describe('Search Profile', function() {
         .wait(3000)
         .click();
     });
-    return changeSubdomain(originalRoute);    
+    return changeSubdomain(originalRoute);
   });
 });

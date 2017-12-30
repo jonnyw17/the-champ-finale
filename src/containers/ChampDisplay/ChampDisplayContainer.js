@@ -66,7 +66,7 @@ class ChampDisplay extends Component {
             </Link>
             <div className="ghost-separator"></div>
             <Link to="champdisplay">
-              <button className="champ-display-btn nav-btn">
+              <button className="champ-display-btn nav-btn nav-highlight">
                 <img className="button-highlight" src="Button_Highlight.png" alt="highlight button"/>
                 <img className="trophy-icon" src="Trophy_Icon_White.png" alt="trophy icon"/>
               </button>
