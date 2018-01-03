@@ -13,6 +13,8 @@ class SignUp extends Component {
       password: 'none',
       address: 'none',
       postcode: 'none',
+      city: 'none',
+      postcode: 'none',
       username: 'none',
       twitter: 'none',
       submitBtn: 'none',
@@ -24,6 +26,7 @@ class SignUp extends Component {
     this.displayInput = this.displayInput.bind(this);
     this.postUserDetails = this.postUserDetails.bind(this);
     this.showPostcodeInput = this.showPostcodeInput.bind(this);
+    this.showCityInput = this.showCityInput.bind(this);
     this.userMessage = this.userMessage.bind(this);
     this.userInput = this.userInput.bind(this);
   }
@@ -99,9 +102,10 @@ class SignUp extends Component {
       fullname: event.target[0].value,
       username: event.target[1].value,
       password: event.target[2].value,
-      streetname: event.target[3].value,
+      address: event.target[3].value,
       city: event.target[4].value,
-      twitterHandle: event.target[5].value
+      postcode: event.target[5].value,
+      twitterHandle: event.target[6].value
     }
     this.props.getCurrentUserSignUp(currentUser);
 
@@ -109,9 +113,10 @@ class SignUp extends Component {
       fullname: event.target[0].value,
       username: event.target[1].value,
       password: event.target[2].value,
-      streetname: event.target[3].value,
+      address: event.target[3].value,
       city: event.target[4].value,
-      twitterhandle: event.target[5].value
+      postcode: event.target[5].value,
+      twitterHandle: event.target[6].value
     }).catch((err) => err)
   }
 
@@ -123,6 +128,16 @@ class SignUp extends Component {
       ? postcodeInput = 'block'
       : postcodeInput = 'none';
     this.setState({postcode: postcodeInput})
+  }
+
+  //SHOWCITYINPUT - adds display to hidden input fields on city section, when event.target.value.length > 0 input field slides in
+  showCityInput(event) {
+    let cityInput;
+    event.preventDefault();
+    event.target.value.length > 0
+      ? cityInput = 'block'
+      : cityInput = 'none';
+    this.setState({city: cityInput})
   }
 
   //USERMESSAGE - inform the user of the minimum length needed, once minimum length has been reached inform the user that hey can then move onto the next input field
@@ -159,6 +174,9 @@ class SignUp extends Component {
     let displayAddress = {
       display: this.state.address
     };
+    let displayCity = {
+      display: this.state.city
+    };
     let displayPostcode = {
       display: this.state.postcode
     };
@@ -175,117 +193,118 @@ class SignUp extends Component {
       display: this.state.nextBtn
     }
 
-    return (
-      <div>
-        <section className="top-container">
-          <article className="back-btn-wrapper fixed">
-            <Link to="/">
-              <div className="back-btn">
-                <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
-                <h5>Back</h5>
-              </div>
-            </Link>
-          </article>
-          <article className="logo-signup-wrapper">
-            <img src="BetGame_Logo.png" alt="the champ logo"/>
-            <h3>Champ</h3>
-          </article>
-        </section>
-        <section className="form-container">
-          <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
+    return (<div>
+      <section className="top-container">
+        <article className="back-btn-wrapper fixed">
+          <Link to="/">
+            <div className="back-btn">
+              <img src="Back_Button_Triangle_Icon.png" alt="back button"/>
+              <h5>Back</h5>
+            </div>
+          </Link>
+        </article>
+        <article className="logo-signup-wrapper">
+          <img src="BetGame_Logo.png" alt="the champ logo"/>
+          <h3>Champ</h3>
+        </article>
+      </section>
+      <section className="form-container">
+        <form onSubmit={this.postUserDetails} className="uk-form-horizontal uk-margin-large">
 
-            <article className='input-container uk-animation-slide-right' style={displayFullname}>
-              <div className="social-media-input">
-                <label className="uk-form-label">We&#39;ll need your full name.
-                  <sup>&#42;</sup>
-                </label>
-              </div>
-              <div className="sub-header"></div>
-              <div className="uk-margin">
-                <div className="uk-form-controls">
-                  <input onChange={this.userInput} className="fullname-input uk-input" id="form-horizontal-text" type="text" name="fullname" placeholder="Full name" required="required"/>
-                </div>
-                <div className="input-line"></div>
-              </div>
-            </article>
-
-            <article className='input-container uk-animation-slide-right' style={displayUserName}>
-              <div className="social-media-input">
-                <label className="uk-form-label">You&#39;ll need a username.<sup>&#42;</sup>
-                </label>
-              </div>
-              <div className="sub-header"></div>
-              <div className="uk-margin">
-                <div className="uk-form-controls">
-                  <input className="username-input uk-input" id="form-horizontal-text" type="text" name="username" placeholder="Username" required="required"/>
-                </div>
-                <div className="input-line"></div>
-              </div>
-            </article>
-
-            <article className='input-container uk-animation-slide-right' style={displayPassword}>
-              <div className="social-media-input">
-                <label className="uk-form-label">You&#39;ll need a password.<sup>&#42;</sup>
-                </label>
-              </div>
-              <div className="sub-header_included">Make sure it&#39;s 6 characters or more</div>
-              <div className="uk-margin">
-                <div className="uk-form-controls">
-                  <input className="password-input uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password" required="required"/>
-                </div>
-                <div className="input-line"></div>
-              </div>
-            </article>
-
-            <article className='input-container uk-animation-slide-right' style={displayAddress}>
-              <div className="social-media-input">
-                <label className="uk-form-label">We&#39;ll need your full address.
-                  <sup>&#42;</sup>
-                </label>
-              </div>
-              <div className="sub-header"></div>
-              <div className="uk-margin">
+          <article className='input-container uk-animation-slide-right' style={displayFullname}>
+            <div className="social-media-input">
+              <label className="uk-form-label">We&#39;ll need your full name.
+                <sup>&#42;</sup>
+              </label>
+            </div>
+            <div className="sub-header"></div>
+            <div className="uk-margin">
               <div className="uk-form-controls">
-                <input onChange={this.showPostcodeInput} className="address-input-1 uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Number" required="required"/>
+                <input onChange={this.userInput} className="fullname-input uk-input" id="form-horizontal-text" type="text" name="fullname" placeholder="Full name" required="required"/>
               </div>
-                <div className="uk-form-controls">
-                  <input onChange={this.showPostcodeInput} className="address-input-2 uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="Street Name" required="required"/>
-                </div>
-                <div className="uk-form-controls">
-                  <input onChange={this.userInput} className="address-input-3 uk-input uk-animation-slide-right" style={displayPostcode} id="form-horizontal-text" type="text" name="city" placeholder="City" required="required"/>
-                </div>
-                <div className="input-line"></div>
-              </div>
-            </article>
+              <div className="input-line"></div>
+            </div>
+          </article>
 
-            <article className='input-container uk-animation-slide-right' style={displayTwitterHandle}>
-              <div className="social-media-input">
-                <img src="Twitter_Icon_Black.png" alt="twitter icon"/>
-                <label className="uk-form-label">Twitter details</label>
+          <article className='input-container uk-animation-slide-right' style={displayUserName}>
+            <div className="social-media-input">
+              <label className="uk-form-label">You&#39;ll need a username.<sup>&#42;</sup>
+              </label>
+            </div>
+            <div className="sub-header"></div>
+            <div className="uk-margin">
+              <div className="uk-form-controls">
+                <input className="username-input uk-input" id="form-horizontal-text" type="text" name="username" placeholder="Username" required="required"/>
               </div>
-              <div className="sub-header_included">Provoke your opponent on Twitter (optional)</div>
-              <div className="uk-margin">
-                <div className="uk-form-controls">
-                  <div className="at-html-entity">&#64;</div>
-                  <div className="division-line"></div>
-                  <input className="twitter-handle-input uk-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
-                </div>
-                <div className="input-line"></div>
-              </div>
-            </article>
+              <div className="input-line"></div>
+            </div>
+          </article>
 
-            <input className="confirm-btn form-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
-            <input className="submit-btn form-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
-            <article className='input-container uk-animation-slide-right' style={displayNext}>
-              <div className="centered-description">
-                <label className="uk-form-label">Ready to be The Champ?!</label>
+          <article className='input-container uk-animation-slide-right' style={displayPassword}>
+            <div className="social-media-input">
+              <label className="uk-form-label">You&#39;ll need a password.<sup>&#42;</sup>
+              </label>
+            </div>
+            <div className="sub-header_included">Make sure it&#39;s 6 characters or more</div>
+            <div className="uk-margin">
+              <div className="uk-form-controls">
+                <input className="password-input uk-input" id="form-horizontal-text" type="password" name="password" placeholder="Password" required="required"/>
               </div>
-            </article>
-            <Link to='/platform'>
-              <input className="next-btn form-btn" type="button" value="Next" style={displayNext}/>
-            </Link>
-          </form>
-        </section>
+              <div className="input-line"></div>
+            </div>
+          </article>
+
+          <article className='input-container uk-animation-slide-right' style={displayAddress}>
+            <div className="social-media-input">
+              <label className="uk-form-label">We&#39;ll need your full address.
+                <sup>&#42;</sup>
+              </label>
+            </div>
+            <div className="sub-header"></div>
+            <div className="uk-margin">
+              <div className="uk-form-controls" style={displayAddress}>
+                <input onChange={this.showCityInput} className="address-input-1 uk-input" id="form-horizontal-text" type="text" name="address" placeholder="Address" required="required"/>
+                <div className="input-line" style={displayAddress}></div>
+              </div>
+              <div className="uk-form-controls uk-animation-slide-right" style={displayCity}>
+                <input onChange={this.showPostcodeInput} className="address-input-2 uk-input" id="form-horizontal-text" type="text" name="streetname" placeholder="City" required="required"/>
+                <div className="input-line uk-animation-slide-right" tyle={displayCity}></div>
+              </div>
+              <div className="uk-form-controls uk-animation-slide-right" style={displayPostcode}>
+                <input className="address-input-2 uk-input" id="form-horizontal-text" type="text" name="city" placeholder="Postcode" required="required"/>
+                  <div className="input-line uk-animation-slide-right" style={displayPostcode}></div>
+              </div>
+            </div>
+          </article>
+
+          <article className='input-container uk-animation-slide-right' style={displayTwitterHandle}>
+            <div className="social-media-input">
+              <img src="Twitter_Icon_Black.png" alt="twitter icon"/>
+              <label className="uk-form-label">Twitter details</label>
+            </div>
+            <div className="sub-header_included">Provoke your opponent on Twitter (optional)</div>
+            <div className="uk-margin">
+              <div className="uk-form-controls">
+                <div className="at-html-entity">&#64;</div>
+                <div className="division-line"></div>
+                <input className="twitter-handle-input uk-input" id="form-horizontal-text" type="text" name="twitterhandle" placeholder="Twitter Handle"/>
+              </div>
+              <div className="input-line"></div>
+            </div>
+          </article>
+
+          <input className="confirm-btn form-btn" onClick={this.displayInput} type="button" value="Confirm" style={displayConfirm} disabled={this.state.disabledBtn}/>
+          <input className="submit-btn form-btn" onClick={this.displayInput} type="submit" value="Submit" style={displaySubmit}/>
+          <article className='input-container uk-animation-slide-right' style={displayNext}>
+            <div className="centered-description">
+              <label className="uk-form-label">Ready to be The Champ?!</label>
+            </div>
+          </article>
+          <Link to='/platform'>
+            <input className="next-btn form-btn" type="button" value="Next" style={displayNext}/>
+          </Link>
+        </form>
+      </section>
     </div>)
   }
 }
